@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				game: {
+					dark: '#121418',
+					darker: '#0a0c0e',
+					orange: '#FF6B00',
+					'orange-light': '#FF8A3D',
+					'orange-dark': '#CC5500',
+					red: '#FF3A20',
+					gray: '#2E3440',
+					'gray-light': '#4C566A',
 				}
 			},
 			borderRadius: {
@@ -70,26 +81,42 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
+				},
+				'glow': {
+					'0%, 100%': { 
+						textShadow: '0 0 5px rgba(255, 107, 0, 0.7), 0 0 10px rgba(255, 107, 0, 0.5)'
 					},
-					to: {
-						height: '0'
+					'50%': { 
+						textShadow: '0 0 20px rgba(255, 107, 0, 0.9), 0 0 30px rgba(255, 107, 0, 0.7)' 
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+				'glow': 'glow 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'hero-pattern': "linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(12,14,18,0.9) 100%), url('/lovable-uploads/7db9e57a-96e2-431c-aeca-429aef63288a.png')",
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
