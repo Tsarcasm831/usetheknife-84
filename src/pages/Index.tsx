@@ -4,16 +4,15 @@ import NavBar from '@/components/NavBar';
 import HeroSection from '@/components/HeroSection';
 import DevLogSection from '@/components/DevLogSection';
 import UserSection from '@/components/UserSection';
-import { mockUser, mockDevLogs } from '@/lib/data';
+import { mockDevLogs } from '@/lib/data';
+import { useAuth } from '@/contexts/AuthContext';
 
 const Index = () => {
-  // In a real app, you would check if the user is logged in
-  const isLoggedIn = true;
-  const user = isLoggedIn ? mockUser : undefined;
+  const { user, profile } = useAuth();
 
   return (
     <div className="min-h-screen bg-game-darker text-white">
-      <NavBar user={user} />
+      <NavBar />
       <HeroSection />
       <DevLogSection devlogs={mockDevLogs} />
       
@@ -42,8 +41,8 @@ const Index = () => {
       </footer>
       
       {/* Show user section only if logged in */}
-      {isLoggedIn && user && (
-        <UserSection user={user} />
+      {user && profile && (
+        <UserSection user={profile} />
       )}
     </div>
   );

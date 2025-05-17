@@ -1,18 +1,23 @@
 
 import React, { useState, useEffect } from 'react';
-import { User } from '@/types';
-import { mockNavItems } from '@/lib/data';
-import { Menu, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Menu, Search, User, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { mockNavItems } from '@/lib/data';
+import { useAuth } from '@/contexts/AuthContext';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-interface NavBarProps {
-  user?: User;
-}
-
-const NavBar: React.FC<NavBarProps> = ({ user }) => {
+const NavBar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user, profile, signOut } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,22 +38,22 @@ const NavBar: React.FC<NavBarProps> = ({ user }) => {
       <div className="game-container flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="/" className="text-2xl font-bold tracking-wider text-game-orange text-glow">
+          <Link to="/" className="text-2xl font-bold tracking-wider text-game-orange text-glow">
             REMNANTS
             <span className="text-white ml-2">DEVLOG</span>
-          </a>
+          </Link>
         </div>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
           {mockNavItems.map((item) => (
-            <a 
+            <Link
               key={item.title} 
-              href={item.href}
+              to={item.href}
               className="nav-link"
             >
               {item.title}
-            </a>
+            </Link>
           ))}
           <Button variant="ghost" size="icon" className="ml-2">
             <Search className="h-5 w-5" />
@@ -57,20 +62,40 @@ const NavBar: React.FC<NavBarProps> = ({ user }) => {
         
         {/* User Menu / Login */}
         <div className="hidden md:flex items-center space-x-4">
-          {user ? (
-            <div className="flex items-center space-x-3">
-              <span className="text-sm text-game-orange">{user.username}</span>
-              <div className="h-8 w-8 rounded-full bg-game-gray overflow-hidden">
-                <img 
-                  src={user.avatar} 
-                  alt={user.username}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
+          {user && profile ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <div className="flex items-center space-x-3 cursor-pointer group">
+                  <span className="text-sm text-game-orange group-hover:text-white transition-colors">
+                    {profile.username}
+                  </span>
+                  <Avatar className="h-8 w-8 ring-1 ring-white/10 group-hover:ring-game-orange transition-all">
+                    <AvatarImage src={profile.avatar_url} alt={profile.username} />
+                    <AvatarFallback className="bg-game-gray">
+                      {profile.username?.substring(0, 2).toUpperCase()}
+                    </AvatarFallback>
+                  </Avatar>
+                </div>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-game-dark border-white/10 text-white">
+                <DropdownMenuItem className="hover:bg-white/5" asChild>
+                  <Link to="/profile" className="cursor-pointer w-full">
+                    <User className="h-4 w-4 mr-2" />
+                    Profile
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  className="text-red-400 hover:text-red-300 hover:bg-red-900/20 cursor-pointer"
+                  onClick={signOut}
+                >
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Sign Out
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           ) : (
-            <Button className="btn-primary">
-              Login
+            <Button asChild className="btn-primary">
+              <Link to="/auth">Login</Link>
             </Button>
           )}
         </div>
@@ -92,30 +117,51 @@ const NavBar: React.FC<NavBarProps> = ({ user }) => {
         <div className="md:hidden bg-game-dark/95 backdrop-blur-lg">
           <div className="game-container py-4 flex flex-col space-y-4">
             {mockNavItems.map((item) => (
-              <a
+              <Link
                 key={item.title}
-                href={item.href}
+                to={item.href}
                 className="block py-2 text-lg"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.title}
-              </a>
+              </Link>
             ))}
-            {user ? (
-              <div className="flex items-center space-x-3 py-3 border-t border-white/10">
-                <div className="h-8 w-8 rounded-full bg-game-gray overflow-hidden">
-                  <img 
-                    src={user.avatar} 
-                    alt={user.username}
-                    className="h-full w-full object-cover"
-                  />
+            {user && profile ? (
+              <div className="flex flex-col space-y-3 py-3 border-t border-white/10">
+                <div className="flex items-center space-x-3">
+                  <Avatar className="h-8 w-8">
+                    <AvatarImage src={profile.avatar_url} alt={profile.username} />
+                    <AvatarFallback className="bg-game-gray">
+                      {profile.username?.substring(0, 2).toUpperCase()}
+                    </AvatarFallback>
+                  </Avatar>
+                  <span className="text-sm text-game-orange">{profile.username}</span>
                 </div>
-                <span className="text-sm text-game-orange">{user.username}</span>
+                <Link
+                  to="/profile"
+                  className="flex items-center text-white py-1"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <User className="h-4 w-4 mr-2" />
+                  Profile
+                </Link>
+                <button 
+                  className="flex items-center text-red-400 py-1" 
+                  onClick={() => {
+                    signOut();
+                    setMenuOpen(false);
+                  }}
+                >
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Sign Out
+                </button>
               </div>
             ) : (
               <div className="py-3 border-t border-white/10">
-                <Button className="btn-primary w-full">
-                  Login
+                <Button asChild className="btn-primary w-full">
+                  <Link to="/auth" onClick={() => setMenuOpen(false)}>
+                    Login
+                  </Link>
                 </Button>
               </div>
             )}

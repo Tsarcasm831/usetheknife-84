@@ -1,15 +1,17 @@
 
 import React, { useState } from 'react';
-import { User } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Bell, Settings, LogOut } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useAuth } from '@/contexts/AuthContext';
+import { Link } from 'react-router-dom';
 
 interface UserSectionProps {
-  user: User;
+  user: any;
 }
 
 const UserSection: React.FC<UserSectionProps> = ({ user }) => {
+  const { signOut } = useAuth();
   const [notifications, setNotifications] = useState([
     { id: 1, text: "New devlog published: Combat System Overhaul", read: false },
     { id: 2, text: "Your comment received 5 likes", read: true },
@@ -57,7 +59,7 @@ const UserSection: React.FC<UserSectionProps> = ({ user }) => {
               <div className="flex items-center space-x-3">
                 <div className="h-10 w-10 rounded-full overflow-hidden">
                   <img 
-                    src={user.avatar} 
+                    src={user.avatar_url} 
                     alt={user.username}
                     className="h-full w-full object-cover"
                   />
@@ -68,10 +70,10 @@ const UserSection: React.FC<UserSectionProps> = ({ user }) => {
                 </div>
               </div>
               <div className="flex space-x-2">
-                <button className="text-gray-400 hover:text-white">
+                <Link to="/profile" className="text-gray-400 hover:text-white">
                   <Settings className="h-4 w-4" />
-                </button>
-                <button className="text-gray-400 hover:text-white">
+                </Link>
+                <button onClick={signOut} className="text-gray-400 hover:text-white">
                   <LogOut className="h-4 w-4" />
                 </button>
               </div>
