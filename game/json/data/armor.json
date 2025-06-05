@@ -1,0 +1,203 @@
+[
+  {
+    "name": "FDG \"SHOGUN\" Armor",
+    "category": "Medium Armor",
+    "protection": {
+      "head": 60,
+      "shoulders": 40,
+      "torso": 70,
+      "arms": 50,
+      "legs": 50
+    },
+    "weight": "20 lbs",
+    "mobility_penalty": -10,
+    "cost": 2000,
+    "rarity": "R",
+    "special_properties": [
+      "Standard FDG issue",
+      "Environmental protection: +5 to resist hazardous environments"
+    ]
+  },
+  {
+    "name": "FDG \"MANTIS IV\" Power Armor",
+    "category": "Power Armor",
+    "protection": {
+      "head": 80,
+      "shoulders": 60,
+      "torso": 100,
+      "arms": 60,
+      "legs": 60
+    },
+    "strength_bonus": 20,
+    "weight": "100 lbs (assisted)",
+    "mobility_penalty": -5,
+    "cost": 15000,
+    "rarity": "VR",
+    "special_properties": [
+      "Power assisted: Negates weight penalties",
+      "Enhanced strength: +20 to STR for carrying capacity",
+      "Power source required: Fusion cell lasts 48 hours"
+    ]
+  },
+  {
+    "name": "FDG \"Valkyrie\" Aerial Power Armor",
+    "category": "Power Armor",
+    "protection": {
+      "head": 60,
+      "shoulders": 50,
+      "torso": 80,
+      "arms": 50,
+      "legs": 50
+    },
+    "strength_bonus": 10,
+    "weight": "80 lbs (assisted)",
+    "mobility_penalty": 0,
+    "cost": 25000,
+    "rarity": "XR",
+    "special_properties": [
+      "Flight capable: Up to 100 mph for 4 hours",
+      "Enhanced agility: +10 to AGI",
+      "Power source required: Fusion cell lasts 24 hours"
+    ]
+  },
+  {
+    "name": "H.I.V.E. Drone Power Armor",
+    "category": "Power Armor",
+    "protection": {
+      "head": 80,
+      "shoulders": 60,
+      "torso": 100,
+      "arms": 60,
+      "legs": 60
+    },
+    "strength_bonus": 30,
+    "weight": "120 lbs (assisted)",
+    "mobility_penalty": -10,
+    "cost": 20000,
+    "rarity": "XR",
+    "special_properties": [
+      "Power assisted: Negates weight penalties",
+      "Enhanced strength: +30 to STR for carrying capacity",
+      "Integrated systems: Comms, targeting assistance (+5 to hit)",
+      "Power source required: Fusion cell lasts 36 hours"
+    ]
+  },
+  {
+    "name": "H.I.V.E. Light Power Armor",
+    "category": "Light Power Armor",
+    "protection": {
+      "head": 80,
+      "shoulders": 40,
+      "torso": 80,
+      "arms": 40,
+      "legs": 30
+    },
+    "strength_bonus": 10,
+    "weight": "60 lbs (assisted)",
+    "mobility_penalty": 0,
+    "cost": 30000,
+    "rarity": "XR",
+    "special_properties": [
+      "Stealth systems: +20 to stealth checks",
+      "Shadow effects: Near invisibility in shadow (+30 to stealth in darkness)",
+      "Silenced footpads: Silent movement",
+      "Power source required: Fusion cell lasts 48 hours"
+    ]
+  },
+  {
+    "name": "FDG ARCHANGEL Powered Battle Armor",
+    "category": "Heavy Power Armor",
+    "protection": {
+      "head": 100,
+      "shoulders": 80,
+      "torso": 250,
+      "arms": 80,
+      "legs": 80
+    },
+    "strength_bonus": 240,
+    "weight": "2500 lbs (assisted)",
+    "mobility_penalty": -20,
+    "cost": 500000,
+    "rarity": "X",
+    "special_properties": [
+      "Weapon mounts: Can equip heavy weapons",
+      "Enhanced systems: +40 to PER for targeting",
+      "Vehicle-scale armor: Resistant to small arms fire",
+      "Power source required: Fusion reactor lasts 72 hours"
+    ]
+  },
+  {
+    "name": "Ballistic Vest",
+    "category": "Light Armor",
+    "protection": {
+      "torso": 40
+    },
+    "weight": "8 lbs",
+    "mobility_penalty": -2,
+    "cost": 500,
+    "rarity": "C",
+    "special_properties": [
+      "Concealable: Can be worn under clothing",
+      "Limited coverage: Protects torso only"
+    ]
+  },
+  {
+    "name": "Tactical Armor",
+    "category": "Medium Armor",
+    "protection": {
+      "head": 30,
+      "shoulders": 30,
+      "torso": 50,
+      "arms": 30,
+      "legs": 30
+    },
+    "weight": "15 lbs",
+    "mobility_penalty": -5,
+    "cost": 1200,
+    "rarity": "C",
+    "special_properties": [
+      "Modular: Can attach additional equipment",
+      "MOLLE system: Additional carrying capacity"
+    ]
+  },
+  {
+    "name": "Stealth Suit",
+    "category": "Light Armor",
+    "protection": {
+      "head": 20,
+      "shoulders": 20,
+      "torso": 30,
+      "arms": 20,
+      "legs": 20
+    },
+    "weight": "10 lbs",
+    "mobility_penalty": 0,
+    "cost": 3000,
+    "rarity": "VR",
+    "special_properties": [
+      "Stealth coating: +10 to stealth checks",
+      "Noise dampening: Near silent movement",
+      "Thermal masking: Reduces heat signature"
+    ]
+  },
+  {
+    "name": "Energy Resistant Suit",
+    "category": "Medium Armor",
+    "protection": {
+      "head": 30,
+      "shoulders": 30,
+      "torso": 40,
+      "arms": 30,
+      "legs": 30
+    },
+    "energy_resistance": 50,
+    "weight": "12 lbs",
+    "mobility_penalty": -5,
+    "cost": 4000,
+    "rarity": "VR",
+    "special_properties": [
+      "Energy dispersal: 50% reduction in energy weapon damage",
+      "Poor physical protection: -10 against physical attacks"
+    ]
+  }
+]

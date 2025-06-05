@@ -1,0 +1,44 @@
+<div id="poi-modal">
+    <div class="poi-modal-content">
+        <span class="poi-modal-close-btn" id="close-poi-modal">&times;</span>
+        <h3>Point of Interest</h3>
+        <form id="poi-form">
+            <div class="form-group">
+                <label for="poi-title">Title:</label>
+                <input type="text" id="poi-title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="poi-description">Description:</label>
+                <textarea id="poi-description" name="description" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="poi-category">Category:</label>
+                <select id="poi-category" name="category">
+                    <option value="general">General</option>
+                    <option value="landmark">Landmark</option>
+                    <option value="hazard">Hazard</option>
+                    <option value="resource">Resource</option>
+                    <option value="shelter">Shelter</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="poi-image">Image URL (optional):</label>
+                <input type="url" id="poi-image" name="image">
+            </div>
+            <div class="form-group">
+                <label for="poi-icon">Icon:</label>
+                <select id="poi-icon" name="icon">
+                    <option value="default">Default</option>
+                    <option value="star">Star</option>
+                    <option value="flag">Flag</option>
+                    <option value="warning">Warning</option>
+                    <option value="info">Info</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="save-poi">Save</button>
+                <button type="button" id="cancel-poi">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

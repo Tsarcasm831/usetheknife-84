@@ -1,0 +1,122 @@
+/* Support Tab specific styling */
+
+.support-assets-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.support-asset-item {
+    background-color: rgba(40, 40, 40, 0.7);
+    border-radius: 5px;
+    padding: 15px;
+    border-left: 3px solid #666;
+}
+
+/* Styling for different support types */
+#support-artillery {
+    border-left-color: #EF4444; /* Red */
+}
+
+#support-drone-recon {
+    border-left-color: #3B82F6; /* Blue */
+}
+
+#support-air-strike {
+    border-left-color: #F59E0B; /* Amber */
+}
+
+#support-resupply {
+    border-left-color: #10B981; /* Green */
+}
+
+#support-medevac {
+    border-left-color: #EC4899; /* Pink */
+}
+
+.support-asset-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.support-asset-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    background-color: #555;
+    border-radius: 16px;
+}
+
+.support-asset-header h4 {
+    margin: 0;
+    color: #ddd;
+    font-size: 1.1em;
+}
+
+.support-asset-description {
+    color: #aaa;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.support-asset-controls {
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.support-asset-controls label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.support-asset-controls input,
+.support-asset-controls select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #222;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #ddd;
+}
+
+.support-request-btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.support-asset-status {
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+.status-text {
+    font-weight: bold;
+}
+
+.status-text:contains('Available') {
+    color: #10B981; /* Green */
+}
+
+.status-text:contains('Unavailable'), 
+.status-text:contains('On Cooldown') {
+    color: #EF4444; /* Red */
+}
+
+.cooldown-timer {
+    color: #F59E0B; /* Amber */
+}
+
+@media (max-width: 900px) {
+    .support-assets-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,117 @@
+/* Button component styling */
+
+.sidebar-button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sidebar-button:hover {
+    background-color: #444;
+    border-color: #666;
+}
+
+.sidebar-button:active {
+    transform: scale(0.98);
+}
+
+.sidebar-button:disabled {
+    background-color: #444;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.primary-button {
+    background-color: orange;
+    color: #222;
+    border: 1px solid #ffa500;
+    font-weight: bold;
+}
+
+.primary-button:hover {
+    background-color: #ffb733;
+    border-color: #ffb733;
+}
+
+.success-button {
+    background-color: #10B981; /* Green */
+    color: white;
+    border: 1px solid #0ea271;
+}
+
+.success-button:hover {
+    background-color: #059669;
+    border-color: #059669;
+}
+
+.danger-button {
+    background-color: #EF4444; /* Red */
+    color: white;
+    border: 1px solid #e02424;
+}
+
+.danger-button:hover {
+    background-color: #dc2626;
+    border-color: #dc2626;
+}
+
+.info-button {
+    background-color: #3B82F6; /* Blue */
+    color: white;
+    border: 1px solid #2563eb;
+}
+
+.info-button:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.warning-button {
+    background-color: #F59E0B; /* Amber */
+    color: white;
+    border: 1px solid #d97706;
+}
+
+.warning-button:hover {
+    background-color: #d97706;
+    border-color: #d97706;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button-group.center {
+    justify-content: center;
+}
+
+.button-group.right {
+    justify-content: flex-end;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.large-button {
+    font-size: 1.1em;
+    padding: 12px 20px;
+}
+
+.small-button {
+    font-size: 0.8em;
+    padding: 5px 10px;
+}

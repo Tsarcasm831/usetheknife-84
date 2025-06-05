@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Soldier",
+    "attribute_modifiers": {
+      "STR": 10,
+      "DEX": 5,
+      "VIT": 10,
+      "COM": 0,
+      "INT": 0,
+      "PER": 5,
+      "CHA": 0,
+      "PSY": 0
+    },
+    "starting_skills": [
+      "FIREARMS",
+      "ARMOR SOAK",
+      "DODGE PROJECTILE"
+    ],
+    "special_abilities": [
+      "Combat Training: +5 to hit with all standard military weapons",
+      "Tactical Awareness: +2 to initiative in combat situations"
+    ],
+    "equipment_packages": [
+      {
+        "name": "Standard Military",
+        "items": [
+          "Military fatigues",
+          "Standard rifle",
+          "Sidearm",
+          "Combat knife",
+          "Basic medical kit"
+        ]
+      },
+      {
+        "name": "Special Forces",
+        "items": [
+          "Light stealth armor",
+          "Sniper rifle",
+          "Silenced sidearm",
+          "Combat knife",
+          "Advanced medical kit"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Scout",
+    "attribute_modifiers": {
+      "STR": 0,
+      "DEX": 10,
+      "VIT": 5,
+      "COM": 0,
+      "INT": 5,
+      "PER": 10,
+      "CHA": 0,
+      "PSY": 0
+    },
+    "starting_skills": [
+      "LAND NAVIGATION",
+      "STEALTH",
+      "THROWN"
+    ],
+    "special_abilities": [
+      "Keen Senses: +10 to perception checks",
+      "Pathfinder: Can travel 50% faster through difficult terrain"
+    ],
+    "equipment_packages": [
+      {
+        "name": "Wilderness",
+        "items": [
+          "Camouflage gear",
+          "Survival knife",
+          "Compact bow",
+          "Binoculars",
+          "Survival kit"
+        ]
+      },
+      {
+        "name": "Urban",
+        "items": [
+          "Civilian clothes",
+          "Concealable pistol",
+          "Electronic lockpicks",
+          "Digital camera",
+          "Comm device"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Psion",
+    "attribute_modifiers": {
+      "STR": 0,
+      "DEX": 0,
+      "VIT": 0,
+      "COM": 0,
+      "INT": 5,
+      "PER": 5,
+      "CHA": 0,
+      "PSY": 20
+    },
+    "starting_skills": [
+      "RANGED ATTACK PSIONICS",
+      "MEDITATION",
+      "PSY DEFENSE"
+    ],
+    "special_abilities": [
+      "Psionic Aptitude: Start with 2 additional psionic powers",
+      "Mental Shield: +10 to resist psionic attacks"
+    ],
+    "equipment_packages": [
+      {
+        "name": "Academic",
+        "items": [
+          "Formal attire",
+          "Psi-focusing crystal",
+          "Research materials",
+          "Energy measurement tools",
+          "Light defensive weapon"
+        ]
+      },
+      {
+        "name": "Combat",
+        "items": [
+          "Psi-amplifying headgear",
+          "Light armor",
+          "Energy pistol",
+          "Psionic dampening grenades",
+          "Medical stimulants"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Technician",
+    "attribute_modifiers": {
+      "STR": 0,
+      "DEX": 5,
+      "VIT": 0,
+      "COM": 0,
+      "INT": 15,
+      "PER": 10,
+      "CHA": 0,
+      "PSY": 0
+    },
+    "starting_skills": [
+      "ELECTRICAL TOOL KIT",
+      "MECHANICAL TOOL KIT",
+      "HACKING"
+    ],
+    "special_abilities": [
+      "Tech Expertise: +15 to all technical repair and analysis checks",
+      "Improvise: Can create temporary tools or devices from available materials"
+    ],
+    "equipment_packages": [
+      {
+        "name": "Engineering",
+        "items": [
+          "Advanced toolkit",
+          "Diagnostic scanner",
+          "Safety gear",
+          "Portable computer",
+          "Utility pistol"
+        ]
+      },
+      {
+        "name": "Field Tech",
+        "items": [
+          "Compact toolkit",
+          "Portable power supply",
+          "Light armor",
+          "Multi-tool weapon",
+          "Emergency beacon"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Face",
+    "attribute_modifiers": {
+      "STR": 0,
+      "DEX": 0,
+      "VIT": 0,
+      "COM": 10,
+      "INT": 5,
+      "PER": 5,
+      "CHA": 10,
+      "PSY": 0
+    },
+    "starting_skills": [
+      "FAST-TALK",
+      "EXPERT LIAR",
+      "BARTER"
+    ],
+    "special_abilities": [
+      "Silver Tongue: +15 to persuasion and deception checks",
+      "Network: Has contacts in most major settlements"
+    ],
+    "equipment_packages": [
+      {
+        "name": "Diplomat",
+        "items": [
+          "Fine clothing",
+          "Diplomatic credentials",
+          "Concealed recording device",
+          "Luxury items for gifts",
+          "Concealed holdout weapon"
+        ]
+      },
+      {
+        "name": "Con Artist",
+        "items": [
+          "Multiple outfit changes",
+          "Forgery kit",
+          "Disguise materials",
+          "Concealable pistol",
+          "Various fake IDs"
+        ]
+      }
+    ]
+  }
+]

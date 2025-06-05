@@ -1,0 +1,126 @@
+[
+  {
+    "name": "Reinforced Plating",
+    "compatibility": ["Medium Armor", "Heavy Armor", "Power Armor"],
+    "effects": {
+      "protection_bonus": "+20%",
+      "weight_increase": "+15%",
+      "mobility_penalty": "-5"
+    },
+    "cost": 800,
+    "weight": "Variable",
+    "rarity": "C",
+    "description": "Additional armor plating that provides better protection at the cost of increased weight and reduced mobility."
+  },
+  {
+    "name": "Reactive Coating",
+    "compatibility": ["Medium Armor", "Heavy Armor", "Power Armor"],
+    "effects": {
+      "energy_resistance_bonus": "+30%"
+    },
+    "cost": 1500,
+    "weight": "2 lbs",
+    "rarity": "R",
+    "description": "Special coating that dissipates energy weapon impacts, reducing their effectiveness."
+  },
+  {
+    "name": "Mobility System",
+    "compatibility": ["Medium Armor", "Heavy Armor", "Power Armor"],
+    "effects": {
+      "mobility_bonus": "+10",
+      "power_consumption_increase": "+15%"
+    },
+    "cost": 2000,
+    "weight": "5 lbs",
+    "rarity": "R",
+    "description": "Servo-assisted joints that improve mobility and reduce the penalty from wearing heavy armor. For powered armor only."
+  },
+  {
+    "name": "Stealth Module",
+    "compatibility": ["Light Armor", "Medium Armor", "Light Power Armor"],
+    "effects": {
+      "stealth_bonus": "+15",
+      "sound_dampening": true,
+      "thermal_masking": true
+    },
+    "cost": 3000,
+    "weight": "3 lbs",
+    "rarity": "VR",
+    "description": "Advanced stealth technology that reduces visual, audio, and thermal signatures."
+  },
+  {
+    "name": "Environmental Control",
+    "compatibility": ["All Armor"],
+    "effects": {
+      "environmental_protection": true,
+      "radiation_resistance": "+20",
+      "temperature_control": true
+    },
+    "cost": 1200,
+    "weight": "4 lbs",
+    "rarity": "R",
+    "description": "Internal systems that provide protection against radiation, extreme temperatures, and toxic environments."
+  },
+  {
+    "name": "Auto-Medic",
+    "compatibility": ["Medium Armor", "Heavy Armor", "Power Armor"],
+    "effects": {
+      "auto_healing": "1d8 per hour",
+      "stimulant_injection": "Combat boost when below 25% health"
+    },
+    "cost": 5000,
+    "weight": "6 lbs",
+    "rarity": "VR",
+    "description": "Automated medical system that administers first aid and combat stimulants when the wearer is injured."
+  },
+  {
+    "name": "Targeting Assistance",
+    "compatibility": ["Medium Armor", "Heavy Armor", "Power Armor"],
+    "effects": {
+      "accuracy_bonus": "+10",
+      "perception_bonus": "+15 for target identification"
+    },
+    "cost": 3500,
+    "weight": "2 lbs",
+    "rarity": "VR",
+    "description": "Integrated targeting systems that improve weapon accuracy and target identification."
+  },
+  {
+    "name": "Power Efficiency",
+    "compatibility": ["Power Armor"],
+    "effects": {
+      "power_consumption_reduction": "-30%",
+      "operational_time_increase": "+50%"
+    },
+    "cost": 4000,
+    "weight": "1 lb",
+    "rarity": "VR",
+    "description": "Advanced power management systems that significantly extend operational time between recharges."
+  },
+  {
+    "name": "Jump Jets",
+    "compatibility": ["Power Armor"],
+    "effects": {
+      "vertical_jump": "Up to 20m",
+      "horizontal_jump": "Up to 30m",
+      "power_consumption_increase": "+20% when used"
+    },
+    "cost": 6000,
+    "weight": "10 lbs",
+    "rarity": "XR",
+    "description": "Short-burst propulsion systems that allow for enhanced jumping capabilities."
+  },
+  {
+    "name": "Shield Generator",
+    "compatibility": ["Power Armor"],
+    "effects": {
+      "energy_shield": "50 HP",
+      "regeneration": "5 HP per round",
+      "power_consumption_increase": "+25% when active"
+    },
+    "cost": 10000,
+    "weight": "15 lbs",
+    "rarity": "XR",
+    "description": "Creates an energy shield that absorbs damage until depleted, then requires time to recharge."
+  }
+]

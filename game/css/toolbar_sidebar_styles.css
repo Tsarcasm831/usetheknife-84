@@ -1,0 +1,306 @@
+/* Styles moved from css/styles.css for Toolbar, Sidebar, and related UI elements */
+
+/* Toolbar Styles */
+#toolbar {
+  height: 50px;
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  position: relative; /* For z-index context */
+  z-index: 1002; /* Above map, below modals */
+  justify-content: space-between;
+}
+
+.toolbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#lsu-logo-img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+#bestiary-btn { /* Specific ID for bestiary button */
+  background: transparent;
+  color: orange;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 0;
+  display: inline-block;
+}
+
+/* General style for toolbar buttons that look like links */
+.toolbar-button-like-link {
+  background: transparent;
+  color: orange;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 0;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+.toolbar-button-like-link:hover {
+  text-decoration: underline;
+}
+
+/* Specific for LSU Teach if needed, though it can use .toolbar-button-like-link */
+#lsu-teach {
+  background: transparent;
+  color: orange;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 0;
+  display: inline-block;
+}
+
+#add-pin-btn {
+  background-color: #111827; /* Darker gray */
+  border: 1px solid orange;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#toggle-3d-btn {
+  background-color: #111827;
+  border: 1px solid orange;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 10px; /* Space from previous button */
+  display: none; /* Initially hidden, shown by gridController.js */
+  align-items: center;
+}
+
+#globe-view-btn {
+  background-color: #111827;
+  border: 1px solid orange;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#toggle-3d-btn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-image: url('../icons/terrain-icon.png'); /* Relative path from css folder */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grid-action-btn, .map-roads-btn, .find-events-btn {
+  display: none; /* Controlled by JS */
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  margin-left: 5px; /* Consistent spacing */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.grid-action-btn {
+  background-color: #2563eb; /* Blue */
+  margin-left: 10px; /* Specific for scan button if needed */
+}
+
+.map-roads-btn {
+  background-color: #34D399; /* Green */
+}
+
+.find-events-btn {
+  background-color: #EF4444; /* Red */
+}
+
+#sign-in-btn { /* Positioned relative to viewport */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: orange;
+  border: none;
+  cursor: pointer;
+  z-index: 1003; /* Above toolbar content, below modals */
+  font-size: 14px;
+}
+
+/* Right Sidebar Styles */
+#right-sidebar {
+  position: fixed;
+  right: -45%; /* Initially off-screen */
+  top: 50px; /* Below toolbar */
+  width: 45%;
+  height: calc(100% - 50px); /* Full height minus toolbar */
+  background-color: rgba(30, 30, 30, 0.9); /* Semi-transparent dark */
+  transition: right 0.3s, width 0.3s;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1001; /* Above map, below toolbar */
+  overflow-y: auto; /* Scroll for content */
+}
+
+#right-sidebar.open {
+  right: 0; /* Slides in */
+}
+
+#right-sidebar.full-width {
+  width: 100%; /* Expands to full width */
+}
+
+/* Sidebar Control Buttons */
+#close-right-sidebar, #expand-right-sidebar, #collapse-sidebar-content {
+  position: absolute;
+  top: 10px;
+  background-color: orange;
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#close-right-sidebar {
+  right: 10px;
+}
+
+#expand-right-sidebar {
+  right: 80px; /* Adjusted for new button */
+}
+
+#collapse-sidebar-content {
+  right: 150px; /* Adjusted for new button */
+}
+
+/* Sidebar Content Styling */
+#sidebar-content { /* Container for main sidebar items */
+  margin-bottom: 60px; /* Space for toggle buttons if they are at the bottom */
+}
+
+.sidebar-button { /* For main category buttons in sidebar */
+  background-color: #1f2937; /* Dark blue-gray */
+  color: white;
+  border: 1px solid orange;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  margin: 5px 0 10px; /* Spacing */
+  border-radius: 4px;
+}
+
+.sidebar-button:hover {
+  background-color: #374151;
+}
+
+.sidebar-dropdown { /* Dropdown container */
+  display: none; /* Hidden by default, shown on hover */
+  position: absolute; /* Relative to parent .group */
+  background-color: #1f2937;
+  border: 1px solid orange;
+  width: 100%;
+  z-index: 10; /* Above other sidebar content */
+  border-top: none; /* Optional: merge with button */
+  border-radius: 0 0 4px 4px;
+}
+
+.relative.group:hover .sidebar-dropdown { /* Tailwind 'group' hover */
+  display: block;
+}
+
+.sidebar-dropdown a { /* Links within dropdown */
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-dropdown a:hover {
+  background-color: #374151; /* Highlight on hover */
+}
+
+#sidebar-toggle-buttons { /* Container for control buttons if needed */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#geolocation-info {
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+}
+
+#geometa-block { /* For displaying metadata */
+  background-color: #2a2a2a; /* Darker box */
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: monospace; /* Good for code-like text */
+  white-space: pre-wrap; /* Preserves formatting */
+  border: 1px solid #444;
+}
+
+/* Sticky Footer Styles */
+#sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(17, 24, 39, 0.8); /* Dark, semi-transparent */
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Items spread out */
+  align-items: center;
+  padding: 5px 10px;
+  border-top: 1px solid orange;
+  z-index: 1000; /* Above map, below sidebar/toolbar */
+}
+
+#capture-fullscreen-btn, #screen-record-btn { /* Style for footer buttons */
+  background-color: #111827;
+  border: 1px solid orange;
+  color: white;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 16px; /* Or adjust for icon size */
+  border-radius: 4px;
+}
+
+#capture-fullscreen-btn:hover, #screen-record-btn:hover {
+  background-color: #374151;
+}
+
+/* General camera button style if used elsewhere */
+.camera-btn {
+  background-color: #111827;
+  border: 1px solid orange;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 5px; /* Example margin */
+}

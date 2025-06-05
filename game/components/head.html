@@ -1,0 +1,78 @@
+<!-- Head section with meta tags, CSS and JavaScript imports -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced split Screen Map with Geocoding and 3D View</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-fullscreen@1.0.2/dist/leaflet.fullscreen.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/modal_styles1.css">
+<link rel="stylesheet" href="css/modal_styles2.css">
+<link rel="stylesheet" href="css/modal_styles3.css">
+<link rel="stylesheet" href="css/toolbar_sidebar_styles.css">
+<link rel="stylesheet" href="css/map_component_styles.css">
+<link rel="stylesheet" href="css/prepareEventModal/index.css">
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-fullscreen@1.0.2/dist/Leaflet.fullscreen.min.js"></script>
+<!-- load Leaflet Side-by-Side plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-side-by-side/2.0.1/leaflet-side-by-side.min.js"></script>
+<script src="https://unpkg.com/leaflet-plugins@3.3.1/control/Permalink.js"></script>
+<script src="https://unpkg.com/leaflet-plugins@3.3.1/control/Permalink.Layer.js"></script>
+<script src="https://unpkg.com/leaflet-plugins@3.3.1/control/Permalink.Marker.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY_HERE&loading=async"></script> 
+<!-- Three.js for 3D terrain visualization -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "js/app.js": "./js/app.js",
+    "js/camera.js": "./js/camera.js",
+    "js/geolocation.js": "./js/geolocation.js",
+    "js/grid.js": "./js/grid.js",
+    "js/gridOverlay.js": "./js/gridOverlay.js",
+    "js/subgrid.js": "./js/subgrid.js",
+    "js/roadMapper.js": "./js/roadMapper.js",
+    "js/eventFinder.js": "./js/eventFinder.js",
+    "js/gridController.js": "./js/gridController.js",
+    "js/map.js": "./js/map.js",
+    "js/mapBase.js": "./js/mapBase.js",
+    "js/markerWithAddress.js": "./js/markerWithAddress.js",
+    "js/screenRecorder.js": "./js/screenRecorder.js",
+    "js/sidebar.js": "./js/sidebar.js",
+    "js/streetview.js": "./js/streetview.js",
+    "js/terraIncognita.js": "./js/terraIncognita.js",
+    "js/ui.js": "./js/ui.js",
+    "js/modals.js": "./js/modals.js",
+    "js/threeDModal.js": "./js/threeDModal.js",
+    "js/fdgModal.js": "./js/fdgModal.js",
+    "js/hiveModal.js": "./js/hiveModal.js",
+    "js/westOverlay.js": "./js/westOverlay.js",
+    "js/eastOverlay.js": "./js/eastOverlay.js",
+    "js/dmzOverlay.js": "./js/dmzOverlay.js",
+    "js/poiModal.js": "./js/poiModal.js",
+    "js/surveyPointPopup.js": "./js/surveyPointPopup.js",
+    "js/bestiaryModal.js": "./js/bestiaryModal.js",
+    "js/coreRulesModal.js": "./js/coreRulesModal.js",
+    "js/characterSheet.js": "./js/characterSheet.js",
+    "js/gddModal.js": "./js/gddModal.js",
+    "js/genericIframeModal.js": "./js/genericIframeModal.js",
+    "js/anthromorphModal.js": "./js/anthromorphModal.js",
+    "js/homeModal.js": "./js/homeModal.js",
+    "js/aliensModal.js": "./js/aliensModal.js",
+    "js/prepareEventModal.js": "./js/prepareEventModal/index.js",
+    "js/teamManager.js": "./js/teamManager.js",
+    "js/loadoutManager.js": "./js/loadoutManager.js",
+    "osmtogeojson": "https://esm.sh/osmtogeojson@3.0.0-beta.5",
+    "@turf/bbox-polygon": "https://esm.sh/@turf/bbox-polygon@6.5.0",
+    "@turf/intersect": "https://esm.sh/@turf/intersect@6.5.0",
+    "@turf/helpers": "https://esm.sh/@turf/helpers@6.5.0",
+    "@turf/point-on-feature": "https://esm.sh/@turf/point-on-feature@6.5.0",
+    "@turf/line-split": "https://esm.sh/@turf/line-split@6.5.0",
+    "@turf/boolean-point-in-polygon": "https://esm.sh/@turf/boolean-point-in-polygon@6.5.0"
+  }
+}
+</script>

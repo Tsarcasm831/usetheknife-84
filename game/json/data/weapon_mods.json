@@ -1,0 +1,126 @@
+[
+  {
+    "name": "Scope",
+    "compatibility": ["Rifle", "Sniper Rifle", "SMG"],
+    "effects": {
+      "range_bonus": "+25%",
+      "accuracy_bonus": "+5"
+    },
+    "cost": 150,
+    "weight": "0.5 lbs",
+    "rarity": "C",
+    "description": "Standard optical scope that improves accuracy at medium to long ranges."
+  },
+  {
+    "name": "Electro-optical Scope",
+    "compatibility": ["Rifle", "Sniper Rifle"],
+    "effects": {
+      "range_bonus": "+30%",
+      "accuracy_bonus": "+10",
+      "night_vision": true
+    },
+    "cost": 1200,
+    "weight": "1.5 lbs",
+    "rarity": "VR",
+    "description": "Advanced scope with IR capabilities for night operations."
+  },
+  {
+    "name": "Laser Sight",
+    "compatibility": ["Pistol", "SMG", "Rifle", "Shotgun"],
+    "effects": {
+      "accuracy_bonus": "+5",
+      "visibility_penalty": "+10% chance of being spotted"
+    },
+    "cost": 500,
+    "weight": "0.5 lbs",
+    "rarity": "R",
+    "description": "Projects a laser dot on target for improved aim, especially in low-light conditions."
+  },
+  {
+    "name": "Extended Magazine",
+    "compatibility": ["Pistol", "SMG", "Rifle"],
+    "effects": {
+      "capacity_increase": "+50%",
+      "weight_increase": "+20%"
+    },
+    "cost": 100,
+    "weight": "Variable",
+    "rarity": "C",
+    "description": "Increases ammunition capacity at the cost of slightly increased weight."
+  },
+  {
+    "name": "Recoil Compensator",
+    "compatibility": ["Pistol", "SMG", "Rifle", "Shotgun"],
+    "effects": {
+      "recoil_reduction": "-30%",
+      "accuracy_bonus_rapid_fire": "+3"
+    },
+    "cost": 300,
+    "weight": "0.8 lbs",
+    "rarity": "R",
+    "description": "Reduces felt recoil, improving accuracy during rapid firing."
+  },
+  {
+    "name": "Suppressor",
+    "compatibility": ["Pistol", "SMG", "Rifle"],
+    "effects": {
+      "noise_reduction": "-75%",
+      "damage_penalty": "-5%",
+      "range_penalty": "-10%"
+    },
+    "cost": 400,
+    "weight": "1 lb (pistol), 2 lbs (rifle)",
+    "rarity": "R",
+    "description": "Significantly reduces the sound signature of the weapon."
+  },
+  {
+    "name": "Barrel Extension",
+    "compatibility": ["Pistol", "SMG"],
+    "effects": {
+      "range_bonus": "+15%",
+      "accuracy_bonus": "+2",
+      "concealability_penalty": "+20%"
+    },
+    "cost": 250,
+    "weight": "0.7 lbs",
+    "rarity": "C",
+    "description": "Extends barrel length for improved range and accuracy at the cost of concealability."
+  },
+  {
+    "name": "Plasma Resonator",
+    "compatibility": ["Energy"],
+    "effects": {
+      "damage_bonus": "+15%",
+      "energy_consumption_increase": "+20%"
+    },
+    "cost": 1500,
+    "weight": "1 lb",
+    "rarity": "VR",
+    "description": "Enhances plasma weapon damage output at the cost of increased energy consumption."
+  },
+  {
+    "name": "Rail Accelerator",
+    "compatibility": ["Rail"],
+    "effects": {
+      "damage_bonus": "+20%",
+      "armor_penetration_bonus": "+2",
+      "heat_generation_increase": "+30%"
+    },
+    "cost": 2000,
+    "weight": "2 lbs",
+    "rarity": "VR",
+    "description": "Increases rail weapon velocity for improved damage and armor penetration."
+  },
+  {
+    "name": "Tactical Grip",
+    "compatibility": ["Pistol", "SMG", "Rifle", "Shotgun"],
+    "effects": {
+      "handling_bonus": "+2",
+      "draw_speed_bonus": "+10%"
+    },
+    "cost": 150,
+    "weight": "0.3 lbs",
+    "rarity": "C",
+    "description": "Ergonomic grip that improves weapon handling and draw speed."
+  }
+]

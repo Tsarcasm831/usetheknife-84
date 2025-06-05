@@ -1,0 +1,161 @@
+[
+  {
+    "name": "FDG Rail Pistol",
+    "category": "Pistol",
+    "type": "Rail",
+    "damage": "2d8+8",
+    "range": "50m",
+    "rate_of_fire": 1,
+    "capacity": 12,
+    "weight": "2 lbs",
+    "cost": 800,
+    "rarity": "R",
+    "special_properties": [
+      "Armor piercing: Reduces target armor value by 4"
+    ]
+  },
+  {
+    "name": "FDG Rail Carbine",
+    "category": "Rifle",
+    "type": "Rail",
+    "damage": "3d8+10",
+    "range": "200m",
+    "rate_of_fire": 2,
+    "capacity": 20,
+    "weight": "5 lbs",
+    "cost": 1500,
+    "rarity": "R",
+    "special_properties": [
+      "Armor piercing: Reduces target armor value by 6"
+    ]
+  },
+  {
+    "name": "High Velocity Plasma Pistol",
+    "category": "Pistol",
+    "type": "Energy",
+    "damage": "3d6+6",
+    "range": "40m",
+    "rate_of_fire": 1,
+    "capacity": 10,
+    "weight": "1.5 lbs",
+    "cost": 1200,
+    "rarity": "VR",
+    "special_properties": [
+      "Energy damage: Ignores 2 points of physical armor",
+      "Non-persistent variant available (MIL)"
+    ]
+  },
+  {
+    "name": "High Velocity Plasma Carbine",
+    "category": "Rifle",
+    "type": "Energy",
+    "damage": "4d6+8",
+    "range": "150m",
+    "rate_of_fire": 3,
+    "capacity": 18,
+    "weight": "4 lbs",
+    "cost": 2000,
+    "rarity": "VR",
+    "special_properties": [
+      "Energy damage: Ignores 3 points of physical armor",
+      "Non-persistent variant available (MIL)"
+    ]
+  },
+  {
+    "name": "30mm HV Plasma Repeating Cannon",
+    "category": "Heavy Weapon",
+    "type": "Energy",
+    "damage": "6d8+20",
+    "range": "300m",
+    "rate_of_fire": 5,
+    "capacity": 100,
+    "weight": "30 lbs",
+    "cost": 15000,
+    "rarity": "XR",
+    "special_properties": [
+      "Energy damage: Ignores 5 points of physical armor",
+      "Mounted: Requires power armor or fixed mount to operate",
+      "Non-persistent variant available (MIL)"
+    ]
+  },
+  {
+    "name": "Standard Shotgun",
+    "category": "Shotgun",
+    "type": "Projectile",
+    "damage": "4d8 (close) / 2d8 (medium)",
+    "range": "25m/50m",
+    "rate_of_fire": 1,
+    "capacity": 8,
+    "weight": "7 lbs",
+    "cost": 500,
+    "rarity": "C",
+    "special_properties": [
+      "Spread: +5 to hit at close range",
+      "Multiple ammunition types available"
+    ]
+  },
+  {
+    "name": "Tactical SMG",
+    "category": "SMG",
+    "type": "Projectile",
+    "damage": "2d6+4",
+    "range": "80m",
+    "rate_of_fire": 5,
+    "capacity": 30,
+    "weight": "3 lbs",
+    "cost": 1000,
+    "rarity": "C",
+    "special_properties": [
+      "Burst fire: Can fire 1, 3, or 5 round bursts",
+      "Compact: Can be concealed with appropriate skill check"
+    ]
+  },
+  {
+    "name": "Sniper Rifle",
+    "category": "Rifle",
+    "type": "Projectile",
+    "damage": "5d8+10",
+    "range": "600m",
+    "rate_of_fire": 1,
+    "capacity": 5,
+    "weight": "10 lbs",
+    "cost": 3000,
+    "rarity": "R",
+    "special_properties": [
+      "Scope: +10 to hit at long ranges",
+      "High-powered: Armor piercing value of 5"
+    ]
+  },
+  {
+    "name": "Heavy Machine Gun",
+    "category": "Heavy Weapon",
+    "type": "Projectile",
+    "damage": "3d10+12",
+    "range": "400m",
+    "rate_of_fire": 10,
+    "capacity": 100,
+    "weight": "25 lbs",
+    "cost": 8000,
+    "rarity": "R",
+    "special_properties": [
+      "Mounted: Requires bipod, tripod, or fixed mount to operate effectively",
+      "Suppression: Can provide area denial over a 10m radius"
+    ]
+  },
+  {
+    "name": "Frag Grenade",
+    "category": "Explosive",
+    "type": "Thrown",
+    "damage": "5d6 (10m radius)",
+    "range": "STR x 2m",
+    "rate_of_fire": 1,
+    "capacity": 1,
+    "weight": "1 lb",
+    "cost": 200,
+    "rarity": "R",
+    "special_properties": [
+      "Fragmentation: Damage reduces by 1d6 per 2m from center",
+      "Smart variant available: Can be programmed to detonate under specific conditions"
+    ]
+  }
+]

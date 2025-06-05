@@ -1,0 +1,90 @@
+/* Intel Tab specific styling */
+
+.intel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+    height: 100%;
+}
+
+.intel-section {
+    background-color: rgba(40, 40, 40, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    border-left: 3px solid #666;
+}
+
+.intel-section h4 {
+    margin-top: 0;
+    color: #ddd;
+    font-size: 1.1em;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+.enemy-analysis {
+    border-left-color: #EF4444; /* Red */
+}
+
+#enemy-units-preview {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 4px;
+}
+
+.known-threats {
+    border-left-color: #F59E0B; /* Amber */
+}
+
+.known-threats ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.environmental-factors {
+    border-left-color: #3B82F6; /* Blue */
+}
+
+.subgrid-snapshot {
+    border-left-color: #8B5CF6; /* Purple */
+    grid-row: span 2;
+}
+
+#import-subgrid-snapshot-btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.intel-reports {
+    border-left-color: #10B981; /* Green */
+    grid-column: span 2;
+}
+
+#intel-reports-display {
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.7);
+    color: #ddd;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    margin-top: 10px;
+    resize: none;
+}
+
+@media (max-width: 900px) {
+    .intel-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .intel-section {
+        grid-column: 1;
+    }
+    
+    .intel-reports {
+        grid-column: 1;
+    }
+}

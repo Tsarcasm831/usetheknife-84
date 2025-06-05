@@ -1,0 +1,692 @@
+  /* Character Sheet Specific Styles */
+  .character-sheet-container {
+    background-color: #2a2a2a; 
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    font-size: 10pt; 
+    line-height: 1.4;
+  }
+  
+  .character-sheet-title {
+    text-align: center;
+    color: orange;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-family: "serif"; 
+    border-bottom: 2px solid orange;
+    padding-bottom: 5px;
+  }
+  
+  .char-sheet-section {
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333; 
+  }
+  
+  .char-sheet-section h4 {
+    color: #f0ad4e; 
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #4a4a4a;
+    padding-bottom: 3px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  .char-sheet-section h5 { /* Sub-headings within sections */
+    color: #e09d3e;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-top: 1px dashed #4a4a4a;
+    padding-top: 5px;
+  }
+  
+  .char-sheet-header-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Wider columns */
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #555;
+  }
+  
+  .char-sheet-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .char-sheet-field label {
+    font-size: 0.7em;
+    color: #aaa;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+  
+  .char-sheet-field input[type="text"],
+  .char-sheet-field input[type="number"],
+  .char-sheet-field select { /* Added select here */
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #777;
+    border-radius: 2px;
+    padding: 4px 6px;
+    font-size: 0.9em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .char-sheet-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 15px;
+  }
+  
+  .char-sheet-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Attribute Block Styling */
+  .attribute-block {
+    background-color: #404040;
+    border-radius: 3px;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  .attribute-score-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .attribute-score-input label {
+    font-weight: bold;
+    color: #ddd;
+    width: 100px; /* Increased width for longer names */
+    font-size: 1.0em; /* Slightly larger */
+    text-transform: uppercase;
+  }
+  .attribute-score-input .attr-score {
+    width: 60px; /* Wider score input */
+    text-align: center;
+    font-size: 1.1em; /* Larger score font */
+    font-weight: bold;
+    margin: 0 5px;
+    padding: 5px 2px;
+    background-color: #fff; /* Ensure light background */
+    color: #222; /* Ensure dark text */
+  }
+
+  .attribute-derived-stats {
+    font-size: 0.75em;
+    color: #ccc;
+    padding-left: 10px;
+    border-left: 2px solid #555;
+    margin-top: 5px;
+  }
+  .attribute-derived-stats .derived-stat-item {
+    margin: 2px 0;
+  }
+  .attribute-derived-stats .derived-stat-item strong {
+    color: #bbb;
+  }
+  
+  .char-sheet-saving-throws .saving-throw,
+  .char-sheet-skills .skill {
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+    margin-bottom: 3px;
+  }
+  .prof-checkbox {
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+  }
+  .save-value, .skill-value {
+    width: 35px;
+    text-align: center;
+    margin-right: 5px;
+    font-size: 0.9em;
+    padding: 2px;
+  }
+  
+  .scrollable-list { /* Generic scrollable list style */
+    overflow-y: auto;
+    padding-right: 5px; /* For scrollbar */
+    background-color: #383838;
+    border: 1px solid #4f4f4f;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  .scrollable-list::-webkit-scrollbar { width: 6px; }
+  .scrollable-list::-webkit-scrollbar-track { background: #444; }
+  .scrollable-list::-webkit-scrollbar-thumb { background-color: #666; border-radius: 3px; }
+
+  .char-sheet-skills {
+    max-height: 220px; /* Adjusted height */
+  }
+  
+  .char-sheet-combat-stats .combat-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 0.85em;
+  }
+  .char-sheet-combat-stats .combat-stat label {
+    color: #ccc;
+  }
+  .char-sheet-combat-stats .combat-stat input {
+    width: 60px; 
+    text-align: center;
+    padding: 3px;
+  }
+  
+  .char-sheet-section textarea {
+    width: 100%;
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #777;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 50px;
+  }
+  .char-sheet-section label[for*="char-"] { 
+      display: block;
+      font-size: 0.8em;
+      color: #bbb;
+      margin-bottom: 3px;
+  }
+
+  #save-char-sheet-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: orange;
+    color: #1e1e1e;
+    font-weight: bold;
+  }
+  #save-char-sheet-btn:hover {
+    background-color: #ffc966;
+  }
+
+  .char-sheet-equipment select,
+  .char-sheet-equipment textarea {
+    width: 100%;
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #777;
+    border-radius: 2px;
+    padding: 4px 6px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    margin-bottom: 5px; /* Space between equipment fields */
+  }
+   .char-sheet-equipment .char-sheet-field {
+    margin-bottom: 8px; /* Add some space between each equipment dropdown/textarea container */
+  }
+
+  .char-sheet-checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px; /* Space between checkboxes */
+    padding-left: 5px; /* Indent checkbox list slightly */
+  }
+  .char-sheet-checkbox-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+    margin-bottom: 2px; /* Reduced margin for denser list */
+  }
+  .char-sheet-checkbox-item input[type="checkbox"] {
+    margin-right: 6px;
+    width: 12px;
+    height: 12px;
+  }
+  .char-sheet-checkbox-item label {
+    color: #ddd;
+    cursor: help; /* For tooltip */
+    flex-grow: 1; /* Allow label to take space */
+  }
+  .char-sheet-checkbox-item label:hover {
+    color: orange;
+  }
+  
+  .char-sheet-traits #trait-points-total {
+    font-weight: normal; /* Keep it normal, part of h4 */
+    color: #ccc;
+    font-size: 0.8em; /* Smaller than h4 text */
+  }
+
+  .mutation-details {
+    font-size:0.8em;
+    padding-left:5px; /* Reduced padding */
+    background-color: #383838;
+    border-left: 2px solid orange;
+    margin-left: 15px; /* Indent details section */
+    padding: 5px;
+    border-radius: 3px;
+    margin-top: 3px; /* Space from checkbox */
+  }
+  .mutation-details p { margin: 2px 0; line-height: 1.3;}
+  .mutation-details strong { color: #f0ad4e; }
+  .mutation-effect-description {
+    font-size: 0.9em;
+    color: #b0e0e6; /* Light blue for description */
+    margin-top: 4px;
+    padding: 3px;
+    background-color: #2c2c2c;
+    border-radius: 2px;
+  }
+  .mutation-item-container { /* Add a class to the main div of each mutation for better structure */
+    padding-bottom: 5px; /* Add some space below each mutation entry */
+    margin-bottom: 5px; /* Add some space below each mutation entry */
+    border-bottom: 1px dashed #4a4a4a; /* Separator */
+  }
+  .mutation-item-container:last-child {
+    border-bottom: none; /* Remove border for the last item */
+  }
+
+  .loading-message, .error-message { /* General styling for loading/error messages in modals */
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+  }
+  .loading-message {
+    color: orange;
+  }
+  .error-message {
+    color: #ff6b6b; /* A reddish color for errors */
+  }
+
+  /* Specifics for GDD Modal */
+  #gdd-modal h2 { 
+    color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Prompt", sans-serif;
+  }
+  #gdd-content-area {
+    flex-grow:1; 
+    overflow-y:auto; 
+    margin-bottom:15px;
+  }
+  .gdd-section {
+    margin-bottom: 20px;
+  }
+  .gdd-section h3 {
+    color: orange;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 4px;
+  }
+  .gdd-section textarea {
+    width: 100%;
+    min-height: 100px; 
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid orange;
+    border-radius: 4px;
+    padding: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical; 
+  }
+  .gdd-functionality-list {
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid orange;
+    border-radius: 4px;
+    max-height: 300px; /* Or adjust as needed */
+    overflow-y: auto;
+  }
+  .gdd-functionality-list .functionality-items-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+  }
+  .gdd-functionality-list .functionality-items-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  .gdd-functionality-list .functionality-items-list li strong {
+    color: #f0ad4e; /* Light orange for emphasis */
+  }
+  #save-gdd-btn { 
+    background-color: #1f2937;
+    color: white;
+    border: 1px solid orange;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px; 
+  }
+  #save-gdd-btn:hover {
+    background-color: #374151;
+  }
+  
+  /* Terrain Info Overlay and 3D View Controls (used with 3D Modal) */
+  .terrain-info-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none; 
+    border: 1px solid rgba(255,165,0,0.5);
+    max-width: 300px;
+    line-height: 1.4;
+    z-index: 10; 
+  }
+  .terrain-info-overlay p {
+    margin: 4px 0;
+  }
+  .threeD-view-controls {
+    position: absolute;
+    top: 15px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; 
+    display: flex;
+    justify-content: center;
+  }
+  .view-toggle-btn {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid orange;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+  .view-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: orange;
+  }
+  /* If #threeD-street-view needs specific styling within the modal */
+  #threeD-street-view {
+    position: relative; 
+    z-index: 5; 
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Screen Record Panel */
+  #screen-record-panel {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(17, 24, 39, 0.8); 
+    border: 1px solid orange;
+    padding: 10px;
+    resize: both; 
+    overflow: auto; 
+    min-width: 200px;
+    min-height: 150px;
+    z-index: 1010; 
+    border-radius: 5px;
+  }
+  #screen-record-panel.active {
+    display: block; 
+  }
+  
+  #face-video { 
+    width: 100%;
+    height: calc(100% - 40px); 
+    background-color: black; 
+    border-radius: 3px;
+  }
+  
+  #screen-record-controls { 
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  #screen-record-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 5px;
+  }
+  #screen-record-controls button:hover {
+    color: orange;
+  }
+  
+  /* Generic Iframe Modal */
+  .generic-iframe-modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2050; /* High z-index */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Backdrop */
+    align-items: center;
+    justify-content: center;
+  }
+  .generic-iframe-modal-overlay.active {
+    display: flex; /* Show the modal */
+  }
+  
+  .generic-iframe-modal-content {
+    background-color: #1e1e1e; 
+    color: white; 
+    padding: 20px; 
+    border: 1px solid orange; 
+    border-radius: 8px; 
+    width: 80%; 
+    height: 80%; 
+    max-width: 1000px; 
+    max-height: 90vh; 
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+  
+  .generic-iframe-modal-close-btn {
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 28px; 
+    background: none; 
+    border: none; 
+    color: #ccc; 
+    cursor: pointer; 
+    line-height: 1;
+  }
+  .generic-iframe-modal-close-btn:hover {
+    color: orange;
+  }
+  
+  .generic-iframe-modal-content h3 {
+    color: orange; 
+    margin-bottom: 15px; 
+    text-align: center; 
+    padding-top: 10px; /* Align with close button */
+  }
+  
+  .generic-iframe-modal-content iframe {
+    flex-grow: 1; 
+    width: 100%; 
+    height: calc(100% - 60px); /* Adjust based on h3 height and padding */
+    border: none; 
+    background-color: white; /* Background for the iframe content area */
+  }
+  
+  /* Home Modal Styles */
+  #home-modal {
+    position: fixed;
+    z-index: 1100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #home-modal.active {
+    display: flex;
+  }
+  
+  .home-modal-content {
+    background-color: #1e1e1e;
+    color: white;
+    margin: auto;
+    padding: 25px;
+    border: 2px solid orange;
+    width: 95%;
+    height: 95%;
+    max-width: 95%;
+    max-height: 95%;
+    overflow-y: auto;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-modal-close-btn {
+    color: #ccc;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    font-weight: bold;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+  
+  .home-modal-close-btn:hover,
+  .home-modal-close-btn:focus {
+    color: orange;
+    text-decoration: none;
+  }
+  
+  #home-modal h2 {
+    color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  
+  .home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    height: calc(100% - 60px);
+  }
+  
+  .home-stats {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #444;
+  }
+  
+  .home-actions {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #444;
+  }
+  
+  .home-map {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #444;
+    overflow: hidden;
+  }
+  
+  .home-content h3 {
+    color: orange;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+  }
+  
+  .home-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .home-content strong {
+    color: #f0ad4e;
+  }
+  
+  .home-action-btn {
+    display: block;
+    width: 100%;
+    background-color: #1f2937;
+    color: white;
+    border: 1px solid orange;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .home-action-btn:hover {
+    background-color: #374151;
+  }
+  
+  .base-map-container {
+    height: calc(100% - 40px);
+    background-color: #222;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .char-sheet-actions-top {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555;
+  }
+  .char-sheet-actions-top .sidebar-button { /* Re-use sidebar button style */
+    margin: 0 5px; /* Small margin between buttons */
+    padding: 8px 12px; /* Slightly smaller padding */
+    font-size: 0.9em;
+  }

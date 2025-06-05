@@ -1,0 +1,178 @@
+/* Core Rules & GDD Modal Styles (sharing some structure) */
+#core-rules-modal, #gdd-modal {
+    position: fixed;
+    z-index: 1050; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Changed to hidden, content scrolls internally */
+    background-color: rgba(0,0,0,0.7);
+    display: none; /* Default hidden */
+    align-items: center;
+    justify-content: center;
+}
+#core-rules-modal.active, #gdd-modal.active {
+    display: flex;
+}
+
+.core-rules-modal-content, .gdd-modal-content { 
+    background-color: #1e1e1e;
+    color: white;
+    margin: auto; 
+    padding: 25px;
+    border: 1px solid orange;
+    width: 90%; 
+    max-width: 1400px; 
+    max-height: 90vh; 
+    overflow-y: auto;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+.core-rules-close-btn, .gdd-modal-close-btn { 
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.core-rules-close-btn:hover,
+.core-rules-close-btn:focus,
+.gdd-modal-close-btn:hover,
+.gdd-modal-close-btn:focus {
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Specifics for Core Rules Modal */
+#core-rules-modal h2 {
+    color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Prompt", sans-serif;
+}
+#core-rules-category-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.core-rules-category-btn { 
+    background-color: #1f2937;
+    color: white;
+    border: 1px solid orange;
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.2s, transform 0.2s;
+    flex-grow: 1; 
+    text-align: center;
+}
+.core-rules-category-btn:hover {
+    background-color: #374151;
+    transform: translateY(-2px);
+}
+#core-rules-content-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+#core-rules-back-btn { 
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+#core-rules-dynamic-content { 
+    line-height: 1.7;
+}
+#core-rules-dynamic-content h3 {
+      color: orange;
+      margin-top: 15px;
+      margin-bottom: 8px;
+}
+#core-rules-dynamic-content p {
+      margin-bottom: 10px;
+}
+#core-rules-dynamic-content ul {
+      list-style-position: inside;
+      margin-bottom: 10px;
+}
+#core-rules-dynamic-content li {
+      margin-bottom: 5px;
+}
+
+/* Specifics for GDD Modal - can share general content styling with core-rules or have its own */
+#gdd-modal h2 { 
+    color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Prompt", sans-serif;
+}
+#gdd-content-area {
+    flex-grow:1; 
+    overflow-y:auto; 
+    margin-bottom:15px;
+}
+.gdd-section {
+    margin-bottom: 20px;
+}
+.gdd-section h3 {
+    color: orange;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 4px;
+}
+.gdd-section textarea#gdd-overview { /* Target the specific textarea for GDD */
+    width: 100%;
+    min-height: 150px; /* Ensure enough space for the overview */
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid orange;
+    border-radius: 4px;
+    padding: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical; 
+}
+.gdd-functionality-list {
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid orange;
+    border-radius: 4px;
+    max-height: 250px; /* Adjusted height for lists */
+    overflow-y: auto;
+}
+.gdd-functionality-list ul { /* Ensure ul inside is targeted */
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+.gdd-functionality-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+.gdd-functionality-list li strong {
+    color: #f0ad4e; /* Light orange for emphasis */
+}
+#save-gdd-btn { 
+    background-color: #1f2937;
+    color: white;
+    border: 1px solid orange;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px; 
+    align-self: center; /* Center the button */
+}
+#save-gdd-btn:hover {
+    background-color: #374151;
+}

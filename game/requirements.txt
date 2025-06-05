@@ -1,0 +1,4 @@
+# Python dependencies for optional backend integration
+flask==2.3.2
+requests==2.31.0
+nano

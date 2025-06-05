@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Basic Task Resolution",
+    "description": "To resolve a task, roll 1d100 and add relevant attribute and skill modifiers. Compare against difficulty class (DC) to determine success or failure.",
+    "rules": [
+      "Roll 1d100 + Attribute Modifier + Skill Value",
+      "Compare result against DC: 60 (Easy), 70 (Average), 80 (Challenging), 90 (Difficult), 100+ (Very Difficult)",
+      "Success if roll meets or exceeds DC"
+    ]
+  },
+  {
+    "name": "Combat Initiative",
+    "description": "Determines order of actions in combat rounds.",
+    "rules": [
+      "Roll 1d100 + Perception modifier + initiative bonuses",
+      "Characters act in descending order of initiative results",
+      "Tied initiative results are resolved by higher Perception, then Dexterity"
+    ]
+  },
+  {
+    "name": "Attack Resolution",
+    "description": "System for resolving attack attempts in combat.",
+    "rules": [
+      "Roll 1d100 + Dexterity modifier + relevant weapon skill",
+      "If using firearms, apply range penalties (-10 medium range, -20 long range)",
+      "Compare against target's defense value (60 + Dexterity modifier + armor/shield bonuses)",
+      "Success if roll meets or exceeds target's defense"
+    ]
+  },
+  {
+    "name": "Damage Resolution",
+    "description": "System for calculating damage from successful attacks.",
+    "rules": [
+      "Roll weapon damage dice (e.g., 2d8+5)",
+      "Apply attribute bonuses (e.g., STR/5 for melee weapons, INT/5 for some energy weapons)",
+      "Subtract target's armor value from damage",
+      "Apply any special damage effects (critical hits, armor penetration, etc.)",
+      "Subtract final damage from target's hit points"
+    ]
+  },
+  {
+    "name": "Hit Points",
+    "description": "Represents a character's ability to avoid serious injury.",
+    "rules": [
+      "Base HP = Vitality x 2",
+      "Add any bonus HP from traits, advantages, or equipment",
+      "HP is divided among body parts (Head, Torso, Arms, Legs)",
+      "Characters are incapacitated when any vital body part reaches 0 HP"
+    ]
+  },
+  {
+    "name": "Critical Hits",
+    "description": "Special attacks that cause additional damage or effects.",
+    "rules": [
+      "Critical hit occurs on attack roll of 95-100 (varies by Perception)",
+      "Roll on critical hit table for location and effect",
+      "Effects can include bonus damage, status effects, or targeted injuries"
+    ]
+  },
+  {
+    "name": "Psionics",
+    "description": "System for using and resolving psionic abilities.",
+    "rules": [
+      "Psionic powers are based on PSY attribute",
+      "Each power costs Mana Points to activate",
+      "Mana Pool = PSY x 2 + modifiers",
+      "To use a power, roll 1d100 + PSY modifier + relevant skill",
+      "Compare against power's difficulty or target's resistance"
+    ]
+  },
+  {
+    "name": "Experience and Advancement",
+    "description": "System for character growth and improvement.",
+    "rules": [
+      "Characters earn Experience Points (XP) for completing objectives, combat, and role-playing",
+      "XP can be spent to improve attributes (cost = new value x 10)",
+      "XP can be spent to improve skills (cost = new value x 5)",
+      "XP can be spent to acquire new traits or advantages (cost varies)"
+    ]
+  },
+  {
+    "name": "Skill Checks",
+    "description": "System for resolving skill-based challenges.",
+    "rules": [
+      "Base DC for skill checks is determined by difficulty",
+      "Roll 1d100 + relevant attribute modifier + skill value",
+      "Critical success on roll of 95+ (regardless of DC)",
+      "Critical failure on roll of 5 or less (regardless of modifiers)"
+    ]
+  },
+  {
+    "name": "Healing and Recovery",
+    "description": "Rules for natural healing and medical treatment.",
+    "rules": [
+      "Natural healing: Recover VIT/10 HP per day of rest",
+      "First Aid: Heal 1d8 HP immediately, usable once per wound",
+      "Medical Treatment: Heal 2d8 HP, requires medical skill and supplies",
+      "Critical injuries require specialized treatment and longer recovery times"
+    ]
+  }
+]

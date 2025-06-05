@@ -1,0 +1,20 @@
+/* Main entry point for Prepare Event Modal styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Orbitron:wght@500;700&display=swap');
+
+/* Import core modal styles */
+@import './core/modal.css';
+@import './core/tabs.css';
+
+/* Import tab-specific styles */
+@import './tabs/team-tab.css';
+@import './tabs/loadout-tab.css';
+@import './tabs/briefing-tab.css';
+@import './tabs/intel-tab.css';
+@import './tabs/map-tab.css';
+@import './tabs/support-tab.css';
+@import './tabs/launch-tab.css';
+
+/* Import reusable component styles */
+@import './components/scrollable-list.css';
+@import './components/slots.css';
+@import './components/buttons.css';

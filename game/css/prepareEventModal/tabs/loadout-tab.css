@@ -1,0 +1,153 @@
+/* Loadout Tab specific styling */
+
+.loadout-container {
+    display: flex;
+    height: 100%;
+}
+
+.selected-soldiers-loadouts {
+    flex-basis: 65%;
+    margin-right: 20px;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.soldier-loadout-panel {
+    background-color: rgba(40, 40, 40, 0.8);
+    border-radius: 5px;
+    border: 1px solid #555;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.soldier-loadout-header {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.soldier-loadout-portrait {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #666;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.soldier-loadout-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.soldier-loadout-details {
+    flex-grow: 1;
+}
+
+.soldier-loadout-name {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.soldier-loadout-class {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+.soldier-loadout-slots {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.equipment-slot {
+    background-color: rgba(60, 60, 60, 0.5);
+    border: 2px dashed #555;
+    border-radius: 5px;
+    padding: 10px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.equipment-slot.empty {
+    cursor: pointer;
+}
+
+.equipment-slot.empty:hover {
+    background-color: rgba(80, 80, 80, 0.5);
+    border-color: #777;
+}
+
+.equipment-slot.drag-over {
+    background-color: rgba(255, 165, 0, 0.2);
+    border-color: orange;
+}
+
+.equipment-slot:not(.empty) {
+    border-style: solid;
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+.equipment-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.equipment-name {
+    font-size: 0.8em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.equipment-remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(220, 20, 20, 0.7);
+    color: white;
+    border: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.equipment-remove-btn:hover {
+    background-color: rgb(220, 20, 20);
+    transform: scale(1.1);
+}
+
+.available-equipment-panel {
+    flex-basis: 35%;
+    padding-left: 15px;
+    border-left: 1px solid #444;
+}
+
+.available-equipment-panel h3 {
+    margin-top: 0;
+    color: #ddd;
+    font-size: 1.1em;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+.equipment-list {
+    margin-bottom: 20px;
+}

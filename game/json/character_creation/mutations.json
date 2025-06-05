@@ -1,0 +1,161 @@
+[
+  {
+    "name": "Enhanced Strength",
+    "category": "Physical",
+    "type": "Beneficial",
+    "description": "Mutation causes increased muscle density and power.",
+    "effects": [
+      "+10 to STR attribute",
+      "+5 to melee damage",
+      "+20% carrying capacity"
+    ],
+    "drawbacks": [
+      "Increased caloric requirements (need to eat 50% more)",
+      "May appear visibly muscular or deformed"
+    ]
+  },
+  {
+    "name": "Armored Skin",
+    "category": "Physical",
+    "type": "Beneficial",
+    "description": "Skin develops tough, armored plates or scales.",
+    "effects": [
+      "Natural armor: +10 to all body locations",
+      "Resistance to cutting and piercing damage",
+      "Damage reduction: 2 points from all physical attacks"
+    ],
+    "drawbacks": [
+      "-5 to DEX due to reduced flexibility",
+      "Cannot wear some types of armor",
+      "Visibly mutated appearance"
+    ]
+  },
+  {
+    "name": "Psionic Sensitivity",
+    "category": "Mental",
+    "type": "Beneficial",
+    "description": "Brain mutation enhances psionic potential.",
+    "effects": [
+      "+15 to PSY attribute",
+      "Access to one additional psionic power",
+      "Mana regeneration increased by 25%"
+    ],
+    "drawbacks": [
+      "Vulnerable to psionic attacks (-5 to defense)",
+      "Occasional headaches in crowded areas",
+      "May experience random psionic phenomena when stressed"
+    ]
+  },
+  {
+    "name": "Regeneration",
+    "category": "Physical",
+    "type": "Beneficial",
+    "description": "Body can rapidly repair injuries and regrow tissue.",
+    "effects": [
+      "Heal 1d6 HP per round naturally",
+      "Regrow lost limbs over 1d6 days",
+      "Immunity to bleeding effects"
+    ],
+    "drawbacks": [
+      "Doubled food requirements",
+      "Pain sensitivity increased (+25% damage from pain-based attacks)",
+      "Cancer risk increases with age"
+    ]
+  },
+  {
+    "name": "Toxic Blood",
+    "category": "Physical",
+    "type": "Mixed",
+    "description": "Blood contains powerful toxins.",
+    "effects": [
+      "When injured, attackers in melee range must make VIT check or take 1d6 poison damage",
+      "Immunity to most poisons and toxins",
+      "+10 resistance to disease"
+    ],
+    "drawbacks": [
+      "Medical treatments half as effective",
+      "Risk of self-poisoning when severely injured",
+      "Cannot donate blood or receive transfusions"
+    ]
+  },
+  {
+    "name": "Photosynthetic Skin",
+    "category": "Physical",
+    "type": "Mixed",
+    "description": "Skin contains chlorophyll-like compounds that convert light to energy.",
+    "effects": [
+      "Reduced food requirements (50%)",
+      "Can go without food for weeks if exposed to sunlight",
+      "Minor healing (1 HP per hour) in sunlight"
+    ],
+    "drawbacks": [
+      "Skin has greenish hue",
+      "Weakness in prolonged darkness (-5 to all attributes after 3+ days)",
+      "Vulnerability to dehydration (+50% water requirements)"
+    ]
+  },
+  {
+    "name": "Vestigial Wings",
+    "category": "Physical",
+    "type": "Mixed",
+    "description": "Partially developed wings sprouting from back.",
+    "effects": [
+      "Gliding capability (can safely fall from any height if conscious)",
+      "+10 to jumping-related checks",
+      "Can eventually develop into functional wings with further mutation"
+    ],
+    "drawbacks": [
+      "Cannot wear standard back-worn equipment",
+      "Requires custom armor",
+      "Visibly mutated appearance"
+    ]
+  },
+  {
+    "name": "Radiation Absorption",
+    "category": "Physical",
+    "type": "Beneficial",
+    "description": "Body processes radiation as energy instead of taking damage.",
+    "effects": [
+      "Immunity to radiation damage",
+      "Convert radiation exposure to temporary HP (1 per rad, up to 20)",
+      "Can sense radioactive sources within 50m"
+    ],
+    "drawbacks": [
+      "Glows faintly in darkness after exposure",
+      "Medical radiation treatments ineffective",
+      "May become dependent on radiation for full health"
+    ]
+  },
+  {
+    "name": "Degenerated Physique",
+    "category": "Physical",
+    "type": "Detrimental",
+    "description": "Body has become weakened and frail due to mutation.",
+    "effects": [
+      "-10 to STR and VIT attributes",
+      "HP reduced by 20%",
+      "Vulnerability to disease and poison (+50% effect)"
+    ],
+    "drawbacks": [
+      "Visibly sickly appearance",
+      "Reduced carrying capacity (50%)",
+      "Requires medication to manage symptoms"
+    ]
+  },
+  {
+    "name": "Mental Instability",
+    "category": "Mental",
+    "type": "Detrimental",
+    "description": "Brain chemistry altered causing psychological issues.",
+    "effects": [
+      "Random mood swings and personality shifts",
+      "Must make PSY check in stressful situations or suffer temporary breakdown",
+      "-10 to CHA for social interactions"
+    ],
+    "drawbacks": [
+      "Occasional hallucinations",
+      "Difficulty maintaining long-term relationships",
+      "May develop more severe conditions with time"
+    ]
+  }
+]

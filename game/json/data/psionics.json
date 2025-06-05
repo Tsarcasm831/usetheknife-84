@@ -1,0 +1,145 @@
+[
+  {
+    "name": "Telekinesis",
+    "category": "Psychokinesis",
+    "level": 1,
+    "mana_cost": 5,
+    "range": "30m",
+    "duration": "Concentration",
+    "description": "Move objects with the power of your mind.",
+    "effects": [
+      "Can lift and manipulate objects up to (PSY/10) kg",
+      "Use as a weapon to deal 1d6 + PSY/10 damage",
+      "Requires concentration to maintain"
+    ]
+  },
+  {
+    "name": "Enhanced Telekinesis",
+    "category": "Psychokinesis",
+    "level": 3,
+    "mana_cost": 15,
+    "range": "50m",
+    "duration": "Concentration",
+    "description": "More powerful version of Telekinesis with greater force and control.",
+    "effects": [
+      "Can lift and manipulate objects up to (PSY/5) kg",
+      "Use as a weapon to deal 2d6 + PSY/5 damage",
+      "Can perform precision manipulations like lockpicking",
+      "Requires concentration to maintain"
+    ]
+  },
+  {
+    "name": "Mind Shield",
+    "category": "Defense",
+    "level": 1,
+    "mana_cost": 3,
+    "range": "Self",
+    "duration": "1 hour",
+    "description": "Create a mental barrier that protects against psionic attacks.",
+    "effects": [
+      "+20 resistance to psionic intrusion",
+      "Automatically alerts you to psionic probing",
+      "Can be extended with additional mana cost (1 per hour)"
+    ]
+  },
+  {
+    "name": "Telepathy",
+    "category": "Communication",
+    "level": 1,
+    "mana_cost": 4,
+    "range": "100m",
+    "duration": "10 minutes",
+    "description": "Communicate mentally with another sentient being.",
+    "effects": [
+      "Establish two-way mental communication",
+      "Target can resist with PSY check",
+      "Language barriers still apply"
+    ]
+  },
+  {
+    "name": "Psionic Blast",
+    "category": "Offensive",
+    "level": 2,
+    "mana_cost": 8,
+    "range": "50m",
+    "duration": "Instant",
+    "description": "Project a focused burst of psionic energy at a target.",
+    "effects": [
+      "Deals 3d6 + PSY/5 mental damage",
+      "Target can resist with PSY check to halve damage",
+      "Can cause disorientation (-5 to all checks for 1d4 rounds)"
+    ]
+  },
+  {
+    "name": "Psychometry",
+    "category": "Sensing",
+    "level": 2,
+    "mana_cost": 6,
+    "range": "Touch",
+    "duration": "Instant",
+    "description": "Read psychic impressions from an object or location.",
+    "effects": [
+      "Gain insights about the object's history and previous owners",
+      "Reveal emotional events connected to the object",
+      "Information clarity depends on success level of PSY check"
+    ]
+  },
+  {
+    "name": "Pyrokinesis",
+    "category": "Psychokinesis",
+    "level": 3,
+    "mana_cost": 12,
+    "range": "30m",
+    "duration": "Instant/Concentration",
+    "description": "Create and control fire with your mind.",
+    "effects": [
+      "Ignite flammable objects",
+      "Create a flame burst dealing 3d8 fire damage",
+      "With concentration, control existing flames"
+    ]
+  },
+  {
+    "name": "Mind Control",
+    "category": "Domination",
+    "level": 4,
+    "mana_cost": 20,
+    "range": "20m",
+    "duration": "1d6 rounds",
+    "description": "Take control of another being's actions.",
+    "effects": [
+      "Target follows basic commands",
+      "Target can resist with PSY check",
+      "Self-destructive commands grant target +20 to resistance check",
+      "Target remembers being controlled afterward"
+    ]
+  },
+  {
+    "name": "Precognition",
+    "category": "Sensing",
+    "level": 3,
+    "mana_cost": 15,
+    "range": "Self",
+    "duration": "Instant",
+    "description": "Glimpse possible future events.",
+    "effects": [
+      "Gain insight into potential outcomes of a specific action",
+      "Multiple possible futures may be revealed",
+      "Clarity depends on success level of PSY check",
+      "Future is not fixed and can change based on actions taken"
+    ]
+  },
+  {
+    "name": "Psionic Healing",
+    "category": "Restoration",
+    "level": 3,
+    "mana_cost": 10,
+    "range": "Touch",
+    "duration": "Instant",
+    "description": "Channel psionic energy to heal physical injuries.",
+    "effects": [
+      "Heal 2d8 + PSY/5 HP",
+      "Can stabilize a dying character",
+      "Cannot heal critical injuries or disease"
+    ]
+  }
+]

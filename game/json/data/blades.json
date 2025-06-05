@@ -1,0 +1,136 @@
+[
+  {
+    "name": "Combat Knife",
+    "category": "Knife",
+    "damage": "1d6+STR/5",
+    "range": "Melee",
+    "weight": "1 lb",
+    "cost": 50,
+    "rarity": "C",
+    "special_properties": [
+      "Concealable: +5 to hide weapon",
+      "Balanced: Can be thrown effectively (range: STR x 2m)"
+    ]
+  },
+  {
+    "name": "Survival Knife",
+    "category": "Knife",
+    "damage": "1d6+STR/5",
+    "range": "Melee",
+    "weight": "1.5 lbs",
+    "cost": 75,
+    "rarity": "C",
+    "special_properties": [
+      "Utility: +5 to survival-related skill checks",
+      "Durable: Double normal durability"
+    ]
+  },
+  {
+    "name": "Machete",
+    "category": "Medium Blade",
+    "damage": "1d8+STR/5",
+    "range": "Melee",
+    "weight": "3 lbs",
+    "cost": 100,
+    "rarity": "C",
+    "special_properties": [
+      "Slashing: +2 damage against unarmored targets",
+      "Wilderness tool: +3 to clearing vegetation"
+    ]
+  },
+  {
+    "name": "Vibro-Blade",
+    "category": "Knife",
+    "damage": "2d6+STR/5",
+    "range": "Melee",
+    "weight": "1.2 lbs",
+    "cost": 500,
+    "rarity": "R",
+    "special_properties": [
+      "Energy-enhanced: Ignores 2 points of physical armor",
+      "Power source required: Battery lasts 50 uses"
+    ]
+  },
+  {
+    "name": "Officer's Vibro-Sabre",
+    "category": "Long Blade",
+    "damage": "3d6+STR/5",
+    "range": "Melee",
+    "weight": "3 lbs",
+    "cost": 1500,
+    "rarity": "VR",
+    "special_properties": [
+      "Energy-enhanced: Ignores 3 points of physical armor",
+      "Status symbol: +2 to social interactions with military personnel",
+      "Power source required: Battery lasts 40 uses"
+    ]
+  },
+  {
+    "name": "Energy Garotte",
+    "category": "Flexible",
+    "damage": "2d8+STR/5",
+    "range": "Melee",
+    "weight": "0.5 lbs",
+    "cost": 400,
+    "rarity": "R",
+    "special_properties": [
+      "Strangulation: Target must make STR check or take additional 1d8 damage per round",
+      "Concealable: +10 to hide weapon",
+      "Power source required: Battery lasts 20 uses"
+    ]
+  },
+  {
+    "name": "Katana",
+    "category": "Long Blade",
+    "damage": "2d6+STR/5",
+    "range": "Melee",
+    "weight": "2.5 lbs",
+    "cost": 800,
+    "rarity": "R",
+    "special_properties": [
+      "Sharp: +1 to damage",
+      "Well-balanced: +2 to parry",
+      "Cultural significance: May affect social interactions"
+    ]
+  },
+  {
+    "name": "Double-bladed Sword",
+    "category": "Exotic",
+    "damage": "2d8+STR/5",
+    "range": "Melee",
+    "weight": "5 lbs",
+    "cost": 1000,
+    "rarity": "VR",
+    "special_properties": [
+      "Double attack: Can attack twice with a -5 penalty to each attack",
+      "Difficult to use: Requires specific training (Exotic Weapons skill)"
+    ]
+  },
+  {
+    "name": "Mono-Molecular Knife",
+    "category": "Knife",
+    "damage": "2d8+STR/5",
+    "range": "Melee",
+    "weight": "0.8 lbs",
+    "cost": 2000,
+    "rarity": "XR",
+    "special_properties": [
+      "Super-sharp: Ignores 5 points of physical armor",
+      "Fragile: 5% chance of breaking on critical failure"
+    ]
+  },
+  {
+    "name": "Plasma Sword",
+    "category": "Energy Blade",
+    "damage": "4d6+STR/5",
+    "range": "Melee",
+    "weight": "4 lbs",
+    "cost": 5000,
+    "rarity": "XR",
+    "special_properties": [
+      "Energy blade: Ignores 4 points of physical armor",
+      "Power source required: Energy cell lasts 30 uses",
+      "Intimidating: +2 to intimidation checks when drawn"
+    ]
+  }
+]

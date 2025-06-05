@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "name": "Odd Eye Color",
+      "description": "The character’s eyes differ in color or shade, potentially giving them a unique, unsettling appearance."
+    },
+    {
+      "id": 2,
+      "name": "Odd Hair Color",
+      "description": "Hair exhibits an unusual color variation, deviating from typical human hues."
+    },
+    {
+      "id": 3,
+      "name": "Odd Skin Color",
+      "description": "Skin tone is irregular, possibly marked by patches or shifts in coloration."
+    },
+    {
+      "id": 4,
+      "name": "Unnatural Strength",
+      "description": "Add 1d20 (rolled at character creation) to the strength score, representing bursts of anomalous power."
+    },
+    {
+      "id": 5,
+      "name": "Bony Ridges on Knuckles",
+      "description": "Provides an additional +20 to +30 STR. These prominent ridges may also serve as natural weapons."
+    },
+    {
+      "id": 6,
+      "name": "Fangs",
+      "description": "The character develops pronounced canine teeth, enhancing their predatory appearance and possibly their bite attack."
+    },
+    {
+      "id": 7,
+      "name": "Multiple Voices",
+      "description": "The character can produce several simultaneous vocalizations, which might confuse foes or affect social interactions."
+    },
+    {
+      "id": 8,
+      "name": "Claws",
+      "description": "Natural claw formations appear on the hands, potentially useful for combat or climbing."
+    },
+    {
+      "id": 9,
+      "name": "Pointed Ears",
+      "description": "The ears become distinctly pointed, giving the character an elfin or otherworldly look."
+    },
+    {
+      "id": 10,
+      "name": "Minor Teleport",
+      "description": "Short-range teleportation ability, useful for quickly evading danger or repositioning in combat."
+    },
+    {
+      "id": 11,
+      "name": "Unnatural Speed",
+      "description": "Run speed increases by +20 MPH, +10 to dodge checks, and +10 to initiative, enhancing overall mobility in combat and exploration."
+    },
+    {
+      "id": 12,
+      "name": "Aura of Mistrust",
+      "description": "An unsettling presence causes others to feel wary, potentially influencing social interactions and NPC reactions."
+    },
+    {
+      "id": 13,
+      "name": "Aura of Trust",
+      "description": "The character exudes an aura that inspires confidence and trust in allies and acquaintances."
+    },
+    {
+      "id": 14,
+      "name": "Wall Climbing",
+      "description": "Grants the ability to climb vertical surfaces, allowing access to otherwise unreachable areas."
+    },
+    {
+      "id": 15,
+      "name": "Frog Skin Ability",
+      "description": "Skin takes on qualities similar to amphibian skin, perhaps offering resistance to water or environmental changes."
+    },
+    {
+      "id": 16,
+      "name": "Slow Aging",
+      "description": "The aging process is significantly decelerated (aging at ½ the normal rate), extending the character’s prime years."
+    },
+    {
+      "id": 17,
+      "name": "Energy Discharge from Hands",
+      "description": "Random energy discharge with a range up to 100, dealing 20-30 damage points as an offensive ability."
+    },
+    {
+      "id": 18,
+      "name": "Prehensile Tail",
+      "description": "A tail develops that can grasp objects, providing utility in combat, climbing, or handling tasks."
+    },
+    {
+      "id": 19,
+      "name": "Fast Healing",
+      "description": "Heals at a rate determined by 1d20 per round, greatly enhancing natural regeneration beyond standard healing."
+    },
+    {
+      "id": 20,
+      "name": "Cognitive Reflex",
+      "description": "Heightens reflexes related to mental processing, possibly aiding in quick decision-making or reaction to stimuli."
+    }
+  ]

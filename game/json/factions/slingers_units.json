@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Ember Harmonia",
+    "tri_animal_combo": [
+      "Red Panda",
+      "Jackal",
+      "Raven"
+    ],
+    "bodysuit_color": "Burnt orange",
+    "role": "Espionage / Recon",
+    "status": "Presumed deceased \u2013 last seen deep behind enemy lines during the Kansas City breach.",
+    "description": "A stealth-oriented Slinger designed for high-speed intel gathering and covert observation. Her hybrid DNA gives her extreme agility, quiet footfalls, and keen observational senses. She is said to have vanished into the smoke of battle, never confirmed dead nor seen again. Her suit features a lightweight, adaptive fabric with feathers embedded for soft gliding jumps."
+  },
+  {
+    "name": "Orion Nocturna",
+    "tri_animal_combo": [
+      "Black Shadow Snake",
+      "Monitor Lizard",
+      "Scorpion"
+    ],
+    "bodysuit_color": "Venom black",
+    "role": "Ambush / Toxin Delivery",
+    "status": "Confirmed KIA \u2013 self-destructed after infiltration failure.",
+    "description": "The venom-based Slinger, built for silence and death. His DNA cocktail made him immune to many toxins, and allowed him to inject enemies with engineered compounds. His skin could mimic heatless voids. Rumored to have triggered his internal failsafe when capture was imminent."
+  },
+  {
+    "name": "Pax Innocentia",
+    "tri_animal_combo": [
+      "Corgi",
+      "Meerkat",
+      "Weasel"
+    ],
+    "bodysuit_color": "Sky blue",
+    "role": "Tunneling / Sabotage",
+    "status": "Unknown \u2013 possibly buried alive during collapse.",
+    "description": "Don't let the size fool you \u2014 Pax was engineered for tight-space sabotage and rapid tunnel-based infiltration. Small, fast, and clever, they could dismantle complex machinery with childlike glee. Their disappearance was never confirmed, leading to rumors of deep-burrow survivor cults."
+  },
+  {
+    "name": "Vega Spark",
+    "tri_animal_combo": [
+      "Bees/AI Hologram",
+      "Dragonfly",
+      "Electric Eel"
+    ],
+    "bodysuit_color": "Neon yellow",
+    "role": "Swarm Disruption / Electronic Warfare",
+    "status": "Unconfirmed \u2013 sightings persist, mostly static distortion on comms.",
+    "description": "A living EMP with swarming instincts and twitch-speed reflexes. Vega's semi-holographic appearance confused both ally and enemy alike. Rumors say she's alive in digital form \u2014 hijacking surveillance feeds and whispering coordinates to rogue scavenger bands."
+  },
+  {
+    "name": "Kaanan Hellstrom",
+    "tri_animal_combo": [
+      "Bear",
+      "Bat",
+      "Dog"
+    ],
+    "bodysuit_color": "Blood red",
+    "role": "Heavy Assault / Alpha Operative",
+    "status": "Alive \u2013 Last of the Slingers.",
+    "description": "The only success story. Towering and brutal, Kaanan remains fully functional and mentally intact. His strength is legendary, matched only by his uncanny perception and unshakable loyalty. Wears a hyper-dense red bodysuit reinforced with reactive fibers. The battlefield calls him the Crimson Hound."
+  },
+  {
+    "name": "Lior Solace",
+    "tri_animal_combo": [
+      "Otter",
+      "Snow Leopard",
+      "Cuttlefish"
+    ],
+    "bodysuit_color": "Iridescent teal",
+    "role": "Aquatic Infiltration / Psychological Warfare",
+    "status": "Presumed drowned during canal breach.",
+    "description": "Master of aquatic escape and mental misdirection, Lior could camouflage even in direct light. They left enemies dazed and paranoid, unsure what they\u2019d seen. Water became their element, until one fateful infiltration turned into a rising flood of silence."
+  },
+  {
+    "name": "Ark Sentinel",
+    "tri_animal_combo": [
+      "Dragon",
+      "Alligator Snapping Turtle",
+      "Iguana"
+    ],
+    "bodysuit_color": "Forest green",
+    "role": "Juggernaut Brawler / Area Denial",
+    "status": "Missing in action \u2013 last seen holding the southern breach solo.",
+    "description": "A walking fortress. Ark was the myth made flesh \u2014 scaled, armored, and almost unstoppable. Designed to absorb fire and crush tanks with their tail, they were often deployed as living shields. When the line broke, Ark didn\u2019t. Then he vanished into the crater smoke, and no one saw him again."
+  },
+  {
+    "name": "Tiberius Wreath",
+    "tri_animal_combo": [
+      "Owl",
+      "Wolf",
+      "Mantis Shrimp"
+    ],
+    "bodysuit_color": "Midnight violet",
+    "role": "Tactical Planning / Shock Assault",
+    "status": "Deceased \u2013 body recovered, but eyes removed post-mortem.",
+    "description": "The tactician and commander of the group. His vision was unmatched \u2014 literally, enhanced to see through illusions, smoke, and false readings. Capable of delivering explosive strikes with mantis reflexes, he planned every move three steps ahead. His corpse was found staring at the stars, his vision stolen by someone \u2014 or something."
+  }
+]

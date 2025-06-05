@@ -1,0 +1,530 @@
+/* POI Moda Styles */
+#poi-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e1e1e;
+    border: 1px solid orange;
+    padding: 20px;
+    z-index: 1050;
+    width: 400px;
+    max-width: 90%;
+    color: white;
+    box-sizing: border-box;
+    height: auto; /* Adjusted for content */
+    max-height: 70vh; /* Prevent excessive height */
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+    display: none; /* Default hidden */
+    flex-direction: column;
+  }
+  #poi-modal.active {
+    display: flex;
+  }
+  
+  /* Generic Popup Module (used for Add Survey Point) */
+  #popup-module {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111827;
+    border: 1px solid orange;
+    padding: 20px;
+    z-index: 1010;
+    color: white;
+    max-width: 400px;
+    width: 90%;
+    display: none; /* Default hidden */
+  }
+  #popup-module.active {
+    display: block;
+  }
+  
+  #popup-module h2 {
+    color: orange;
+    font-family: "Prompt", sans-serif;
+  }
+  #post-point-btn {
+    background-color: transparent;
+    border: 1px solid orange;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  #point-type-select-container { 
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+  }
+  #point-type-select { 
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #111827;
+    color: white;
+    border: 1px solid orange;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* 3D Modal Styles */
+  #threeD-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2000;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+  }
+  #threeD-modal.active {
+    display: flex;
+  }
+  
+  .threeD-modal-content {
+    background-color: #111827;
+    color: white;
+    width: 80%;
+    height: 80%;
+    max-width: 1200px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.5);
+    border: 1px solid orange;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  #close-3d-modal {
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  #close-3d-modal:hover,
+  #close-3d-modal:focus {
+    color: orange;
+  }
+  #threeD-content {
+    flex-grow: 1;
+    width: 100%;
+    height: calc(100% - 40px); 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .loading-container {
+    text-align: center;
+    color: orange;
+  }
+  .loading-spinner {
+    border: 4px solid #f3f3f3; 
+    border-top: 4px solid orange; 
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px auto;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .error-message {
+    color: red;
+    text-align: center;
+  }
+  
+  /* Bestiary Modal Styles - now adapted for Mutants specific display */
+  #bestiary-modal { /* ID remains the same for now, but functionally it's the Mutants modal */
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    background-color: rgba(0,0,0,0.7);
+    display: none; 
+    align-items: center; 
+    justify-content: center;
+  }
+  #bestiary-modal.active {
+    display: flex;
+  }
+  
+  .mutants-modal-content { /* New class for Mutants, similar to hive-modal-content */
+    background-color: #1c1c1c; /* Slightly different dark shade for mutants */
+    color: white;
+    margin: auto; 
+    padding: 25px;
+    border: 1px solid #7CFC00; /* Mutant green accent */
+    width: 90%; 
+    max-width: 1600px; 
+    max-height: 90vh;
+    border-radius: 10px; 
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7); 
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; 
+    overflow-y: auto;
+  }
+  .mutants-modal-close-btn { /* New class for Mutants close button */
+    color: #aaa; 
+    position: absolute;
+    top: 15px; 
+    right: 25px; 
+    font-size: 36px; 
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s;
+  }
+  .mutants-modal-close-btn:hover,
+  .mutants-modal-close-btn:focus {
+    color: #7CFC00; /* Mutant green accent */
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  #bestiary-modal h2 { /* Title styling for Mutants modal */
+    color: #7CFC00; /* Mutant green accent */
+    text-align: center;
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+    font-family: "Impact", "Arial Black", Gadget, sans-serif; 
+    font-size: 1.8em; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  #mutants-units-list-container { /* New ID, styled like hive-units-list-container */
+    flex-grow: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 20px; 
+    padding: 15px; 
+    scrollbar-width: thin;
+    scrollbar-color: #7CFC00 #333; /* Mutant green scrollbar */
+  }
+  /* Custom scrollbar for Webkit browsers for Mutants modal */
+  #mutants-units-list-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  #mutants-units-list-container::-webkit-scrollbar-track {
+    background: #2c2c2c;
+    border-radius: 4px;
+  }
+  #mutants-units-list-container::-webkit-scrollbar-thumb {
+    background-color: #7CFC00; /* Mutant green accent */
+    border-radius: 4px;
+    border: 2px solid #2c2c2c;
+  }
+  
+  /* FDG Modal Styles */
+  #fdg-modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1055; 
+    overflow-y: auto; /* Changed to auto for the main modal container */
+    justify-content: center;
+    align-items: center;
+  }
+  #fdg-modal.active {
+    display: flex;
+  }
+  .fdg-modal-content {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    margin: auto; /* Helps with centering if parent is flex */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1200px;
+    position: relative; /* Keep for close button positioning */
+    max-height: 90vh; /* Max height for the content box */
+    overflow-y: auto; /* Scroll for content box if it exceeds max-height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Added to help structure content like header and list */
+    flex-direction: column; /* Stack header and list vertically */
+  }
+  .fdg-modal-close-btn {
+    color: #aaa; 
+    position: absolute;
+    top: 15px; 
+    right: 25px; 
+    font-size: 36px; 
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s;
+  }
+  .fdg-modal-close-btn:hover,
+  .fdg-modal-close-btn:focus {
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  #fdg-modal h2 {
+    color: orange;
+    text-align: center;
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+    font-family: "Arial Black", Gadget, sans-serif; 
+    font-size: 1.8em; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  #fdg-units-list-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 20px; 
+    padding: 15px; 
+    scrollbar-width: thin;
+    scrollbar-color: orange #333;
+  }
+  /* Custom scrollbar for Webkit browsers */
+  #fdg-units-list-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  #fdg-units-list-container::-webkit-scrollbar-track {
+    background: #2c2c2c;
+    border-radius: 4px;
+  }
+  #fdg-units-list-container::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 4px;
+    border: 2px solid #2c2c2c;
+  }
+  .fdg-unit-item {
+    background-color: #262626; 
+    border: 1px solid #555; 
+    border-radius: 8px; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  .fdg-unit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255,165,0,0.4); 
+    border-color: orange;
+  }
+  .fdg-unit-image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    background-color: #333;
+    border-radius: 6px;
+    margin-bottom: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    border: 1px solid #444;
+  }
+  .fdg-unit-item img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 4px; 
+  }
+  .fdg-unit-image-container .image-not-found {
+    color: #888;
+    font-size: 0.9em;
+    padding: 10px;
+  }
+  .fdg-unit-item h3 {
+    color: orange;
+    font-size: 1.4em; 
+    margin-top: 0;
+    margin-bottom: 5px; 
+    font-weight: bold;
+  }
+  .fdg-unit-item .unit-version {
+    font-size: 0.95em; 
+    color: #bbb; 
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  .fdg-unit-item .unit-stats {
+    margin-top: auto; 
+    font-size: 0.9em; 
+    width: 100%;
+    text-align: left;
+    padding-top: 12px;
+    border-top: 1px solid #4a4a4a; 
+  }
+  .fdg-unit-item .unit-stats p {
+    margin-bottom: 6px; 
+    line-height: 1.6;
+    display: flex; 
+    justify-content: space-between; 
+  }
+  .fdg-unit-item .unit-stats strong {
+    color: #f0ad4e; 
+    margin-right: 8px; 
+  }
+  .fdg-unit-item .unit-stats span {
+    color: #ddd; 
+    font-weight: 500;
+  }
+  
+  /* H.I.V.E. Modal Styles (can largely reuse FDG styles if desired) */
+  #hive-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1060; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85); 
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto; /* Added for the main modal if content is too tall */
+  }
+  #hive-modal.active {
+    display: flex;
+  }
+  .hive-modal-content { /* Using a distinct class for HIVE modal content */
+    background-color: #1a1a1a; /* Dark theme for H.I.V.E. */
+    color: white;
+    margin: auto;
+    padding: 25px; 
+    border: 1px solid #ff4500; /* H.I.V.E. orange-red color */
+    width: 90%; 
+    max-width: 1600px; 
+    max-height: 90vh; /* Max height for content box */
+    border-radius: 10px; 
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7); 
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; 
+    overflow-y: auto; /* Scroll for content box */
+  }
+  .hive-modal-close-btn {
+    color: #aaa; 
+    position: absolute;
+    top: 15px; 
+    right: 25px; 
+    font-size: 36px; 
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s;
+  }
+  .hive-modal-close-btn:hover,
+  .hive-modal-close-btn:focus {
+    color: #ff4500; /* H.I.V.E. orange-red */
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  #hive-modal h2 {
+    color: #ff4500; /* H.I.V.E. orange-red */
+    text-align: center;
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+    font-family: "Impact", "Arial Black", Gadget, sans-serif; /* More aggressive font */
+    font-size: 1.8em; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Wider letter spacing */
+  }
+  #hive-units-list-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 20px; 
+    padding: 15px; 
+    scrollbar-width: thin;
+    scrollbar-color: #ff4500 #333; /* H.I.V.E. scrollbar color */
+  }
+  /* Custom scrollbar for Webkit browsers for HIVE modal */
+  #hive-units-list-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  #hive-units-list-container::-webkit-scrollbar-track {
+    background: #2c2c2c;
+    border-radius: 4px;
+  }
+  #hive-units-list-container::-webkit-scrollbar-thumb {
+    background-color: #ff4500; /* H.I.V.E. orange-red */
+    border-radius: 4px;
+    border: 2px solid #2c2c2c;
+  }
+/* Welcome Modal Styles */
+#welcome-modal {
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome-modal.active {
+  display: flex;
+}
+
+.welcome-modal-content {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 25px;
+  border: 1px solid orange;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.welcome-modal-close-btn {
+  color: #ccc;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.welcome-modal-close-btn:hover,
+.welcome-modal-close-btn:focus {
+  color: orange;
+}
+
+#welcome-modal h2 {
+  color: orange;
+  margin-bottom: 15px;
+}

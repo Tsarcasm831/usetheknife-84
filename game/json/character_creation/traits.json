@@ -1,0 +1,103 @@
+[
+  {
+    "name": "Tough",
+    "category": "Advantage",
+    "cost": 2,
+    "description": "Character is naturally tough and can withstand more damage. +10 to Vitality for calculating HP.",
+    "mechanics": {
+      "vitality_bonus": 10,
+      "hp_modifier": "+10%"
+    }
+  },
+  {
+    "name": "Quick Reflexes",
+    "category": "Advantage",
+    "cost": 2,
+    "description": "Character has exceptionally fast reflexes. +5 to initiative and +5 to Dexterity for defense calculations.",
+    "mechanics": {
+      "initiative_bonus": 5,
+      "defense_bonus": 5
+    }
+  },
+  {
+    "name": "Talented",
+    "category": "Advantage",
+    "cost": 3,
+    "description": "Character has a natural talent for a specific skill, gaining +10 when using it.",
+    "mechanics": {
+      "skill_bonus": 10,
+      "applicable_skills": "Player choice"
+    }
+  },
+  {
+    "name": "Psionic Sensitivity",
+    "category": "Advantage",
+    "cost": 4,
+    "description": "Character has heightened psionic potential. +15 to PSY attribute for power calculations.",
+    "mechanics": {
+      "psy_bonus": 15,
+      "mana_pool_bonus": "25%"
+    }
+  },
+  {
+    "name": "Weapon Specialization",
+    "category": "Advantage",
+    "cost": 3,
+    "description": "Character is highly trained with a specific weapon type, gaining +10 to hit and +5 to damage.",
+    "mechanics": {
+      "hit_bonus": 10,
+      "damage_bonus": 5,
+      "weapon_type": "Player choice"
+    }
+  },
+  {
+    "name": "Sickly",
+    "category": "Disadvantage",
+    "bonus_points": 2,
+    "description": "Character is prone to illness and physical weakness. -10 to Vitality for HP calculations.",
+    "mechanics": {
+      "vitality_penalty": -10,
+      "hp_modifier": "-10%"
+    }
+  },
+  {
+    "name": "Slow",
+    "category": "Disadvantage",
+    "bonus_points": 2,
+    "description": "Character has below average reflexes. -5 to initiative and -5 to Dexterity for defense calculations.",
+    "mechanics": {
+      "initiative_penalty": -5,
+      "defense_penalty": -5
+    }
+  },
+  {
+    "name": "Addiction",
+    "category": "Disadvantage",
+    "bonus_points": 3,
+    "description": "Character is addicted to a substance and suffers withdrawal if not regularly consumed.",
+    "mechanics": {
+      "withdrawal_effects": "-10 to all attributes when in withdrawal",
+      "addiction_type": "Player choice"
+    }
+  },
+  {
+    "name": "Phobia",
+    "category": "Disadvantage",
+    "bonus_points": 2,
+    "description": "Character has an irrational fear that can be triggered during gameplay.",
+    "mechanics": {
+      "fear_effect": "Must make a PSY check or be unable to act for 1d4 rounds",
+      "phobia_type": "Player choice"
+    }
+  },
+  {
+    "name": "Debt",
+    "category": "Disadvantage",
+    "bonus_points": 2,
+    "description": "Character owes money or favors to a powerful organization or individual.",
+    "mechanics": {
+      "debt_amount": "5000 credits or equivalent",
+      "debt_holder": "Player choice with GM approval"
+    }
+  }
+]
