@@ -14,7 +14,7 @@ export function initBestiaryModal() {
             bestiaryModal.classList.add('active');
             
             try {
-                const response = await fetch('/json/mutants.json'); // Use absolute path
+                const response = await fetch('json/mutants.json'); // Use absolute path
                 if (!response.ok) {
                     throw new Error(`Failed to fetch mutants.json: ${response.status}`);
                 }
@@ -33,7 +33,7 @@ export function initBestiaryModal() {
                     sortedTroops.forEach(troop => {
                         const unitNameForFile = troop.name.replace(/ /g, '_');
                         const imageName = `${unitNameForFile}_${troop.version}.png`;
-                        const imagePath = `/assets/mutants/${imageName}`; // Use absolute path
+                        const imagePath = `assets/mutants/${imageName}`;
 
                         const unitItem = document.createElement('div');
                         unitItem.classList.add('fdg-unit-item'); // Reusing fdg styling for cards

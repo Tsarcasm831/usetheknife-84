@@ -43,7 +43,7 @@ export function initLoadoutManager(elements, activeTeamGetter) {
 
 async function fetchAndPopulateAvailableWeapons() {
     try {
-        const response = await fetch('/json/equipment/weapons.json');
+        const response = await fetch('json/equipment/weapons.json');
         if (!response.ok) {
             throw new Error(`Failed to fetch weapons.json: ${response.status}`);
         }
@@ -57,7 +57,7 @@ async function fetchAndPopulateAvailableWeapons() {
                         ...weapon,
                         id: `weapon_${categoryKey}_${weapon.name.replace(/[^a-zA-Z0-9]/g, '_')}`, // Unique ID
                         category: categoryKey,
-                        imagePath: `/assets/equipment/weapons/${categoryKey}/${imageName}`
+                        imagePath: `assets/equipment/weapons/${categoryKey}/${imageName}`
                     });
                 });
             }

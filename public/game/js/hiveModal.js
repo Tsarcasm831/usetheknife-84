@@ -28,7 +28,7 @@ export function initHiveModal() {
   if (hiveBtn && hiveModal && closeHiveModalBtn && hiveUnitsListContainer) {
     hiveBtn.addEventListener('click', async () => {
       try {
-        const response = await fetch('/json/factions/hive.json'); // Fetching data from the correct path
+        const response = await fetch('json/factions/hive.json'); // Fetching data from the correct path
         if (!response.ok) {
           throw new Error(`Failed to fetch hive.json: ${response.status} ${response.statusText}`);
         }
@@ -47,7 +47,7 @@ export function initHiveModal() {
           sortedTroops.forEach(troop => {
             const unitNameForFile = troop.name.replace(/\./g, '').replace(/ /g, '_'); 
             const imageName = `${unitNameForFile}_${troop.version}.png`;
-            const imagePath = `/assets/HIVE/${imageName}`; // Path already absolute
+            const imagePath = `assets/HIVE/${imageName}`;
 
             const unitItem = document.createElement('div');
             unitItem.classList.add('fdg-unit-item'); 

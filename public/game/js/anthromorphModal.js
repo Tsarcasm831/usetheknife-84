@@ -22,7 +22,7 @@ export async function displayAnthromorphUnits() {
 
 
     try {
-        const response = await fetch('/json/anthromorph.json'); 
+        const response = await fetch('json/anthromorph.json'); 
         if (!response.ok) {
           throw new Error(`Failed to fetch anthromorph.json: ${response.status} ${response.statusText}`);
         }
@@ -65,9 +65,9 @@ export async function displayAnthromorphUnits() {
             const baseUnit = unitVariants.find(variant => variant.version === 'Base') || unitVariants[0];
             
             const imageNameBase = unitName.replace(/ /g, '_');
-            const basePath = `/assets/aliens/anthromorphs/${imageNameBase}_Base.png`;
-            const superiorPath = `/assets/aliens/anthromorphs/${imageNameBase}_Superior.png`;
-            const elitePath = `/assets/aliens/anthromorphs/${imageNameBase}_Elite.png`;
+            const basePath = `assets/aliens/anthromorphs/${imageNameBase}_Base.png`;
+            const superiorPath = `assets/aliens/anthromorphs/${imageNameBase}_Superior.png`;
+            const elitePath = `assets/aliens/anthromorphs/${imageNameBase}_Elite.png`;
             
             unitCard.innerHTML = `
                 <h3>${unitName}</h3>

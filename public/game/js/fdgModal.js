@@ -30,7 +30,7 @@ export function initFdgModal() {
   if (fdgBtn && fdgModal && closeFdgModalBtn && fdgUnitsListContainer) {
     fdgBtn.addEventListener('click', async () => {
       try {
-        const response = await fetch('/json/factions/fdg.json'); // Fetching data from the correct path
+        const response = await fetch('json/factions/fdg.json'); // Fetching data from the correct path
         if (!response.ok) {
           throw new Error(`Failed to fetch fdg.json: ${response.status} ${response.statusText}`);
         }
@@ -48,7 +48,7 @@ export function initFdgModal() {
 
           sortedTroops.forEach(troop => {
             const imageName = troop.name.replace(/ /g, '_') + '_' + troop.version + '.png';
-            const imagePath = `/assets/FDG/${imageName}`; // Path already absolute
+            const imagePath = `assets/FDG/${imageName}`;
 
             const unitItem = document.createElement('div');
             unitItem.classList.add('fdg-unit-item');

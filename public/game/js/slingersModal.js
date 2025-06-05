@@ -33,7 +33,7 @@ export function initSlingersModal() {
   if (slingersBtn && slingersModal && closeSlingersModalBtn && slingersUnitsListContainer) {
     slingersBtn.addEventListener('click', async () => {
       try {
-        const response = await fetch('/json/factions/slingers_units.json');
+        const response = await fetch('json/factions/slingers_units.json');
         if (!response.ok) {
           throw new Error(`Failed to fetch slingers_units.json: ${response.status} ${response.statusText}`);
         }
@@ -60,7 +60,7 @@ export function initSlingersModal() {
             const unitNameForFile = troop.name.replace(/\./g, '').replace(/ /g, '_');
             // Slingers don't have versions in their data, image names might just be the name.
             const imageName = `${unitNameForFile}.png`; 
-            const imagePath = `/assets/factions/heroes/slingers/${imageName}`;
+            const imagePath = `assets/factions/heroes/slingers/${imageName}`;
 
 
             const unitItem = document.createElement('div');

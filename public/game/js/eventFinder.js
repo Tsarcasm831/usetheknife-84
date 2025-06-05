@@ -237,7 +237,7 @@ export function initEventFinder(map) {
 
     const numEvents = Math.floor(Math.random() * 5) + 1; 
     const eventIcon = L.icon({
-      iconUrl: '/icons/event-icon.png',  
+      iconUrl: 'icons/event-icon.png',
       iconSize: [25, 25],
       iconAnchor: [12, 12]
     });
