@@ -14,7 +14,8 @@ export const mockNavItems: NavItem[] = [
   { title: "DevLog", href: "#devlog" },
   { title: "About", href: "#about" },
   { title: "Media", href: "#media" },
-  { title: "Community", href: "#community" }
+  { title: "Community", href: "#community" },
+  { title: "Game", href: "/game" }
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
