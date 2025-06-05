@@ -12,7 +12,7 @@ export const mockUser: User = {
 export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "DevLog", href: "#devlog" },
-  { title: "About", href: "#about" },
+  { title: "About Me", href: "/about" },
   { title: "Media", href: "#media" },
   { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
