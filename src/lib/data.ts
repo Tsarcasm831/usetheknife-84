@@ -20,7 +20,7 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
-    id: "devlog-12",
+    id: "devlog-13",
     title: "Map viewer documented",
     excerpt: "Added README for the Leaflet demo.",
     content:
