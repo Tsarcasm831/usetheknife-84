@@ -22,6 +22,36 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-9",
+    title: "README overhauled",
+    excerpt: "Documentation now explains the project and local setup.",
+    content: "The README has been rewritten to describe the devlog portal, development commands and key technologies.",
+    date: "2025-06-08T00:00:00Z",
+    author: "Web Team",
+    tags: ["documentation"],
+    imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Docs+Update"
+  },
+  {
+    id: "devlog-8",
+    title: "Media page now live",
+    excerpt: "Visit our new page for links to Facebook, Spotify and YouTube.",
+    content: "We've launched a dedicated Media page collecting our online channels. Check it out to follow us on Facebook, Spotify and YouTube.",
+    date: "2025-06-07T12:00:00Z",
+    author: "Web Team",
+    tags: ["website", "community"],
+    imageUrl: "https://via.placeholder.com/640x360/1E90FF/FFFFFF/?text=Media+Page"
+  },
+  {
+    id: "devlog-7",
+    title: "Trailer Button Updated",
+    excerpt: "The homepage trailer button now says Coming Soon.",
+    content: "We've renamed the 'Watch Trailer' button to 'Coming Soon' as we finalize footage for the next trailer.",
+    date: "2025-06-07T12:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "update"],
+    imageUrl: "https://via.placeholder.com/640x360/FFA500/FFFFFF/?text=Coming+Soon"
+  },
+  {
     id: "devlog-6",
     title: "Updated site branding",
     excerpt: "Renamed landing page title to usetheknife.com.",
@@ -30,20 +60,6 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["meta", "branding"],
     imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Branding"
-    title: "Media page now live",
-    excerpt: "Visit our new page for links to Facebook, Spotify and YouTube.",
-    content: "We've launched a dedicated Media page collecting our online channels. Check it out to follow us on Facebook, Spotify and YouTube.",
-    date: "2025-06-07T12:00:00Z",
-    author: "Web Team",
-    tags: ["website", "community"],
-    imageUrl: "https://via.placeholder.com/640x360/1E90FF/FFFFFF/?text=Media+Page"
-    title: "Trailer Button Updated",
-    excerpt: "The homepage trailer button now says Coming Soon.",
-    content: "We've renamed the 'Watch Trailer' button to 'Coming Soon' as we finalize footage for the next trailer.",
-    date: "2025-06-07T12:00:00Z",
-    author: "Web Team",
-    tags: ["ui", "update"],
-    imageUrl: "https://via.placeholder.com/640x360/FFA500/FFFFFF/?text=Coming+Soon"
   },
   {
     id: "devlog-5",
