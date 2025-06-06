@@ -11,7 +11,7 @@ export const mockUser: User = {
 
 export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
-  { title: "DevLog", href: "#devlog" },
+  { title: "DevLog", href: "/devlog" },
   { title: "About Me", href: "/about" },
   { title: "About", href: "#about" },
   { title: "Media", href: "#media" },
@@ -23,13 +23,14 @@ export const mockNavItems: NavItem[] = [
 export const mockDevLogs: DevLogEntry[] = [
   {
     id: "devlog-10",
-    title: "Header rebranded",
-    excerpt: "Logo now reads UseTheKnife.com.",
-    content: "The navigation bar and login page have been updated to display UseTheKnife.com instead of Remnants Devlog.",
-    date: "2025-06-08T12:00:00Z",
+    title: "DevLog now standalone",
+    excerpt: "Navigation links to a dedicated page.",
+    content:
+      "The DevLog section has moved to its own route. The nav bar directs to /devlog and the home page no longer includes the log.",
+    date: "2025-06-09T00:00:00Z",
     author: "Web Team",
-    tags: ["branding"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Branding"
+    tags: ["website"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=DevLog+Page"
   },
   {
     id: "devlog-9",

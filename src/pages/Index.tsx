@@ -2,9 +2,7 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import HeroSection from '@/components/HeroSection';
-import DevLogSection from '@/components/DevLogSection';
 import UserSection from '@/components/UserSection';
-import { mockDevLogs } from '@/lib/data';
 import { useAuth } from '@/contexts/AuthContext';
 
 const Index = () => {
@@ -14,7 +12,6 @@ const Index = () => {
     <div className="min-h-screen bg-game-darker text-white">
       <NavBar />
       <HeroSection />
-      <DevLogSection devlogs={mockDevLogs} />
       
       {/* Footer section */}
       <footer className="bg-game-darker py-12 border-t border-white/10">
