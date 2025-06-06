@@ -15,12 +15,22 @@ export const mockNavItems: NavItem[] = [
   { title: "About Me", href: "/about" },
   { title: "DevLog", href: "/devlog" },
   { title: "About", href: "#about" },
-  { title: "Media", href: "#media" },
+  { title: "Media", href: "/media" },
   { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
+  {
+    id: "devlog-6",
+    title: "Media page now live",
+    excerpt: "Visit our new page for links to Facebook, Spotify and YouTube.",
+    content: "We've launched a dedicated Media page collecting our online channels. Check it out to follow us on Facebook, Spotify and YouTube.",
+    date: "2025-06-07T12:00:00Z",
+    author: "Web Team",
+    tags: ["website", "community"],
+    imageUrl: "https://via.placeholder.com/640x360/1E90FF/FFFFFF/?text=Media+Page"
+  },
   {
     id: "devlog-5",
     title: "UI Fixes and Asset Updates",
