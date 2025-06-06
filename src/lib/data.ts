@@ -22,6 +22,16 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-12",
+    title: "Google Maps key via env",
+    excerpt: "Map viewer reads VITE_GOOGLE_MAPS_KEY.",
+    content: "index.html now loads Google Maps using VITE_GOOGLE_MAPS_KEY. See the new README for setup.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["docs", "game"],
+    imageUrl: "https://via.placeholder.com/640x360/4285F4/FFFFFF/?text=Map+Setup"
+  },
+  {
     id: "devlog-11",
     title: "Roadmap Overhauled",
     excerpt: "Updated roadmap lays out a two-year plan to launch 1.0.",
