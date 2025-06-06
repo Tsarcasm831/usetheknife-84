@@ -16,11 +16,20 @@ export const mockNavItems: NavItem[] = [
   { title: "About", href: "#about" },
   { title: "Media", href: "#media" },
   { title: "Media", href: "/media" },
-  { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
+  {
+    id: "devlog-10",
+    title: "Community tab removed",
+    excerpt: "Navigation no longer shows the Community button.",
+    content: "The Community link has been dropped from the main menu. You can still keep up with us via the Media page.",
+    date: "2025-06-09T00:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "navigation"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Menu+Update"
+  },
   {
     id: "devlog-9",
     title: "README overhauled",
