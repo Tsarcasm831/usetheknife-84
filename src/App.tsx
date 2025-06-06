@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Game from "./pages/Game";
 import AboutMe from "./pages/AboutMe";
 import DevLog from "./pages/DevLog";
+import Media from "./pages/Media";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/devlog" element={<DevLog />} />
             <Route path="/game" element={<Game />} />
             <Route path="/about" element={<AboutMe />} />
+            <Route path="/media" element={<Media />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
