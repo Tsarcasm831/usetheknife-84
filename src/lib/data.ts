@@ -27,7 +27,12 @@ export const mockDevLogs: DevLogEntry[] = [
     excerpt: "Documentation now explains the project and local setup.",
     content: "The README has been rewritten to describe the devlog portal, development commands and key technologies.",
     date: "2025-06-08T00:00:00Z",
-    id: "devlog-7",
+    author: "Web Team",
+    tags: ["documentation"],
+    imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Docs+Update"
+  },
+  {
+    id: "devlog-8",
     title: "Navigation Cleanup",
     excerpt: "Removed extra links from the top navigation bar.",
     content: "We trimmed the nav bar by dropping the Community button and the duplicate DevLog link so the interface is less cluttered.",
@@ -37,16 +42,7 @@ export const mockDevLogs: DevLogEntry[] = [
     imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Navigation"
   },
   {
-    id: "devlog-6",
-    title: "Updated site branding",
-    excerpt: "Renamed landing page title to usetheknife.com.",
-    content: "The main index now references the new domain in the title and Open Graph meta tags.",
-    author: "Web Team",
-    tags: ["documentation"],
-    imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Docs+Update"
-  },
-  {
-    id: "devlog-8",
+    id: "devlog-7",
     title: "Media page now live",
     excerpt: "Visit our new page for links to Facebook, Spotify and YouTube.",
     content: "We've launched a dedicated Media page collecting our online channels. Check it out to follow us on Facebook, Spotify and YouTube.",
@@ -56,17 +52,17 @@ export const mockDevLogs: DevLogEntry[] = [
     imageUrl: "https://via.placeholder.com/640x360/1E90FF/FFFFFF/?text=Media+Page"
   },
   {
-    id: "devlog-7",
+    id: "devlog-6",
     title: "Trailer Button Updated",
     excerpt: "The homepage trailer button now says Coming Soon.",
     content: "We've renamed the 'Watch Trailer' button to 'Coming Soon' as we finalize footage for the next trailer.",
-    date: "2025-06-07T12:00:00Z",
+    date: "2025-06-07T10:00:00Z",
     author: "Web Team",
     tags: ["ui", "update"],
     imageUrl: "https://via.placeholder.com/640x360/FFA500/FFFFFF/?text=Coming+Soon"
   },
   {
-    id: "devlog-6",
+    id: "devlog-5",
     title: "Updated site branding",
     excerpt: "Renamed landing page title to usetheknife.com.",
     content: "The main index now references the new domain in the title and Open Graph meta tags.",
@@ -76,7 +72,7 @@ export const mockDevLogs: DevLogEntry[] = [
     imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Branding"
   },
   {
-    id: "devlog-5",
+    id: "devlog-4",
     title: "UI Fixes and Asset Updates",
     excerpt: "Improved team and loadout tabs. Fixed broken images in the mission modal.",
     content: "This patch cleans up the Prepare Event interface. Available units are easier to read, loadout slots are clearer, and briefing/map images now load correctly.",
@@ -86,7 +82,7 @@ export const mockDevLogs: DevLogEntry[] = [
     imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=UI+Fixes"
   },
   {
-    id: "devlog-4",
+    id: "devlog-3",
     title: "Roadmap to Release",
     excerpt: "We've published an updated roadmap detailing the final steps to 1.0.",
     content: "In this post we outline our remaining milestones including balancing passes, localization and console certification. Thank you for sticking with us on this journey!",
