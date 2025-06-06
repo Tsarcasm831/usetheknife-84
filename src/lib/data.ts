@@ -30,6 +30,13 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["website", "community"],
     imageUrl: "https://via.placeholder.com/640x360/1E90FF/FFFFFF/?text=Media+Page"
+    title: "Trailer Button Updated",
+    excerpt: "The homepage trailer button now says Coming Soon.",
+    content: "We've renamed the 'Watch Trailer' button to 'Coming Soon' as we finalize footage for the next trailer.",
+    date: "2025-06-07T12:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "update"],
+    imageUrl: "https://via.placeholder.com/640x360/FFA500/FFFFFF/?text=Coming+Soon"
   },
   {
     id: "devlog-5",
