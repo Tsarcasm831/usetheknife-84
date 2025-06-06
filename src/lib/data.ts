@@ -5,7 +5,7 @@ export const mockUser: User = {
   id: "user-1",
   username: "GameTester123",
   avatar: "https://i.pravatar.cc/150?img=3",
-  lastLogin: "2023-05-15T10:30:00Z",
+  lastLogin: "2025-05-15T10:30:00Z",
   role: "member"
 };
 
@@ -23,43 +23,43 @@ export const mockNavItems: NavItem[] = [
 export const mockDevLogs: DevLogEntry[] = [
   {
     id: "devlog-1",
-    title: "Combat System Overhaul",
-    excerpt: "We've completely redesigned the combat mechanics to be more fluid and responsive.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl.",
-    date: "2023-05-12T15:30:00Z",
+    title: "Multiplayer Beta Launch",
+    excerpt: "The long awaited multiplayer beta is now live for all backers.",
+    content: "Players can now team up online and test our new networking code. Let us know if you find any issues while partying up and exploring the wasteland together!",
+    date: "2025-05-28T15:30:00Z",
     author: "Lead Developer",
-    tags: ["combat", "gameplay", "mechanics"],
+    tags: ["multiplayer", "beta", "gameplay"],
     featured: true,
-    imageUrl: "https://via.placeholder.com/640x360/FF6B00/FFFFFF/?text=Combat+System"
+    imageUrl: "https://via.placeholder.com/640x360/FF6B00/FFFFFF/?text=Multiplayer+Beta"
   },
   {
     id: "devlog-2",
-    title: "New Environment: The Wastes",
-    excerpt: "Explore the desolate and dangerous region known as The Wastes in our next update.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl.",
-    date: "2023-05-08T09:45:00Z",
+    title: "Dynamic Weather System",
+    excerpt: "Experience storms, fog and more as our new weather system rolls out.",
+    content: "Our artists and engineers worked together to bring a fully dynamic weather system. Conditions will now change organically as you travel the world, affecting both visibility and combat tactics.",
+    date: "2025-05-15T09:45:00Z",
     author: "Environment Artist",
-    tags: ["environment", "level design", "art"],
-    imageUrl: "https://via.placeholder.com/640x360/2E3440/FFFFFF/?text=The+Wastes"
+    tags: ["environment", "weather", "art"],
+    imageUrl: "https://via.placeholder.com/640x360/2E3440/FFFFFF/?text=Dynamic+Weather"
   },
   {
     id: "devlog-3",
-    title: "Performance Improvements",
-    excerpt: "Major optimizations to improve framerates on all platforms.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl.",
-    date: "2023-05-01T14:20:00Z",
-    author: "Technical Director",
-    tags: ["performance", "optimization", "technical"],
-    imageUrl: "https://via.placeholder.com/640x360/4C566A/FFFFFF/?text=Performance"
+    title: "New Faction Revealed: The Archivists",
+    excerpt: "Meet the Archivists, a secretive group hoarding pre-disaster tech.",
+    content: "This update introduces a brand new faction complete with quests, gear and their own hidden base. Forge alliances or make enemies – the choice is yours.",
+    date: "2025-05-05T14:20:00Z",
+    author: "Narrative Designer",
+    tags: ["faction", "story", "lore"],
+    imageUrl: "https://via.placeholder.com/640x360/4C566A/FFFFFF/?text=Archivists"
   },
   {
     id: "devlog-4",
-    title: "Story Expansion: The Fallen City",
-    excerpt: "New story missions will take players through the ruins of a once-great civilization.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl nisl eget ultricies ultricies, nunc nisl ultricies nunc, eget ultricies nisl.",
-    date: "2023-04-25T11:15:00Z",
-    author: "Narrative Designer",
-    tags: ["story", "missions", "narrative"],
-    imageUrl: "https://via.placeholder.com/640x360/FF3A20/FFFFFF/?text=Fallen+City"
+    title: "Roadmap to Release",
+    excerpt: "We've published an updated roadmap detailing the final steps to 1.0.",
+    content: "In this post we outline our remaining milestones including balancing passes, localization and console certification. Thank you for sticking with us on this journey!",
+    date: "2025-04-20T11:15:00Z",
+    author: "Project Lead",
+    tags: ["roadmap", "development"],
+    imageUrl: "https://via.placeholder.com/640x360/FF3A20/FFFFFF/?text=Roadmap"
   }
 ];
