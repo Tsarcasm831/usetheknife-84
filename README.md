@@ -9,7 +9,8 @@ This repository contains the web portal for **Remnants of Destruction**. The sit
    ```bash
    npm install
    ```
-3. Start the development server:
+3. Copy `.env.example` to `.env` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY`.
+4. Start the development server:
    ```bash
    npm run dev
    ```
