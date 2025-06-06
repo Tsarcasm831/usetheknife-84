@@ -22,6 +22,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-12",
+    title: "Camera alt text added",
+    excerpt: "Accessibility improved for captured photos.",
+    content:
+      "All images created by the in-game camera now include descriptive alt text so screen readers can announce them.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["accessibility", "ui"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Alt+Text"
+  },
+  {
     id: "devlog-11",
     title: "Roadmap Overhauled",
     excerpt: "Updated roadmap lays out a two-year plan to launch 1.0.",
