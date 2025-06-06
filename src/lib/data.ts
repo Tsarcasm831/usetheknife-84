@@ -11,7 +11,7 @@ export const mockUser: User = {
 
 export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
-  { title: "DevLog", href: "#devlog" },
+  { title: "DevLog", href: "/devlog" },
   { title: "About Me", href: "/about" },
   { title: "About", href: "#about" },
   { title: "Media", href: "/media" },
@@ -21,6 +21,15 @@ export const mockNavItems: NavItem[] = [
 export const mockDevLogs: DevLogEntry[] = [
   {
     id: "devlog-10",
+    title: "DevLog now standalone",
+    excerpt: "Navigation links to a dedicated page.",
+    content:
+      "The DevLog section has moved to its own route. The nav bar directs to /devlog and the home page no longer includes the log.",
+    date: "2025-06-09T00:00:00Z",
+    author: "Web Team",
+    tags: ["website"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=DevLog+Page"
+=======
     title: "Community tab removed",
     excerpt: "Navigation no longer shows the Community button.",
     content: "The Community link has been dropped from the main menu. You can still keep up with us via the Media page.",
