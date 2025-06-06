@@ -14,13 +14,22 @@ export const mockNavItems: NavItem[] = [
   { title: "DevLog", href: "#devlog" },
   { title: "About Me", href: "/about" },
   { title: "About", href: "#about" },
-  { title: "Media", href: "#media" },
   { title: "Media", href: "/media" },
   { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
+  {
+    id: "devlog-10",
+    title: "Duplicate Media link removed",
+    excerpt: "Cleaned up nav to show one Media option.",
+    content: "The top navigation no longer includes two Media buttons. The redundant anchor link was removed for clarity.",
+    date: "2025-06-09T00:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "navigation"],
+    imageUrl: "https://via.placeholder.com/640x360/1E90FF/FFFFFF/?text=Media+Fix"
+  },
   {
     id: "devlog-9",
     title: "README overhauled",
