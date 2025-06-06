@@ -12,15 +12,23 @@ export const mockUser: User = {
 export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "DevLog", href: "/devlog" },
-  { title: "About Me", href: "/about" },
-  { title: "About", href: "#about" },
-  { title: "Media", href: "#media" },
+  { title: "About", href: "/about" },
   { title: "Media", href: "/media" },
   { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
+  {
+    id: "devlog-12",
+    title: "Navigation links deduplicated",
+    excerpt: "Mock nav items no longer repeat About or Media.",
+    content: "The nav data was cleaned up so only one About and one Media link remain, making the menu easier to manage.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "navigation"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Nav+Update"
+  },
   {
     id: "devlog-11",
     title: "Roadmap Overhauled",
