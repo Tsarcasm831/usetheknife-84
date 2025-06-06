@@ -23,6 +23,13 @@ export const mockNavItems: NavItem[] = [
 export const mockDevLogs: DevLogEntry[] = [
   {
     id: "devlog-6",
+    title: "Updated site branding",
+    excerpt: "Renamed landing page title to usetheknife.com.",
+    content: "The main index now references the new domain in the title and Open Graph meta tags.",
+    date: "2025-06-07T00:00:00Z",
+    author: "Web Team",
+    tags: ["meta", "branding"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Branding"
     title: "Media page now live",
     excerpt: "Visit our new page for links to Facebook, Spotify and YouTube.",
     content: "We've launched a dedicated Media page collecting our online channels. Check it out to follow us on Facebook, Spotify and YouTube.",
