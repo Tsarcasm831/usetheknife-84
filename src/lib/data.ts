@@ -12,9 +12,7 @@ export const mockUser: User = {
 export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "DevLog", href: "/devlog" },
-  { title: "About Me", href: "/about" },
-  { title: "About", href: "#about" },
-  { title: "Media", href: "#media" },
+  { title: "About", href: "/about" },
   { title: "Media", href: "/media" },
   { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
@@ -22,7 +20,7 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
-    id: "devlog-12",
+    id: "devlog-13",
     title: "Map viewer documented",
     excerpt: "Added README for the Leaflet demo.",
     content:
@@ -31,6 +29,13 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["documentation"],
     imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Map+README"
+    title: "Navigation links deduplicated",
+    excerpt: "Mock nav items no longer repeat About or Media.",
+    content: "The nav data was cleaned up so only one About and one Media link remain, making the menu easier to manage.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "navigation"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Nav+Update"
   },
   {
     id: "devlog-11",
