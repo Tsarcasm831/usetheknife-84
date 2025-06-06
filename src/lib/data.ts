@@ -20,31 +20,28 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
-    id: "devlog-12",
-    title: "Google Maps key via env",
-    excerpt: "Map viewer reads VITE_GOOGLE_MAPS_KEY.",
-    content: "index.html now loads Google Maps using VITE_GOOGLE_MAPS_KEY. See the new README for setup.",
-    date: "2025-06-11T00:00:00Z",
-    author: "Web Team",
-    tags: ["docs", "game"],
-    imageUrl: "https://via.placeholder.com/640x360/4285F4/FFFFFF/?text=Map+Setup"
-    title: "Camera alt text added",
-    excerpt: "Accessibility improved for captured photos.",
+    id: "devlog-17",
+    title: "DevLog entries recovered",
+    excerpt: "Restored missing posts and cleaned up data.",
     content:
-      "All images created by the in-game camera now include descriptive alt text so screen readers can announce them.",
+      "Fixed corrupted devlog data and re-added entries for alt text, env based keys and the map README.",
+    date: "2025-06-12T00:00:00Z",
+    author: "Web Team",
+    tags: ["fix", "devlog"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=DevLog+Fix"
+  },
+  {
+    id: "devlog-16",
+    title: "Navigation links deduplicated",
+    excerpt: "Mock nav items no longer repeat About or Media.",
+    content: "The nav data was cleaned up so only one About and one Media link remain, making the menu easier to manage.",
     date: "2025-06-11T00:00:00Z",
     author: "Web Team",
-    tags: ["accessibility", "ui"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Alt+Text"
-    title: "Supabase keys moved to env",
-    excerpt: "Connection details now come from .env.",
-    content:
-      "Supabase URL and key are read from environment variables. Copy `.env.example` to `.env` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY`.",
-    date: "2025-06-11T00:00:00Z",
-    author: "Web Team",
-    tags: ["config", "supabase"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Supabase+Env"
-    id: "devlog-13",
+    tags: ["ui", "navigation"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Nav+Update"
+  },
+  {
+    id: "devlog-15",
     title: "Map viewer documented",
     excerpt: "Added README for the Leaflet demo.",
     content:
@@ -53,13 +50,38 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["documentation"],
     imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Map+README"
-    title: "Navigation links deduplicated",
-    excerpt: "Mock nav items no longer repeat About or Media.",
-    content: "The nav data was cleaned up so only one About and one Media link remain, making the menu easier to manage.",
+  },
+  {
+    id: "devlog-14",
+    title: "Supabase keys moved to env",
+    excerpt: "Connection details now come from .env.",
+    content:
+      "Supabase URL and key are read from environment variables. Copy `.env.example` to `.env` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY`.",
     date: "2025-06-11T00:00:00Z",
     author: "Web Team",
-    tags: ["ui", "navigation"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Nav+Update"
+    tags: ["config", "supabase"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Supabase+Env"
+  },
+  {
+    id: "devlog-13",
+    title: "Camera alt text added",
+    excerpt: "Accessibility improved for captured photos.",
+    content:
+      "All images created by the in-game camera now include descriptive alt text so screen readers can announce them.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["accessibility", "ui"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Alt+Text"
+  },
+  {
+    id: "devlog-12",
+    title: "Google Maps key via env",
+    excerpt: "Map viewer reads VITE_GOOGLE_MAPS_KEY.",
+    content: "index.html now loads Google Maps using VITE_GOOGLE_MAPS_KEY. See the new README for setup.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["docs", "game"],
+    imageUrl: "https://via.placeholder.com/640x360/4285F4/FFFFFF/?text=Map+Setup"
   },
   {
     id: "devlog-11",
