@@ -206,10 +206,10 @@ function updateBriefingTabWithEventDetails() {
     if(briefingAreaNotes) briefingAreaNotes.textContent = "Be aware of potential sniper positions in taller structures. Ground may be unstable in certain sectors.";
 
     const areaMapImg = tabContent.querySelector('#briefing-area-map-img');
-    if (areaMapImg) areaMapImg.src = "/area_map_placeholder.png"; 
-    
+    if (areaMapImg) areaMapImg.src = "area_map_placeholder.png";
+
     const planDiagramImg = tabContent.querySelector('#briefing-plan-diagram-img');
-    if (planDiagramImg) planDiagramImg.src = "/plan_diagram_placeholder.png";
+    if (planDiagramImg) planDiagramImg.src = "plan_diagram_placeholder.png";
 }
 
 function updateIntelTabWithEventDetails() {
@@ -239,7 +239,7 @@ function updateMapTabWithEventDetails() {
 
     const mapTabAreaMapImg = tabContent.querySelector('#map-tab-area-map-img');
     if (mapTabAreaMapImg) {
-        mapTabAreaMapImg.src = "/area_map_placeholder.png";
+        mapTabAreaMapImg.src = "area_map_placeholder.png";
     }
 }
 

@@ -10,7 +10,7 @@ export async function initMapTab(tabElement) {
         <div class="map-tab-container" style="display: flex; flex-direction: column; align-items: center; gap: 15px; padding-top: 10px;">
             <p style="text-align: center; width: 80%; max-width: 700px;">Detailed view of the operational area. Use this map for tactical planning and situational awareness during the event.</p>
             <div class="map-image-container" style="width: 80%; max-width: 700px; border: 1px solid #555; padding: 5px; background-color: #222; border-radius: 5px;">
-                <img id="map-tab-area-map-img" src="/area_map_placeholder.png" alt="Area Map" style="width: 100%; height: auto; border-radius: 4px;">
+                <img id="map-tab-area-map-img" src="area_map_placeholder.png" alt="Area Map" style="width: 100%; height: auto; border-radius: 4px;">
             </div>
             <div class="map-details" style="width: 80%; max-width: 700px; background-color: #252525; padding:10px; border-radius:5px; border: 1px solid #4a4a4a;">
                 <h4 style="color: #f0ad4e; margin-top:0; margin-bottom:10px; border-bottom: 1px solid #555; padding-bottom:5px;">Map Legend & Controls (Future Enhancements)</h4>
@@ -37,7 +37,7 @@ function updateMapWithEventDetails(tabElement, eventDetails) {
     // In the future, this could load a specific map based on event coordinates
     const mapTabAreaMapImg = tabElement.querySelector('#map-tab-area-map-img');
     if (mapTabAreaMapImg) {
-        mapTabAreaMapImg.src = "/area_map_placeholder.png";
+        mapTabAreaMapImg.src = "area_map_placeholder.png";
         // Could be updated to `/maps/${eventDetails.eventId}.png` if specific maps exist
     }
 }
