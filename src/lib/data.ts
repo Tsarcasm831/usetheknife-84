@@ -21,6 +21,13 @@ export const mockNavItems: NavItem[] = [
 export const mockDevLogs: DevLogEntry[] = [
   {
     id: "devlog-10",
+    title: "Header rebranded",
+    excerpt: "Logo now reads UseTheKnife.com.",
+    content: "The navigation bar and login page have been updated to display UseTheKnife.com instead of Remnants Devlog.",
+    date: "2025-06-08T12:00:00Z",
+    author: "Web Team",
+    tags: ["branding"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Branding"
     title: "DevLog now standalone",
     excerpt: "Navigation links to a dedicated page.",
     content:
@@ -29,7 +36,6 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["website"],
     imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=DevLog+Page"
-=======
     title: "Community tab removed",
     excerpt: "Navigation no longer shows the Community button.",
     content: "The Community link has been dropped from the main menu. You can still keep up with us via the Media page.",
