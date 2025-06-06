@@ -13,14 +13,22 @@ export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "DevLog", href: "#devlog" },
   { title: "About Me", href: "/about" },
-  { title: "DevLog", href: "/devlog" },
   { title: "About", href: "#about" },
   { title: "Media", href: "#media" },
-  { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
+  {
+    id: "devlog-7",
+    title: "Navigation Cleanup",
+    excerpt: "Removed extra links from the top navigation bar.",
+    content: "We trimmed the nav bar by dropping the Community button and the duplicate DevLog link so the interface is less cluttered.",
+    date: "2025-06-08T09:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "navigation"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Navigation"
+  },
   {
     id: "devlog-6",
     title: "Trailer Button Updated",
