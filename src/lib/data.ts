@@ -21,6 +21,14 @@ export const mockNavItems: NavItem[] = [
 export const mockDevLogs: DevLogEntry[] = [
   {
     id: "devlog-12",
+    title: "Map viewer documented",
+    excerpt: "Added README for the Leaflet demo.",
+    content:
+      "public/game now includes instructions for running the standalone map. The guide covers features like the 3D terrain toggle and notes the Google Maps API key placeholder.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["documentation"],
+    imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Map+README"
     title: "Navigation links deduplicated",
     excerpt: "Mock nav items no longer repeat About or Media.",
     content: "The nav data was cleaned up so only one About and one Media link remain, making the menu easier to manage.",
