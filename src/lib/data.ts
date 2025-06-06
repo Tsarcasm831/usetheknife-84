@@ -13,8 +13,8 @@ export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "DevLog", href: "#devlog" },
   { title: "About Me", href: "/about" },
-  { title: "DevLog", href: "/devlog" },
   { title: "About", href: "#about" },
+  { title: "Media", href: "#media" },
   { title: "Media", href: "/media" },
   { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
@@ -27,6 +27,20 @@ export const mockDevLogs: DevLogEntry[] = [
     excerpt: "Documentation now explains the project and local setup.",
     content: "The README has been rewritten to describe the devlog portal, development commands and key technologies.",
     date: "2025-06-08T00:00:00Z",
+    id: "devlog-7",
+    title: "Navigation Cleanup",
+    excerpt: "Removed extra links from the top navigation bar.",
+    content: "We trimmed the nav bar by dropping the Community button and the duplicate DevLog link so the interface is less cluttered.",
+    date: "2025-06-08T09:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "navigation"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Navigation"
+  },
+  {
+    id: "devlog-6",
+    title: "Updated site branding",
+    excerpt: "Renamed landing page title to usetheknife.com.",
+    content: "The main index now references the new domain in the title and Open Graph meta tags.",
     author: "Web Team",
     tags: ["documentation"],
     imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Docs+Update"
