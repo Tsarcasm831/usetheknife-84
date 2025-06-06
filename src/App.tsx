@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Profile from "./pages/Profile";
 import Game from "./pages/Game";
+import AboutMe from "./pages/AboutMe";
+import DevLog from "./pages/DevLog";
 import NotFound from "./pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -29,7 +31,9 @@ const App = () => (
                 <Profile />
               </ProtectedRoute>
             } />
+            <Route path="/devlog" element={<DevLog />} />
             <Route path="/game" element={<Game />} />
+            <Route path="/about" element={<AboutMe />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
