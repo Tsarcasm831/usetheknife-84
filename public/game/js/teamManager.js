@@ -24,9 +24,9 @@ export function initTeamManager(elements, loadoutRefreshCallback) {
 
 export async function fetchAndPopulateAvailableUnits() {
     try {
-        const response = await fetch('/json/factions/fdg.json'); // Corrected path
+        const response = await fetch('json/factions/fdg.json'); // Corrected path
         if (!response.ok) {
-            throw new Error(`Failed to fetch /json/factions/fdg.json: ${response.status}`);
+            throw new Error(`Failed to fetch json/factions/fdg.json: ${response.status}`);
         }
         const data = await response.json();
         if (data.troops) {
@@ -34,7 +34,7 @@ export async function fetchAndPopulateAvailableUnits() {
                 ...troop,
                 id: `unit_${troop.name.replace(/ /g, '_')}_${troop.version}`,
                 faction: 'FDG',
-                imagePath: `/assets/FDG/${troop.name.replace(/ /g, '_')}_${troop.version}.png`
+                imagePath: `assets/FDG/${troop.name.replace(/ /g, '_')}_${troop.version}.png`
             }));
         }
         renderAvailableUnitsList();

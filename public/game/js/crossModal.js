@@ -34,9 +34,9 @@ export function initCrossModal() {
     crossBtn.addEventListener('click', async () => {
       try {
         const urls = [
-          '/json/factions/cross_units/base.json',
-          '/json/factions/cross_units/superior.json',
-          '/json/factions/cross_units/elite.json'
+          'json/factions/cross_units/base.json',
+          'json/factions/cross_units/superior.json',
+          'json/factions/cross_units/elite.json'
         ];
         const dataArrays = await Promise.all(
           urls.map(async url => {
@@ -72,7 +72,7 @@ export function initCrossModal() {
 
             const unitNameForFile = troopName.replace(/\./g, '').replace(/ /g, '_');
             const imageName = `${unitNameForFile}_${troopVersion}.png`;
-            const imagePath = `/assets/factions/cross/${imageName}`;
+            const imagePath = `assets/factions/cross/${imageName}`;
 
 
             const unitItem = document.createElement('div');

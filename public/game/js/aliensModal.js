@@ -22,7 +22,7 @@ export function initAliensModal() {
     { 
       id: 'anthromorph', 
       name: 'Anthromorphs', 
-      jsonPath: '/json/anthromorph.json', 
+      jsonPath: 'json/anthromorph.json', 
       description: 'Genetically modified creatures that combine animal and humanoid traits, created for various specialized tasks.',
       defaultUnit: 'Grunt',
       folderName: 'anthromorphs' 
@@ -30,7 +30,7 @@ export function initAliensModal() {
     { 
       id: 'avianos', 
       name: 'Avianos', 
-      jsonPath: '/json/avianos.json', 
+      jsonPath: 'json/avianos.json', 
       description: 'Bird-like predatory race from the dark side of Warnix planetoid. They once had wings but lost them when conquered by the Shal\'Rah.',
       defaultUnit: 'Sky_Guard',
       folderName: 'avianos' 
@@ -38,7 +38,7 @@ export function initAliensModal() {
     { 
       id: 'behemoth', 
       name: 'Behemoths', 
-      jsonPath: '/json/behemoth.json', 
+      jsonPath: 'json/behemoth.json', 
       description: 'Massive pack animals from a grassland world near the Phallon Nebula, prized for their immense carrying capacity.',
       defaultUnit: 'Goliath',
       folderName: 'behemoth'
@@ -46,7 +46,7 @@ export function initAliensModal() {
     { 
       id: 'chiropteran', 
       name: 'Chiropterans', 
-      jsonPath: '/json/chiropteran.json', 
+      jsonPath: 'json/chiropteran.json', 
       description: 'Bat-like species, mechanically gifted, who lived on space stations around their shattered homeworld.',
       defaultUnit: 'Fury',
       folderName: 'chiropteran'
@@ -54,7 +54,7 @@ export function initAliensModal() {
     { 
       id: 'dengar', 
       name: 'Dengar', 
-      jsonPath: '/json/dengar.json', 
+      jsonPath: 'json/dengar.json', 
       description: 'Humanoid race with tentacles instead of hair, black eyes, and a threatening appearance. Often employed as guards.',
       defaultUnit: 'Fang',
       folderName: 'dengar'
@@ -62,7 +62,7 @@ export function initAliensModal() {
     { 
       id: 'kilrathi', 
       name: 'Kilrathi', 
-      jsonPath: '/json/kilrathi.json', 
+      jsonPath: 'json/kilrathi.json', 
       description: 'Feline race from Kilrah Prime with brown/green fur. Nomadic warriors with high-tech weapons but primitive clothing.',
       defaultUnit: 'Warrior',
       folderName: 'kilrathi'
@@ -70,7 +70,7 @@ export function initAliensModal() {
     { 
       id: 'shalrah_p', 
       name: 'Shal\'Rah Prime', 
-      jsonPath: '/json/shalrah_p.json', 
+      jsonPath: 'json/shalrah_p.json', 
       description: 'Hostile insectoid race known for their aggressive expansion and conquest of other species.',
       defaultUnit: 'Drone',
       folderName: 'shalrah_p'
@@ -78,7 +78,7 @@ export function initAliensModal() {
     { 
       id: 't_ana_rhe', 
       name: 'T\'ana\'rhe', 
-      jsonPath: '/json/t_ana_rhe.json', 
+      jsonPath: 'json/t_ana_rhe.json', 
       description: 'Bird-like psionically gifted species known for their trading networks and mental abilities.',
       defaultUnit: 'Merchant',
       folderName: 't_ana_rhe'
@@ -86,7 +86,7 @@ export function initAliensModal() {
     { 
       id: 'tal_ehn', 
       name: 'Tal\'Ehn', 
-      jsonPath: '/json/tal_ehn.json', 
+      jsonPath: 'json/tal_ehn.json', 
       description: 'Mystic aliens focused on arcane arts and the manipulation of energy and matter.',
       defaultUnit: 'Acolyte',
       folderName: 'tal_ehn'
@@ -94,7 +94,7 @@ export function initAliensModal() {
     { 
       id: 'talorian', 
       name: 'Talorian', 
-      jsonPath: '/json/talorian.json', 
+      jsonPath: 'json/talorian.json', 
       description: 'Diplomatic species with keen intellect, often serving as negotiators between disparate factions.',
       defaultUnit: 'Diplomat',
       folderName: 'talorian'
@@ -102,7 +102,7 @@ export function initAliensModal() {
     { 
       id: 'vyraxus', 
       name: 'Vyraxus', 
-      jsonPath: '/json/vyraxus.json', 
+      jsonPath: 'json/vyraxus.json', 
       description: 'Reptilian species known for their tactical skills and predatory instincts.',
       defaultUnit: 'Reptoid',
       folderName: 'vyraxus'
@@ -110,7 +110,7 @@ export function initAliensModal() {
     { 
       id: 'xithrian', 
       name: 'Xithrian', 
-      jsonPath: '/json/xithrian.json', 
+      jsonPath: 'json/xithrian.json', 
       description: 'Highly intellectual aliens devoted to knowledge, research, and scientific discovery.',
       defaultUnit: 'Scholar',
       folderName: 'xithrian'
@@ -152,12 +152,12 @@ export function initAliensModal() {
       speciesCard.className = 'alien-species-card';
       
       const folderPath = species.folderName || species.id; 
-      const representativeImagePath = `/assets/aliens/${folderPath}/${species.defaultUnit}_Base.png`;
+      const representativeImagePath = `assets/aliens/${folderPath}/${species.defaultUnit}_Base.png`;
       
       speciesCard.innerHTML = `
         <div class="alien-species-image-container">
-          <img src="${representativeImagePath}" alt="${species.name}" 
-               onerror="this.src='/icons/flag-cursor.png'; this.classList.add('fallback-icon');">
+          <img src="${representativeImagePath}" alt="${species.name}"
+               onerror="this.src='icons/flag-cursor.png'; this.classList.add('fallback-icon');">
         </div>
         <h3>${species.name}</h3>
         <p>${species.description}</p>
@@ -232,9 +232,9 @@ export function initAliensModal() {
             const baseUnit = unitVariants.find(variant => variant.version === 'Base') || unitVariants[0];
             
             const imageNameBase = unitName.replace(/ /g, '_');
-            const basePath = `/assets/aliens/${folderPath}/${imageNameBase}_Base.png`;
-            const superiorPath = `/assets/aliens/${folderPath}/${imageNameBase}_Superior.png`;
-            const elitePath = `/assets/aliens/${folderPath}/${imageNameBase}_Elite.png`;
+            const basePath = `assets/aliens/${folderPath}/${imageNameBase}_Base.png`;
+            const superiorPath = `assets/aliens/${folderPath}/${imageNameBase}_Superior.png`;
+            const elitePath = `assets/aliens/${folderPath}/${imageNameBase}_Elite.png`;
             
             unitCard.innerHTML = `
               <h3>${unitName}</h3>

@@ -38,7 +38,7 @@ export function initPrometheusModal() {
   if (prometheusBtn && prometheusModal && closePrometheusModalBtn && prometheusUnitsListContainer) {
     prometheusBtn.addEventListener('click', async () => {
       try {
-        const response = await fetch('/json/factions/prometheus_units.json');
+        const response = await fetch('json/factions/prometheus_units.json');
         if (!response.ok) {
           throw new Error(`Failed to fetch prometheus_units.json: ${response.status} ${response.statusText}`);
         }
@@ -70,7 +70,7 @@ export function initPrometheusModal() {
             const unitNameForFile = troopName.replace(/\./g, '').replace(/ /g, '_');
             const imageName = `${unitNameForFile}_${troopVersion}.png`;
             // Corrected path to use 'prometheus' (lowercase) as per existing assets.
-            const imagePath = `/assets/factions/prometheus/${imageName}`;
+            const imagePath = `assets/factions/prometheus/${imageName}`;
 
 
             const unitItem = document.createElement('div');

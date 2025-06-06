@@ -6,7 +6,7 @@ let poiAddress = "";
 let mapInstance; // To store the map reference
 
 const flagIcon = L.icon({
-    iconUrl: "/icons/flag-cursor.png", 
+    iconUrl: "icons/flag-cursor.png",
     iconSize: [32, 32],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32]
