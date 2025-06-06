@@ -22,6 +22,16 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-10",
+    title: "Header rebranded",
+    excerpt: "Logo now reads UseTheKnife.com.",
+    content: "The navigation bar and login page have been updated to display UseTheKnife.com instead of Remnants Devlog.",
+    date: "2025-06-08T12:00:00Z",
+    author: "Web Team",
+    tags: ["branding"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Branding"
+  },
+  {
     id: "devlog-9",
     title: "README overhauled",
     excerpt: "Documentation now explains the project and local setup.",
