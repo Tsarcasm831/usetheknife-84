@@ -20,70 +20,6 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
-    id: "devlog-17",
-    title: "DevLog entries recovered",
-    excerpt: "Restored missing posts and cleaned up data.",
-    content:
-      "Fixed corrupted devlog data and re-added entries for alt text, env based keys and the map README.",
-    date: "2025-06-12T00:00:00Z",
-    author: "Web Team",
-    tags: ["fix", "devlog"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=DevLog+Fix"
-  },
-  {
-    id: "devlog-16",
-    title: "Navigation links deduplicated",
-    excerpt: "Mock nav items no longer repeat About or Media.",
-    content: "The nav data was cleaned up so only one About and one Media link remain, making the menu easier to manage.",
-    date: "2025-06-11T00:00:00Z",
-    author: "Web Team",
-    tags: ["ui", "navigation"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Nav+Update"
-  },
-  {
-    id: "devlog-15",
-    title: "Map viewer documented",
-    excerpt: "Added README for the Leaflet demo.",
-    content:
-      "public/game now includes instructions for running the standalone map. The guide covers features like the 3D terrain toggle and notes the Google Maps API key placeholder.",
-    date: "2025-06-11T00:00:00Z",
-    author: "Web Team",
-    tags: ["documentation"],
-    imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Map+README"
-  },
-  {
-    id: "devlog-14",
-    title: "Supabase keys moved to env",
-    excerpt: "Connection details now come from .env.",
-    content:
-      "Supabase URL and key are read from environment variables. Copy `.env.example` to `.env` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY`.",
-    date: "2025-06-11T00:00:00Z",
-    author: "Web Team",
-    tags: ["config", "supabase"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Supabase+Env"
-  },
-  {
-    id: "devlog-13",
-    title: "Camera alt text added",
-    excerpt: "Accessibility improved for captured photos.",
-    content:
-      "All images created by the in-game camera now include descriptive alt text so screen readers can announce them.",
-    date: "2025-06-11T00:00:00Z",
-    author: "Web Team",
-    tags: ["accessibility", "ui"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Alt+Text"
-  },
-  {
-    id: "devlog-12",
-    title: "Google Maps key via env",
-    excerpt: "Map viewer reads VITE_GOOGLE_MAPS_KEY.",
-    content: "index.html now loads Google Maps using VITE_GOOGLE_MAPS_KEY. See the new README for setup.",
-    date: "2025-06-11T00:00:00Z",
-    author: "Web Team",
-    tags: ["docs", "game"],
-    imageUrl: "https://via.placeholder.com/640x360/4285F4/FFFFFF/?text=Map+Setup"
-  },
-  {
     id: "devlog-11",
     title: "Roadmap Overhauled",
     excerpt: "Updated roadmap lays out a two-year plan to launch 1.0.",
@@ -171,7 +107,7 @@ export const mockDevLogs: DevLogEntry[] = [
     excerpt: "Our plan now targets a feature-complete release in mid-2027.",
     content:
       "This post details a realistic two-year roadmap. We'll focus on engine upgrades, co-op mode, localization and mod tooling before launching on PC and consoles in 2027. Thanks for your patience!",
-    date: "2025-06-10T00:00:00Z",
+    date: "2025-06-05T00:00:00Z",
     author: "Project Lead",
     tags: ["roadmap", "development"],
     imageUrl: "https://via.placeholder.com/640x360/FF3A20/FFFFFF/?text=Roadmap"
