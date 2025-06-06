@@ -12,9 +12,7 @@ export const mockUser: User = {
 export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "DevLog", href: "/devlog" },
-  { title: "About Me", href: "/about" },
-  { title: "About", href: "#about" },
-  { title: "Media", href: "#media" },
+  { title: "About", href: "/about" },
   { title: "Media", href: "/media" },
   { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
@@ -30,6 +28,38 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["docs", "game"],
     imageUrl: "https://via.placeholder.com/640x360/4285F4/FFFFFF/?text=Map+Setup"
+    title: "Camera alt text added",
+    excerpt: "Accessibility improved for captured photos.",
+    content:
+      "All images created by the in-game camera now include descriptive alt text so screen readers can announce them.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["accessibility", "ui"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Alt+Text"
+    title: "Supabase keys moved to env",
+    excerpt: "Connection details now come from .env.",
+    content:
+      "Supabase URL and key are read from environment variables. Copy `.env.example` to `.env` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY`.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["config", "supabase"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Supabase+Env"
+    id: "devlog-13",
+    title: "Map viewer documented",
+    excerpt: "Added README for the Leaflet demo.",
+    content:
+      "public/game now includes instructions for running the standalone map. The guide covers features like the 3D terrain toggle and notes the Google Maps API key placeholder.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["documentation"],
+    imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Map+README"
+    title: "Navigation links deduplicated",
+    excerpt: "Mock nav items no longer repeat About or Media.",
+    content: "The nav data was cleaned up so only one About and one Media link remain, making the menu easier to manage.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "navigation"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Nav+Update"
   },
   {
     id: "devlog-11",
