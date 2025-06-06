@@ -1,5 +1,8 @@
 # Agent Contribution Guide
 
+**Updated 2025-06-06:** All pull requests must update the devlog page with a brief summary of the changes.
+
+
 This document outlines the development standards for the **Remnants of Destruction**
 static web project. Each section provides detailed rules to ensure consistent style
 and maintainable code. Follow them carefully whenever you modify or extend this
@@ -193,6 +196,7 @@ Below is a simplified view of the repository showing only directories:
   the title; include them in the body if required.
 - Check for merge conflicts before opening a pull request so the review process
   goes smoothly.
+- Update the devlog page with a brief summary of your changes.
 
 ## Documentation standards
 - Keep this `AGENTS.md` up to date. Whenever you adjust guidelines, provide a
