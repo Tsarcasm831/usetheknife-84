@@ -22,6 +22,16 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-6",
+    title: "Trailer Button Updated",
+    excerpt: "The homepage trailer button now says Coming Soon.",
+    content: "We've renamed the 'Watch Trailer' button to 'Coming Soon' as we finalize footage for the next trailer.",
+    date: "2025-06-07T12:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "update"],
+    imageUrl: "https://via.placeholder.com/640x360/FFA500/FFFFFF/?text=Coming+Soon"
+  },
+  {
     id: "devlog-5",
     title: "UI Fixes and Asset Updates",
     excerpt: "Improved team and loadout tabs. Fixed broken images in the mission modal.",

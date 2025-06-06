@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
                 Latest Updates
               </Button>
               <Button variant="outline" className="border-game-orange text-game-orange hover:bg-game-orange hover:text-white transition-colors">
-                Watch Trailer
+                Coming Soon
               </Button>
             </div>
           </div>
