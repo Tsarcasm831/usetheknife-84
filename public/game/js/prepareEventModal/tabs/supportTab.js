@@ -11,7 +11,7 @@ export async function initSupportTab(tabElement) {
             <!-- Artillery Strike -->
             <div class="support-asset-item" id="support-artillery">
                 <div class="support-asset-header">
-                    <img src="/icon_artillery_support.png" alt="Artillery" class="support-asset-icon">
+                    <img src="icon_artillery_support.png" alt="Artillery" class="support-asset-icon">
                     <h4>Artillery Strike</h4>
                 </div>
                 <p class="support-asset-description">Call in an off-map artillery barrage. Effective against clustered enemies and light structures. High collateral damage risk.</p>
@@ -32,7 +32,7 @@ export async function initSupportTab(tabElement) {
             <!-- Drone Reconnaissance -->
             <div class="support-asset-item" id="support-drone-recon">
                 <div class="support-asset-header">
-                    <img src="/icon_drone_recon.png" alt="Drone Recon" class="support-asset-icon">
+                    <img src="icon_drone_recon.png" alt="Drone Recon" class="support-asset-icon">
                     <h4>Drone Reconnaissance</h4>
                 </div>
                 <p class="support-asset-description">Deploy a stealth drone to scout the target area. Reveals enemy positions and points of interest for a limited time.</p>
@@ -52,7 +52,7 @@ export async function initSupportTab(tabElement) {
             <!-- Air Strike -->
             <div class="support-asset-item" id="support-air-strike">
                 <div class="support-asset-header">
-                    <img src="/icon_air_strike.png" alt="Air Strike" class="support-asset-icon">
+                    <img src="icon_air_strike.png" alt="Air Strike" class="support-asset-icon">
                     <h4>Close Air Support</h4>
                 </div>
                 <p class="support-asset-description">Request a fast-mover for a precision strike or strafing run. Requires clear line of sight to target area.</p>
@@ -71,7 +71,7 @@ export async function initSupportTab(tabElement) {
             <!-- Resupply Drop -->
             <div class="support-asset-item" id="support-resupply">
                 <div class="support-asset-header">
-                    <img src="/icon_resupply_drop.png" alt="Resupply" class="support-asset-icon">
+                    <img src="icon_resupply_drop.png" alt="Resupply" class="support-asset-icon">
                     <h4>Resupply Drop</h4>
                 </div>
                 <p class="support-asset-description">Request an airdrop of essential supplies to a designated safe location.</p>
@@ -91,7 +91,7 @@ export async function initSupportTab(tabElement) {
             <!-- Medevac -->
             <div class="support-asset-item" id="support-medevac">
                 <div class="support-asset-header">
-                    <img src="/icon_medevac.png" alt="Medevac" class="support-asset-icon">
+                    <img src="icon_medevac.png" alt="Medevac" class="support-asset-icon">
                     <h4>Medevac Extraction</h4>
                 </div>
                 <p class="support-asset-description">Request emergency medical evacuation for critically wounded personnel. Requires secure LZ.</p>

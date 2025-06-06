@@ -12,7 +12,8 @@
     max-height: 100%;
 }
 
-.soldier-loadout-panel {
+.soldier-loadout-panel,
+.soldier-loadout-card {
     background-color: rgba(40, 40, 40, 0.8);
     border-radius: 5px;
     border: 1px solid #555;
@@ -92,6 +93,49 @@
 }
 
 .equipment-slot:not(.empty) {
+    border-style: solid;
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+.weapon-slot,
+.armor-slot,
+.item-slot {
+    background-color: rgba(60, 60, 60, 0.5);
+    border: 2px dashed #555;
+    border-radius: 5px;
+    padding: 10px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.weapon-slot.empty,
+.armor-slot.empty,
+.item-slot.empty {
+    cursor: pointer;
+}
+
+.weapon-slot.empty:hover,
+.armor-slot.empty:hover,
+.item-slot.empty:hover {
+    background-color: rgba(80, 80, 80, 0.5);
+    border-color: #777;
+}
+
+.weapon-slot.drag-over,
+.armor-slot.drag-over,
+.item-slot.drag-over {
+    background-color: rgba(255, 165, 0, 0.2);
+    border-color: orange;
+}
+
+.weapon-slot:not(.empty),
+.armor-slot:not(.empty),
+.item-slot:not(.empty) {
     border-style: solid;
     background-color: rgba(30, 30, 30, 0.8);
 }

@@ -45,12 +45,12 @@ export async function initBriefingTab(tabElement) {
     
             <div class="briefing-section briefing-map-image">
                 <h4>Area Map</h4>
-                <img id="briefing-area-map-img" src="/area_map_placeholder.png" alt="Area Map Placeholder">
+                <img id="briefing-area-map-img" src="area_map_placeholder.png" alt="Area Map Placeholder">
             </div>
     
             <div class="briefing-section briefing-plan-image">
                 <h4>Operational Plan</h4>
-                <img id="briefing-plan-diagram-img" src="/plan_diagram_placeholder.png" alt="Plan Diagram Placeholder">
+                <img id="briefing-plan-diagram-img" src="plan_diagram_placeholder.png" alt="Plan Diagram Placeholder">
             </div>
         </div>
     `;

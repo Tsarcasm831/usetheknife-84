@@ -22,6 +22,16 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-5",
+    title: "UI Fixes and Asset Updates",
+    excerpt: "Improved team and loadout tabs. Fixed broken images in the mission modal.",
+    content: "This patch cleans up the Prepare Event interface. Available units are easier to read, loadout slots are clearer, and briefing/map images now load correctly.",
+    date: "2025-06-06T10:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "bugfix"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=UI+Fixes"
+  },
+  {
     id: "devlog-1",
     title: "Multiplayer Beta Launch",
     excerpt: "The long awaited multiplayer beta is now live for all backers.",

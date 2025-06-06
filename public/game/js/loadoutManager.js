@@ -121,10 +121,10 @@ export function refreshLoadoutDisplay() {
             soldierCard.dataset.teamMemberIndex = index;
 
             const weapon = unit.equippedWeapon;
-            let weaponSlotHTML = `<div class="weapon-slot" data-slot-type="weapon" data-team-member-index="${index}">Weapon Slot</div>`;
+            let weaponSlotHTML = `<div class="equipment-slot weapon-slot" data-slot-type="weapon" data-team-member-index="${index}">Weapon Slot</div>`;
             if (weapon) {
                 weaponSlotHTML = `
-                    <div class="weapon-slot equipped" data-slot-type="weapon" data-team-member-index="${index}">
+                    <div class="equipment-slot weapon-slot equipped" data-slot-type="weapon" data-team-member-index="${index}">
                         <img src="${weapon.imagePath}" alt="${weapon.name}" onerror="this.style.display='none'; this.parentElement.innerHTML += '<br>(Img Fail)';">
                         <span>${weapon.name}</span>
                         <button class="remove-equipment-btn" data-equipment-type="weapon" data-slot-index="${index}">&times;</button>
@@ -139,9 +139,9 @@ export function refreshLoadoutDisplay() {
                 </div>
                 <div class="loadout-slots">
                     ${weaponSlotHTML}
-                    <div class="armor-slot" data-slot-type="armor" data-team-member-index="${index}">Armor Slot</div>
-                    <div class="item-slot" data-slot-type="item1" data-team-member-index="${index}">Item Slot</div>
-                    <div class="item-slot locked" data-slot-type="item2" data-team-member-index="${index}">Item 2: Locked</div>
+                    <div class="equipment-slot armor-slot" data-slot-type="armor" data-team-member-index="${index}">Armor Slot</div>
+                    <div class="equipment-slot item-slot" data-slot-type="item1" data-team-member-index="${index}">Item Slot</div>
+                    <div class="equipment-slot item-slot locked" data-slot-type="item2" data-team-member-index="${index}">Item 2: Locked</div>
                 </div>
             `;
             domElements.selectedSoldiersLoadoutsContainer.appendChild(soldierCard);
