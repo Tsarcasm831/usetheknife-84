@@ -86,37 +86,6 @@ export const mockDevLogs: DevLogEntry[] = [
     imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=UI+Fixes"
   },
   {
-    id: "devlog-1",
-    title: "Multiplayer Beta Launch",
-    excerpt: "The long awaited multiplayer beta is now live for all backers.",
-    content: "Players can now team up online and test our new networking code. Let us know if you find any issues while partying up and exploring the wasteland together!",
-    date: "2025-05-28T15:30:00Z",
-    author: "Lead Developer",
-    tags: ["multiplayer", "beta", "gameplay"],
-    featured: true,
-    imageUrl: "https://via.placeholder.com/640x360/FF6B00/FFFFFF/?text=Multiplayer+Beta"
-  },
-  {
-    id: "devlog-2",
-    title: "Dynamic Weather System",
-    excerpt: "Experience storms, fog and more as our new weather system rolls out.",
-    content: "Our artists and engineers worked together to bring a fully dynamic weather system. Conditions will now change organically as you travel the world, affecting both visibility and combat tactics.",
-    date: "2025-05-15T09:45:00Z",
-    author: "Environment Artist",
-    tags: ["environment", "weather", "art"],
-    imageUrl: "https://via.placeholder.com/640x360/2E3440/FFFFFF/?text=Dynamic+Weather"
-  },
-  {
-    id: "devlog-3",
-    title: "New Faction Revealed: The Archivists",
-    excerpt: "Meet the Archivists, a secretive group hoarding pre-disaster tech.",
-    content: "This update introduces a brand new faction complete with quests, gear and their own hidden base. Forge alliances or make enemies – the choice is yours.",
-    date: "2025-05-05T14:20:00Z",
-    author: "Narrative Designer",
-    tags: ["faction", "story", "lore"],
-    imageUrl: "https://via.placeholder.com/640x360/4C566A/FFFFFF/?text=Archivists"
-  },
-  {
     id: "devlog-4",
     title: "Roadmap to Release",
     excerpt: "We've published an updated roadmap detailing the final steps to 1.0.",

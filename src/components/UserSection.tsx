@@ -13,9 +13,8 @@ interface UserSectionProps {
 const UserSection: React.FC<UserSectionProps> = ({ user }) => {
   const { signOut } = useAuth();
   const [notifications, setNotifications] = useState([
-    { id: 1, text: "New devlog published: Multiplayer Beta Launch", read: false },
-    { id: 2, text: "Your comment received 5 likes", read: true },
-    { id: 3, text: "New game update available", read: false }
+    { id: 1, text: "Your comment received 5 likes", read: true },
+    { id: 2, text: "New game update available", read: false }
   ]);
   
   const [showNotifications, setShowNotifications] = useState(false);
