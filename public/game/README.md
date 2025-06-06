@@ -1,3 +1,9 @@
+# Game Assets
+
+This folder contains the static map viewer and related assets used by the devlog portal.
+
+To run the main site locally, copy `.env.example` to `.env` in the project root and provide values for `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY`.
+
 # Tactical Map Viewer
 
 This folder contains the Leaflet-based map used to explore the world of **Remnants of Destruction**. The viewer is fully client-side and can be opened directly in a browser or from a lightweight local server.
@@ -32,3 +38,4 @@ The Google Maps API script in `index.html` includes a placeholder key:
 ```
 
 Replace `YOUR_GOOGLE_MAPS_API_KEY_HERE` with your own API key if you want to enable Street View and geocoding features.
+

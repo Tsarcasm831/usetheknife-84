@@ -20,6 +20,15 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-12",
+    title: "Supabase keys moved to env",
+    excerpt: "Connection details now come from .env.",
+    content:
+      "Supabase URL and key are read from environment variables. Copy `.env.example` to `.env` and set `VITE_SUPABASE_URL` and `VITE_SUPABASE_KEY`.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["config", "supabase"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Supabase+Env"
     id: "devlog-13",
     title: "Map viewer documented",
     excerpt: "Added README for the Leaflet demo.",
