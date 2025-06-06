@@ -17,33 +17,18 @@ export function initCoreRulesModal() {
         if (characterDataCache) return characterDataCache;
 
         const dataSources = {
-            weapons: 'json/data/weapons.json',
-            armor: 'json/data/armor.json',
-            blades: 'json/data/blades.json',
-            archetypes: 'json/character_creation/archetypes.json',
-            attributes: 'json/character_creation/attributes.json',
-            traits: 'json/character_creation/traits.json',
-            mutations: 'json/character_creation/mutations.json',
-            mutations_effects: 'json/character_creation/mutations_effects.json',
-            mutations_colors: 'json/character_creation/mutations_colors.json',
-            psionics: 'json/character_creation/psionics.json',
-            game_mechanics: 'json/character_creation/game_mechanics.json'
+          weapons: "json/data/weapons.json",
+          armor: "json/data/armor.json",
+          blades: "json/data/blades.json",
+          archetypes: "json/character_creation/archetypes.json",
+          attributes: "json/character_creation/attributes.json",
+          traits: "json/character_creation/traits.json",
+          mutations: "json/character_creation/mutations.json",
+          mutations_effects: "json/character_creation/mutations_effects.json",
+          mutations_colors: "json/character_creation/mutations_colors.json",
+          psionics: "json/character_creation/psionics.json",
+          game_mechanics: "json/character_creation/game_mechanics.json"
         };
-  if (characterDataCache) return characterDataCache;
-
-  const dataSources = {
-    weapons: "json/data/weapons.json",
-    armor: "json/data/armor.json",
-    blades: "json/data/blades.json",
-    archetypes: "json/character_creation/archetypes.json",
-    attributes: "json/character_creation/attributes.json",
-    traits: "json/character_creation/traits.json",
-    mutations: "json/character_creation/mutations.json",
-    mutations_effects: "json/character_creation/mutations_effects.json",
-    mutations_colors: "json/character_creation/mutations_colors.json",
-    psionics: "json/character_creation/psionics.json",
-    game_mechanics: "json/character_creation/game_mechanics.json"
-  };
         const loadedData = {};
         try {
             const promises = Object.entries(dataSources).map(async ([key, path]) => {
@@ -148,10 +133,8 @@ export function initCoreRulesModal() {
                     } else {
                          coreRulesDynamicContent.innerHTML = `<p class="error-message">Error loading character data. Please try again.</p>`;
                     }
-                } else if (category === 'rulebook_pdf') {
+                } else if (category === "rulebook_pdf") {
                     coreRulesDynamicContent.innerHTML = `<h3>Rulebook (PDF)</h3><iframe src="assets/Remnants_of_Destruction_Core_Rulebook.pdf" style="width:100%; height: 60vh; border:1px solid orange;"><p>Your browser does not support PDFs. Please download the PDF to view it: <a href="assets/Remnants_of_Destruction_Core_Rulebook.pdf">Download PDF</a>.</p></iframe>`;
-    } else if (category === "rulebook_pdf") {
-      coreRulesDynamicContent.innerHTML = `<h3>Rulebook (PDF)</h3><iframe src="assets/Remnants_of_Destruction_Core_Rulebook.pdf" style="width:100%; height: 60vh; border:1px solid orange;"><p>Your browser does not support PDFs. Please download the PDF to view it: <a href="assets/Remnants_of_Destruction_Core_Rulebook.pdf">Download PDF</a>.</p></iframe>`;
                 } else if (category === 'general_rules') {
                     const charData = await loadCharacterCreationData(); 
                     if (charData && charData.game_mechanics) {
