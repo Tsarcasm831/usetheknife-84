@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-15",
+    title: "AI image generator setup clarified",
+    excerpt: "Supabase function now checks for Hugging Face token.",
+    content:
+      "The generate-devlog-image function validates the HUGGING_FACE_ACCESS_TOKEN secret and returns an error when missing. The README explains how to configure the token.",
+    date: "2025-06-14T00:00:00Z",
+    author: "Web Team",
+    tags: ["ai", "docs"],
+    imageUrl: "https://via.placeholder.com/640x360/FFCC00/FFFFFF/?text=AI+Fix"
+  },
+  {
     id: "devlog-14",
     title: "About tab removed",
     excerpt: "Navigation no longer links to a dead anchor.",
