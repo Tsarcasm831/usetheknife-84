@@ -13,12 +13,22 @@ export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "DevLog", href: "/devlog" },
   { title: "About Me", href: "/about" },
-  { title: "About", href: "#about" },
   { title: "Media", href: "/media" },
   { title: "Game", href: "/game" }
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
+  {
+    id: "devlog-14",
+    title: "About tab removed",
+    excerpt: "Navigation no longer links to a dead anchor.",
+    content:
+      "The About link pointing to #about has been removed from the navigation bar since it had no destination.",
+    date: "2025-06-13T00:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "cleanup"],
+    imageUrl: "https://via.placeholder.com/640x360/FFCC00/FFFFFF/?text=Nav+Update"
+  },
   {
     id: "devlog-13",
     title: "Navigation tabs trimmed",
