@@ -10,7 +10,7 @@ const Media = () => (
       <ul className="list-disc list-inside space-y-2">
         <li>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/lordtsarcasm"
             className="text-game-orange hover:underline"
             target="_blank"
             rel="noopener noreferrer"

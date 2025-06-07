@@ -19,6 +19,16 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-20",
+    title: "Media page uses official Facebook",
+    excerpt: "Link now points to facebook.com/lordtsarcasm.",
+    content: "The Media page previously linked to Facebook's homepage. It now directs to the official page at facebook.com/lordtsarcasm.",
+    date: "2025-06-19T00:00:00Z",
+    author: "Web Team",
+    tags: ["media", "link"],
+    imageUrl: "https://robohash.org/devlog-20?size=640x360"
+  },
+  {
     id: "devlog-19",
     title: "RoboHash integration improved",
     excerpt: "Image generation now works after a clean clone.",
