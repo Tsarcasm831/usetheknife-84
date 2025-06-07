@@ -52,6 +52,7 @@ export const mockDevLogs: DevLogEntry[] = [
     imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=usetheknife"
   },
   {
+
     id: "devlog-16",
     title: "Game sign-in fixed",
     excerpt: "Auth modal now waits for components to load.",
