@@ -56,8 +56,7 @@ const Auth = () => {
       >
         <div className="text-center mb-8">
           <a href="/" className="text-4xl font-bold tracking-wider text-game-orange text-glow inline-block mb-2">
-            REMNANTS
-            <span className="text-white ml-2">DEVLOG</span>
+            usetheknife.com
           </a>
           <h2 className="text-xl text-gray-400">
             {mode === "login" ? "Sign in to your account" : "Create a new account"}

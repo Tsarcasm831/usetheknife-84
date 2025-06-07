@@ -1,6 +1,6 @@
-# Remnants of Destruction Devlog Portal
+# usetheknife.com Devlog Portal
 
-This repository contains the web portal for **Remnants of Destruction**. The site hosts devlogs, media links and an embedded tactical map. It is built with [Vite](https://vitejs.dev/), React and TypeScript using Tailwind CSS and the shadcn-ui component library. Authentication is handled by Supabase.
+This repository contains the web portal for **usetheknife.com**. The site hosts devlogs, media links and an embedded tactical map. It is built with [Vite](https://vitejs.dev/), React and TypeScript using Tailwind CSS and the shadcn-ui component library. Authentication is handled by Supabase.
 
 ## Getting Started
 
