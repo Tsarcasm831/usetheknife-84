@@ -14,13 +14,22 @@ export const mockNavItems: NavItem[] = [
   { title: "DevLog", href: "/devlog" },
   { title: "About Me", href: "/about" },
   { title: "About", href: "#about" },
-  { title: "Media", href: "#media" },
   { title: "Media", href: "/media" },
-  { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
+  {
+    id: "devlog-13",
+    title: "Navigation tabs trimmed",
+    excerpt: "Community and empty Media links removed.",
+    content:
+      "The navigation bar no longer shows the placeholder Media tab or the old Community link. This keeps the menu focused on active pages.",
+    date: "2025-06-12T00:00:00Z",
+    author: "Web Team",
+    tags: ["ui", "cleanup"],
+    imageUrl: "https://via.placeholder.com/640x360/FFCC00/FFFFFF/?text=Nav+Clean"
+  },
   {
     id: "devlog-12",
     title: "Google Maps key via env",
