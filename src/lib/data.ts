@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-16",
+    title: "Game sign-in fixed",
+    excerpt: "Auth modal now waits for components to load.",
+    content:
+      "The sign-in button on the game page failed because the modal script loaded before its HTML. The initializer now retries until elements exist, so the login dialog opens reliably.",
+    date: "2025-06-15T00:00:00Z",
+    author: "Web Team",
+    tags: ["bugfix", "ui"],
+    imageUrl: "https://via.placeholder.com/640x360/FFCC00/FFFFFF/?text=Sign+In"
+  },
+  {
     id: "devlog-15",
     title: "AI image generator setup clarified",
     excerpt: "Supabase function now checks for Hugging Face token.",

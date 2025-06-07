@@ -1,18 +1,20 @@
 export function initAuthModal() {
-  const authModal = document.getElementById('auth-modal');
-  const closeBtn = document.getElementById('close-auth-modal-btn');
-  const signInBtn = document.getElementById('sign-in-btn');
-  const authForm = document.getElementById('auth-form');
-  const switchLink = document.getElementById('auth-switch-link');
-  const title = document.getElementById('auth-modal-title');
-  const actionButton = document.getElementById('auth-action-button');
-  const errorMessage = document.getElementById('auth-error-message');
-  const aiMessage = document.getElementById('auth-ai-message');
+  function setup() {
+    const authModal = document.getElementById("auth-modal");
+    const closeBtn = document.getElementById("close-auth-modal-btn");
+    const signInBtn = document.getElementById("sign-in-btn");
+    const authForm = document.getElementById("auth-form");
+    const switchLink = document.getElementById("auth-switch-link");
+    const title = document.getElementById("auth-modal-title");
+    const actionButton = document.getElementById("auth-action-button");
+    const errorMessage = document.getElementById("auth-error-message");
+    const aiMessage = document.getElementById("auth-ai-message");
 
-  if (!authModal || !closeBtn || !signInBtn || !authForm) {
-    console.error('Auth modal elements missing');
-    return;
-  }
+    if (!authModal || !closeBtn || !signInBtn || !authForm) {
+      // Elements may not be loaded yet, retry shortly
+      setTimeout(setup, 100);
+      return;
+    }
 
   let isRegisterMode = false;
 
@@ -81,4 +83,8 @@ export function initAuthModal() {
       }
     }
   });
+
+  }
+
+  setup();
 }
