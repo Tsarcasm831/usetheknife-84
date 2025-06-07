@@ -23,16 +23,6 @@ This repository contains the web portal for **Remnants of Destruction**. The sit
 
 Run `npm run build` to create a production build in the `dist/` folder.
 
-## Environment Variables
-
-The application requires two Supabase variables at runtime:
-
-- `SUPABASE_URL` – your Supabase project URL.
-- `SUPABASE_PUBLISHABLE_KEY` – the project's public anon key.
-
-You can place these in a `.env` file or export them in your shell before running
-`npm run dev` or `npm run build`.
-
 ## DevLog Image Generation
 
 The DevLog page now uses [RoboHash](https://robohash.org/) to create fun
