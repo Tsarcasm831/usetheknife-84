@@ -31,7 +31,7 @@ const Index = () => {
                 <a href="#" className="hover:text-game-orange">Steam</a>
                 <a href="#" className="hover:text-game-orange">YouTube</a>
               </div>
-              <p className="text-sm text-gray-500">© 2025 usetheknife.com. All rights reserved.</p>
+              <p className="text-sm text-gray-500">© 2025 Remnants of Destruction. All rights reserved.</p>
             </div>
           </div>
         </div>

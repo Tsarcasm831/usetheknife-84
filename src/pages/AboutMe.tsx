@@ -7,7 +7,7 @@ const AboutMe = () => (
     <div className="game-container pt-24 pb-12 space-y-6">
       <h1 className="text-4xl font-bold">About Me</h1>
       <p>
-        Welcome to the usetheknife.com devlog portal. This project shares
+        Welcome to the Remnants of Destruction devlog portal. This project shares
         updates about the game's development and the people behind it.
       </p>
       <p>

@@ -19,17 +19,6 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
-    id: "devlog-17",
-    title: "Main page rebranded",
-    excerpt: "Home page now shows usetheknife.com branding.",
-    content:
-      "The navigation bar, hero section and footer all reference usetheknife.com as the new site name.",
-    date: "2025-06-16T00:00:00Z",
-    author: "Web Team",
-    tags: ["branding"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=usetheknife"
-  },
-  {
     id: "devlog-16",
     title: "Game sign-in fixed",
     excerpt: "Auth modal now waits for components to load.",

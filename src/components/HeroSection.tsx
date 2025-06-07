@@ -25,7 +25,8 @@ const HeroSection: React.FC = () => {
             visible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           )}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
-              <span className="block text-game-orange animate-glow">usetheknife.com</span>
+              <span className="block text-game-orange animate-glow">REMNANTS OF</span>
+              <span className="block">DESTRUCTION</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
@@ -50,9 +51,9 @@ const HeroSection: React.FC = () => {
             <div className="relative">
               <div className="absolute -inset-0.5 bg-game-orange rounded-lg blur opacity-30 animate-pulse-slow"></div>
               <div className="relative rounded-lg overflow-hidden shadow-2xl shadow-game-orange/20 animate-float">
-                <img
-                  src="/lovable-uploads/7db9e57a-96e2-431c-aeca-429aef63288a.png"
-                  alt="usetheknife.com"
+                <img 
+                  src="/lovable-uploads/7db9e57a-96e2-431c-aeca-429aef63288a.png" 
+                  alt="Remnants of Destruction"
                   className="w-full h-auto rounded-lg"
                 />
               </div>

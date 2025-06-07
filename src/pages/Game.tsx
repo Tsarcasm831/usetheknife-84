@@ -8,7 +8,7 @@ const Game = () => {
       <div className="game-container pt-24 pb-12">
         <iframe
           src="/game/index.html"
-          title="usetheknife.com"
+          title="Remnants of Destruction"
           className="w-full h-[80vh] border border-white/10 rounded"
         />
       </div>
