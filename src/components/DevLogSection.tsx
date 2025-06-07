@@ -1,18 +1,22 @@
 
 import React, { useState } from 'react';
 import DevLogCard from './DevLogCard';
+import DevLogForm from './DevLogForm';
 import { DevLogEntry } from '@/types';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Search } from 'lucide-react';
+import { Search, Plus } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface DevLogSectionProps {
   devlogs: DevLogEntry[];
 }
 
-const DevLogSection: React.FC<DevLogSectionProps> = ({ devlogs }) => {
+const DevLogSection: React.FC<DevLogSectionProps> = ({ devlogs: initialDevlogs }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [showForm, setShowForm] = useState(false);
+  const [devlogs, setDevlogs] = useState(initialDevlogs);
   
   // Extract all unique tags
   const allTags = Array.from(
@@ -29,6 +33,18 @@ const DevLogSection: React.FC<DevLogSectionProps> = ({ devlogs }) => {
     
     return matchesSearch && matchesTag;
   });
+
+  const handleAddDevLog = (newEntry: Omit<DevLogEntry, 'id' | 'date'>) => {
+    const entry: DevLogEntry = {
+      ...newEntry,
+      id: `devlog-${Date.now()}`,
+      date: new Date().toISOString()
+    };
+    
+    setDevlogs([entry, ...devlogs]);
+    setShowForm(false);
+    toast.success('DevLog entry added successfully!');
+  };
   
   return (
     <section id="devlog" className="py-20 bg-game-dark">
@@ -40,9 +56,27 @@ const DevLogSection: React.FC<DevLogSectionProps> = ({ devlogs }) => {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-3xl font-bold mb-6">
-            Development <span className="text-game-orange">Log</span>
-          </h2>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-3xl font-bold">
+              Development <span className="text-game-orange">Log</span>
+            </h2>
+            <Button
+              onClick={() => setShowForm(!showForm)}
+              className="bg-game-orange hover:bg-game-orange-light text-white"
+            >
+              <Plus className="w-4 h-4 mr-2" />
+              Add Entry
+            </Button>
+          </div>
+
+          {showForm && (
+            <div className="mb-8">
+              <DevLogForm
+                onSubmit={handleAddDevLog}
+                onCancel={() => setShowForm(false)}
+              />
+            </div>
+          )}
           
           <div className="flex flex-col md:flex-row md:items-center justify-between space-y-4 md:space-y-0">
             <div className="relative max-w-md">
