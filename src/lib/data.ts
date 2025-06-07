@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-20",
+    title: "Supabase keys from env",
+    excerpt: "client.ts now reads environment variables.",
+    content:
+      "Supabase URL and publishable key are no longer hard coded. The client reads SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY from your environment.",
+    date: "2025-06-19T00:00:00Z",
+    author: "Web Team",
+    tags: ["docs", "auth"],
+    imageUrl: "https://via.placeholder.com/640x360/4285F4/FFFFFF/?text=Env+Setup"
+  },
+  {
     id: "devlog-19",
     title: "RoboHash integration improved",
     excerpt: "Image generation now works after a clean clone.",
