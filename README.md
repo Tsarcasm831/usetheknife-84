@@ -23,6 +23,13 @@ This repository contains the web portal for **Remnants of Destruction**. The sit
 
 Run `npm run build` to create a production build in the `dist/` folder.
 
+## AI Image Generation Setup
+
+The DevLog page can generate artwork using Hugging Face. Deploying the
+`generate-devlog-image` function requires a personal access token stored in the
+`HUGGING_FACE_ACCESS_TOKEN` environment variable. Set this secret in Supabase or
+your local `.env` before invoking the function.
+
 ## Contributing
 
 Pull requests are welcome. Each pull request should add a short entry to `src/lib/data.ts` describing the change so it appears on the DevLog page.
