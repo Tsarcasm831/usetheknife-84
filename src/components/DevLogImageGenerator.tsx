@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { supabase } from '@/integrations/supabase/client';
 import { Loader2, Wand2 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -26,22 +25,12 @@ const DevLogImageGenerator: React.FC<DevLogImageGeneratorProps> = ({
 
     setIsGenerating(true);
     try {
-      const { data, error } = await supabase.functions.invoke('generate-devlog-image', {
-        body: { title, excerpt }
-      });
-
-      if (error) {
-        console.error('Error generating image:', error);
-        toast.error('Failed to generate image. Please try again.');
-        return;
-      }
-
-      if (data?.image) {
-        onImageGenerated(data.image);
-        toast.success('AI image generated successfully!');
-      }
+      const seed = encodeURIComponent(`${title} ${excerpt}`);
+      const imageUrl = `https://robohash.org/${seed}?size=640x360`;
+      onImageGenerated(imageUrl);
+      toast.success('Image generated using RoboHash!');
     } catch (error) {
-      console.error('Error calling image generation function:', error);
+      console.error('Error generating image:', error);
       toast.error('Failed to generate image. Please try again.');
     } finally {
       setIsGenerating(false);

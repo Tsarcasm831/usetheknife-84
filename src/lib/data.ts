@@ -19,6 +19,40 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-19",
+    title: "RoboHash integration improved",
+    excerpt: "Image generation now works after a clean clone.",
+    content:
+      "This follow-up ensures RoboHash URLs generate correctly from a fresh repository pull. The feature no longer depends on Supabase.",
+    date: "2025-06-18T00:00:00Z",
+    author: "Web Team",
+    tags: ["devlog", "fix"],
+    imageUrl: "https://robohash.org/devlog-19?size=640x360"
+  },
+  {
+    id: "devlog-18",
+    title: "RoboHash devlog images",
+    excerpt: "Entries now use RoboHash for quick images.",
+    content:
+      "The DevLog image generator no longer relies on Supabase. It builds a RoboHash URL from the title and excerpt so images appear instantly without setup.",
+    date: "2025-06-17T00:00:00Z",
+    author: "Web Team",
+    tags: ["devlog", "images"],
+    imageUrl: "https://robohash.org/devlog-18?size=640x360"
+  },
+  {
+    id: "devlog-17",
+    title: "Main page rebranded",
+    excerpt: "Home page now shows usetheknife.com branding.",
+    content:
+      "The navigation bar, hero section and footer all reference usetheknife.com as the new site name.",
+    date: "2025-06-16T00:00:00Z",
+    author: "Web Team",
+    tags: ["branding"],
+    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=usetheknife"
+  },
+  {
+
     id: "devlog-16",
     title: "Game sign-in fixed",
     excerpt: "Auth modal now waits for components to load.",
