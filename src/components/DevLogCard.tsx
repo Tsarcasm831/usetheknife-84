@@ -2,7 +2,7 @@
 import React from 'react';
 import { DevLogEntry } from '@/types';
 import { motion } from 'framer-motion';
-import { formatDistanceToNow, parseISO, isValid } from 'date-fns';
+import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -58,9 +58,7 @@ const DevLogCard: React.FC<DevLogCardProps> = ({ devlog, index }) => {
           <div className="flex justify-between items-center text-sm text-gray-400">
             <span>{devlog.author}</span>
             <time dateTime={devlog.date}>
-              {isValid(parseISO(devlog.date))
-                ? formatDistanceToNow(parseISO(devlog.date), { addSuffix: true })
-                : 'Invalid date'}
+              {formatDistanceToNow(new Date(devlog.date), { addSuffix: true })}
             </time>
           </div>
         </header>

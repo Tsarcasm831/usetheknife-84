@@ -12,13 +12,25 @@ export const mockUser: User = {
 export const mockNavItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "DevLog", href: "/devlog" },
-  { title: "About", href: "/about" },
+  { title: "About Me", href: "/about" },
+  { title: "About", href: "#about" },
+  { title: "Media", href: "#media" },
   { title: "Media", href: "/media" },
   { title: "Community", href: "#community" },
   { title: "Game", href: "/game" }
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
+  {
+    id: "devlog-12",
+    title: "Google Maps key via env",
+    excerpt: "Map viewer reads VITE_GOOGLE_MAPS_KEY.",
+    content: "index.html now loads Google Maps using VITE_GOOGLE_MAPS_KEY. See the new README for setup.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["docs", "game"],
+    imageUrl: "https://via.placeholder.com/640x360/4285F4/FFFFFF/?text=Map+Setup"
+  },
   {
     id: "devlog-11",
     title: "Roadmap Overhauled",
@@ -107,7 +119,7 @@ export const mockDevLogs: DevLogEntry[] = [
     excerpt: "Our plan now targets a feature-complete release in mid-2027.",
     content:
       "This post details a realistic two-year roadmap. We'll focus on engine upgrades, co-op mode, localization and mod tooling before launching on PC and consoles in 2027. Thanks for your patience!",
-    date: "2025-06-05T00:00:00Z",
+    date: "2025-06-10T00:00:00Z",
     author: "Project Lead",
     tags: ["roadmap", "development"],
     imageUrl: "https://via.placeholder.com/640x360/FF3A20/FFFFFF/?text=Roadmap"
