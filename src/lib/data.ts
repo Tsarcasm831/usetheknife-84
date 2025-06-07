@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-19",
+    title: "RoboHash integration improved",
+    excerpt: "Image generation now works after a clean clone.",
+    content:
+      "This follow-up ensures RoboHash URLs generate correctly from a fresh repository pull. The feature no longer depends on Supabase.",
+    date: "2025-06-18T00:00:00Z",
+    author: "Web Team",
+    tags: ["devlog", "fix"],
+    imageUrl: "https://robohash.org/devlog-19?size=640x360"
+  },
+  {
     id: "devlog-18",
     title: "RoboHash devlog images",
     excerpt: "Entries now use RoboHash for quick images.",
