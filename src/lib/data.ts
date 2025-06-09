@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-22",
+    title: "styles.css newline added",
+    excerpt: "File now ends with a newline character.",
+    content:
+      "public/game/css/styles.css now ends with a newline to follow POSIX conventions.",
+    date: "2025-06-21T00:00:00Z",
+    author: "Web Team",
+    tags: ["maintenance"],
+    imageUrl: "https://robohash.org/devlog-22?size=640x360"
+  },
+  {
     id: "devlog-21",
     title: "Camera images get alt text",
     excerpt: "Popup and Street View images now include alt text.",
