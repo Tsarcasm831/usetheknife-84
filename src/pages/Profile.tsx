@@ -63,6 +63,13 @@ const Profile = () => {
                   Member since {new Date(profile.created_at).toLocaleDateString()}
                 </span>
               </div>
+              {profile.last_login_at && (
+                <div className="mb-4">
+                  <span className="text-sm text-gray-400">
+                    Last login: {new Date(profile.last_login_at).toLocaleDateString()}
+                  </span>
+                </div>
+              )}
               <div className="flex flex-col md:flex-row gap-4 mt-4">
                 <Button 
                   variant="outline" 

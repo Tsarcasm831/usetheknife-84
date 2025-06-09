@@ -67,9 +67,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const fetchProfile = async (userId: string): Promise<void> => {
     try {
       const { data, error } = await supabase
-        .from("profiles")
+        .from("app_users")
         .select("*")
-        .eq("id", userId)
+        .eq("auth_user_id", userId)
         .maybeSingle();
 
       if (error) {
@@ -140,9 +140,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (!user) throw new Error("No user logged in");
 
       const { error } = await supabase
-        .from("profiles")
+        .from("app_users")
         .update(updates)
-        .eq("id", user.id);
+        .eq("auth_user_id", user.id);
 
       if (error) throw error;
       
