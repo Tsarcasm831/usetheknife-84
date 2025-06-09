@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-26",
+    title: "Hero banner links to devlog",
+    excerpt: "Latest Updates button now opens posts.",
+    content:
+      "Clicking the Latest Updates button on the home page now routes to the DevLog page so newcomers can quickly read new entries.",
+    date: "2025-06-25T00:00:00Z",
+    author: "Web Team",
+    tags: ["navigation"],
+    imageUrl: "https://robohash.org/devlog-26?size=640x360"
+  },
+  {
     id: "devlog-25",
     title: "README shows linting steps",
     excerpt: "ESLint instructions added to docs.",
