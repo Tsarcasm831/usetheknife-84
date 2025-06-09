@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-23",
+    title: "Typed auth and profile forms",
+    excerpt: "Added interfaces and removed any types.",
+    content:
+      "Auth and profile components now use explicit interfaces for form data and user profiles, improving type safety.",
+    date: "2025-06-22T00:00:00Z",
+    author: "Web Team",
+    tags: ["typescript", "refactor"],
+    imageUrl: "https://robohash.org/devlog-23?size=640x360"
+  },
+  {
     id: "devlog-22",
     title: "styles.css newline added",
     excerpt: "File now ends with a newline character.",
