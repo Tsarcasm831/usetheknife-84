@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-24",
+    title: "Form types split into files",
+    excerpt: "Interfaces now live under src/types for clarity.",
+    content:
+      "Auth, Profile and context logic import dedicated interfaces from src/types. Any usages have been removed for stronger typing.",
+    date: "2025-06-23T00:00:00Z",
+    author: "Web Team",
+    tags: ["typescript", "cleanup"],
+    imageUrl: "https://robohash.org/devlog-24?size=640x360"
+  },
+  {
     id: "devlog-23",
     title: "Typed auth and profile forms",
     excerpt: "Added interfaces and removed any types.",

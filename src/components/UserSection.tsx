@@ -6,8 +6,10 @@ import { motion } from 'framer-motion';
 import { useAuth } from '@/contexts/AuthContext';
 import { Link } from 'react-router-dom';
 
+import type { UserProfile } from '@/types';
+
 interface UserSectionProps {
-  user: any;
+  user: UserProfile;
 }
 
 const UserSection: React.FC<UserSectionProps> = ({ user }) => {
