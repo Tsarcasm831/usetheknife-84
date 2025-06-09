@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-25",
+    title: "README shows linting steps",
+    excerpt: "ESLint instructions added to docs.",
+    content:
+      "The README now explains how to run `npm run lint` and notes that linting must pass before a pull request.",
+    date: "2025-06-24T00:00:00Z",
+    author: "Web Team",
+    tags: ["docs"],
+    imageUrl: "https://robohash.org/devlog-25?size=640x360"
+  },
+  {
     id: "devlog-24",
     title: "Form types split into files",
     excerpt: "Interfaces now live under src/types for clarity.",
