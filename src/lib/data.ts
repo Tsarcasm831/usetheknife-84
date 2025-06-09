@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-21",
+    title: "Camera images get alt text",
+    excerpt: "Popup and Street View images now include alt text.",
+    content:
+      "The camera module sets alt='Captured photo' on generated image tags so screen readers describe them correctly.",
+    date: "2025-06-20T00:00:00Z",
+    author: "Web Team",
+    tags: ["accessibility", "camera"],
+    imageUrl: "https://robohash.org/devlog-21?size=640x360"
+  },
+  {
     id: "devlog-20",
     title: "Media page uses official Facebook",
     excerpt: "Link now points to facebook.com/lordtsarcasm.",
