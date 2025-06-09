@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="/websim.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "websim": "/websim.js"
+            }
+        }
+    </script>
+    <script type="module" src="/script.js" defer></script>
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-container" id="auth-container">
+            <div class="login-header">
+                <h1 id="form-title">Welcome Back</h1>
+                <p id="form-subtitle">Please enter your details to sign in.</p>
+            </div>
+            <form id="auth-form">
+                <div id="message-area" class="message-area"></div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z" />
+                        <path d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z" />
+                    </svg>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="current-password">
+                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                    </svg>
+                    <div id="password-strength" class="password-strength-indicator signup-field">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text"></span>
+                    </div>
+                </div>
+                <div class="form-group signup-field">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" autocomplete="new-password">
+                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div class="form-options signin-field">
+                    <div class="remember-me">
+                        <!-- Removed for simplicity -->
+                    </div>
+                    <a href="#" class="forgot-password" id="forgot-password-link">Forgot Password?</a>
+                </div>
+                <button type="submit" class="auth-button" id="submit-button">
+                    <span class="button-text">Sign In</span>
+                    <div class="spinner" style="display: none;"></div>
+                </button>
+            </form>
+            <div class="toggle-link">
+                <p id="toggle-text">Don't have an account? <a href="#" id="toggle-action">Sign Up</a></p>
+            </div>
+        </div>
+
+        <!-- Logged In State -->
+        <div class="logged-in-container" id="logged-in-state" style="display: none;">
+            <img id="user-avatar" src="" alt="User Avatar" class="avatar">
+            <h2>Welcome Back!</h2>
+            <p>You are signed in as <strong id="user-email-display"></strong>.</p>
+            <p class="info-text">This session will last until you close the browser tab.</p>
+            <button id="logout-button" class="auth-button logout-button">Logout</button>
+        </div>
+
+        <div class="login-background">
+            <!-- Background element remains the same -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style="width: 100%; height: 100%; display: block;">
+                <path fill="#4F46E5" fill-opacity="0.8" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,181.3C960,203,1056,213,1152,197.3C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+                <path fill="#6366F1" fill-opacity="0.6" d="M0,224L48,208C96,192,192,160,288,170.7C384,181,480,235,576,250.7C672,267,768,245,864,218.7C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

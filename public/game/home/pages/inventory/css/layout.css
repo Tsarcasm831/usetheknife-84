@@ -1,0 +1,178 @@
+/* Moved from style.css */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: max-content;
+    margin: 20px auto;
+}
+
+/* Moved from style.css */
+.top-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    width: auto;
+    align-items: flex-start;
+    width: var(--total-target-width);
+}
+
+/* Moved from style.css */
+.equipment-container {
+    background: var(--equipment-container-bg);
+    padding: 25px;
+    border: 1px solid var(--border-color-dark);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Moved from style.css */
+.equipment-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 10px 3px rgba(80, 80, 90, 0.15),
+                inset 0 1px 1px rgba(255, 255, 255, 0.05),
+                inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Moved from style.css */
+.equipment-container h3 {
+    margin: 0 0 20px 0;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* Moved from style.css */
+.player-model-container {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 300px;
+    box-sizing: border-box;
+    color: #666;
+    flex-grow: 1;
+    max-height: 600px;
+}
+
+/* Moved from style.css */
+.player-model-container h3 {
+    margin: 0 0 15px 0;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Moved from style.css */
+.model-placeholder {
+    border: 1px dashed #444;
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    min-height: 200px;
+}
+
+/* Moved from style.css */
+.player-placeholder-svg {
+    width: 60%;
+    height: auto;
+    max-height: 80%;
+    fill: #444;
+    margin-bottom: 10px;
+}
+
+/* Moved from style.css */
+.model-placeholder span {
+    position: absolute;
+    bottom: 10px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Moved from style.css */
+.inventory-container {
+    background-color: #1f1f1f;
+    padding: var(--inventory-container-padding);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: fit-content;
+    align-self: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.inventory-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.65); /* Modal backdrop */
+    transition: opacity 0.2s;
+}
+.inventory-modal.closed {
+    display: none !important;
+}
+
+.inventory-container.closed {
+    display: block;
+} /* legacy: ensure inventory-container is always visible inside modal */
+
+.inventory-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #2c2c2c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.7em;
+    font-weight: bold;
+    line-height: 28px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inventory-close-btn:hover, .inventory-close-btn:focus {
+    background: #444;
+    color: #ff6666;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}

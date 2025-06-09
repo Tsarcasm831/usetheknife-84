@@ -1,0 +1,551 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #000;
+    color: white;
+}
+
+#container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    pointer-events: none;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+#controls {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+    padding: 15px;
+    background: rgba(0, 20, 40, 0.7);
+    border-radius: 8px;
+    border: 1px solid rgba(100, 200, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+button {
+    background: rgba(30, 60, 90, 0.7);
+    color: white;
+    border: 1px solid rgba(100, 200, 255, 0.5);
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    font-weight: 500;
+}
+
+button:hover {
+    background: rgba(40, 80, 120, 0.8);
+    border-color: rgba(120, 220, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #00b8ff;
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Add tooltip styles for grid cell information */
+.cell-tooltip {
+    position: absolute;
+    background: rgba(0, 30, 60, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    z-index: 100;
+    border: 1px solid rgba(0, 200, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    max-width: 200px;
+}
+
+.cell-tooltip.visible {
+    opacity: 1;
+}
+
+/* Highlighted cell glows */
+.cell-highlight {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,200,0,0.3) 0%, rgba(255,150,0,0) 70%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Time display styles */
+#timeDisplay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    z-index: 10;
+}
+
+.time-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 36px;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(100, 200, 255, 0.8);
+}
+
+.date-display {
+    font-size: 18px;
+    font-weight: 500;
+    color: #8accff;
+    margin-top: 5px;
+}
+
+.day {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 2px;
+    line-height: 1.4;
+}
+
+.time-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.time-controls button {
+    width: 40px;
+    height: 30px;
+    padding: 2px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pauseTime {
+    width: 80px;
+}
+
+#speedDisplay {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.calendar-shortcuts {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.calendar-shortcuts button {
+    padding: 4px 0;
+    font-size: 12px;
+    flex: 1;
+    min-width: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    width: auto;
+}
+
+/* Spring */
+.calendar-shortcuts button:nth-child(1) {
+    background: rgba(30, 130, 50, 0.7);
+    border-color: rgba(100, 255, 150, 0.5);
+}
+/* Summer */
+.calendar-shortcuts button:nth-child(2) {
+    background: rgba(150, 130, 20, 0.7);
+    border-color: rgba(255, 200, 100, 0.5);
+}
+/* Fall */
+.calendar-shortcuts button:nth-child(3) {
+    background: rgba(130, 80, 20, 0.7);
+    border-color: rgba(255, 150, 50, 0.5);
+}
+/* Winter */
+.calendar-shortcuts button:nth-child(4) {
+    background: rgba(50, 80, 130, 0.7);
+    border-color: rgba(150, 200, 255, 0.5);
+}
+
+/* Add UI improvements */
+.ui-panel {
+  background: rgba(0, 20, 40, 0.7);
+  border: 1px solid rgba(100, 200, 255, 0.5);
+  border-radius: 8px;
+  color: white;
+  padding: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.ui-panel:hover {
+  background: rgba(0, 30, 60, 0.8);
+  border-color: rgba(120, 220, 255, 0.8);
+}
+
+.ui-panel + .ui-panel {
+  margin-top: 10px;
+}
+
+/* Add day/night indicator */
+#dayNightIndicator {
+    position: absolute;
+    top: 220px;
+    right: 20px;
+    width: 250px;
+    text-align: center;
+    z-index: 10;
+}
+
+.indicator-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.day-night-bar {
+  height: 14px;
+  border-radius: 7px;
+  background: linear-gradient(to right, 
+    #0a1a33 0%, 
+    #163975 20%, 
+    #65a0e6 40%, 
+    #ffffff 50%, 
+    #ffcc55 60%, 
+    #ff7733 80%, 
+    #0a1a33 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.5), 0 0 5px rgba(0,150,255,0.3);
+  border: 1px solid rgba(100, 200, 255, 0.2);
+}
+
+.time-marker {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 5px white, 0 0 10px white;
+  transform: translateX(-50%);
+}
+
+/* Location info panel */
+#locationInfo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 220px;
+  z-index: 10;
+  display: none;
+}
+
+#locationInfo.visible {
+  display: block;
+}
+
+.location-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-shadow: 0 0 5px rgba(0, 150, 255, 0.8);
+}
+
+.location-details {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+/* Add loading effect for location info */
+@keyframes pulse-text {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.loading-text {
+    animation: pulse-text 1.5s infinite;
+}
+
+/* Add tooltips for UI elements */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+    background: rgba(0, 20, 40, 0.9);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border: 1px solid rgba(100, 200, 255, 0.3);
+}
+
+/* Add styling for the Python script note */
+.footnote {
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+/* Add more detailed styling for region information */
+.region-info, .feature-info {
+    border-left: 3px solid rgba(0, 150, 255, 0.7);
+    padding-left: 7px;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.feature-info {
+    border-left-color: rgba(100, 255, 150, 0.7);
+}
+
+/* Add responsive design for mobile */
+@media (max-width: 768px) {
+  #timeDisplay {
+    width: 200px;
+  }
+  
+  #dayNightIndicator {
+    top: 250px;
+    width: 200px;
+  }
+  
+  #locationInfo {
+    bottom: 80px;
+    right: 10px;
+  }
+  
+  #info h1 {
+    font-size: 20px;
+  }
+  
+  #info p {
+    font-size: 14px;
+  }
+  
+  #controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    left: 5%;
+  }
+  
+  button {
+    width: auto;
+    padding: 8px 12px;
+  }
+}
+
+/* Enhance notification styles for better visibility */
+.notification {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 150, 255, 0.9);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 9999; 
+    transition: bottom 0.5s ease;
+    text-align: center;
+    max-width: 80%;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.notification.visible {
+    bottom: 40px;
+}
+
+.notification.error {
+    background: rgba(255, 70, 70, 0.9);
+}
+
+.notification.success {
+    background: rgba(50, 210, 110, 0.9);
+}
+
+.notification.info {
+    background: rgba(0, 120, 210, 0.9);
+}
+
+/* Override any React styles that might interfere */
+body > div:not(#container):not(#info):not(#controls):not(#loading):not(#timeDisplay):not(#locationInfo):not(#dayNightIndicator):not(.notification):not(.cell-tooltip):not(.footnote) {
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
+/* Further isolation from WebSim UI */
+div[id^="websim-"], div[class^="websim-"] {
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
+/* Add styling for the Python script button */
+#runPythonScript {
+    background: rgba(60, 80, 140, 0.8);
+    border-color: rgba(120, 160, 255, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+#runPythonScript:hover {
+    background: rgba(80, 110, 180, 0.9);
+}
+
+#runPythonScript:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#runPythonScript::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: button-shine 1.5s infinite;
+}
+
+@keyframes button-shine {
+    0% { width: 0%; left: 0; }
+    50% { width: 30%; left: 70%; }
+    100% { width: 0%; left: 100%; }
+}
+
+/* Active button styles for better user feedback */
+button.active {
+    background: rgba(60, 140, 200, 0.9) !important;
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.8) !important;
+}
+
+/* Ensure grid is visible */
+#gridToggle {
+    background: rgba(0, 100, 150, 0.8);
+    border-color: rgba(80, 200, 255, 0.7);
+}
+
+#gridToggle:hover {
+    background: rgba(0, 130, 180, 0.9);
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.5);
+}
+
+/* Debug button for grid issues */
+#debugGrid {
+    background: rgba(150, 50, 50, 0.7);
+    border-color: rgba(255, 100, 100, 0.5);
+    font-size: 12px;
+    padding: 6px;
+}
+
+#debugGrid:hover {
+    background: rgba(180, 60, 60, 0.9);
+}
+
+#fixGrids {
+    background: rgba(180, 80, 60, 0.8);
+    border-color: rgba(255, 120, 100, 0.6);
+    font-weight: bold;
+}
+
+#fixGrids:hover {
+    background: rgba(220, 100, 80, 0.9);
+    box-shadow: 0 0 10px rgba(255, 100, 80, 0.5);
+}

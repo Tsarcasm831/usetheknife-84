@@ -1,0 +1,11 @@
+{
+  "name": "farhaven-world",
+  "version": "1.0.0",
+  "description": "Build scripts for assets manifest and model compression",
+  "scripts": {
+    "build": "node scripts/build_assets_manifest.js && node scripts/compress_glbs.js"
+  },
+  "dependencies": {
+    "gltf-pipeline": "^3.0.2"
+  }
+}

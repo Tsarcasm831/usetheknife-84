@@ -1,0 +1,99 @@
+:root {
+    --grid-cols: 12;
+    --grid-rows: 6;
+    --cell-size: 58px;
+    --grid-gap: 1px;
+    --grid-bg: #1a1a1e;
+    --cell-bg: #28282e;
+    --border-color: #555;
+    --border-color-dark: #333;
+    --text-color: #e0e0e0;
+    --rarity-normal: #c9c9c9;
+    --rarity-normal-bg: linear-gradient(145deg, #4a4a4a, #3f3f3f);
+    --rarity-normal-border: #777;
+    --rarity-magic: #8888ff;
+    --rarity-magic-bg: linear-gradient(145deg, #4a4a7a, #3f3f5f);
+    --rarity-magic-border: #8888ff;
+    --rarity-rare: #ffff77;
+    --rarity-rare-bg: linear-gradient(145deg, #7a7a3a, #5f5f2f);
+    --rarity-rare-border: #ffff77;
+    --rarity-unique: #af6025;
+    --rarity-unique-bg: linear-gradient(145deg, #7a5a1a, #5f4f0f);
+    --rarity-unique-border: #af6025;
+    --rarity-currency: #aa9e8d;
+    --rarity-currency-bg: linear-gradient(145deg, #6a655a, #5f5a4f);
+    --rarity-currency-border: #aa9e8d;
+    --tooltip-bg: rgba(10, 10, 10, 0.95);
+    --tooltip-text: #e0e0e0;
+    --tooltip-compare-bg: rgba(0, 0, 0, 0.3);
+    --tooltip-compare-border: #333;
+    --tooltip-increase-color: #66ff66;
+    --tooltip-decrease-color: #ff6666;
+    --tooltip-neutral-color: #aaaaaa;
+    --invalid-drop-bg: rgba(255, 60, 60, 0.35);
+    --invalid-drop-border: #ff3c3c;
+    --valid-drop-bg: rgba(80, 255, 80, 0.25);
+    --blocked-slot-bg: repeating-linear-gradient(
+        -45deg,
+        rgba(15, 15, 15, 0.9),
+        rgba(15, 15, 15, 0.9) 5px,
+        rgba(25, 25, 25, 0.9) 5px,
+        rgba(25, 25, 25, 0.9) 10px
+    );
+    --req-color: #b0b0b0;
+    --implicit-color: #88aaff;
+    --explicit-color: #ffffff;
+    --flavor-color: #af6025;
+
+    /* Equipment Specific Vars */
+    --equipment-container-bg: linear-gradient(160deg, #28282c, #1e1e22);
+    --equipment-slot-bg: #2e2e34;
+    --equipment-slot-bg-gradient: linear-gradient(145deg, #3a3a42, #2c2c32);
+    --equipment-slot-hover-bg-gradient: linear-gradient(145deg, #4e4e58, #3a3a42);
+    --equipment-slot-can-drop-bg: linear-gradient(145deg, rgba(80, 100, 200, 0.4), rgba(60, 80, 150, 0.5));
+    --equipment-slot-cannot-drop-bg: linear-gradient(145deg, rgba(180, 50, 50, 0.4), rgba(150, 30, 30, 0.5));
+    --equipment-slot-border: #444;
+    --equipment-slot-hover-border: #c0c0d0;
+    --equipment-slot-placeholder-color: #6a6a75;
+    --equipment-slot-blocked-border: #aa4040;
+    --equipment-slot-blocked-overlay: rgba(0, 0, 0, 0.55);
+    --equipment-slot-blocked-x-color: rgba(200, 60, 60, 0.8);
+
+    --equipment-slot-size: 75px;
+    --equipment-flask-slot-size: 48px;
+    --equipment-grid-gap: 8px;
+    --equipment-body-height: calc(var(--equipment-slot-size) * 2 + var(--equipment-grid-gap));
+    --equipment-body-width: 105px;
+    --equipment-belt-height: calc(var(--equipment-slot-size) * 0.65);
+    --equipment-belt-width: 105px;
+    --inventory-grid-width: calc(var(--grid-cols) * (var(--cell-size) + var(--grid-gap)) + var(--grid-gap));
+    --inventory-container-padding: 15px;
+    --total-target-width: calc(var(--inventory-grid-width) + var(--inventory-container-padding) * 2);
+    --transition-speed: 0.15s;
+    --anim-speed-fast: 0.1s;
+    --anim-speed-medium: 0.2s;
+    --drop-glow-valid: 0 0 12px 4px rgba(90, 255, 90, 0.8);
+    --drop-glow-invalid: 0 0 12px 4px rgba(255, 70, 70, 0.8);
+    --tab-inactive-bg: #383840;
+    --tab-active-bg: var(--cell-bg);
+    --tab-hover-bg: #484850;
+    --body-bg-start: #121214;
+    --body-bg-end: #1f1f23;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--body-bg-start), var(--body-bg-end));
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto; /* allow scroll if needed */
+    /* shrink page content by 10% */
+    transform: scale(0.9);
+    transform-origin: top center;
+    user-select: none;
+}

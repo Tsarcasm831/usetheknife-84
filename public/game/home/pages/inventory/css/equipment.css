@@ -1,0 +1,239 @@
+/* --- Equipment Grid Layout --- */
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, var(--equipment-slot-size));
+    grid-template-rows:
+        var(--equipment-slot-size) /* Row 1: Helmet */
+        var(--equipment-slot-size) /* Row 2: Weapon1, Amulet, Weapon2 */
+        var(--equipment-slot-size) /* Row 3: Gloves, Body, Boots */
+        var(--equipment-slot-size) /* Row 4: Body */
+        var(--equipment-slot-size) /* Row 5: Ring1, Belt, Ring2 */
+        auto;                     /* Row 6: Flasks */
+    gap: var(--equipment-grid-gap);
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 15px; /* Increased space before flasks */
+}
+
+/* --- Specific Slot Positioning --- */
+.equipment-slot.helmet { grid-column: 2 / 3; grid-row: 1 / 2; }
+.equipment-slot.weapon1 { grid-column: 1 / 2; grid-row: 2 / 3; }
+.equipment-slot.amulet  { grid-column: 2 / 3; grid-row: 2 / 3; }
+.equipment-slot.weapon2 { grid-column: 3 / 4; grid-row: 2 / 3; }
+.equipment-slot.gloves { grid-column: 1 / 2; grid-row: 3 / 4; }
+.equipment-slot.body-armour {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5; /* Spans rows 3 and 4 */
+    width: var(--equipment-body-width);
+    height: var(--equipment-body-height);
+    align-self: center; /* Center vertically */
+}
+.equipment-slot.boots { grid-column: 3 / 4; grid-row: 3 / 4; }
+.equipment-slot.ring1 { grid-column: 1 / 2; grid-row: 5 / 6; }
+.equipment-slot.belt {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6; /* Moved to Row 5 */
+    width: var(--equipment-belt-width);
+    height: var(--equipment-belt-height);
+    align-self: center; /* Center vertically */
+}
+.equipment-slot.ring2 { grid-column: 3 / 4; grid-row: 5 / 6; }
+.equipment-slot.flask-slots {
+    grid-column: 1 / 4; /* Span all columns */
+    grid-row: 6 / 7; /* Moved to Row 6 */
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Slightly wider gap between flasks */
+    margin-top: 8px; /* Increased space above flasks */
+    background: none;
+    border: none;
+    height: auto;
+    width: 100%;
+    padding: 0;
+}
+
+/* --- Base Slot Styles - Refined --- */
+.equipment-slot {
+    background: var(--equipment-slot-bg-gradient); /* Gradient background */
+    border: 1px solid var(--equipment-slot-border);
+    border-radius: 5px; /* Slightly rounder radius */
+    width: var(--equipment-slot-size);
+    height: var(--equipment-slot-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    transition: border-color var(--transition-speed) ease,
+                background var(--transition-speed) ease, /* Transition background now */
+                box-shadow var(--transition-speed) ease,
+                filter var(--transition-speed) ease;
+    overflow: hidden;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.4), /* Deeper inner shadow */
+                inset 0 0 0 1px rgba(255, 255, 255, 0.03), /* Subtle inner border */
+                0 1px 1px rgba(255, 255, 255, 0.05); /* Subtle top highlight */
+}
+
+/* --- Slot Hover State --- */
+.equipment-slot:not(.occupied):not(.blocked):not(.drop-target):hover {
+    border-color: var(--equipment-slot-hover-border);
+    filter: brightness(1.2); /* Slightly brighter hover */
+    background: var(--equipment-slot-hover-bg-gradient); /* Hover gradient */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), /* Keep inner */
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+                0 0 10px rgba(190, 190, 210, 0.25); /* Enhanced outer glow on hover */
+}
+
+/* --- Blocked Slot --- */
+.equipment-slot.blocked {
+    background: var(--equipment-slot-bg-gradient); /* Keep base gradient but overlay */
+    border-color: var(--equipment-slot-blocked-border);
+    cursor: not-allowed;
+    filter: grayscale(0.3) brightness(0.8); /* Less grayscale, still dark */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.6); /* Darker inset shadow */
+}
+/* Dark overlay for blocked slot */
+.equipment-slot.blocked::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--equipment-slot-blocked-overlay);
+    border-radius: inherit;
+    z-index: 2;
+    pointer-events: none;
+}
+.equipment-slot.blocked::after {
+    content: "X"; /* Use text X */
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(var(--equipment-slot-size) * 0.7); /* Larger X */
+    font-weight: bold;
+    color: var(--equipment-slot-blocked-x-color);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Stronger shadow */
+    pointer-events: none;
+    z-index: 3; /* Above overlay */
+    opacity: 1;
+}
+
+/* --- Drop Target Feedback --- */
+.equipment-slot.drop-target {
+    filter: brightness(1.15);
+}
+.equipment-slot.drop-target.can-drop {
+    border-color: var(--rarity-magic);
+    box-shadow: var(--drop-glow-valid), inset 0 0 6px rgba(136, 136, 255, 0.4); /* Combine glows */
+    background: var(--equipment-slot-can-drop-bg); /* Specific background */
+}
+.equipment-slot.drop-target.cannot-drop {
+    border-color: var(--invalid-drop-border);
+    box-shadow: var(--drop-glow-invalid), inset 0 0 6px rgba(255, 60, 60, 0.4); /* Combine glows */
+    background: var(--equipment-slot-cannot-drop-bg); /* Specific background */
+}
+
+/* --- Slot Size Overrides --- */
+.equipment-slot.body-armour {
+    width: var(--equipment-body-width);
+    height: var(--equipment-body-height);
+}
+.equipment-slot.belt {
+    width: var(--equipment-belt-width);
+    height: var(--equipment-belt-height);
+}
+.equipment-slot.flask {
+    width: var(--equipment-flask-slot-size);
+    height: var(--equipment-flask-slot-size);
+    flex-shrink: 0;
+    border-radius: 3px; /* Slightly sharper radius for flasks */
+}
+
+/* --- Flask Container Reset --- */
+.equipment-slot.flask-slots {
+    background: none;
+    border: none;
+    box-shadow: none;
+    height: auto;
+    width: 100%;
+    padding: 0;
+}
+.equipment-slot.flask-slots::before,
+.equipment-slot.flask-slots::after {
+    content: none; /* Remove base slot effects from container */
+}
+
+/* --- Placeholder SVG --- */
+.slot-icon-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%; /* Increased default size */
+    height: 65%; /* Increased default size */
+    stroke: var(--equipment-slot-placeholder-color);
+    fill: none;
+    stroke-width: 1.8; /* Slightly thicker */
+    opacity: 0.35; /* Slightly more visible */
+    pointer-events: none;
+    transition: opacity var(--transition-speed) ease, filter var(--transition-speed) ease;
+    z-index: 1;
+    filter: drop-shadow(0 0 2px rgba(0,0,0, 0.6)); /* Enhanced shadow */
+}
+/* Hover effect for placeholder */
+.equipment-slot:not(.occupied):not(.blocked):not(.drop-target):hover .slot-icon-placeholder {
+    stroke: var(--equipment-slot-hover-border);
+    opacity: 0.6;
+    filter: drop-shadow(0 0 3px rgba(190, 190, 210, 0.4));
+}
+
+.slot-icon-placeholder.large {
+     width: 55%; /* Adjusted size */
+     height: 55%; /* Adjusted size */
+}
+.slot-icon-placeholder.small {
+     width: 70%; /* Adjusted size */
+     height: 70%; /* Adjusted size */
+}
+
+/* --- Placeholder Visibility --- */
+.equipment-slot.occupied .slot-icon-placeholder,
+.equipment-slot.blocked .slot-icon-placeholder {
+    opacity: 0 !important; /* Use important to override hover */
+    filter: none !important;
+}
+
+/* --- Item within Equipment Slot --- */
+.equipment-slot > .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100% !important;
+    height: 100% !important;
+    transform: translate(0, 0) !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    opacity: 1 !important;
+    padding: 3px; /* Slightly more padding */
+    font-size: 18px; /* Slightly larger icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 3px; /* Match slot border radius */
+    box-sizing: border-box;
+    transition: transform var(--anim-speed-medium) cubic-bezier(0.25, 0.1, 0.25, 1),
+                opacity var(--anim-speed-medium) ease,
+                filter var(--transition-speed) ease,
+                border-color var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
+    will-change: transform, opacity, filter, box-shadow;
+}
+
+.equipment-slot > .item:not(.dragging):hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Brighter hover shadow */
+    filter: brightness(1.1);
+    z-index: 60;
+}

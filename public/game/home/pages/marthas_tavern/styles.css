@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel&display=swap');
+
+:root {
+    --text-color: #e0d2bc;
+    --dialog-bg: #271b10;
+    --dialog-border: #5a4a38;
+    --accent-color: #ffd066;
+    --button-bg: #49392a;
+    --button-hover: #644e36;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IM Fell English', serif;
+    overflow: hidden;
+    background-color: #000;
+    color: var(--text-color);
+    cursor: none; 
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    cursor: crosshair; 
+}
+
+#scene-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #10090a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 1s ease-in-out;
+    cursor: default; 
+}
+
+.loading-content {
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+.loading-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(255, 208, 102, 0.5);
+}
+
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #271b10;
+    border: 2px solid #5a4a38;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--accent-color);
+    width: 0%;
+    transition: width 0.3s ease-out;
+}
+
+.loading-text {
+    font-style: italic;
+    color: #a89784;
+    margin-bottom: 1.5rem; 
+}
+
+/* Start Button */
+#start-button {
+    background-color: var(--button-bg);
+    border: 1px solid var(--dialog-border);
+    color: var(--text-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 1rem; 
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+#start-button:hover {
+    background-color: var(--button-hover);
+}
+
+#start-button:active {
+    transform: scale(0.98);
+}
+
+/* HUD */
+#hud {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    pointer-events: none; 
+}
+
+.location-indicator {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.controls-hint {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Interaction Prompt */
+#interaction-prompt {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    z-index: 20;
+    pointer-events: none; 
+}
+
+/* Dialog System */
+#dialog-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 30;
+    cursor: default; 
+}
+
+.dialog-box {
+    background-color: var(--dialog-bg);
+    border: 3px solid var(--dialog-border);
+    border-radius: 5px;
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "portrait name"
+        "portrait text"
+        "portrait options";
+    gap: 10px;
+}
+
+.dialog-portrait {
+    grid-area: portrait;
+    width: 100px;
+    height: 120px;
+    background-color: #000;
+    border: 2px solid var(--dialog-border);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+    overflow: hidden; 
+}
+.dialog-portrait svg {
+    display: block; 
+    width: 100%;
+    height: 100%;
+}
+
+.dialog-name {
+    grid-area: name;
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.dialog-text {
+    grid-area: text;
+    min-height: 100px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-height: 200px; 
+    overflow-y: auto; 
+}
+
+.dialog-options {
+    grid-area: options;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 150px; 
+    overflow-y: auto; 
+}
+
+.dialog-option {
+    background-color: var(--button-bg);
+    border: 1px solid var(--dialog-border);
+    color: var(--text-color);
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-family: 'IM Fell English', serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: left; 
+}
+
+.dialog-option:hover {
+    background-color: var(--button-hover);
+}
+
+.dialog-close {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--button-bg);
+    border: 1px solid var(--dialog-border);
+    color: var(--text-color);
+    padding: 8px 20px;
+    border-radius: 3px;
+    font-family: 'IM Fell English', serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dialog-close:hover {
+    background-color: var(--button-hover);
+}
+
+/* Trade UI */
+#trade-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 40;
+}
+
+.trade-container {
+    background-color: var(--dialog-bg);
+    border: 3px solid var(--dialog-border);
+    border-radius: 5px;
+    width: 90%;
+    height: 80%;
+    max-width: 900px;
+    padding: 20px;
+    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.trade-container h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--dialog-border);
+    padding-bottom: 10px;
+}
+
+.trade-sections {
+    display: flex;
+    flex-grow: 1; 
+    gap: 20px;
+    overflow: hidden; 
+}
+
+.trade-section {
+    flex: 1;
+    border: 1px solid var(--dialog-border);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    display: flex; 
+    flex-direction: column; 
+}
+
+.trade-section h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.trade-items {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding-right: 5px; /* For scrollbar */
+}
+
+.trade-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(90, 74, 56, 0.3);
+    cursor: pointer;
+}
+
+.trade-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.trade-item-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.trade-item-details {
+    flex: 1;
+}
+
+.trade-item-name {
+    font-weight: bold;
+}
+
+.trade-item-price {
+    color: #ffd066;
+    font-size: 0.9rem;
+}
+
+.trade-close {
+    margin-top: 20px; 
+    align-self: flex-end; 
+    background-color: var(--button-bg);
+    border: 1px solid var(--dialog-border);
+    color: var(--text-color);
+    padding: 10px 25px;
+    border-radius: 3px;
+    font-family: 'IM Fell English', serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.trade-close:hover {
+    background-color: var(--button-hover);
+}
+
+.hidden {
+    display: none !important;
+}

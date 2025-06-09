@@ -1,0 +1,126 @@
+#credits-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 12px;
+    z-index: 100; /* Ensure it's above the canvas */
+    transition: background-color 0.2s ease;
+}
+
+#credits-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#bgm-control-container {
+    position: absolute;
+    bottom: 100px; /* above credits button */
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+#bgm-control-container span#now-playing {
+    flex-shrink: 0;
+}
+
+#bgm-control-container button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+#bgm-control-container button:hover {
+    color: #ddd;
+}
+
+#credits-modal-container {
+    position: fixed; /* Use fixed to cover the whole screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Hidden by default */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    z-index: 1000; /* Above everything else */
+    font-family: sans-serif;
+}
+
+#credits-modal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    backdrop-filter: blur(3px); /* Optional blur effect */
+}
+
+#credits-modal-content {
+    position: relative; /* Needed for z-index stacking within the container */
+    background-color: #f0f0f0; /* Light background for the modal box */
+    color: #333; /* Dark text */
+    padding: 25px 35px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 500px; /* Limit width */
+    max-height: 80vh; /* Limit height */
+    overflow-y: auto; /* Add scroll if content exceeds height */
+    z-index: 1001; /* Above the background */
+}
+
+#credits-modal-content h2 {
+    margin-top: 0;
+    color: #111;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#credits-modal-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#credits-modal-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#credits-modal-content li {
+    margin-bottom: 5px;
+}
+
+#credits-modal-close {
+    display: block; /* Make it a block element */
+    margin: 20px auto 0; /* Center horizontally, add top margin */
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#credits-modal-close:hover {
+    background-color: #333;
+}

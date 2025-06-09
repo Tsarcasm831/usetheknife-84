@@ -1,0 +1,199 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path of Exile - Style Inventory</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/equipment.css">
+    <link rel="stylesheet" href="css/inventory-grid.css">
+    <link rel="stylesheet" href="css/item.css">
+    <link rel="stylesheet" href="css/tooltip.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/drag-drop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Remove broken importmap for interactjs and load via CDN script instead -->
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+</head>
+<body>
+    <div class="inventory-modal">
+    <button class="inventory-close-btn" aria-label="Close Inventory" title="Close Inventory">&times;</button>
+    <div class="page-container">
+        <div class="top-section">
+            <div class="equipment-container">
+                <h3>Equipment</h3>
+                <div class="equipment-grid">
+                    <div class="equipment-slot helmet" data-slot-type="Helmet" title="Helmet">
+                        <svg class="slot-icon-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M32 10C18 10 6 22 6 36v12h52V36C58 22 46 10 32 10z"/>
+                          <path d="M6 36h52"/>
+                          <path d="M18 36a14 14 0 0 1 14-14 14 14 0 0 1 14 14"/>
+                          <path d="M32 48v-8 M28 48h8"/>
+                        </svg>
+                    </div>
+                    <div class="equipment-slot weapon1" data-slot-type="Weapon" title="Main Hand">
+                         <svg class="slot-icon-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M8 56l48-48"/>
+                           <path d="M18 46l6-6"/>
+                           <path d="M42 22l6-6"/>
+                           <path d="M12 52l-4 4 8 8 4-4"/>
+                           <path d="M30 34l-8 8 12 12 8-8"/>
+                           <path d="M52 12l4-4-8-8-4 4"/>
+                         </svg>
+                    </div>
+                    <div class="equipment-slot amulet" data-slot-type="Amulet" title="Amulet">
+                         <svg class="slot-icon-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 18 C 18 8 46 8 46 18 C 46 28 38 32 32 40 C 26 32 18 28 18 18 Z"/>
+                            <path d="M32 40 l -6 14 h 12 Z"/>
+                            <circle cx="32" cy="24" r="6"/>
+                            <path d="M10 18 Q 14 14 18 18 M46 18 Q 50 14 54 18"/>
+                         </svg>
+                    </div>
+                    <div class="equipment-slot weapon2" data-slot-type="Weapon" title="Off Hand">
+                         <svg class="slot-icon-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M8 56l48-48"/>
+                           <path d="M18 46l6-6"/>
+                           <path d="M42 22l6-6"/>
+                           <path d="M12 52l-4 4 8 8 4-4"/>
+                           <path d="M30 34l-8 8 12 12 8-8"/>
+                           <path d="M52 12l4-4-8-8-4 4"/>
+                         </svg>
+                    </div>
+                    <div class="equipment-slot body-armour" data-slot-type="Body Armour" title="Body Armour">
+                        <svg class="slot-icon-placeholder large" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M12 10 H 52 L 58 20 V 54 H 6 V 20 Z"/>
+                           <path d="M18 10 L 12 20 M46 10 L 52 20"/>
+                           <path d="M6 20 H 58"/>
+                           <path d="M10 10 C 18 4 46 4 54 10"/>
+                           <path d="M24 30 a 8 8 0 0 1 16 0"/>
+                           <path d="M20 54 V 40 H 44 V 54"/>
+                        </svg>
+                    </div>
+                    <div class="equipment-slot ring1" data-slot-type="Ring" title="Ring 1">
+                         <svg class="slot-icon-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 16 H 40 L 48 24 V 40 L 40 48 H 24 L 16 40 V 24 Z"/>
+                            <circle cx="32" cy="32" r="12"/>
+                            <circle cx="32" cy="32" r="8"/>
+                         </svg>
+                    </div>
+                    <div class="equipment-slot gloves" data-slot-type="Gloves" title="Gloves">
+                        <svg class="slot-icon-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M10 24 V 54 H 30 V 32 C 30 22 24 18 24 18 L 10 24 Z"/>
+                           <path d="M54 24 V 54 H 34 V 32 C 34 22 40 18 40 18 L 54 24 Z"/>
+                           <path d="M24 18 S 28 10 32 10 S 40 18 40 18"/>
+                           <path d="M10 40 H 18 M14 40 v 6 M18 40 v -4 M22 36 v -4"/>
+                           <path d="M54 40 H 46 M50 40 v 6 M46 40 v -4 M42 36 v -4"/>
+                        </svg>
+                    </div>
+                    <div class="equipment-slot ring2" data-slot-type="Ring" title="Ring 2">
+                        <svg class="slot-icon-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 16 H 40 L 48 24 V 40 L 40 48 H 24 L 16 40 V 24 Z"/>
+                            <circle cx="32" cy="32" r="12"/>
+                            <circle cx="32" cy="32" r="8"/>
+                        </svg>
+                    </div>
+                    <div class="equipment-slot boots" data-slot-type="Boots" title="Boots">
+                        <svg class="slot-icon-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M12 44 H 52 V 54 H 12 Z"/>
+                          <path d="M16 44 V 20 C 16 10 24 10 32 10 S 48 10 48 20 V 44"/>
+                          <path d="M12 54 L 8 58 M52 54 l 4 4"/>
+                          <path d="M12 50 H 52"/>
+                        </svg>
+                    </div>
+                    <div class="equipment-slot belt" data-slot-type="Belt" title="Belt">
+                        <svg class="slot-icon-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M10 20 H 54 V 44 H 10 Z"/>
+                           <rect x="24" y="16" width="16" height="32" rx="3"/>
+                           <rect x="28" y="22" width="8" height="20" rx="1"/>
+                           <path d="M24 32 h -10 M40 32 h 10"/>
+                        </svg>
+                    </div>
+                     <div class="equipment-slot flask-slots">
+                         <div class="equipment-slot flask" data-slot-type="Flask" title="Flask 1">
+                            <svg class="slot-icon-placeholder small" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                               <path d="M20 10 h 24"/>
+                               <path d="M24 10 v 10"/>
+                               <path d="M40 10 v 10"/>
+                               <path d="M16 20 C 16 30 10 36 10 44 C 10 54 20 58 32 58 S 54 54 54 44 C 54 36 48 30 48 20 H 16 Z"/>
+                               <path d="M18 48 Q 32 44 46 48"/>
+                            </svg>
+                         </div>
+                         <div class="equipment-slot flask" data-slot-type="Flask" title="Flask 2">
+                            <svg class="slot-icon-placeholder small" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                               <path d="M20 10 h 24"/> <path d="M24 10 v 10"/> <path d="M40 10 v 10"/>
+                               <path d="M16 20 C 16 30 10 36 10 44 C 10 54 20 58 32 58 S 54 54 54 44 C 54 36 48 30 48 20 H 16 Z"/>
+                               <path d="M18 48 Q 32 44 46 48"/>
+                            </svg>
+                         </div>
+                         <div class="equipment-slot flask" data-slot-type="Flask" title="Flask 3">
+                            <svg class="slot-icon-placeholder small" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                               <path d="M20 10 h 24"/> <path d="M24 10 v 10"/> <path d="M40 10 v 10"/>
+                               <path d="M16 20 C 16 30 10 36 10 44 C 10 54 20 58 32 58 S 54 54 54 44 C 54 36 48 30 48 20 H 16 Z"/>
+                               <path d="M18 48 Q 32 44 46 48"/>
+                            </svg>
+                         </div>
+                         <div class="equipment-slot flask" data-slot-type="Flask" title="Flask 4">
+                             <svg class="slot-icon-placeholder small" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                               <path d="M20 10 h 24"/> <path d="M24 10 v 10"/> <path d="M40 10 v 10"/>
+                               <path d="M16 20 C 16 30 10 36 10 44 C 10 54 20 58 32 58 S 54 54 54 44 C 54 36 48 30 48 20 H 16 Z"/>
+                               <path d="M18 48 Q 32 44 46 48"/>
+                            </svg>
+                         </div>
+                         <div class="equipment-slot flask" data-slot-type="Flask" title="Flask 5">
+                             <svg class="slot-icon-placeholder small" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                               <path d="M20 10 h 24"/> <path d="M24 10 v 10"/> <path d="M40 10 v 10"/>
+                               <path d="M16 20 C 16 30 10 36 10 44 C 10 54 20 58 32 58 S 54 54 54 44 C 54 36 48 30 48 20 H 16 Z"/>
+                               <path d="M18 48 Q 32 44 46 48"/>
+                            </svg>
+                         </div>
+                     </div>
+                </div>
+            </div>
+
+            <div class="player-model-container">
+                <h3>Player</h3>
+                <div class="model-placeholder">
+                    <svg class="player-placeholder-svg" viewBox="0 0 100 200">
+                      <path d="M50 10 C 40 10, 35 20, 35 30 C 35 40, 40 50, 50 50 C 60 50, 65 40, 65 30 C 65 20, 60 10, 50 10 Z M 50 55 C 30 55, 20 70, 20 90 L 20 140 C 20 150, 25 160, 35 160 L 35 190 L 45 190 L 45 160 C 45 155, 48 150, 50 150 C 52 150, 55 155, 55 160 L 55 190 L 65 190 L 65 160 C 75 160, 80 150, 80 140 L 80 90 C 80 70, 70 55, 50 55 Z M 20 90 C 15 90, 10 95, 10 110 L 10 130 C 10 145, 15 150, 20 150 Z M 80 90 C 85 90, 90 95, 90 110 L 90 130 C 90 145, 85 150, 80 150 Z" />
+                    </svg>
+                    <span>(3D Model Area)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="inventory-container">
+            <div class="tabs">
+                <button class="tab active" data-tab-id="inventory">Inventory</button>
+                <button class="tab" data-tab-id="stash1">Stash Tab 1</button>
+                <button class="tab" data-tab-id="currency">Currency</button>
+            </div>
+            <div class="grid-container">
+                 <div class="drop-indicator"></div>
+                <div class="inventory-grid" id="inventory-grid">
+                    <!-- Grid cells dynamically generated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tooltip" class="tooltip" style="display: none;"></div>
+
+    <!-- Load all inventory JS dependencies in order -->
+    <script src="config.js"></script>
+    <script src="data.js"></script>
+    <script src="dragDropHandlers.js"></script>
+    <script src="dragDropState.js"></script>
+    <script src="dropTarget.js"></script>
+    <script src="grid.js"></script>
+    <script src="inventoryManager.js"></script>
+    <script src="render.js"></script>
+    <script src="tooltip.js"></script>
+    <script src="ui.js"></script>
+    <script src="dragDrop.js"></script>
+    <!-- Main entrypoint -->
+    <script src="script.js"></script>
+    <!-- interactjs is now globally available as window.interact -->
+</body>
+</html>

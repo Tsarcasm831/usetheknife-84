@@ -1,0 +1,40 @@
+/* Moved from style.css */
+.tabs {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+/* Moved from style.css */
+.tab {
+    padding: 9px 18px; 
+    background-color: #3a3a3a;
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 4px 4px 0 0; 
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    position: relative;
+    top: 1px; 
+    opacity: 0.85;
+}
+
+/* Moved from style.css */
+.tab:hover {
+    background-color: #484848;
+    color: #fff;
+    opacity: 1;
+}
+
+/* Moved from style.css */
+.tab.active {
+    background-color: var(--cell-bg);
+    border-bottom: 1px solid var(--cell-bg); 
+    color: #fff;
+    font-weight: bold;
+    border-color: var(--border-color);
+    border-bottom-color: var(--cell-bg); 
+    opacity: 1;
+    z-index: 2; 
+}

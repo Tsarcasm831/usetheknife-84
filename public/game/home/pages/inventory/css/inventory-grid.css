@@ -1,0 +1,30 @@
+/* Moved from style.css */
+.grid-container {
+    position: relative;
+    padding: var(--grid-gap);
+    background-color: var(--grid-bg);
+    border: 1px solid var(--border-color);
+    width: var(--inventory-grid-width);
+    height: calc(var(--grid-rows) * (var(--cell-size) + var(--grid-gap)) + var(--grid-gap));
+    box-sizing: border-box;
+    border-radius: 0 3px 3px 3px;
+    overflow: hidden;
+}
+
+/* Moved from style.css */
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), var(--cell-size));
+    grid-template-rows: repeat(var(--grid-rows), var(--cell-size));
+    gap: var(--grid-gap);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    background-color: var(--grid-bg);
+     background-image:
+        linear-gradient(to right, var(--cell-bg) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--cell-bg) 1px, transparent 1px);
+     background-size: calc(var(--cell-size) + var(--grid-gap)) calc(var(--cell-size) + var(--grid-gap));
+     z-index: 1;
+}

@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileGarden Replica</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "react-router-dom": "https://esm.sh/react-router-dom@6.22.3",
+        "uuid": "https://esm.sh/uuid@9.0.1"
+      }
+    }
+    </script>
+
+    <!-- React UMDs for Babel's JSX transform environment -->
+    <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- WebsimSocket, deferred. Placed before Babel to ensure its global is available. -->
+    <script defer src="https://cdn.jsdelivr.net/npm/websim@0.3.1/dist/websim.socket.min.js"></script>
+    
+    <!-- Babel Standalone, deferred. Will process type="text/babel" scripts. -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"><div style="padding: 20px; font-family: sans-serif;">Loading application...</div></div>
+    
+    <!-- 
+      Babel (deferred) will fetch this script, transpile it, and then execute it.
+      Changed to relative path.
+    -->
+    <script type="text/babel" data-type="module" data-presets="react,env" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,776 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raycasting Demo with Dual Perspective</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+        }
+        canvas {
+            background-color: #111;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #3dView {
+            width: 800px;
+            height: 200px;
+        }
+        .detection-status {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            z-index: 10;
+        }
+        .toggle-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .toggle-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 34px;
+            transition: .4s;
+        }
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            border-radius: 50%;
+            transition: .4s;
+        }
+        input:checked + .toggle-slider {
+            background-color: #2196F3;
+        }
+        input:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+        .view-indicator {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <div class="detection-status" id="detectionStatus"></div>
+        <canvas id="3dView" width="800" height="200"></canvas>
+        <div class="view-indicator" id="viewIndicator">Blue View</div>
+    </div>
+    <div class="toggle-container">
+        <div class="toggle-option">
+            <span>Freeze Red Direction</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="freezeToggle">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+        <div class="toggle-option">
+            <span>Use Red's View</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="viewToggle">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+    </div>
+    <div class="controls">
+        <p>Use WASD or Arrow Keys to move the blue player</p>
+        <p>Use Q/E or Z/C to rotate</p>
+    </div>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const canvas3D = document.getElementById('3dView');
+        const ctx3D = canvas3D.getContext('2d');
+        const detectionStatus = document.getElementById('detectionStatus');
+        const freezeToggle = document.getElementById('freezeToggle');
+        const viewToggle = document.getElementById('viewToggle');
+        const viewIndicator = document.getElementById('viewIndicator');
+        
+        // Tracking if the dummy's direction is frozen and which view to use
+        let isDummyDirectionFrozen = false;
+        let useRedView = false;
+        
+        // Game objects
+        const player = {
+            x: 400,
+            y: 300,
+            radius: 15,
+            direction: 0,
+            speed: 3,
+            rotationSpeed: 0.1,
+            rays: [],
+            fovAngle: Math.PI / 2, // 90 degrees field of view
+            color: 'blue'
+        };
+        
+        const dummy = {
+            x: 200,
+            y: 200,
+            radius: 15,
+            direction: Math.PI / 4,
+            rays: [],
+            fovAngle: Math.PI / 2, // 90 degrees field of view
+            color: 'red'
+        };
+        
+        // Walls/obstacles
+        const walls = [
+            {x: 100, y: 100, width: 50, height: 200},
+            {x: 600, y: 150, width: 100, height: 50},
+            {x: 300, y: 400, width: 200, height: 30},
+            {x: 450, y: 150, width: 30, height: 150},
+            {x: 150, y: 450, width: 80, height: 80}
+        ];
+        
+        // Raycasting variables
+        const RAY_COUNT = 160; // Increased for smoother 3D rendering
+        const RAY_LENGTH = Math.hypot(canvas.width, canvas.height) * 2;
+        
+        // Create rays for entity
+        function createRays(entity) {
+            entity.rays = [];
+            const halfFOV = entity.fovAngle / 2;
+            const angleStep = entity.fovAngle / (RAY_COUNT - 1);
+            
+            for (let i = 0; i < RAY_COUNT; i++) {
+                const angle = entity.direction - halfFOV + i * angleStep;
+                entity.rays.push({
+                    angle: angle,
+                    endX: entity.x + RAY_LENGTH * Math.cos(angle),
+                    endY: entity.y + RAY_LENGTH * Math.sin(angle),
+                    hit: false,
+                    distance: RAY_LENGTH,
+                    wallType: null,
+                    hitEntity: null
+                });
+            }
+        }
+        
+        // Cast rays and check for collisions
+        function castRays(entity, otherEntity) {
+            createRays(entity);
+            
+            entity.rays.forEach((ray, rayIndex) => {
+                let closestIntersection = null;
+                let minDistance = RAY_LENGTH;
+                ray.hit = false;
+                ray.wallType = null;
+                ray.hitEntity = null;
+                
+                // Check intersections with all walls
+                walls.forEach((wall, wallIndex) => {
+                    const boundaries = [
+                        {x1: wall.x, y1: wall.y, x2: wall.x + wall.width, y2: wall.y, type: 'top'}, // Top
+                        {x1: wall.x + wall.width, y1: wall.y, x2: wall.x + wall.width, y2: wall.y + wall.height, type: 'right'}, // Right
+                        {x1: wall.x + wall.width, y1: wall.y + wall.height, x2: wall.x, y2: wall.y + wall.height, type: 'bottom'}, // Bottom
+                        {x1: wall.x, y1: wall.y + wall.height, x2: wall.x, y2: wall.y, type: 'left'} // Left
+                    ];
+                    
+                    boundaries.forEach(boundary => {
+                        const intersection = getIntersection(
+                            entity.x, entity.y, entity.x + RAY_LENGTH * Math.cos(ray.angle), entity.y + RAY_LENGTH * Math.sin(ray.angle),
+                            boundary.x1, boundary.y1, boundary.x2, boundary.y2
+                        );
+                        
+                        if (intersection) {
+                            const distance = Math.hypot(intersection.x - entity.x, intersection.y - entity.y);
+                            const correctedDistance = distance * Math.cos(ray.angle - entity.direction);
+                            
+                            if (correctedDistance < minDistance) {
+                                minDistance = correctedDistance;
+                                closestIntersection = intersection;
+                                ray.hit = true;
+                                ray.wallType = {
+                                    index: wallIndex,
+                                    side: boundary.type
+                                };
+                                ray.hitEntity = null;
+                            }
+                        }
+                    });
+                });
+                
+                // Check intersections with canvas boundaries
+                const boundaries = [
+                    {x1: 0, y1: 0, x2: canvas.width, y2: 0, type: 'canvas-top'}, // Top
+                    {x1: canvas.width, y1: 0, x2: canvas.width, y2: canvas.height, type: 'canvas-right'}, // Right
+                    {x1: canvas.width, y1: canvas.height, x2: 0, y2: canvas.height, type: 'canvas-bottom'}, // Bottom
+                    {x1: 0, y1: canvas.height, x2: 0, y2: 0, type: 'canvas-left'} // Left
+                ];
+                
+                boundaries.forEach(boundary => {
+                    const intersection = getIntersection(
+                        entity.x, entity.y, entity.x + RAY_LENGTH * Math.cos(ray.angle), entity.y + RAY_LENGTH * Math.sin(ray.angle),
+                        boundary.x1, boundary.y1, boundary.x2, boundary.y2
+                    );
+                    
+                    if (intersection) {
+                        const distance = Math.hypot(intersection.x - entity.x, intersection.y - entity.y);
+                        const correctedDistance = distance * Math.cos(ray.angle - entity.direction);
+                        
+                        if (correctedDistance < minDistance) {
+                            minDistance = correctedDistance;
+                            closestIntersection = intersection;
+                            ray.hit = true;
+                            ray.wallType = {
+                                index: -1, // Special index for canvas boundaries
+                                side: boundary.type
+                            };
+                            ray.hitEntity = null;
+                        }
+                    }
+                });
+                
+                // Check intersection with other entity (player or dummy)
+                if (otherEntity) {
+                    // Get vector from entity to other entity
+                    const dx = otherEntity.x - entity.x;
+                    const dy = otherEntity.y - entity.y;
+                    
+                    // Get ray direction vector
+                    const rayDirX = Math.cos(ray.angle);
+                    const rayDirY = Math.sin(ray.angle);
+                    
+                    // Calculate coefficients for quadratic equation for circle-line intersection
+                    const a = rayDirX * rayDirX + rayDirY * rayDirY;
+                    const b = 2 * (rayDirX * dx + rayDirY * dy);
+                    const c = dx * dx + dy * dy - otherEntity.radius * otherEntity.radius;
+                    
+                    // Calculate discriminant to check for intersection
+                    const discriminant = b * b - 4 * a * c;
+                    
+                    if (discriminant >= 0) {
+                        // Ray might hit the entity
+                        const sqrtDiscriminant = Math.sqrt(discriminant);
+                        const t1 = (-b - sqrtDiscriminant) / (2 * a);
+                        const t2 = (-b + sqrtDiscriminant) / (2 * a);
+                        
+                        // Find closest intersection point in front of ray
+                        let t = null;
+                        if (t1 >= 0) t = t1;
+                        else if (t2 >= 0) t = t2;
+                        
+                        if (t !== null) {
+                            const intersectionX = entity.x + t * rayDirX;
+                            const intersectionY = entity.y + t * rayDirY;
+                            const distance = Math.hypot(intersectionX - entity.x, intersectionY - entity.y);
+                            const correctedDistance = distance * Math.cos(ray.angle - entity.direction);
+                            
+                            if (correctedDistance < minDistance && correctedDistance > 0) {
+                                minDistance = correctedDistance;
+                                closestIntersection = { x: intersectionX, y: intersectionY };
+                                ray.hit = true;
+                                ray.wallType = null;
+                                ray.hitEntity = otherEntity;
+                                ray.distance = correctedDistance;
+                            }
+                        }
+                    }
+                }
+                
+                if (closestIntersection) {
+                    ray.endX = closestIntersection.x;
+                    ray.endY = closestIntersection.y;
+                    ray.distance = minDistance;
+                } else {
+                    ray.distance = RAY_LENGTH;
+                }
+            });
+        }
+        
+        // Line intersection helper
+        function getIntersection(x1, y1, x2, y2, x3, y3, x4, y4) {
+            const denominator = (y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1);
+            
+            if (denominator === 0) {
+                return null;
+            }
+            
+            const ua = ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) / denominator;
+            const ub = ((x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)) / denominator;
+            
+            if (ua < 0 || ua > 1 || ub < 0 || ub > 1) {
+                return null;
+            }
+            
+            const x = x1 + ua * (x2 - x1);
+            const y = y1 + ua * (y2 - y1);
+            
+            return {x, y};
+        }
+        
+        // Draw vision cone
+        function drawVisionCone(entity, color) {
+            if (entity.rays.length < 2) return;
+            
+            // Draw vision cone with gradient for infinite feel
+            ctx.beginPath();
+            ctx.moveTo(entity.x, entity.y);
+            
+            // First, create a polygon with all ray endpoints
+            for (let i = 0; i < entity.rays.length; i++) {
+                ctx.lineTo(entity.rays[i].endX, entity.rays[i].endY);
+            }
+            ctx.lineTo(entity.x, entity.y);
+            
+            // Create a radial gradient for a fading effect
+            const gradient = ctx.createRadialGradient(
+                entity.x, entity.y, 0,
+                entity.x, entity.y, RAY_LENGTH/2
+            );
+            gradient.addColorStop(0, color);
+            gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            
+            // Fill with the gradient
+            ctx.fillStyle = gradient;
+            ctx.fill();
+            
+            // Draw rays with gradient for infinite feel
+            entity.rays.forEach(ray => {
+                ctx.beginPath();
+                ctx.moveTo(entity.x, entity.y);
+                ctx.lineTo(ray.endX, ray.endY);
+                
+                // Create gradient for each ray
+                const rayGradient = ctx.createLinearGradient(
+                    entity.x, entity.y,
+                    ray.endX, ray.endY
+                );
+                rayGradient.addColorStop(0, 'rgba(255, 255, 255, 0.5)');
+                rayGradient.addColorStop(1, 'rgba(255, 255, 255, 0.1)');
+                
+                // Use different color for rays that hit entities
+                if (ray.hitEntity) {
+                    ctx.strokeStyle = ray.hitEntity.color === 'red' ? 
+                        'rgba(255, 100, 100, 0.7)' : 
+                        'rgba(100, 100, 255, 0.7)';
+                    ctx.lineWidth = 2;
+                } else {
+                    ctx.strokeStyle = rayGradient;
+                    ctx.lineWidth = 1;
+                }
+                
+                ctx.stroke();
+            });
+            
+            // Highlight points where rays hit walls or entities
+            entity.rays.forEach(ray => {
+                if (ray.hit) {
+                    if (ray.hitEntity) {
+                        // Highlight entity hits with a larger, colored circle
+                        ctx.beginPath();
+                        ctx.arc(ray.endX, ray.endY, 4, 0, Math.PI * 2);
+                        ctx.fillStyle = ray.hitEntity.color === 'red' ? 
+                            'rgba(255, 100, 100, 0.9)' : 
+                            'rgba(100, 100, 255, 0.9)';
+                        ctx.fill();
+                    } else {
+                        // Regular wall hits
+                        ctx.beginPath();
+                        ctx.arc(ray.endX, ray.endY, 2, 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+                        ctx.fill();
+                    }
+                }
+            });
+        }
+        
+        // Draw 3D View
+        function draw3DView() {
+            ctx3D.clearRect(0, 0, canvas3D.width, canvas3D.height);
+            
+            // Choose which entity's rays to use based on view toggle
+            const viewEntity = useRedView ? dummy : player;
+            const otherEntity = useRedView ? player : dummy;
+            
+            // Draw ceiling
+            ctx3D.fillStyle = '#222';
+            ctx3D.fillRect(0, 0, canvas3D.width, canvas3D.height / 2);
+            
+            // Draw floor
+            ctx3D.fillStyle = '#444';
+            ctx3D.fillRect(0, canvas3D.width / 2, canvas3D.width, canvas3D.height / 2);
+            
+            // Calculate strip width based on canvas width and ray count
+            const stripWidth = canvas3D.width / viewEntity.rays.length;
+            
+            // Draw walls and entities based on ray distances
+            viewEntity.rays.forEach((ray, i) => {
+                // Calculate wall height based on distance (inversely proportional)
+                const wallHeight = ray.distance ? 15000 / ray.distance : canvas3D.height;
+                const cappedHeight = Math.min(canvas3D.height * 2, wallHeight);
+                const wallTop = (canvas3D.height - cappedHeight) / 2;
+                
+                // Position for this strip
+                const screenX = i * stripWidth;
+                
+                if (ray.hitEntity) {
+                    // This ray hit an entity (player or dummy)
+                    // Make entities more noticeable in the 3D view
+                    const entityColor = ray.hitEntity.color === 'red' ? 'rgb(255, 50, 50)' : 'rgb(50, 50, 255)';
+                    
+                    // Draw the entity strip with more brightness to make it visible
+                    ctx3D.fillStyle = entityColor;
+                    ctx3D.fillRect(screenX, wallTop, stripWidth + 1, cappedHeight);
+                    
+                    // Add a vertical highlight pattern to make entities stand out
+                    const highlightColor = ray.hitEntity.color === 'red' ? 'rgb(255, 200, 200)' : 'rgb(200, 200, 255)';
+                    ctx3D.fillStyle = highlightColor;
+                    
+                    // Top and bottom highlight borders
+                    ctx3D.fillRect(screenX, wallTop, stripWidth + 1, 5);
+                    ctx3D.fillRect(screenX, wallTop + cappedHeight - 5, stripWidth + 1, 5);
+                    
+                    // Add vertical patterns to make entities more distinct
+                    if (i % 4 === 0) {
+                        ctx3D.fillRect(screenX, wallTop, 2, cappedHeight);
+                    }
+                } 
+                else if (ray.hit) {
+                    // This ray hit a wall
+                    let wallColor;
+                    
+                    if (!ray.wallType || ray.wallType.index === -1) {
+                        // Canvas boundary walls
+                        const darkness = Math.min(1, ray.distance / 400);
+                        const shade = Math.floor(200 * (1 - darkness));
+                        wallColor = `rgb(${shade}, ${shade}, ${shade})`;
+                    } else {
+                        // Regular wall colors with distance shading
+                        const wallIndex = ray.wallType.index;
+                        const wallSide = ray.wallType.side;
+                        
+                        // Create different colors for different walls
+                        const baseHue = (wallIndex * 60) % 360;
+                        
+                        // Darken walls based on side (north/south vs east/west)
+                        const isSideWall = wallSide === 'left' || wallSide === 'right';
+                        
+                        // Adjust darkness based on distance
+                        const darkness = Math.min(1, ray.distance / 400);
+                        const lightness = Math.floor(50 * (1 - darkness));
+                        
+                        wallColor = `hsl(${baseHue}, 70%, ${isSideWall ? lightness - 10 : lightness}%)`;
+                    }
+                    
+                    // Draw the wall strip
+                    ctx3D.fillStyle = wallColor;
+                    ctx3D.fillRect(screenX, wallTop, stripWidth + 1, cappedHeight);
+                }
+            });
+            
+            // Optional: Draw crosshair
+            ctx3D.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+            ctx3D.lineWidth = 1;
+            
+            // Horizontal line
+            ctx3D.beginPath();
+            ctx3D.moveTo(canvas3D.width / 2 - 10, canvas3D.height / 2);
+            ctx3D.lineTo(canvas3D.width / 2 + 10, canvas3D.height / 2);
+            ctx3D.stroke();
+            
+            // Vertical line
+            ctx3D.beginPath();
+            ctx3D.moveTo(canvas3D.width / 2, canvas3D.height / 2 - 10);
+            ctx3D.lineTo(canvas3D.width / 2, canvas3D.height / 2 + 10);
+            ctx3D.stroke();
+            
+            // Update the view indicator
+            viewIndicator.textContent = useRedView ? "Red View" : "Blue View";
+            viewIndicator.style.color = useRedView ? "red" : "blue";
+        }
+        
+        // Check if dummy can see player
+        function canDummySeePlayer() {
+            // Calculate angle to player
+            const dx = player.x - dummy.x;
+            const dy = player.y - dummy.y;
+            const angleToPlayer = Math.atan2(dy, dx);
+            const distanceToPlayer = Math.hypot(dx, dy);
+            
+            // Normalize the angle difference to be between -PI and PI
+            let angleDiff = angleToPlayer - dummy.direction;
+            while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
+            while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
+            
+            // Check if player is within FOV
+            const halfFOV = dummy.fovAngle / 2;
+            if (Math.abs(angleDiff) > halfFOV) {
+                return false; // Player is outside FOV
+            }
+            
+            // Check if any walls block the view to the player
+            for (const wall of walls) {
+                const boundaries = [
+                    {x1: wall.x, y1: wall.y, x2: wall.x + wall.width, y2: wall.y}, // Top
+                    {x1: wall.x + wall.width, y1: wall.y, x2: wall.x + wall.width, y2: wall.y + wall.height}, // Right
+                    {x1: wall.x + wall.width, y1: wall.y + wall.height, x2: wall.x, y2: wall.y + wall.height}, // Bottom
+                    {x1: wall.x, y1: wall.y + wall.height, x2: wall.x, y2: wall.y} // Left
+                ];
+                
+                for (const boundary of boundaries) {
+                    const intersection = getIntersection(
+                        dummy.x, dummy.y, player.x, player.y,
+                        boundary.x1, boundary.y1, boundary.x2, boundary.y2
+                    );
+                    
+                    if (intersection) {
+                        const distToIntersection = Math.hypot(intersection.x - dummy.x, intersection.y - dummy.y);
+                        if (distToIntersection < distanceToPlayer) {
+                            return false; // Wall blocks view
+                        }
+                    }
+                }
+            }
+            
+            return true; // Player is visible
+        }
+        
+        // Update detection status display
+        function updateDetectionStatus() {
+            const isPlayerDetected = canDummySeePlayer();
+            
+            if (isPlayerDetected) {
+                detectionStatus.textContent = "DETECTED!";
+                detectionStatus.style.color = "red";
+            } else {
+                detectionStatus.textContent = "Hidden";
+                detectionStatus.style.color = "green";
+            }
+        }
+        
+        // Draw FOV indicator
+        function drawFOVIndicator(entity, color) {
+            const halfFOV = entity.fovAngle / 2;
+            
+            // Draw FOV lines
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 2;
+            
+            // Left FOV boundary
+            ctx.beginPath();
+            ctx.moveTo(entity.x, entity.y);
+            ctx.lineTo(
+                entity.x + 30 * Math.cos(entity.direction - halfFOV),
+                entity.y + 30 * Math.sin(entity.direction - halfFOV)
+            );
+            ctx.stroke();
+            
+            // Right FOV boundary
+            ctx.beginPath();
+            ctx.moveTo(entity.x, entity.y);
+            ctx.lineTo(
+                entity.x + 30 * Math.cos(entity.direction + halfFOV),
+                entity.y + 30 * Math.sin(entity.direction + halfFOV)
+            );
+            ctx.stroke();
+            
+            // Draw FOV arc
+            ctx.beginPath();
+            ctx.arc(entity.x, entity.y, 15, entity.direction - halfFOV, entity.direction + halfFOV);
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+        }
+        
+        // Draw entities and rays
+        function draw() {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw vision cones first (so they're behind everything else)
+            drawVisionCone(player, 'rgba(0, 150, 255, 0.15)');
+            drawVisionCone(dummy, 'rgba(255, 100, 100, 0.15)');
+            
+            // Draw walls
+            ctx.fillStyle = 'rgba(150, 150, 150, 0.8)';
+            walls.forEach(wall => {
+                ctx.fillRect(wall.x, wall.y, wall.width, wall.height);
+                
+                // Add a border to walls
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(wall.x, wall.y, wall.width, wall.height);
+            });
+            
+            // Draw player
+            ctx.fillStyle = 'blue';
+            ctx.beginPath();
+            ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Draw player direction line
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(player.x, player.y);
+            ctx.lineTo(
+                player.x + player.radius * 1.5 * Math.cos(player.direction),
+                player.y + player.radius * 1.5 * Math.sin(player.direction)
+            );
+            ctx.stroke();
+            
+            // Draw dummy
+            ctx.fillStyle = 'red';
+            ctx.beginPath();
+            ctx.arc(dummy.x, dummy.y, dummy.radius, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Draw dummy direction line
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(dummy.x, dummy.y);
+            ctx.lineTo(
+                dummy.x + dummy.radius * 1.5 * Math.cos(dummy.direction),
+                dummy.y + dummy.radius * 1.5 * Math.sin(dummy.direction)
+            );
+            ctx.stroke();
+            
+            // Draw FOV indicators
+            drawFOVIndicator(player, 'rgba(0, 150, 255, 0.5)');
+            drawFOVIndicator(dummy, 'rgba(255, 100, 100, 0.5)');
+            
+            // Draw 3D view
+            draw3DView();
+            
+            // Update detection status
+            updateDetectionStatus();
+        }
+        
+        // Handle keyboard input
+        const keys = {};
+        window.addEventListener('keydown', e => keys[e.key] = true);
+        window.addEventListener('keyup', e => keys[e.key] = false);
+        
+        // Game loop
+        function gameLoop() {
+            // Player movement
+            if (keys['ArrowUp'] || keys['w'] || keys['W']) {
+                player.x += player.speed * Math.cos(player.direction);
+                player.y += player.speed * Math.sin(player.direction);
+            }
+            if (keys['ArrowDown'] || keys['s'] || keys['S']) {
+                player.x -= player.speed * Math.cos(player.direction);
+                player.y -= player.speed * Math.sin(player.direction);
+            }
+            if (keys['ArrowLeft'] || keys['a'] || keys['A']) {
+                player.x += player.speed * Math.cos(player.direction - Math.PI/2);
+                player.y += player.speed * Math.sin(player.direction - Math.PI/2);
+            }
+            if (keys['ArrowRight'] || keys['d'] || keys['D']) {
+                player.x += player.speed * Math.cos(player.direction + Math.PI/2);
+                player.y += player.speed * Math.sin(player.direction + Math.PI/2);
+            }
+            
+            // Player rotation
+            if (keys['q'] || keys['Q'] || keys['z'] || keys['Z']) {
+                player.direction -= player.rotationSpeed;
+            }
+            if (keys['e'] || keys['E'] || keys['c'] || keys['C']) {
+                player.direction += player.rotationSpeed;
+            }
+            
+            // Keep player on screen
+            player.x = Math.max(player.radius, Math.min(canvas.width - player.radius, player.x));
+            player.y = Math.max(player.radius, Math.min(canvas.height - player.radius, player.y));
+            
+            // Update dummy direction to follow player only if not frozen
+            if (!isDummyDirectionFrozen) {
+                dummy.direction = Math.atan2(player.y - dummy.y, player.x - dummy.x);
+            }
+            
+            // Cast rays - each entity casts rays and checks for the other entity
+            castRays(player, dummy);
+            castRays(dummy, player);
+            
+            // Draw everything
+            draw();
+            
+            // Continue game loop
+            requestAnimationFrame(gameLoop);
+        }
+        
+        // Add event listener for freeze toggle
+        freezeToggle.addEventListener('change', function() {
+            isDummyDirectionFrozen = this.checked;
+        });
+        
+        // Add event listener for view toggle
+        viewToggle.addEventListener('change', function() {
+            useRedView = this.checked;
+        });
+        
+        // Start the game
+        gameLoop();
+    </script>
+</body>
+</html>

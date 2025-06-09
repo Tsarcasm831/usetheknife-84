@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martha's Tavern</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load Howler globally before other scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/",
+                "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.2/index.js"
+            }
+        }
+    </script>
+    <style>
+        body {
+            cursor: crosshair;
+        }
+
+        #game-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            /* Remove cursor: crosshair; pointer lock will handle it */
+        }
+/* 
+        #scene-container {
+
+        } */
+        /* Add style for audio prompt if it doesn't exist */
+        #audio-prompt {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: rgba(200, 0, 0, 0.8);
+            color: white;
+            border: 1px solid #ffaaaa;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 101;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="loading-screen">
+            <div class="loading-content">
+                <h1>Martha's Tavern</h1>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <p class="loading-text">Stepping into the warm glow of the tavern...</p>
+                <button id="start-button" class="hidden">Enter the Tavern</button>
+            </div>
+        </div>
+
+        <div id="scene-container"></div>
+
+        <div id="interaction-prompt" class="hidden">
+            Press F to interact
+        </div>
+
+        <div id="dialog-container" class="hidden">
+            <div class="dialog-box">
+                <div class="dialog-portrait"></div>
+                <h3 class="dialog-name"></h3>
+                <div class="dialog-text"></div>
+                <div class="dialog-options"></div>
+                <button class="dialog-close">Close</button>
+            </div>
+        </div>
+
+        <div id="trade-ui" class="hidden">
+            <div class="trade-container">
+                <h2>Martha's Goods</h2>
+                <div class="trade-sections">
+                    <div class="trade-section" id="provisions">
+                        <h3>Provisions</h3>
+                        <div class="trade-items"></div>
+                    </div>
+                    <div class="trade-section" id="weapons">
+                        <h3>Weapons</h3>
+                        <div class="trade-items"></div>
+                    </div>
+                    <div class="trade-section" id="trinkets">
+                        <h3>Trinkets</h3>
+                        <div class="trade-items"></div>
+                    </div>
+                </div>
+                <button class="trade-close">Done</button>
+            </div>
+        </div>
+
+        <div id="hud">
+            <div class="location-indicator">Martha's Tavern</div>
+            <div class="controls-hint">WASD to move | Mouse to look | F to interact | ESC for menu</div>
+        </div>
+        <!-- Exit Tavern Button -->
+        <button id="exit-button" style="position:absolute;top:10px;right:10px;z-index:102;">Exit Tavern</button>
+        <!-- Placeholder for audio prompt -->
+        <div id="audio-prompt"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

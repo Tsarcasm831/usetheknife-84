@@ -1,0 +1,27 @@
+body { margin: 0; overflow: hidden; }
+/* Loading screen background image */
+body.loading {
+  background-image: url('./assets/images/background.png');
+  background-size: cover;
+  background-position: center;
+}
+canvas { display: block; }
+.thought-bubble {
+  position: absolute;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-family: monospace;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  transition: opacity 0.2s;
+  opacity: 0;
+  z-index: 1000;
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}

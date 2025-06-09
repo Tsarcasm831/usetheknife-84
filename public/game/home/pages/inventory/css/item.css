@@ -1,0 +1,104 @@
+/* --- Base Item Styles --- */
+.item {
+    position: relative; 
+    box-sizing: border-box;
+    cursor: grab;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    user-select: none;
+    transition: transform var(--anim-speed-medium) cubic-bezier(0.25, 0.1, 0.25, 1),
+                opacity var(--anim-speed-medium) ease,
+                background-image var(--transition-speed) ease,
+                border-color var(--transition-speed) ease,
+                filter var(--transition-speed) ease,
+                left var(--anim-speed-medium) ease, 
+                top var(--anim-speed-medium) ease,  
+                box-shadow var(--transition-speed) ease;
+    border-radius: 3px;
+    background-clip: padding-box;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    will-change: transform, opacity, left, top, filter, box-shadow;
+    transform-origin: center center;
+    z-index: 10; 
+}
+
+/* Absolute positioning is now applied dynamically by JS render function or for dragging */
+
+/* --- Item Animation States --- */
+.item.item-entering {
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+.item.item-entered {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* --- Item Hover State --- */
+.item:not(.dragging):hover {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+    border-color: rgba(255, 255, 255, 0.6);
+    z-index: 50; 
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Item Rarity Styles --- */
+.item.rarity-Normal {
+    background: var(--rarity-normal-bg);
+    border-color: var(--rarity-normal-border);
+    color: #222;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+}
+.item.rarity-Magic {
+    background: var(--rarity-magic-bg);
+    border-color: var(--rarity-magic-border);
+    box-shadow: inset 0 0 5px rgba(136, 136, 255, 0.3);
+}
+.item.rarity-Rare {
+    background: var(--rarity-rare-bg);
+    border-color: var(--rarity-rare-border);
+    box-shadow: inset 0 0 5px rgba(255, 255, 119, 0.3);
+}
+.item.rarity-Unique {
+    background: var(--rarity-unique-bg);
+    border-color: var(--rarity-unique-border);
+    box-shadow: inset 0 0 5px rgba(175, 96, 37, 0.4);
+}
+.item.rarity-Currency {
+    background: var(--rarity-currency-bg);
+    border-color: var(--rarity-currency-border);
+    color: #333;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 0 5px rgba(170, 158, 141, 0.3);
+}
+
+/* --- Stack Count Display --- */
+.item .stack-count {
+    position: absolute;
+    bottom: 1px; 
+    right: 4px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 3px;
+    border-radius: 2px;
+    line-height: 1.1;
+    text-shadow: none;
+}
+
+/* Smaller stack count for smaller items */
+.item[style*="width: 50px;"] .stack-count,
+.item[style*="height: 50px;"] .stack-count {
+    font-size: 0.8em;
+    bottom: 1px;
+    right: 2px;
+}

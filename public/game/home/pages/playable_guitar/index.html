@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guitar String Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a id="cinder-link" href="https://websim.ai/@Cinder" target="_blank" rel="noopener noreferrer">
+    Click here for more fun projects by me
+  </a>
+  <div id="warning-message">
+    <span>⚠️ Warning: High distortion levels can produce loud sounds! Adjust volume accordingly.</span>
+    <button id="warning-understood-button">Understood</button>
+  </div>
+  <div id="guitar-neck">
+    <svg id="neck-svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="woodGrain" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#A0522D; stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#8B4513; stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#A0522D; stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="fretShine" x1="0%" y1="0%" x2="0%" y2="100%">
+           <stop offset="0%" stop-color="#E0E0E0" />
+           <stop offset="50%" stop-color="#B0B0B0" />
+           <stop offset="100%" stop-color="#E0E0E0" />
+        </linearGradient>
+        <!-- Repeating wood grain pattern -->
+        <pattern id="woodPattern" patternUnits="userSpaceOnUse" width="20" height="500" patternTransform="rotate(5)">
+          <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSI1MDAiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWluIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjUwMCI+CiAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgzMzkxOCIvPgogIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjYTM2MjI3Ii8+CiAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjODMzOTE4Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSI1MDAiIGZpbGw9InVybCgjZ3JhaW4pIi8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjUwMCIgeD0iNSIgZmlsbD0icmdiYSgwLDAsMCwwLjA4KSIvPgo8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSI1MDAiIHg9IjEzIiBmaWxsPSJyZ2JhKDAsMCwwLDAuMDUpIi8+Cjwvc3ZnPgo=" x="0" y="0" width="20" height="500" />
+       </pattern>
+
+      </defs>
+      <!-- Neck Background -->
+      <rect id="neck-rect" width="100%" height="100%" fill="url(#woodPattern)" />
+
+      <!-- Frets will be added by JS -->
+      <g id="frets"></g>
+      <!-- String Markers (Dots) - Example for 3rd, 5th, 7th, 9th frets -->
+      <g id="fret-markers"></g>
+
+    </svg>
+  </div>
+  <canvas id="strings"></canvas>
+  <div class="controls-container" id="controls-container">
+    <div class="upload-controls">
+      <button id="clear-sounds-button" type="button" class="upload-button">Clear Custom Sounds</button>
+      <label for="global-audio-upload" class="upload-button">Upload Default Sound</label>
+      <input type="file" id="global-audio-upload" accept="audio/*" style="display: none;">
+    </div>
+    <button id="keybindings-button" type="button" class="upload-button">Key Bindings</button>
+    <!-- Tuning controls will be added here by script.js -->
+  </div>
+  <div id="bottom-controls-container" class="bottom-controls">
+     <!-- Moved Controls -->
+     <div class="distortion-control control-group">
+       <label for="distortion-dial">Distortion</label>
+       <div class="control-dial" id="distortion-dial" data-min="0" data-max="100" data-step="1" data-value="0">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="distortion-value-input" class="control-value-input" min="0" max="100" value="0" step="1">
+     </div>
+     <div class="overdrive-control control-group">
+       <label for="overdrive-dial">Overdrive</label>
+       <div class="control-dial" id="overdrive-dial" data-min="0" data-max="100" data-step="1" data-value="0">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="overdrive-value-input" class="control-value-input" min="0" max="100" value="0" step="1">
+     </div>
+     <div class="boost-control control-group">
+       <label for="boost-dial">Boost</label>
+       <div class="control-dial" id="boost-dial" data-min="0" data-max="200" data-step="1" data-value="100">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="boost-value-input" class="control-value-input" min="0" max="200" value="100" step="1">
+     </div>
+     <div class="treble-control control-group">
+       <label for="treble-dial">Treble</label>
+       <div class="control-dial" id="treble-dial" data-min="-40" data-max="40" data-step="1" data-value="0">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="treble-value-input" class="control-value-input" min="-40" max="40" value="0" step="1"> dB
+     </div>
+     <div class="bass-control control-group">
+       <label for="bass-dial">Bass</label>
+       <div class="control-dial" id="bass-dial" data-min="-40" data-max="40" data-step="1" data-value="0">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="bass-value-input" class="control-value-input" min="-40" max="40" value="0" step="1"> dB
+     </div>
+     <div class="volume-control control-group">
+       <label for="volume-dial">Volume</label>
+       <div class="control-dial" id="volume-dial" data-min="0" data-max="100" data-step="1" data-value="50">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="volume-value-input" class="control-value-input" min="0" max="100" value="50" step="1">%
+     </div>
+     <div class="limiter-control control-group">
+       <label for="limiter-dial">Limiter Thresh.</label>
+       <div class="control-dial" id="limiter-dial" data-min="-40" data-max="0" data-step="1" data-value="-10">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="limiter-value-input" class="control-value-input" min="-40" max="0" value="-10" step="1"> dB
+     </div>
+     <div class="gain-control control-group">
+       <label for="gain-dial">Input Gain</label>
+       <div class="control-dial" id="gain-dial" data-min="0" data-max="200" data-step="1" data-value="50">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="gain-value-input" class="control-value-input" min="0" max="200" value="50" step="1">%
+     </div>
+     <div class="mid-control control-group">
+       <label for="mid-dial">Mid</label>
+       <div class="control-dial" id="mid-dial" data-min="-40" data-max="40" data-step="1" data-value="0">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="mid-value-input" class="control-value-input" min="-40" max="40" value="0" step="1"> dB
+     </div>
+     <div class="reverb-control control-group">
+       <label for="reverb-dial">Reverb Mix</label>
+       <div class="control-dial" id="reverb-dial" data-min="0" data-max="100" data-step="1" data-value="0">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="reverb-value-input" class="control-value-input" min="0" max="100" value="0" step="1">%
+     </div>
+     <div class="chorus-control control-group">
+       <label for="chorus-dial">Chorus Mix</label>
+       <div class="control-dial" id="chorus-dial" data-min="0" data-max="100" data-step="1" data-value="0">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="chorus-value-input" class="control-value-input" min="0" max="100" value="0" step="1">%
+     </div>
+     <div class="delay-control control-group">
+       <label for="delay-dial">Delay Mix</label>
+       <div class="control-dial" id="delay-dial" data-min="0" data-max="100" data-step="1" data-value="0">
+         <div class="dial-indicator"></div>
+       </div>
+       <input type="number" id="delay-value-input" class="control-value-input" min="0" max="100" value="0" step="1">%
+     </div>
+     <!-- Future controls will go here -->
+  </div>
+  <!-- Key Binding Settings Overlay -->
+  <div id="keybinding-overlay" class="hidden">
+    <div class="overlay-content">
+      <h2>Key Bindings</h2>
+      <div id="keybinding-instructions"></div>
+      <ul id="keybindings-list"></ul>
+      <button id="close-keybindings-button" type="button" class="upload-button">Close</button>
+    </div>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

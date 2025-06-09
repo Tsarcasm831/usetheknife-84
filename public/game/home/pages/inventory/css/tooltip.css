@@ -1,0 +1,134 @@
+/* Moved from style.css */
+.tooltip {
+    position: fixed;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-text);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    white-space: normal; /* Allow wrapping */
+    z-index: 10000;
+    pointer-events: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+    max-width: 350px; /* Prevent super wide tooltips */
+    transition: opacity 0.1s ease; /* Fade effect */
+}
+
+/* Moved from style.css */
+.tooltip hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 5px 0;
+}
+
+/* Moved from style.css */
+.tooltip-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 3px;
+    display: inline-block; /* Fit border to text */
+    padding-bottom: 2px; /* Space for border */
+    border-bottom: 2px solid transparent; /* Placeholder */
+}
+/* Moved from style.css */
+.tooltip-name.rarity-Normal { color: var(--rarity-normal); border-bottom-color: var(--rarity-normal-border); }
+.tooltip-name.rarity-Magic { color: var(--rarity-magic); border-bottom-color: var(--rarity-magic-border); }
+.tooltip-name.rarity-Rare { color: var(--rarity-rare); border-bottom-color: var(--rarity-rare-border); }
+.tooltip-name.rarity-Unique { color: var(--rarity-unique); border-bottom-color: var(--rarity-unique-border); }
+.tooltip-name.rarity-Currency { color: var(--rarity-currency); border-bottom-color: var(--rarity-currency-border); }
+
+/* Moved from style.css */
+.tooltip-type {
+    font-style: italic;
+    color: #aaa;
+    margin-bottom: 5px;
+    display: block; /* Ensure it takes its own line */
+}
+
+/* Moved from style.css */
+.tooltip-requirements {
+    color: var(--req-color);
+    font-size: 0.9em;
+}
+
+/* Moved from style.css */
+.tooltip-stats {
+    margin-top: 5px;
+}
+
+/* Moved from style.css */
+.tooltip-implicit {
+    color: var(--implicit-color);
+    font-style: italic;
+    margin-bottom: 3px;
+}
+
+/* Moved from style.css */
+.tooltip-explicit {
+    color: var(--explicit-color);
+    margin-bottom: 3px;
+}
+/* Moved from style.css */
+.tooltip-explicit.magic-mod { /* Potentially style magic mods differently if needed */
+    color: var(--rarity-magic);
+}
+
+/* Moved from style.css */
+.tooltip-flavor {
+    color: var(--flavor-color);
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+/* Moved from style.css */
+.tooltip-comparison {
+    margin-top: 10px;
+    padding-top: 8px;
+    padding-left: 5px;
+    border-top: 1px dashed var(--border-color);
+    background-color: var(--tooltip-compare-bg);
+    border-left: 3px solid var(--tooltip-compare-border);
+    border-radius: 0 0 3px 3px;
+}
+
+/* Moved from style.css */
+.tooltip-comparison-header {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+/* Moved from style.css */
+.tooltip-comparison-stat {
+    font-size: 0.95em;
+    margin-bottom: 2px;
+}
+
+/* Moved from style.css */
+.tooltip-comparison-stat .stat-name {
+    color: var(--tooltip-neutral-color);
+}
+
+/* Moved from style.css */
+.tooltip-comparison-stat .stat-diff {
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+/* Moved from style.css */
+.tooltip-comparison-stat .stat-diff.positive {
+    color: var(--tooltip-increase-color);
+}
+
+/* Moved from style.css */
+.tooltip-comparison-stat .stat-diff.negative {
+    color: var(--tooltip-decrease-color);
+}
+/* Moved from style.css */
+.tooltip-comparison-stat .stat-diff.neutral {
+    color: var(--tooltip-neutral-color);
+}
