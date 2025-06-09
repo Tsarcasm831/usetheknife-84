@@ -10,13 +10,14 @@ function openCamera(lat, lng) {
       reader.onload = (event) => {
         const img = document.createElement("img");
         img.src = event.target.result;
+        img.alt = "Captured photo";
         img.style.maxWidth = "100%";
         img.style.height = "auto";
 
         L.popup()
           .setLatLng([lat, lng])
           .setContent(`
-            <img src="${event.target.result}" style="max-width: 100%; height: auto;">
+            <img src="${event.target.result}" style="max-width: 100%; height: auto;" alt="Captured photo">
             <button class="camera-btn" onclick="openCamera(${lat}, ${lng})">📷 Retake Photo</button>
           `)
           .openOn(window.mapInstance);
@@ -25,10 +26,12 @@ function openCamera(lat, lng) {
         const existingImage = document.getElementById("captured-image");
         if (existingImage) {
           existingImage.src = event.target.result;
+          existingImage.alt = "Captured photo";
         } else {
           const newImage = document.createElement("img");
           newImage.id = "captured-image";
           newImage.src = event.target.result;
+          newImage.alt = "Captured photo";
           streetViewPanel.appendChild(newImage);
         }
       };
