@@ -4,6 +4,7 @@ import { Navigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
+import type { AuthFormData } from "@/types";
 import { User, Eye, EyeOff, Mail } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import {
@@ -22,7 +23,12 @@ const Auth = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { user, signIn, signUp } = useAuth();
   
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset
+  } = useForm<AuthFormData>();
   
   // Reset form when switching modes
   useEffect(() => {
@@ -34,7 +40,7 @@ const Auth = () => {
     return <Navigate to="/" />;
   }
   
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: AuthFormData) => {
     try {
       if (mode === "login") {
         await signIn(data.email, data.password);

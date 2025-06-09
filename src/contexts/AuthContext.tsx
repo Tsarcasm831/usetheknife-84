@@ -4,16 +4,17 @@ import { Session, User } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/components/ui/sonner";
+import type { UserProfile, ProfileFormData } from "@/types";
 
 type AuthContextType = {
   session: Session | null;
   user: User | null;
-  profile: any | null;
+  profile: UserProfile | null;
   isLoading: boolean;
   signIn: (email: string, password: string) => Promise<void>;
   signUp: (email: string, password: string, username: string) => Promise<void>;
   signOut: () => Promise<void>;
-  updateProfile: (updates: any) => Promise<void>;
+  updateProfile: (updates: ProfileFormData) => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -21,7 +22,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [session, setSession] = useState<Session | null>(null);
   const [user, setUser] = useState<User | null>(null);
-  const [profile, setProfile] = useState<any | null>(null);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const navigate = useNavigate();
 
@@ -63,7 +64,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  const fetchProfile = async (userId: string) => {
+  const fetchProfile = async (userId: string): Promise<void> => {
     try {
       const { data, error } = await supabase
         .from("profiles")
@@ -76,7 +77,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return;
       }
 
-      setProfile(data);
+      setProfile(data as UserProfile);
     } catch (error) {
       console.error("Error fetching profile:", error);
     }
@@ -93,8 +94,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       
       toast.success("Signed in successfully!");
       navigate("/");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to sign in");
+    } catch (error: unknown) {
+      const err = error as Error;
+      toast.error(err.message || "Failed to sign in");
       throw error;
     }
   };
@@ -115,8 +117,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       
       toast.success("Signed up successfully! Check your email for confirmation.");
       navigate("/auth");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to sign up");
+    } catch (error: unknown) {
+      const err = error as Error;
+      toast.error(err.message || "Failed to sign up");
       throw error;
     }
   };
@@ -126,12 +129,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       await supabase.auth.signOut();
       navigate("/auth");
       toast.success("Signed out successfully");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to sign out");
+    } catch (error: unknown) {
+      const err = error as Error;
+      toast.error(err.message || "Failed to sign out");
     }
   };
 
-  const updateProfile = async (updates: any) => {
+  const updateProfile = async (updates: ProfileFormData): Promise<void> => {
     try {
       if (!user) throw new Error("No user logged in");
 
@@ -142,10 +146,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       if (error) throw error;
       
-      setProfile({ ...profile, ...updates });
+      setProfile({ ...(profile as UserProfile), ...updates });
       toast.success("Profile updated successfully");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to update profile");
+    } catch (error: unknown) {
+      const err = error as Error;
+      toast.error(err.message || "Failed to update profile");
       throw error;
     }
   };

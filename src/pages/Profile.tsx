@@ -6,18 +6,23 @@ import { Input } from "@/components/ui/input";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { User, LogOut } from "lucide-react";
 import { useForm } from "react-hook-form";
+import type { ProfileFormData } from "@/types";
 
 const Profile = () => {
   const { profile, user, updateProfile, signOut } = useAuth();
   const [isEditing, setIsEditing] = useState(false);
-  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting }
+  } = useForm<ProfileFormData>({
     defaultValues: {
       username: profile?.username || "",
       avatar_url: profile?.avatar_url || "",
     }
   });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: ProfileFormData) => {
     try {
       await updateProfile(data);
       setIsEditing(false);
