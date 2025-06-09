@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 const HeroSection: React.FC = () => {
@@ -35,8 +36,8 @@ const HeroSection: React.FC = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Button className="btn-primary">
-                Latest Updates
+              <Button asChild className="btn-primary">
+                <Link to="/devlog">Latest Updates</Link>
               </Button>
               <Button variant="outline" className="border-game-orange text-game-orange hover:bg-game-orange hover:text-white transition-colors">
                 Coming Soon
