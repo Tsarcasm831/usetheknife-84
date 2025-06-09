@@ -24,23 +24,5 @@ export interface NavItem {
   href: string;
 }
 
-export interface AuthFormData {
-  email: string;
-  password: string;
-  username?: string;
-}
-
-export interface ProfileFormData {
-  username: string;
-  avatar_url: string;
-}
-
-export interface UserProfile {
-  id: string;
-  created_at: string;
-  email: string;
-  username: string;
-  avatar_url: string | null;
-  role: string;
-  updated_at: string;
-}
+export * from "./forms";
+export * from "./userProfile";
