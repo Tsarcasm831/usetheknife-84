@@ -28,29 +28,11 @@ const Auth = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset
-  } = useForm<AuthFormData>({
-    defaultValues: {
-      email: "tsarcasm@lordtsarcasm.com",
-      password: "LTwelcome1",
-      username: ""
-    }
-  });
+  } = useForm<AuthFormData>();
   
   // Reset form when switching modes
   useEffect(() => {
-    if (mode === "login") {
-      reset({
-        email: "tsarcasm@lordtsarcasm.com",
-        password: "LTwelcome1",
-        username: ""
-      });
-    } else {
-      reset({
-        email: "",
-        password: "",
-        username: ""
-      });
-    }
+    reset();
   }, [mode, reset]);
   
   // If user is already logged in, redirect to home
