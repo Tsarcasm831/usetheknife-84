@@ -1,6 +1,7 @@
 // Earth Application - Main Script
 // Wrap everything in an IIFE for isolation from React errors
 (function() {
+    const DEBUG = false; // Set to true to enable verbose logging
     // Enhanced safe call function with React error patterns detection
     function safeCall(fn, ...args) {
         try {
@@ -152,7 +153,7 @@
                         if (typeof initHolographicGrid === 'function') {
                             safeCall(initHolographicGrid);
                             gridInitialized = true;
-                            console.log("Grid initialized via timeout");
+                            if (DEBUG) console.log("Grid initialized via timeout");
                         }
                     }, 500);
                     
@@ -288,7 +289,7 @@
             try {
                 initHolographicGrid();
                 gridInitialized = true;
-                console.log("Grid initialized after Earth creation");
+                if (DEBUG) console.log("Grid initialized after Earth creation");
             } catch (e) {
                 console.error("Grid initialization failed:", e);
             }
@@ -912,10 +913,10 @@
                             window.addEventListener('load', function() {
                                 navigator.serviceWorker.register('/sw-earth-app.js')
                                     .then(function() {
-                                        console.log('Service worker registered');
+                                        if (DEBUG) console.log('Service worker registered');
                                     })
                                     .catch(function() {
-                                        console.log('Service worker registration failed, using alternative protection');
+                                        if (DEBUG) console.log('Service worker registration failed, using alternative protection');
                                     });
                             });
                         }
@@ -923,7 +924,7 @@
                         console.warn('Service worker registration failed, continuing without it', e);
                     }
                 } else {
-                    console.log('Skipping service worker registration in restricted environment');
+                    if (DEBUG) console.log('Skipping service worker registration in restricted environment');
                 }
             } catch (e) {
                 console.warn('Could not create service worker:', e);
@@ -1115,7 +1116,7 @@
                 cells: cells
             };
             
-            console.log("Simulated Earth regions data created with", Object.keys(cells).length, "cells");
+            if (DEBUG) console.log("Simulated Earth regions data created with", Object.keys(cells).length, "cells");
         } catch (e) {
             console.error("Error creating simulated region data:", e);
         }
@@ -1222,7 +1223,7 @@
                         window.directionalLight = new THREE.DirectionalLight(0xffffff, 1);
                         window.directionalLight.position.set(5, 3, 5);
                         window.scene.add(window.directionalLight);
-                        console.log("Created recovery directional light");
+                        if (DEBUG) console.log("Created recovery directional light");
                         window.sunPositionErrorShown = false; // Allow future errors to show
                     } catch (err) {
                         // Silently fail recovery attempt
@@ -1250,7 +1251,7 @@
                 // Initialize Python script button after main init
                 initPythonScriptButton();
             } else {
-                console.log("Document not ready, waiting...");
+                if (DEBUG) console.log("Document not ready, waiting...");
                 setTimeout(safeInit, 100);
             }
         } catch (e) {

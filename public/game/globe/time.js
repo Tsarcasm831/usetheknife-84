@@ -1,6 +1,7 @@
 // Time simulation for Earth
 // Isolated from React errors with IIFE
 (function() {
+    const DEBUG = false; // Set to true to enable verbose logging
     // Add global scope protection for directionalLight
     try {
         // If directionalLight exists in any scope, make sure it's globally available
@@ -28,7 +29,7 @@
             try {
                 this.date = new Date(this.startDate);
                 this.initialized = true;
-                console.log("Time simulation initialized");
+                if (DEBUG) console.log("Time simulation initialized");
             } catch (e) {
                 console.error("Time simulation initialization error:", e);
                 // Set minimal working defaults
@@ -249,7 +250,7 @@
                     lightRef.position.set(5, 3, 5);
                     window.scene.add(lightRef);
                     window.directionalLight = lightRef;
-                    console.log("Created missing directional light");
+                    if (DEBUG) console.log("Created missing directional light");
                 }
             }
             
@@ -518,5 +519,5 @@
     // Expose the time simulation object for other scripts
     window.timeSimulation = timeSimulation;
     
-    console.log("Time simulation initialized and protected from React errors");
+    if (DEBUG) console.log("Time simulation initialized and protected from React errors");
 })();

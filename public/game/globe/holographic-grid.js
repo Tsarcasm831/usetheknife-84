@@ -24,7 +24,7 @@
             return;
         }
         
-        console.log("Initializing holographic grid...");
+        if (GRID_DEBUG) console.log("Initializing holographic grid...");
         
         try {
             // Create holographic grid overlay
@@ -182,7 +182,7 @@
             
             // Ensure grid is visible initially
             gridOverlay.visible = isGridVisible;
-            console.log("Holographic grid initialized with", gridCells.length, "cells");
+            if (GRID_DEBUG) console.log("Holographic grid initialized with", gridCells.length, "cells");
             
             // Update the grid toggle button text to reflect current state
             const gridToggleBtn = document.getElementById('gridToggle');
@@ -207,7 +207,7 @@
     }
 
     function createSimplifiedGrid() {
-        console.log("Creating simplified fallback grid...");
+        if (GRID_DEBUG) console.log("Creating simplified fallback grid...");
         const radius = 1.05;
         const wireframe = new THREE.WireframeGeometry(
             new THREE.SphereGeometry(radius, 24, 12)
@@ -220,7 +220,7 @@
         gridOverlay = new THREE.LineSegments(wireframe, material);
         window.scene.add(gridOverlay);
         isGridVisible = true;
-        console.log("Simplified grid created");
+        if (GRID_DEBUG) console.log("Simplified grid created");
     }
 
     function updateHolographicGrid(elapsedTime) {
@@ -241,7 +241,7 @@
             isGridVisible = !isGridVisible;
             gridOverlay.visible = isGridVisible;
             document.getElementById('gridToggle').textContent = isGridVisible ? 'Hide Grid' : 'Show Grid';
-            console.log("Grid visibility:", isGridVisible);
+            if (GRID_DEBUG) console.log("Grid visibility:", isGridVisible);
         } else {
             console.warn("Grid overlay not initialized yet");
         }
@@ -348,5 +348,5 @@
     window.gridCells = gridCells;
 
     // Don't initialize here - we'll call this from script.js after scene is ready
-    console.log("Holographic grid module loaded and protected from React errors");
+    if (GRID_DEBUG) console.log("Holographic grid module loaded and protected from React errors");
 })(); // End IIFE for isolation
