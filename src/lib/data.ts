@@ -19,6 +19,41 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+
+    id: "devlog-32",
+    title: "Game dependencies installed",
+    excerpt: "Missing packages now included for map viewer.",
+    content:
+      "The dev server failed because scripts in the game folder imported modules that were not installed. Adding osmtogeojson, three and Turf helpers fixes the startup error.",
+    date: "2025-07-01T00:00:00Z",
+    author: "Web Team",
+    tags: ["build", "fix"],
+    imageUrl: "https://robohash.org/devlog-32?size=640x360"
+  },
+  {
+    id: "devlog-31",
+    title: "Media page cleaned up",
+    excerpt: "Removed unused React import.",
+    content:
+      "Media.tsx no longer imports React since the project uses the modern JSX runtime. This fixes build warnings.",
+    date: "2025-06-30T00:00:00Z",
+    author: "Web Team",
+    tags: ["media", "cleanup"],
+    imageUrl: "https://robohash.org/devlog-31?size=640x360"
+  },
+  {
+    id: "devlog-30",
+    title: "Media links updated",
+    excerpt: "YouTube and Spotify now point to official pages.",
+    content:
+      "The Media page links to youtube.com/@lordtsarcasm/videos and the correct Spotify artist profile so fans can easily follow our releases.",
+    date: "2025-06-29T00:00:00Z",
+    author: "Web Team",
+    tags: ["media", "link"],
+    imageUrl: "https://robohash.org/devlog-30?size=640x360"
+  },
+  {
+
     id: "devlog-29",
     title: "Game tab requires login",
     excerpt: "Navigation hides the game link until authenticated.",
