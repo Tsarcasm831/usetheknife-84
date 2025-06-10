@@ -18,6 +18,7 @@ const NavBar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { user, profile, signOut } = useAuth();
+  const navItems = user ? mockNavItems : mockNavItems.filter(item => item.title !== "Game");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +47,7 @@ const NavBar: React.FC = () => {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
-          {mockNavItems.map((item) => (
+          {navItems.map((item) => (
             <Link
               key={item.title} 
               to={item.href}
@@ -116,7 +117,7 @@ const NavBar: React.FC = () => {
       {menuOpen && (
         <div className="md:hidden bg-game-dark/95 backdrop-blur-lg">
           <div className="game-container py-4 flex flex-col space-y-4">
-            {mockNavItems.map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.title}
                 to={item.href}

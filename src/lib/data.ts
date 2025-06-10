@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-29",
+    title: "Game tab requires login",
+    excerpt: "Navigation hides the game link until authenticated.",
+    content:
+      "The navigation bar now checks login status. The Game tab is only visible when users are signed in, keeping the menu clean for guests.",
+    date: "2025-06-28T00:00:00Z",
+    author: "Web Team",
+    tags: ["navigation"],
+    imageUrl: "https://robohash.org/devlog-29?size=640x360"
+  },
+  {
     id: "devlog-28",
     title: "Console logging toggled",
     excerpt: "Verbose logs now require DEBUG flags.",
