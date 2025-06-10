@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-32",
+    title: "Game dependencies installed",
+    excerpt: "Missing packages now included for map viewer.",
+    content:
+      "The dev server failed because scripts in the game folder imported modules that were not installed. Adding osmtogeojson, three and Turf helpers fixes the startup error.",
+    date: "2025-07-01T00:00:00Z",
+    author: "Web Team",
+    tags: ["build", "fix"],
+    imageUrl: "https://robohash.org/devlog-32?size=640x360"
+  },
+  {
     id: "devlog-31",
     title: "Media page cleaned up",
     excerpt: "Removed unused React import.",
