@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-28",
+    title: "Console logging toggled",
+    excerpt: "Verbose logs now require DEBUG flags.",
+    content:
+      "Globe scripts no longer spam the console. All console.log calls are wrapped in a DEBUG check so the site stays quiet by default.",
+    date: "2025-06-27T00:00:00Z",
+    author: "Web Team",
+    tags: ["cleanup"],
+    imageUrl: "https://robohash.org/devlog-28?size=640x360"
+  },
+  {
     id: "devlog-27",
     title: "Intro video button preview",
     excerpt: "ROD Intro Video label now changes on hover.",
