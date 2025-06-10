@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-27",
+    title: "Intro video button preview",
+    excerpt: "ROD Intro Video label now changes on hover.",
+    content:
+      "The home page button previously said 'Coming Soon'. It now displays 'ROD Intro Video' until hovered, revealing the upcoming trailer message.",
+    date: "2025-06-26T00:00:00Z",
+    author: "Web Team",
+    tags: ["ui"],
+    imageUrl: "https://robohash.org/devlog-27?size=640x360"
+  },
+  {
     id: "devlog-26",
     title: "Hero banner links to devlog",
     excerpt: "Latest Updates button now opens posts.",

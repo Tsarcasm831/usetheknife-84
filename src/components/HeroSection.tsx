@@ -39,8 +39,12 @@ const HeroSection: React.FC = () => {
               <Button asChild className="btn-primary">
                 <Link to="/devlog">Latest Updates</Link>
               </Button>
-              <Button variant="outline" className="border-game-orange text-game-orange hover:bg-game-orange hover:text-white transition-colors">
-                Coming Soon
+              <Button
+                variant="outline"
+                className="border-game-orange text-game-orange hover:bg-game-orange hover:text-white transition-colors group"
+              >
+                <span className="block group-hover:hidden">ROD Intro Video</span>
+                <span className="hidden group-hover:block">Coming Soon</span>
               </Button>
             </div>
           </div>
