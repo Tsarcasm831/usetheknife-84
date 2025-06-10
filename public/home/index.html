@@ -1,0 +1,57 @@
+<html>
+<head>
+    <base href="/home/">
+    <script>console.log('index.html loaded');</script>
+    <title>3D Isometric RPG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scripts/ui/compass.css">
+    <link rel="stylesheet" href="scripts/ui/credits.css">
+    <link rel="stylesheet" href="scripts/ui/loadingScreen.css">
+    <link rel="stylesheet" href="scripts/ui/glb_status.css">
+    <link rel="icon" type="image/x-icon" sizes="any" href="https://file.garden/Zy7B0LkdIVpGyzA1/Game/favicon.ico">
+    <!-- Add Open Graph image for thumbnail -->
+    <meta property="og:image" content="https://file.garden/Zy7B0LkdIVpGyzA1/Game/thumbnail.png">
+    <!-- Preload assets -->
+    <link rel="prefetch" href="assets/videos/menu.mp4" as="video" type="video/mp4">
+    <link rel="prefetch" href="assets/sounds/town1.mp3" as="fetch" crossorigin="anonymous">
+    <link rel="prefetch" href="assets/sounds/town2.mp3" as="fetch" crossorigin="anonymous">
+    <!-- Hidden video element that will be used by the loading screen -->
+    <video id="menu-video" style="display:none;" preload="auto" muted playsinline>
+        <source src="assets/videos/menu.mp4" type="video/mp4">
+    </video>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+      <canvas id="game-canvas"></canvas>
+        <!-- Compass will be appended here by compass.js -->
+        <!-- GLB Status UI will be appended here by glb_status.js -->
+        <!-- Credits UI will be appended here by credits.js -->
+    </div>
+    <!-- Make main.js async to allow modelLoader/town setup to potentially use await -->
+    <script type="module" src="main.js"></script>
+    <!-- Disabled service worker to avoid background tasks -->
+    <!--
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker registered:', reg))
+          .catch(err => console.warn('SW registration failed:', err));
+      }
+    </script>
+    -->
+    <!-- Garage and Club iframes are now created dynamically; static iframes removed -->
+    <!-- <iframe id="garageFrame" src="pages/bills_garage/index.html" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;border:none;z-index:100;"></iframe> -->
+    <!-- <iframe id="clubFrame" src="pages/diamonds_club/diamonds.html" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;border:none;z-index:100;"></iframe> -->
+    <!-- Audio element for background music -->
+    <!-- <audio id="bgAudio" preload="auto"></audio> --> <!-- DISABLED: background music audio element -->
+    <div id="ranger-thought" class="thought-bubble"></div>
+</body>
+</html>

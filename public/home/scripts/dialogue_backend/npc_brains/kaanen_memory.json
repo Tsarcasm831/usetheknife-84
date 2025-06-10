@@ -1,0 +1,14 @@
+[
+    {
+        "user": "See any mutants out on patrol?",
+        "ai": "Yeah. Always. Shadows lengthen. Nothing interesting. Just the job.",
+        "emotion": "This response strongly indicates **Neutral** emotion.\n\nHere's a breakdown of why:\n\n* **\"Just the job\"** \u2013 This is a very understated and logistical response, suggesting a lack of emotional investment.\n* **\"Shadows lengthen\"** \u2013 A simple, observational statement \u2013 it's describing a natural event, not a feeling.\n* **No indication of sadness, excitement, or anger.** The response is factual and detached.\n\nIt\u2019s a quiet, almost robotic, observation rather than an emotional reaction. \n\nTherefore, the most accurate classification is **Neutral**.",
+        "likes": 0
+    },
+    {
+        "user": "",
+        "ai": "Yeah.  Mutants are a nuisance, predictable.  Don't waste my time.",
+        "emotion": "Okay, let's break down the emotion in this dialogue.  It's leaning towards a mix of **irritation, annoyance, and perhaps a touch of frustration**.\n\nHere\u2019s a more detailed breakdown:\n\n*   **\u201cYeah. Mutants are a nuisance, predictable. Don\u2019t waste my time.\u201d** - This is a direct expression of annoyance and frustration. The repetition of \"Don\u2019t waste my time\" reinforces this.\n\n*   **\"irritation\"** - The overall tone suggests a feeling of irritation.\n\n*   **\u201cFrustration\u201d** - It\u2019s possible there\u2019s a subtle element of frustration because the player is clearly not enjoying the situation.\n\n**Overall, the dominant emotion is annoyance, with a hint of frustration.**\n\nWould you like me to explore this further, perhaps by adding more context or analyzing the possible underlying emotion based on Kaanan\u2019s tone?",
+        "likes": 0
+    }
+]

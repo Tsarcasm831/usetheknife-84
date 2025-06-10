@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talking to {{ npc_data.display_name }}</title>
+    <style>
+      body { font-family:Arial; background:#f5f5f5; padding:20px; }
+      h1,h2 { color:#333; }
+      .memory-entry { background:#fff; padding:10px; margin:8px 0;
+                       border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+      .reflection { color:purple; background:#f9f0ff; padding:10px; 
+                    margin:10px 0; border-radius:8px;}
+      .core-belief{ color:navy; background:#e0f0ff; padding:12px; 
+                    margin:12px 0; border:2px solid #99c2ff; border-radius:10px;}
+      .emotion-tag{ color:teal; font-weight:bold;}
+      button{ background:#4CAF50; color:#fff; padding:5px 10px; 
+              border:none; border-radius:4px; cursor:pointer;}
+      input, select{ padding:8px; margin-right:10px;}
+    </style>
+</head>
+<body>
+    <h1>Talking to {{ npc_data.display_name }}</h1>
+
+    <!-- NPC selector: instant GET -->
+    <form id="selectorForm">
+      <select name="npc_selector" onchange="location.href='/npc/'+this.value">
+        {% for key,info in npc_roster.items() %}
+          <option value="{{ key }}" {% if key==npc_id %}selected{% endif %}>
+            {{ info.display_name }}
+          </option>
+        {% endfor %}
+      </select>
+    </form>
+
+    <form method="POST" action="/npc/{{ npc_id }}">
+      <input type="text" name="user_input" placeholder="Speak your mind…" required>
+      <button type="submit">Pulse</button>
+    </form>
+
+    <h2>Memory:</h2>
+    <ul style="list-style:none; padding:0;">
+      {% for e in memory %}
+        {% if e.type=='reflection' %}
+          <li class="reflection"><strong>Reflection:</strong> {{ e.reflection }}</li>
+        {% elif e.type=='core-belief' %}
+          <li class="core-belief"><strong>Core Belief:</strong> {{ e.reflection }}</li>
+        {% else %}
+          <li class="memory-entry">
+            <strong>You:</strong> {{ e.user }}<br>
+            <strong>{{ npc_data.display_name }}:</strong> {{ e.ai }}<br>
+            <em class="emotion-tag">Emotion: {{ e.emotion }}</em>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    {% if audio_filename %}
+      <audio id="npcVoice" src="/static/audio/{{ audio_filename }}" autoplay></audio>
+    {% endif %}
+</body>
+</html>

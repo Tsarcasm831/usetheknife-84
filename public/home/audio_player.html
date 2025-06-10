@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Player</title>
+</head>
+<body>
+  <!-- Double-buffered audio elements -->
+  <audio id="player1" preload="auto" src="/assets/sounds/town1.mp3" style="display:none"></audio>
+  <audio id="player2" preload="auto" src="/assets/sounds/town2.mp3" style="display:none"></audio>
+  <script>
+    const player1 = document.getElementById('player1');
+    const player2 = document.getElementById('player2');
+    let current = player1, next = player2;
+    // On end, swap and play next seamlessly
+    current.addEventListener('ended', () => {
+      next.play().catch(e => console.warn('AudioFrame play failed', e));
+      [current, next] = [next, current];
+    });
+    window.addEventListener('load', () => {
+      // Ensure both are loaded
+      player1.load();
+      player2.load();
+      current.play().catch(e => console.warn('AudioFrame initial play failed', e));
+    });
+  </script>
+</body>
+</html>
