@@ -19,6 +19,7 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+
     id: "devlog-32",
     title: "Game dependencies installed",
     excerpt: "Missing packages now included for map viewer.",
@@ -52,6 +53,7 @@ export const mockDevLogs: DevLogEntry[] = [
     imageUrl: "https://robohash.org/devlog-30?size=640x360"
   },
   {
+
     id: "devlog-29",
     title: "Game tab requires login",
     excerpt: "Navigation hides the game link until authenticated.",
