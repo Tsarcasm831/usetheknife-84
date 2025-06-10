@@ -19,6 +19,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-31",
+    title: "Media page cleaned up",
+    excerpt: "Removed unused React import.",
+    content:
+      "Media.tsx no longer imports React since the project uses the modern JSX runtime. This fixes build warnings.",
+    date: "2025-06-30T00:00:00Z",
+    author: "Web Team",
+    tags: ["media", "cleanup"],
+    imageUrl: "https://robohash.org/devlog-31?size=640x360"
+  },
+  {
     id: "devlog-30",
     title: "Media links updated",
     excerpt: "YouTube and Spotify now point to official pages.",
