@@ -1,3 +1,4 @@
+import React from "react";
 import NavBar from "@/components/NavBar";
 
 const Media = () => (
@@ -19,7 +20,7 @@ const Media = () => (
         </li>
         <li>
           <a
-            href="https://open.spotify.com/artist/0tIXtsoLoRKrNEMiwvIkdw?si=m0abb3T2SrCP6eD5-INF9w"
+            href="https://spotify.com"
             className="text-game-orange hover:underline"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,7 +30,7 @@ const Media = () => (
         </li>
         <li>
           <a
-            href="https://www.youtube.com/@lordtsarcasm/videos"
+            href="https://youtube.com"
             className="text-game-orange hover:underline"
             target="_blank"
             rel="noopener noreferrer"
