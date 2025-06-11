@@ -65,7 +65,7 @@
   }
   
   .nav-link {
-    @apply relative px-3 py-2 text-sm font-medium transition-colors hover:text-game-orange;
+    @apply relative px-3 py-2 text-sm font-medium transition-colors hover:text-game-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-game-orange focus-visible:ring-offset-2 rounded;
   }
   
   .nav-link::after {
@@ -73,7 +73,8 @@
     @apply absolute bottom-0 left-0 w-0 h-0.5 bg-game-orange transition-all duration-300;
   }
   
-  .nav-link:hover::after {
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
     @apply w-full;
   }
 

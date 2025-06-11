@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-41",
+    title: "Focus outlines added",
+    excerpt: "Interactive elements highlight on keyboard focus.",
+    content:
+      "Buttons and links across the React components now use Tailwind focus classes so keyboard users can easily see which item is active.",
+    date: "2025-07-09T00:00:00Z",
+    author: "Web Team",
+    tags: ["accessibility"],
+    imageUrl: "https://robohash.org/devlog-41?size=640x360"
+  },
+  {
     id: "devlog-40",
     title: "Index script removed",
     excerpt: "Cleaned up stray console output.",

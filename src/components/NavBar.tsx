@@ -39,7 +39,10 @@ const NavBar: React.FC = () => {
       <div className="game-container flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <Link to="/" className="text-2xl font-bold tracking-wider text-game-orange text-glow">
+          <Link
+            to="/"
+            className="text-2xl font-bold tracking-wider text-game-orange text-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-game-orange focus-visible:ring-offset-2 rounded"
+          >
             REMNANTS
             <span className="text-white ml-2">DEVLOG</span>
           </Link>
@@ -80,13 +83,16 @@ const NavBar: React.FC = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="bg-game-dark border-white/10 text-white">
                 <DropdownMenuItem className="hover:bg-white/5" asChild>
-                  <Link to="/profile" className="cursor-pointer w-full">
+                  <Link
+                    to="/profile"
+                    className="cursor-pointer w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-game-orange focus-visible:ring-offset-2 rounded-sm"
+                  >
                     <User className="h-4 w-4 mr-2" />
                     Profile
                   </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem 
-                  className="text-red-400 hover:text-red-300 hover:bg-red-900/20 cursor-pointer"
+                <DropdownMenuItem
+                  className="text-red-400 hover:text-red-300 hover:bg-red-900/20 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:ring-offset-2"
                   onClick={signOut}
                 >
                   <LogOut className="h-4 w-4 mr-2" />
@@ -121,7 +127,7 @@ const NavBar: React.FC = () => {
               <Link
                 key={item.title}
                 to={item.href}
-                className="block py-2 text-lg"
+                className="block py-2 text-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-game-orange focus-visible:ring-offset-2 rounded"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.title}
@@ -140,14 +146,14 @@ const NavBar: React.FC = () => {
                 </div>
                 <Link
                   to="/profile"
-                  className="flex items-center text-white py-1"
+                  className="flex items-center text-white py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-game-orange focus-visible:ring-offset-2 rounded"
                   onClick={() => setMenuOpen(false)}
                 >
                   <User className="h-4 w-4 mr-2" />
                   Profile
                 </Link>
-                <button 
-                  className="flex items-center text-red-400 py-1" 
+                <button
+                  className="flex items-center text-red-400 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:ring-offset-2 rounded"
                   onClick={() => {
                     signOut();
                     setMenuOpen(false);
