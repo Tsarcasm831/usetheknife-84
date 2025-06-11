@@ -20,6 +20,18 @@ export const mockNavItems: NavItem[] = [
 export const mockDevLogs: DevLogEntry[] = [
   {
 
+    id: "devlog-33",
+    title: "Contribution guide added",
+    excerpt: "AGENTS and setup docs available.",
+    content:
+      "The repository now includes a root AGENTS.md describing pull request steps and a setupscript.txt for first time installation.",
+    date: "2025-07-02T00:00:00Z",
+    author: "Web Team",
+    tags: ["docs"],
+    imageUrl: "https://robohash.org/devlog-33?size=640x360"
+  },
+  {
+
     id: "devlog-32",
     title: "Game dependencies installed",
     excerpt: "Missing packages now included for map viewer.",
