@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-37",
+    title: "Media links restored",
+    excerpt: "Spotify and YouTube point to official pages again.",
+    content:
+      "Media.tsx now links to the official artist profile on Spotify and our YouTube videos page, both opening in a new tab.",
+    date: "2025-07-05T00:00:00Z",
+    author: "Web Team",
+    tags: ["media", "link"],
+    imageUrl: "https://robohash.org/devlog-37?size=640x360"
+  },
+  {
     id: "devlog-36",
     title: "Footer links updated",
     excerpt: "Twitter and Steam removed, YouTube fixed.",

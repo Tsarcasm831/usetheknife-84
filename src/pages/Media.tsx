@@ -20,7 +20,7 @@ const Media = () => (
         </li>
         <li>
           <a
-            href="https://spotify.com"
+            href="https://open.spotify.com/artist/0tIXtsoLoRKrNEMiwvIkdw?si=vDfytMNvRhy9Cs4wHUsoJA"
             className="text-game-orange hover:underline"
             target="_blank"
             rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const Media = () => (
         </li>
         <li>
           <a
-            href="https://youtube.com"
+            href="https://www.youtube.com/@lordtsarcasm/videos"
             className="text-game-orange hover:underline"
             target="_blank"
             rel="noopener noreferrer"
