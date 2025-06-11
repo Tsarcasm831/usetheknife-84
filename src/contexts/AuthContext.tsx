@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { Session, User } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
@@ -82,15 +83,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const logSecurityEvent = async (action: string, success: boolean = true, details?: any) => {
     try {
-      const { error } = await supabase.rpc('log_security_event', {
+      await supabase.rpc('log_security_event', {
         p_action: action,
         p_success: success,
         p_details: details ? JSON.stringify(details) : null
       });
-      
-      if (error) {
-        console.warn('Failed to log security event:', error);
-      }
     } catch (error) {
       console.warn('Failed to log security event:', error);
     }
@@ -297,3 +294,4 @@ export function useAuth() {
   }
   return context;
 }
+
