@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-36",
+    title: "Footer links updated",
+    excerpt: "Twitter and Steam removed, YouTube fixed.",
+    content:
+      "The homepage footer drops the unused Twitter and Steam links. The YouTube button now opens https://www.youtube.com/@lordtsarcasm/videos in a new tab.",
+    date: "2025-07-04T00:00:00Z",
+    author: "Web Team",
+    tags: ["footer", "links"],
+    imageUrl: "https://robohash.org/devlog-36?size=640x360"
+  },
+  {
     id: "devlog-35",
     title: "Node warnings silenced",
     excerpt: "Adjusted default max listeners.",

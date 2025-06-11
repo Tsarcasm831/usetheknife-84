@@ -26,10 +26,15 @@ const Index = () => {
             
             <div className="flex flex-col items-center md:items-end">
               <div className="flex space-x-4 mb-4">
-                <a href="#" className="hover:text-game-orange">Twitter</a>
                 <a href="#" className="hover:text-game-orange">Discord</a>
-                <a href="#" className="hover:text-game-orange">Steam</a>
-                <a href="#" className="hover:text-game-orange">YouTube</a>
+                <a
+                  href="https://www.youtube.com/@lordtsarcasm/videos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-game-orange"
+                >
+                  YouTube
+                </a>
               </div>
               <p className="text-sm text-gray-500">© 2025 Remnants of Destruction. All rights reserved.</p>
             </div>
