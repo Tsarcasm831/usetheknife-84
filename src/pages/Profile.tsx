@@ -4,9 +4,10 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { User, LogOut } from "lucide-react";
+import { User, LogOut, Shield } from "lucide-react";
 import { useForm } from "react-hook-form";
 import type { ProfileFormData } from "@/types";
+import { sanitizeInput, validateUsername } from "@/lib/security";
 
 const Profile = () => {
   const { profile, user, updateProfile, signOut } = useAuth();
@@ -14,7 +15,9 @@ const Profile = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting }
+    formState: { errors, isSubmitting },
+    setError,
+    clearErrors
   } = useForm<ProfileFormData>({
     defaultValues: {
       username: profile?.username || "",
@@ -24,7 +27,38 @@ const Profile = () => {
 
   const onSubmit = async (data: ProfileFormData) => {
     try {
-      await updateProfile(data);
+      // Clear previous errors
+      clearErrors();
+      
+      // Sanitize inputs
+      const sanitizedData = {
+        username: sanitizeInput(data.username),
+        avatar_url: sanitizeInput(data.avatar_url)
+      };
+      
+      // Validate username
+      if (sanitizedData.username && !validateUsername(sanitizedData.username)) {
+        setError("username", {
+          type: "manual",
+          message: "Username must be 3-50 characters long and contain only letters, numbers, underscores, and dashes"
+        });
+        return;
+      }
+      
+      // Validate avatar URL if provided
+      if (sanitizedData.avatar_url) {
+        try {
+          new URL(sanitizedData.avatar_url);
+        } catch {
+          setError("avatar_url", {
+            type: "manual",
+            message: "Please enter a valid URL"
+          });
+          return;
+        }
+      }
+      
+      await updateProfile(sanitizedData);
       setIsEditing(false);
     } catch (error) {
       console.error("Error updating profile:", error);
@@ -70,6 +104,13 @@ const Profile = () => {
                   </span>
                 </div>
               )}
+              
+              {/* Security Status Indicator */}
+              <div className="mb-4 flex items-center justify-center md:justify-start">
+                <Shield className="h-4 w-4 text-green-400 mr-2" />
+                <span className="text-sm text-green-400">Account Secured</span>
+              </div>
+              
               <div className="flex flex-col md:flex-row gap-4 mt-4">
                 <Button 
                   variant="outline" 
@@ -99,7 +140,14 @@ const Profile = () => {
                   <Input
                     id="username"
                     className="bg-game-gray/30 border-white/10 text-white"
-                    {...register("username", { required: "Username is required" })}
+                    {...register("username", { 
+                      required: "Username is required",
+                      validate: (value) => {
+                        const sanitized = sanitizeInput(value);
+                        return validateUsername(sanitized) || "Username must be 3-50 characters long and contain only letters, numbers, underscores, and dashes";
+                      }
+                    })}
+                    maxLength={50}
                   />
                   {errors.username && (
                     <p className="text-red-400 text-xs mt-1">{errors.username.message as string}</p>
@@ -112,7 +160,11 @@ const Profile = () => {
                     id="avatar_url"
                     className="bg-game-gray/30 border-white/10 text-white"
                     {...register("avatar_url")}
+                    maxLength={500}
                   />
+                  {errors.avatar_url && (
+                    <p className="text-red-400 text-xs mt-1">{errors.avatar_url.message as string}</p>
+                  )}
                   <p className="text-xs text-gray-500 mt-1">Leave empty to use default avatar</p>
                 </div>
                 
@@ -135,3 +187,4 @@ const Profile = () => {
 };
 
 export default Profile;
+

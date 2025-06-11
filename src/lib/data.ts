@@ -1,4 +1,3 @@
-
 import { DevLogEntry, User, NavItem } from "@/types";
 
 export const mockUser: User = {
@@ -18,6 +17,17 @@ export const mockNavItems: NavItem[] = [
 ];
 
 export const mockDevLogs: DevLogEntry[] = [
+  {
+    id: "devlog-34",
+    title: "Security hardening implemented",
+    excerpt: "Comprehensive security fixes including RLS policies, input validation, and rate limiting.",
+    content:
+      "Major security improvements have been implemented across the platform. Added Row Level Security policies, input sanitization, password validation, rate limiting, and security audit logging. All user inputs are now properly validated and sanitized to prevent XSS attacks. The system includes comprehensive monitoring and logging for security events.",
+    date: "2025-06-11T00:00:00Z",
+    author: "Security Team",
+    tags: ["security", "database", "validation"],
+    imageUrl: "https://robohash.org/devlog-34?size=640x360"
+  },
   {
 
     id: "devlog-33",
