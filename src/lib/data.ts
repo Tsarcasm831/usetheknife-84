@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-35",
+    title: "Node warnings silenced",
+    excerpt: "Adjusted default max listeners.",
+    content:
+      "A tweak to Vite's config increases EventEmitter.defaultMaxListeners, removing the socket listener warning during install.",
+    date: "2025-07-03T00:00:00Z",
+    author: "Web Team",
+    tags: ["build", "fix"],
+    imageUrl: "https://robohash.org/devlog-35?size=640x360"
+  },
+  {
     id: "devlog-34",
     title: "Security hardening implemented",
     excerpt: "Comprehensive security fixes including RLS policies, input validation, and rate limiting.",
