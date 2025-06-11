@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-38",
+    title: "DevLog IDs use UUIDs",
+    excerpt: "IDs are now generated with crypto.randomUUID().",
+    content:
+      "DevLogSection creates entry IDs via crypto.randomUUID so each post has a globally unique identifier.",
+    date: "2025-07-06T00:00:00Z",
+    author: "Web Team",
+    tags: ["devlog", "uuid"],
+    imageUrl: "https://robohash.org/devlog-38?size=640x360"
+  },
+  {
     id: "devlog-37",
     title: "Media links restored",
     excerpt: "Spotify and YouTube point to official pages again.",
