@@ -71,10 +71,16 @@ const UserSection: React.FC<UserSectionProps> = ({ user }) => {
                 </div>
               </div>
               <div className="flex space-x-2">
-                <Link to="/profile" className="text-gray-400 hover:text-white">
+                <Link
+                  to="/profile"
+                  className="text-gray-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-game-orange focus-visible:ring-offset-2 rounded"
+                >
                   <Settings className="h-4 w-4" />
                 </Link>
-                <button onClick={signOut} className="text-gray-400 hover:text-white">
+                <button
+                  onClick={signOut}
+                  className="text-gray-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:ring-offset-2 rounded"
+                >
                   <LogOut className="h-4 w-4" />
                 </button>
               </div>

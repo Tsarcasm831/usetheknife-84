@@ -153,7 +153,7 @@ const DevLogForm: React.FC<DevLogFormProps> = ({ onSubmit, onCancel }) => {
                   <button
                     type="button"
                     onClick={() => removeTag(tag)}
-                    className="hover:text-white"
+                    className="hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-game-orange focus-visible:ring-offset-2 rounded"
                   >
                     <X className="w-3 h-3" />
                   </button>
