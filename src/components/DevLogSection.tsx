@@ -37,7 +37,7 @@ const DevLogSection: React.FC<DevLogSectionProps> = ({ devlogs: initialDevlogs }
   const handleAddDevLog = (newEntry: Omit<DevLogEntry, 'id' | 'date'>) => {
     const entry: DevLogEntry = {
       ...newEntry,
-      id: `devlog-${Date.now()}`,
+      id: `devlog-${crypto.randomUUID()}`,
       date: new Date().toISOString()
     };
     
