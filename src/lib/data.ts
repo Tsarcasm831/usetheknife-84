@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-39",
+    title: "Strict mode enabled",
+    excerpt: "TypeScript now enforces strict checking across the app.",
+    content:
+      "tsconfig.app.json has strict mode switched on, improving type safety throughout the project.",
+    date: "2025-07-07T00:00:00Z",
+    author: "Web Team",
+    tags: ["typescript", "strict"],
+    imageUrl: "https://robohash.org/devlog-39?size=640x360"
+  },
+  {
     id: "devlog-38",
     title: "DevLog IDs use UUIDs",
     excerpt: "IDs are now generated with crypto.randomUUID().",
