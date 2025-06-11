@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-40",
+    title: "Index script removed",
+    excerpt: "Cleaned up stray console output.",
+    content:
+      "public/home/index.html no longer logs to the console when loaded, reducing noise during development.",
+    date: "2025-07-08T00:00:00Z",
+    author: "Web Team",
+    tags: ["cleanup", "logging"],
+    imageUrl: "https://robohash.org/devlog-40?size=640x360"
+  },
+  {
     id: "devlog-39",
     title: "Strict mode enabled",
     excerpt: "TypeScript now enforces strict checking across the app.",
