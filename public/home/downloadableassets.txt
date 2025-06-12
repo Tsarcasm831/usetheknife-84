@@ -1,0 +1,363 @@
+{
+  "manifest.json": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/manifest.json",
+  "Alien_armored": {
+    "biped": {
+      "Animation_Alert_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Alien_armored/biped/Animation_Alert_withSkin.glb",
+      "Animation_Confused_Scratch_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Alien_armored/biped/Animation_Confused_Scratch_withSkin.glb",
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Alien_armored/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Injured_Walk_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Alien_armored/biped/Animation_Injured_Walk_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Alien_armored/biped/Animation_Running_withSkin.glb",
+      "Animation_Run_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Alien_armored/biped/Animation_Run_02_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Alien_armored/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "alien_mercenary": {
+    "biped": {
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/alien_mercenary/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/alien_mercenary/biped/Animation_Running_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/alien_mercenary/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "Anthromorph": {
+    "biped": {
+      "Animation_Alert_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Alert_withSkin.glb",
+      "Animation_Casual_Walk_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Casual_Walk_withSkin.glb",
+      "Animation_Combat_Stance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Combat_Stance_withSkin.glb",
+      "Animation_Dead_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Dead_withSkin.glb",
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Listening_Gesture_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Listening_Gesture_withSkin.glb",
+      "Animation_Mummy_Stagger_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Mummy_Stagger_withSkin.glb",
+      "Animation_RunFast_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_RunFast_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Running_withSkin.glb",
+      "Animation_Run_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Run_02_withSkin.glb",
+      "Animation_Skill_01_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Skill_01_withSkin.glb",
+      "Animation_Skill_03_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Skill_03_withSkin.glb",
+      "Animation_Slow_Orc_Walk_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Slow_Orc_Walk_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Anthromorph/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "Bill": {
+    "biped": {
+      "Animation_Alert_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Bill/biped/Animation_Alert_withSkin.glb",
+      "Animation_Casual_Walk_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Bill/biped/Animation_Casual_Walk_withSkin.glb",
+      "Animation_Dozing_Elderly_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Bill/biped/Animation_Dozing_Elderly_withSkin.glb",
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Bill/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Bill/biped/Animation_Running_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Bill/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "diamond_dancers": {
+    "dancer1": {
+      "biped": {
+        "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer1/biped/Animation_Idle_02_withSkin.glb",
+        "Animation_Love_You_Pop_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer1/biped/Animation_Love_You_Pop_Dance_withSkin.glb",
+        "Animation_Magic_Genie_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer1/biped/Animation_Magic_Genie_withSkin.glb",
+        "Animation_OMG_Groove_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer1/biped/Animation_OMG_Groove_withSkin.glb",
+        "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer1/biped/Animation_Running_withSkin.glb",
+        "Animation_Superlove_Pop_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer1/biped/Animation_Superlove_Pop_Dance_withSkin.glb",
+        "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer1/biped/Animation_Walking_withSkin.glb",
+        "Animation_Walking_Woman_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer1/biped/Animation_Walking_Woman_withSkin.glb",
+        "Animation_You_Groove_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer1/biped/Animation_You_Groove_withSkin.glb"
+      }
+    },
+    "dancer2": {
+      "biped": {
+        "Animation_Boom_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Boom_Dance_withSkin.glb",
+        "Animation_Crystal_Beads_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Crystal_Beads_withSkin.glb",
+        "Animation_Dont_You_Dare_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Dont_You_Dare_withSkin.glb",
+        "Animation_Gentlemans_Bow_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Gentlemans_Bow_withSkin.glb",
+        "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Idle_02_withSkin.glb",
+        "Animation_Love_You_Pop_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Love_You_Pop_Dance_withSkin.glb",
+        "Animation_Magic_Genie_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Magic_Genie_withSkin.glb",
+        "Animation_Pop_Dance_LSA2_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Pop_Dance_LSA2_withSkin.glb",
+        "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Running_withSkin.glb",
+        "Animation_Squat_Stance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Squat_Stance_withSkin.glb",
+        "Animation_Superlove_Pop_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Superlove_Pop_Dance_withSkin.glb",
+        "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Walking_withSkin.glb",
+        "Animation_Walking_Woman_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer2/biped/Animation_Walking_Woman_withSkin.glb"
+      }
+    },
+    "dancer3": {
+      "biped": {
+        "Animation_Boom_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Boom_Dance_withSkin.glb",
+        "Animation_Bubble_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Bubble_Dance_withSkin.glb",
+        "Animation_Chair_Sit_Idle_F_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Chair_Sit_Idle_F_withSkin.glb",
+        "Animation_Confused_Scratch_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Confused_Scratch_withSkin.glb",
+        "Animation_Dead_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Dead_withSkin.glb",
+        "Animation_Denim_Pop_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Denim_Pop_Dance_withSkin.glb",
+        "Animation_Formal_Bow_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Formal_Bow_withSkin.glb",
+        "Animation_Happy_jump_f_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Happy_jump_f_withSkin.glb",
+        "Animation_Idle_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Idle_withSkin.glb",
+        "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Running_withSkin.glb",
+        "Animation_Skip_Forward_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Skip_Forward_withSkin.glb",
+        "Animation_Superlove_Pop_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Superlove_Pop_Dance_withSkin.glb",
+        "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Walking_withSkin.glb",
+        "Animation_Walking_Woman_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer3/biped/Animation_Walking_Woman_withSkin.glb"
+      }
+    },
+    "dancer4": {
+      "biped": {
+        "Animation_All_Night_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_All_Night_Dance_withSkin.glb",
+        "Animation_Arm_Circle_Shuffle_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Arm_Circle_Shuffle_withSkin.glb",
+        "Animation_Bass_Beats_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Bass_Beats_withSkin.glb",
+        "Animation_Boom_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Boom_Dance_withSkin.glb",
+        "Animation_Bubble_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Bubble_Dance_withSkin.glb",
+        "Animation_Cardio_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Cardio_Dance_withSkin.glb",
+        "Animation_Cherish_Pop_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Cherish_Pop_Dance_withSkin.glb",
+        "Animation_Crystal_Beads_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Crystal_Beads_withSkin.glb",
+        "Animation_Denim_Pop_Dance_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Denim_Pop_Dance_withSkin.glb",
+        "Animation_FunnyDancing_01_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_FunnyDancing_01_withSkin.glb",
+        "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Running_withSkin.glb",
+        "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/diamond_dancers/dancer4/biped/Animation_Walking_withSkin.glb"
+      }
+    }
+  },
+  "fauna": {
+    "mutated_grass": {
+      "mutated_grass_Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/fauna/mutated_grass/mutated_grass_Animation_Walking_withSkin.glb"
+    },
+    "radcow": {
+      "radcow_Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/fauna/radcow/radcow_Animation_Walking_withSkin.glb"
+    },
+    "rad_bear": {
+      "model_Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/fauna/rad_bear/model_Animation_Walking_withSkin.glb",
+      "quadruped": {
+        "Animation_Walking_frame_rate_60.fbx": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/fauna/rad_bear/quadruped/Animation_Walking_frame_rate_60.fbx",
+        "Character_output.fbx": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/fauna/rad_bear/quadruped/Character_output.fbx"
+      }
+    },
+    "undead_fox": {
+      "undead_fox_Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/fauna/undead_fox/undead_fox_Animation_Walking_withSkin.glb"
+    }
+  },
+  "hive_drone": {
+    "biped": {
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/hive_drone/biped/Animation_Running_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/hive_drone/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "images": {
+    "background.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/images/background.png",
+    "dancer1.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/images/dancer1.png",
+    "dancer2.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/images/dancer2.png",
+    "dirt.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/images/dirt.png",
+    "metal_rusted.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/images/metal_rusted.png"
+  },
+  "Ivey": {
+    "biped": {
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Ivey/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Ivey/biped/Animation_Running_withSkin.glb",
+      "Animation_Run_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Ivey/biped/Animation_Run_02_withSkin.glb",
+      "Animation_Texting_Walk_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Ivey/biped/Animation_Texting_Walk_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Ivey/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "mercenary": {
+    "biped": {
+      "Animation_Alert_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/mercenary/biped/Animation_Alert_withSkin.glb",
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/mercenary/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/mercenary/biped/Animation_Running_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/mercenary/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "player": {
+    "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/player/Animation_Idle_02_withSkin.glb",
+    "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/player/Animation_Running_withSkin.glb",
+    "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/player/Animation_Walking_withSkin.glb",
+    "portrait.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/player/portrait.png"
+  },
+  "Promethean Robot": {
+    "biped": {
+      "Animation_Dead_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Promethean Robot/biped/Animation_Dead_withSkin.glb",
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Promethean Robot/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Promethean Robot/biped/Animation_Running_withSkin.glb",
+      "Animation_Slow_Orc_Walk_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Promethean Robot/biped/Animation_Slow_Orc_Walk_withSkin.glb",
+      "Animation_Unsteady_Walk_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Promethean Robot/biped/Animation_Unsteady_Walk_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Promethean Robot/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "rad_chicken2": {
+    "biped": {
+      "Animation_Alert_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/rad_chicken2/biped/Animation_Alert_withSkin.glb",
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/rad_chicken2/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/rad_chicken2/biped/Animation_Running_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/rad_chicken2/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "ranger": {
+    "biped": {
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/ranger/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Listening_Gesture_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/ranger/biped/Animation_Listening_Gesture_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/ranger/biped/Animation_Running_withSkin.glb",
+      "Animation_Stand_and_Chat_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/ranger/biped/Animation_Stand_and_Chat_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/ranger/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "sounds": {
+    "bg3.mp3": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/sounds/bg3.mp3",
+    "Shadow's Whisper.mp3": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/sounds/Shadow's Whisper.mp3",
+    "town1.mp3": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/sounds/town1.mp3",
+    "town2.mp3": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/sounds/town2.mp3",
+    "interior": {
+      "bills_garage": {},
+      "diamonds_club": {},
+      "marthas": {}
+    },
+    "loading_screen": {}
+  },
+  "static": {
+    "Abandoned_Hospital.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Abandoned_Hospital.glb",
+    "Alien_Warlord.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Alien_Warlord.glb",
+    "backpack.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/backpack.glb",
+    "Bed.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Bed.glb",
+    "bills_truck.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/bills_truck.glb",
+    "Bills_warehouse.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Bills_warehouse.glb",
+    "brick_house.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/brick_house.glb",
+    "buggy.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/buggy.glb",
+    "bus.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/bus.glb",
+    "cartoon_house.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/cartoon_house.glb",
+    "computer_old.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/computer_old.glb",
+    "diamonds.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/diamonds.glb",
+    "fdg_building.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/fdg_building.glb",
+    "Grass.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Grass.glb",
+    "grass3.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/grass3.glb",
+    "hospital.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/hospital.glb",
+    "house.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/house.glb",
+    "house1.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/house1.glb",
+    "Laboratory_Tower.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Laboratory_Tower.glb",
+    "lantern_bench.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/lantern_bench.glb",
+    "Medieval_House.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Medieval_House.glb",
+    "mineshaft_entrance.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/mineshaft_entrance.glb",
+    "Mini_house.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Mini_house.glb",
+    "picnic_table.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/picnic_table.glb",
+    "Pine_tree.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Pine_tree.glb",
+    "radiator.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/radiator.glb",
+    "red_sedan.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/red_sedan.glb",
+    "refugee_m1.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/refugee_m1.glb",
+    "Rustic_Stove.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Rustic_Stove.glb",
+    "rustic_tavern_bench.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/rustic_tavern_bench.glb",
+    "Rustic_Trailer.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Rustic_Trailer.glb",
+    "Schoolhouse.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Schoolhouse.glb",
+    "Shal'Rah Figure.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Shal'Rah Figure.glb",
+    "Spyders_Workshop.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Spyders_Workshop.glb",
+    "Tavern.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Tavern.glb",
+    "Towers.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/Towers.glb",
+    "tree_beehive.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/tree_beehive.glb",
+    "waterworks.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/waterworks.glb",
+    "wooden_sideboard.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/wooden_sideboard.glb",
+    "wood_plans_and_trash.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/wood_plans_and_trash.glb",
+    "american_house": {
+      "american_house_0417204824_refine.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/american_house/american_house_0417204824_refine.glb",
+      "american_house_0417204824_refine_albedo.jpg": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/american_house/american_house_0417204824_refine_albedo.jpg",
+      "american_house_0417204824_refine_ao.jpg": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/american_house/american_house_0417204824_refine_ao.jpg",
+      "american_house_0417204824_refine_curvature.jpg": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/american_house/american_house_0417204824_refine_curvature.jpg",
+      "american_house_0417204824_refine_height.jpg": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/american_house/american_house_0417204824_refine_height.jpg",
+      "american_house_0417204824_refine_normal.jpg": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/american_house/american_house_0417204824_refine_normal.jpg",
+      "american_house_0417204824_refine_position.jpg": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/american_house/american_house_0417204824_refine_position.jpg",
+      "american_house_0417204824_refine_roughness.jpg": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/american_house/american_house_0417204824_refine_roughness.jpg"
+    },
+    "flora": {
+      "agave_plant_0502171941.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/agave_plant_0502171941.glb",
+      "ambulance_overgrown.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/ambulance_overgrown.glb",
+      "A_glowing_blue_mushro_0502172403_refine.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/A_glowing_blue_mushro_0502172403_refine.glb",
+      "bushes3.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/bushes3.glb",
+      "Dreamflowers_Iridesc_0502172239.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/Dreamflowers_Iridesc_0502172239.glb",
+      "Jungle_Plant_0502171959.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/Jungle_Plant_0502171959.glb",
+      "low_poly_plant_0502171950_refine.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/low_poly_plant_0502171950_refine.glb",
+      "mushrooms.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/mushrooms.glb",
+      "muta-plant.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/muta-plant.glb",
+      "muta-plant2.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/muta-plant2.glb",
+      "muta-plant3.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/muta-plant3.glb",
+      "Plant_0502171925.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/Plant_0502171925.glb",
+      "potato.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/potato.glb",
+      "tall_corn_plant_high_0502172145.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/tall_corn_plant_high_0502172145.glb",
+      "Wooden_Bench_garden_0502171330.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/flora/Wooden_Bench_garden_0502171330.glb"
+    },
+    "textures": {
+      "asphalt_cracked.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/textures/asphalt_cracked.png",
+      "concrete.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/textures/concrete.png",
+      "dark_oak_basecolor.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/textures/dark_oak_basecolor.png"
+    },
+    "weapons": {
+      "firearms": {
+        "alien_blaster.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/alien_blaster.glb",
+        "alien_rifle.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/alien_rifle.glb",
+        "alien_sr.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/alien_sr.glb",
+        "battle_rifle.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/battle_rifle.glb",
+        "flamethrower.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/flamethrower.glb",
+        "Fossilpunk_Pistol.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/Fossilpunk_Pistol.glb",
+        "gauss_cannon.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/gauss_cannon.glb",
+        "gauss_pistol.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/gauss_pistol.glb",
+        "gauss_rifle.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/gauss_rifle.glb",
+        "laser_rifle.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/laser_rifle.glb",
+        "laser_sr.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/laser_sr.glb",
+        "plasma_pistol.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/plasma_pistol.glb",
+        "plasma_rifle.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/plasma_rifle.glb",
+        "smg.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/smg.glb",
+        "x_bow.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/static/weapons/firearms/x_bow.glb"
+      }
+    }
+  },
+  "tal_ehn": {
+    "files": {
+      "tal_ehn_Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/tal_ehn/files/tal_ehn_Animation_Idle_02_withSkin.glb",
+      "tal_ehn_Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/tal_ehn/files/tal_ehn_Animation_Running_withSkin.glb",
+      "tal_ehn_Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/tal_ehn/files/tal_ehn_Animation_Walking_withSkin.glb"
+    }
+  },
+  "tal_ehn_2": {
+    "biped": {
+      "Animation_happy_jump_m_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/tal_ehn_2/biped/Animation_happy_jump_m_withSkin.glb",
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/tal_ehn_2/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Listening_Gesture_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/tal_ehn_2/biped/Animation_Listening_Gesture_withSkin.glb",
+      "Animation_Phone_Call_Gesture_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/tal_ehn_2/biped/Animation_Phone_Call_Gesture_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/tal_ehn_2/biped/Animation_Running_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/tal_ehn_2/biped/Animation_Walking_withSkin.glb"
+    }
+  },
+  "uncompressed": {
+    "Alien_Warlord_A_pos_0508161015_texture.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/Alien_Warlord_A_pos_0508161015_texture.glb",
+    "Apocalyptic_destroyed_0508170657.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/Apocalyptic_destroyed_0508170657.glb",
+    "apocalyptic_truck_wit_0508170611_refine.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/apocalyptic_truck_wit_0508170611_refine.glb",
+    "a_simple_military_bun_0508164903.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/a_simple_military_bun_0508164903.glb",
+    "A_tree_mutated_in_an__0508170630.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/A_tree_mutated_in_an__0508170630.glb",
+    "bush1.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/bush1.glb",
+    "Create_heavy_metal_br_0508170702.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/Create_heavy_metal_br_0508170702.glb",
+    "iron_rock_0508164738.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/iron_rock_0508164738.glb",
+    "moss_airplane.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/moss_airplane.glb",
+    "old_abandoned_house.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/old_abandoned_house.glb",
+    "Realistic_crashed_old_0508170645_refine.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/Realistic_crashed_old_0508170645_refine.glb",
+    "Realistic_rock_0508164805.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/Realistic_rock_0508164805.glb",
+    "Revolver__0508160106.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/Revolver__0508160106.glb",
+    "rock1.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/rock1.glb",
+    "Rocks_0508164747.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/Rocks_0508164747.glb",
+    "rock_0508164725.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/rock_0508164725.glb",
+    "sea_rocks_0508164755.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/sea_rocks_0508164755.glb",
+    "waterworks.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/uncompressed/waterworks.glb"
+  },
+  "videos": {
+    "menu.mp4": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/videos/menu.mp4"
+  },
+  "woman_wastelander": {
+    "portrait.png": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/woman_wastelander/portrait.png",
+    "files": {
+      "woman_wastelander_Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/woman_wastelander/files/woman_wastelander_Animation_Idle_02_withSkin.glb",
+      "woman_wastelander_Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/woman_wastelander/files/woman_wastelander_Animation_Running_withSkin.glb",
+      "woman_wastelander_Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/woman_wastelander/files/woman_wastelander_Animation_Walking_withSkin.glb"
+    }
+  },
+  "Xris": {
+    "biped": {
+      "Animation_Alert_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_Alert_withSkin.glb",
+      "Animation_Casual_Walk_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_Casual_Walk_withSkin.glb",
+      "Animation_Idle_02_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_Idle_02_withSkin.glb",
+      "Animation_Idle_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_Idle_withSkin.glb",
+      "Animation_Injured_Walk_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_Injured_Walk_withSkin.glb",
+      "Animation_RunFast_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_RunFast_withSkin.glb",
+      "Animation_Running_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_Running_withSkin.glb",
+      "Animation_Run_03_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_Run_03_withSkin.glb",
+      "Animation_Stand_and_Chat_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_Stand_and_Chat_withSkin.glb",
+      "Animation_Walking_withSkin.glb": "https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/Xris/biped/Animation_Walking_withSkin.glb"
+    }
+  }
+}
