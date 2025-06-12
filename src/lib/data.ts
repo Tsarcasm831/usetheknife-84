@@ -485,5 +485,16 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["performance", "animation"],
     imageUrl: "https://robohash.org/devlog-45?size=640x360"
+  },
+  {
+    id: "devlog-46",
+    title: "Simpler NavBar markup",
+    excerpt: "Removed extra wrappers to lighten DOM.",
+    content:
+      "The NavBar and hero section no longer use unnecessary \x3cdiv\x3e elements. This flattening trims the DOM tree and speeds up rendering.",
+    date: "2025-07-14T00:00:00Z",
+    author: "Web Team",
+    tags: ["cleanup", "performance"],
+    imageUrl: "https://robohash.org/devlog-46?size=640x360"
   }
 ];

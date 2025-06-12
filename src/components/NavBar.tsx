@@ -38,15 +38,13 @@ const NavBar: React.FC = () => {
     >
       <div className="game-container flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
-          <Link
-            to="/"
-            className="text-2xl font-bold tracking-wider text-game-orange text-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-game-orange focus-visible:ring-offset-2 rounded"
-          >
-            REMNANTS
-            <span className="text-white ml-2">DEVLOG</span>
-          </Link>
-        </div>
+        <Link
+          to="/"
+          className="flex items-center text-2xl font-bold tracking-wider text-game-orange text-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-game-orange focus-visible:ring-offset-2 rounded"
+        >
+          REMNANTS
+          <span className="text-white ml-2">DEVLOG</span>
+        </Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 items-center">
@@ -108,15 +106,14 @@ const NavBar: React.FC = () => {
         </div>
         
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
-          <Button 
-            variant="ghost" 
-            size="icon"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <Menu className="h-6 w-6" />
-          </Button>
-        </div>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <Menu className="h-6 w-6" />
+        </Button>
       </div>
       
       {/* Mobile Menu */}
