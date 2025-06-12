@@ -3,7 +3,7 @@ export function initTerraIncognita(map) {
   map.createPane("terraPane");
   map.getPane("terraPane").style.zIndex = 650;
   const style = { color:"#000", weight:0, fillColor:"#000", fillOpacity:0.7 };
-  
+
   let countriesGeoJsonCache = null; // Cache for the world geojson
 
   async function fetchCountriesGeoJson() {
@@ -43,7 +43,7 @@ export function initTerraIncognita(map) {
           let center;
           if (lay.getBounds && typeof lay.getBounds === 'function' && lay.getBounds().isValid()) {
             center = lay.getBounds().getCenter();
-          } 
+          }
           else if (countryFeature.geometry && countryFeature.geometry.type === "Point") {
             center = L.latLng(countryFeature.geometry.coordinates[1], countryFeature.geometry.coordinates[0]);
           } else {
@@ -53,11 +53,11 @@ export function initTerraIncognita(map) {
               if (Array.isArray(coords)) {
                 if (coords.length > 0 && typeof coords[0] === 'number' && typeof coords[1] === 'number') {
                     // It's a coordinate pair
-                    lngs.push(coords[0]); 
+                    lngs.push(coords[0]);
                     lats.push(coords[1]);
                 } else {
                     // It's an array of coordinates or deeper nested arrays
-                    coords.forEach(c => extractCoords(c)); 
+                    coords.forEach(c => extractCoords(c));
                 }
               }
             };
@@ -70,10 +70,10 @@ export function initTerraIncognita(map) {
                 center = L.latLng(avgLat, avgLng);
             } else {
                 console.warn(`Could not determine center for ${countryCodeISO_A3} label.`);
-                return; 
+                return;
             }
           }
-          
+
           L.marker(center, {
             pane:"terraPane",
             icon: L.divIcon({ className:"terra-label", html:"TERRA INCOGNITA", iconSize:[200,40], iconAnchor:[100,20] }),

@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-44",
+    title: "Terra Incognita overlay fixed",
+    excerpt: "Script loads without trailing whitespace errors.",
+    content:
+      "public/game/js/terraIncognita.js now trims stray spaces and adds a final newline so browsers load it cleanly.",
+    date: "2025-07-12T00:00:00Z",
+    author: "Web Team",
+    tags: ["bugfix", "map"],
+    imageUrl: "https://robohash.org/devlog-44?size=640x360"
+  },
+  {
     id: "devlog-43",
     title: "Home assets fetch script",
     excerpt: "Models download via npm run fetch-home-assets.",

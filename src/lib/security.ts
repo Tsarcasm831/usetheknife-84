@@ -112,7 +112,7 @@ export class ClientRateLimiter {
  * Secure local storage wrapper
  */
 export class SecureStorage {
-  static set(key: string, value: any): void {
+  static set(key: string, value: unknown): void {
     try {
       const sanitizedKey = sanitizeInput(key);
       localStorage.setItem(sanitizedKey, JSON.stringify(value));
@@ -121,7 +121,7 @@ export class SecureStorage {
     }
   }
   
-  static get(key: string): any {
+  static get(key: string): unknown {
     try {
       const sanitizedKey = sanitizeInput(key);
       const item = localStorage.getItem(sanitizedKey);

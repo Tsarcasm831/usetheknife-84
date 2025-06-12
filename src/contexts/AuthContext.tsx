@@ -81,7 +81,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  const logSecurityEvent = async (action: string, success: boolean = true, details?: any) => {
+  const logSecurityEvent = async (
+    action: string,
+    success: boolean = true,
+    details?: Record<string, unknown>
+  ) => {
     try {
       await supabase.rpc('log_security_event', {
         p_action: action,
