@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-43",
+    title: "Home assets fetch script",
+    excerpt: "Models download via npm run fetch-home-assets.",
+    content:
+      "A new Node script reads downloadableassets.txt to pull home page models and then regenerates assets/manifest.json.",
+    date: "2025-07-11T00:00:00Z",
+    author: "Web Team",
+    tags: ["assets", "script"],
+    imageUrl: "https://robohash.org/devlog-43?size=640x360"
+  },
+  {
     id: "devlog-42",
     title: "Map script fallback added",
     excerpt: "Google Maps loads even without env key.",
