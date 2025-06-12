@@ -28,7 +28,15 @@
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <!-- Uses the VITE_GOOGLE_MAPS_KEY environment variable -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=%VITE_GOOGLE_MAPS_KEY%&loading=async"></script>
+    <script>
+      const key = "%VITE_GOOGLE_MAPS_KEY%";
+      const base = "https://maps.googleapis.com/maps/api/js?loading=async";
+      const s = document.createElement("script");
+      s.src = key.includes("VITE_GOOGLE_MAPS_KEY") ? base : `${base}&key=${key}`;
+      s.async = true;
+      s.defer = true;
+      document.head.appendChild(s);
+    </script>
     <!-- Three.js for 3D terrain visualization -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>

@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-42",
+    title: "Map script fallback added",
+    excerpt: "Google Maps loads even without env key.",
+    content:
+      "public/game/index.html now injects the Maps script via JavaScript. If VITE_GOOGLE_MAPS_KEY isn't set, it loads without a key to avoid a URI error. The home page no longer preloads a missing video.",
+    date: "2025-07-10T00:00:00Z",
+    author: "Web Team",
+    tags: ["bugfix", "maps"],
+    imageUrl: "https://robohash.org/devlog-42?size=640x360"
+  },
+  {
     id: "devlog-41",
     title: "Focus outlines added",
     excerpt: "Interactive elements highlight on keyboard focus.",
