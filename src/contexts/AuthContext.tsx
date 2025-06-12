@@ -1,5 +1,5 @@
 
-import { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { Session, User } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
 import { useNavigate } from "react-router-dom";
@@ -43,6 +43,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setSession(session);
         setUser(session?.user ?? null);
         
+        // Log security events
+        if (event === 'SIGNED_IN') {
+          logSecurityEvent('user_signed_in');
+        } else if (event === 'SIGNED_OUT') {
+          logSecurityEvent('user_signed_out');
+        }
+        
         // Fetch user profile data with setTimeout to avoid deadlocks
         if (session?.user) {
           setTimeout(() => {
@@ -74,6 +81,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  const logSecurityEvent = async (action: string, success: boolean = true, details?: any) => {
+    try {
+      await supabase.rpc('log_security_event', {
+        p_action: action,
+        p_success: success,
+        p_details: details ? JSON.stringify(details) : null
+      });
+    } catch (error) {
+      console.warn('Failed to log security event:', error);
+    }
+  };
+
   const fetchProfile = async (userId: string): Promise<void> => {
     try {
       const { data, error } = await supabase
@@ -96,7 +115,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signIn = async (email: string, password: string) => {
     // Rate limiting check
     if (!rateLimiter.canAttempt('signin', 5, 300000)) { // 5 attempts per 5 minutes
+      const remaining = rateLimiter.getRemainingAttempts('signin', 5, 300000);
       toast.error(`Too many sign-in attempts. Please wait before trying again.`);
+      await logSecurityEvent('signin_rate_limited', false);
       throw new Error('Rate limit exceeded');
     }
 
@@ -104,11 +125,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const cleanEmail = sanitizeInput(email.toLowerCase().trim());
     if (!validateEmail(cleanEmail)) {
       toast.error("Please enter a valid email address");
+      await logSecurityEvent('signin_invalid_email', false);
       throw new Error('Invalid email format');
     }
 
     if (!password || password.length < 6) {
       toast.error("Password must be at least 6 characters long");
+      await logSecurityEvent('signin_invalid_password', false);
       throw new Error('Invalid password format');
     }
 
@@ -119,9 +142,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
 
       if (error) {
+        await logSecurityEvent('signin_failed', false, { error: error.message });
         throw error;
       }
       
+      await logSecurityEvent('signin_success', true);
       toast.success("Signed in successfully!");
       navigate("/");
     } catch (error: unknown) {
@@ -135,6 +160,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // Rate limiting check
     if (!rateLimiter.canAttempt('signup', 3, 3600000)) { // 3 attempts per hour
       toast.error("Too many sign-up attempts. Please wait before trying again.");
+      await logSecurityEvent('signup_rate_limited', false);
       throw new Error('Rate limit exceeded');
     }
 
@@ -144,17 +170,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     if (!validateEmail(cleanEmail)) {
       toast.error("Please enter a valid email address");
+      await logSecurityEvent('signup_invalid_email', false);
       throw new Error('Invalid email format');
     }
 
     if (!validateUsername(cleanUsername)) {
       toast.error("Username must be 3-50 characters long and contain only letters, numbers, underscores, and dashes");
+      await logSecurityEvent('signup_invalid_username', false);
       throw new Error('Invalid username format');
     }
 
     const passwordValidation = validatePassword(password);
     if (!passwordValidation.isValid) {
       toast.error(passwordValidation.errors[0]);
+      await logSecurityEvent('signup_weak_password', false);
       throw new Error('Password does not meet requirements');
     }
 
@@ -170,9 +199,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       });
 
       if (error) {
+        await logSecurityEvent('signup_failed', false, { error: error.message });
         throw error;
       }
       
+      await logSecurityEvent('signup_success', true);
       toast.success("Signed up successfully! Check your email for confirmation.");
       navigate("/auth");
     } catch (error: unknown) {
@@ -184,11 +215,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signOut = async () => {
     try {
+      await logSecurityEvent('signout_attempt', true);
       await supabase.auth.signOut();
       navigate("/auth");
       toast.success("Signed out successfully");
     } catch (error: unknown) {
       const err = error as Error;
+      await logSecurityEvent('signout_failed', false, { error: err.message });
       toast.error(err.message || "Failed to sign out");
     }
   };
@@ -197,6 +230,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // Rate limiting check
     if (!rateLimiter.canAttempt('profile_update', 10, 3600000)) { // 10 updates per hour
       toast.error("Too many profile updates. Please wait before trying again.");
+      await logSecurityEvent('profile_update_rate_limited', false);
       throw new Error('Rate limit exceeded');
     }
 
@@ -208,6 +242,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     if (cleanUpdates.username && !validateUsername(cleanUpdates.username)) {
       toast.error("Username must be 3-50 characters long and contain only letters, numbers, underscores, and dashes");
+      await logSecurityEvent('profile_update_invalid_username', false);
       throw new Error('Invalid username format');
     }
 
@@ -220,10 +255,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         .eq("auth_user_id", user.id);
 
       if (error) {
+        await logSecurityEvent('profile_update_failed', false, { error: error.message });
         throw error;
       }
       
       setProfile({ ...(profile as UserProfile), ...cleanUpdates });
+      await logSecurityEvent('profile_update_success', true);
       toast.success("Profile updated successfully");
     } catch (error: unknown) {
       const err = error as Error;
@@ -257,3 +294,4 @@ export function useAuth() {
   }
   return context;
 }
+

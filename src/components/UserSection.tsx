@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Bell, Settings, LogOut } from 'lucide-react';
 import { motion } from 'framer-motion';
