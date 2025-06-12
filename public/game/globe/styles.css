@@ -430,16 +430,17 @@ button:active {
 /* Enhance notification styles for better visibility */
 .notification {
     position: fixed;
-    bottom: -100px;
+    bottom: 40px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 100%);
+    will-change: transform;
     background: rgba(0, 150, 255, 0.9);
     color: white;
     padding: 15px 25px;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    z-index: 9999; 
-    transition: bottom 0.5s ease;
+    z-index: 9999;
+    transition: transform 0.5s ease;
     text-align: center;
     max-width: 80%;
     backdrop-filter: blur(5px);
@@ -449,7 +450,7 @@ button:active {
 }
 
 .notification.visible {
-    bottom: 40px;
+    transform: translate(-50%, 0);
 }
 
 .notification.error {
