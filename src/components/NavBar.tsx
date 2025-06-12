@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Search, User, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';

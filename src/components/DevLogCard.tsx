@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { DevLogEntry } from '@/types';
 import { motion } from 'framer-motion';
 import { formatDistanceToNow } from 'date-fns';

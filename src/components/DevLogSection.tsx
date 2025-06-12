@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import DevLogCard from './DevLogCard';
 import DevLogForm from './DevLogForm';
 import { DevLogEntry } from '@/types';
