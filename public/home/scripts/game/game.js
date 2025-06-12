@@ -1350,8 +1350,7 @@ function updateThoughtBubble(ranger, camera) {
     const x = (screenPos.x * 0.5 + 0.5) * window.innerWidth;
     const y = (-screenPos.y * 0.5 + 0.5) * window.innerHeight;
     if (ranger.userData.currentThought) {
-        thoughtEl.style.left = `${x}px`;
-        thoughtEl.style.top = `${y - 50}px`;
+        thoughtEl.style.transform = `translate(-50%, -100%) translate3d(${x}px, ${y - 50}px, 0)`;
         thoughtEl.innerText = ranger.userData.currentThought;
         thoughtEl.style.opacity = 1;
     } else {

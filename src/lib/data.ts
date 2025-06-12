@@ -474,5 +474,16 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Project Lead",
     tags: ["roadmap", "development"],
     imageUrl: "https://via.placeholder.com/640x360/FF3A20/FFFFFF/?text=Roadmap"
+  },
+  {
+    id: "devlog-45",
+    title: "Notifications use GPU-friendly transforms",
+    excerpt: "Sliding elements now rely on transform animations.",
+    content:
+      "Globe notifications and the ranger thought bubble animate via CSS transforms instead of top/left, tapping hardware acceleration for smoother movement.",
+    date: "2025-07-13T00:00:00Z",
+    author: "Web Team",
+    tags: ["performance", "animation"],
+    imageUrl: "https://robohash.org/devlog-45?size=640x360"
   }
 ];
