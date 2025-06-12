@@ -66,10 +66,8 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 rounded-full border-2 border-white/50 flex items-start justify-center p-1">
-            <div className="w-1 h-3 bg-white/50 rounded-full"></div>
-          </div>
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce w-6 h-10 rounded-full border-2 border-white/50 flex items-start justify-center p-1">
+          <div className="w-1 h-3 bg-white/50 rounded-full"></div>
         </div>
       </div>
     </section>
