@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-45",
+    title: "React imports trimmed",
+    excerpt: "Components no longer import React by default.",
+    content:
+      "Removed redundant `React` default imports across pages and components to match the automatic JSX runtime.",
+    date: "2025-07-13T00:00:00Z",
+    author: "Web Team",
+    tags: ["cleanup", "react"],
+    imageUrl: "https://robohash.org/devlog-45?size=640x360"
+  },
+  {
     id: "devlog-44",
     title: "Service worker caches models",
     excerpt: "Offline assets via optional caching.",
