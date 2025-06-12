@@ -9,12 +9,16 @@ This repository contains the web portal for **Remnants of Destruction**. The sit
    ```bash
    npm install
    ```
-3. Run the linter:
+3. Download the home page assets:
+   ```bash
+   npm run fetch-home-assets
+   ```
+4. Run the linter:
    ```bash
    npm run lint
    ```
    Linting should succeed before submitting pull requests.
-4. Start the development server:
+5. Start the development server:
    ```bash
    npm run dev
    ```

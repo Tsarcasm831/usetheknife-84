@@ -5,12 +5,16 @@
    ```bash
    npm install
    ```
-3. Optionally create a `.env` file and provide `VITE_GOOGLE_MAPS_KEY` if you use the map viewer in `public/game`.
-4. To verify the code style, execute:
+3. Download the home page assets:
+   ```bash
+   npm run fetch-home-assets
+   ```
+4. Optionally create a `.env` file and provide `VITE_GOOGLE_MAPS_KEY` if you use the map viewer in `public/game`.
+5. To verify the code style, execute:
    ```bash
    npm run lint
    ```
-5. Start the development server with:
+6. Start the development server with:
    ```bash
    npm run dev
    ```
