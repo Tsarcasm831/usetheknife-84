@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-44",
+    title: "Service worker caches models",
+    excerpt: "Offline assets via optional caching.",
+    content:
+      "public/home/sw.js now caches model files listed in assets/manifest.json. The registration block in index.html is enabled but can be commented out if needed.",
+    date: "2025-07-12T00:00:00Z",
+    author: "Web Team",
+    tags: ["assets", "service worker"],
+    imageUrl: "https://robohash.org/devlog-44?size=640x360"
+  },
+  {
     id: "devlog-43",
     title: "Home assets fetch script",
     excerpt: "Models download via npm run fetch-home-assets.",

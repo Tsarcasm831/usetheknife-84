@@ -31,8 +31,6 @@
     </div>
     <!-- Make main.js async to allow modelLoader/town setup to potentially use await -->
     <script type="module" src="main.js"></script>
-    <!-- Disabled service worker to avoid background tasks -->
-    <!--
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
@@ -40,7 +38,6 @@
           .catch(err => console.warn('SW registration failed:', err));
       }
     </script>
-    -->
     <!-- Garage and Club iframes are now created dynamically; static iframes removed -->
     <!-- <iframe id="garageFrame" src="pages/bills_garage/index.html" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;border:none;z-index:100;"></iframe> -->
     <!-- <iframe id="clubFrame" src="pages/diamonds_club/diamonds.html" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;border:none;z-index:100;"></iframe> -->

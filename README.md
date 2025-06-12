@@ -23,6 +23,7 @@ This repository contains the web portal for **Remnants of Destruction**. The sit
    npm run dev
    ```
    The app will be available at `http://localhost:8080`.
+6. The home page registers a service worker to cache assets for offline use. You can disable this by commenting out the registration block in `public/home/index.html`.
 
 ## Project Structure
 
