@@ -29,6 +29,8 @@
         <!-- GLB Status UI will be appended here by glb_status.js -->
         <!-- Credits UI will be appended here by credits.js -->
     </div>
+    <!-- Background video used by loadingScreen.js; created dynamically if missing -->
+    <video id="menu-video" src="assets/videos/menu.mp4" preload="auto" style="display:none"></video>
     <!-- Make main.js async to allow modelLoader/town setup to potentially use await -->
     <script type="module" src="main.js"></script>
     <!-- Disabled service worker to avoid background tasks -->
