@@ -49,9 +49,17 @@ export function initStatusUI(parentElement) {
         if (onStartCallback) onStartCallback();
     });
 
-    // Get the pre-created video element
+    // Get the pre-created video element if it exists
     loadingVideo = document.getElementById('menu-video');
-    loadingVideo.id = 'loading-video'; // Change ID for styling
+    if (!loadingVideo) {
+        // Create the video element when not present in the page
+        loadingVideo = document.createElement('video');
+        loadingVideo.src = 'assets/videos/menu.mp4';
+        loadingVideo.preload = 'auto';
+        document.body.appendChild(loadingVideo);
+    }
+    // Use a consistent id for styling
+    loadingVideo.id = 'loading-video';
     loadingVideo.loop = true;
     loadingVideo.autoplay = true;
     loadingVideo.style.display = 'block';

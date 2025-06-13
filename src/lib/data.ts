@@ -496,5 +496,16 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["cleanup", "performance"],
     imageUrl: "https://robohash.org/devlog-46?size=640x360"
+  },
+  {
+    id: "devlog-47",
+    title: "Loading video fallback created",
+    excerpt: "Home page no longer errors when menu-video missing.",
+    content:
+      "loadingScreen.js now creates the menu video dynamically if it's absent, and index.html includes a hidden video element for styling.",
+    date: "2025-07-15T00:00:00Z",
+    author: "Web Team",
+    tags: ["bugfix", "home"],
+    imageUrl: "https://robohash.org/devlog-47?size=640x360"
   }
 ];
