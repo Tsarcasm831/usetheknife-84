@@ -39,7 +39,7 @@ function serveStatic(filePath, res) {
 
 const server = createServer((req, res) => {
   if (req.method === 'POST' && req.url === '/cache-assets') {
-    const script = join(__dirname, 'download_and_cache.js');
+    const script = join(__dirname, 'public', 'home', 'scripts', 'cache_assets.js');
     execFile('node', [script], err => {
       if (err) {
         res.writeHead(500);

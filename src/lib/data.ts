@@ -537,25 +537,5 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["footer", "link"],
     imageUrl: "https://robohash.org/devlog-50?size=640x360"
-  },
-  {
-    id: "devlog-51",
-    title: "Player assets load from CDN",
-    excerpt: "Home Base fetches remote animations and portrait.",
-    content: "playerCamera.js and conversation scripts now reference the File Garden URLs so the command center downloads the player model and portrait on demand.",
-    date: "2025-07-19T00:00:00Z",
-    author: "Web Team",
-    tags: ["assets", "home"],
-    imageUrl: "https://robohash.org/devlog-51?size=640x360"
-  },
-  {
-    id: "devlog-52",
-    title: "Asset cache script rewritten",
-    excerpt: "download_and_cache.js saves files under ./cache.",
-    content: "The cache server now calls download_and_cache.js to mirror File Garden assets locally. Run npm run cache-assets to populate the cache directory.",
-    date: "2025-07-20T00:00:00Z",
-    author: "Web Team",
-    tags: ["assets", "script"],
-    imageUrl: "https://robohash.org/devlog-52?size=640x360"
-  },
+  }
 ];
