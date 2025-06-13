@@ -549,5 +549,16 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["refactor", "models"],
     imageUrl: "https://robohash.org/devlog-51?size=640x360"
+  },
+  {
+    id: "devlog-52",
+    title: "Model loader tracks missing assets",
+    excerpt: "Failed loads accumulate for a summary.",
+    content:
+      "ModelLoader now stores any URLs that fail to load. After the game initializes it logs a concise list of missing assets once.",
+    date: "2025-07-20T00:00:00Z",
+    author: "Web Team",
+    tags: ["debug", "models"],
+    imageUrl: "https://robohash.org/devlog-52?size=640x360"
   }
 ];
