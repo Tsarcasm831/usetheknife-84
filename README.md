@@ -13,12 +13,16 @@ This repository contains the web portal for **Remnants of Destruction**. The sit
    ```bash
    npm run fetch-home-assets
    ```
-4. Run the linter:
+4. Cache game assets locally:
+   ```bash
+   npm run cache-assets
+   ```
+5. Run the linter:
    ```bash
    npm run lint
    ```
-   Linting should succeed before submitting pull requests.
-5. Start the development server:
+  Linting should succeed before submitting pull requests.
+6. Start the development server:
    ```bash
    npm run dev
    ```
