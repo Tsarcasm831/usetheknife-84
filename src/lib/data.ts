@@ -548,4 +548,15 @@ export const mockDevLogs: DevLogEntry[] = [
     tags: ["assets", "home"],
     imageUrl: "https://robohash.org/devlog-51?size=640x360"
   },
+  {
+    id: "devlog-52",
+    title: "GitHub Pages guide added",
+    excerpt: "README explains how to deploy.",
+    content:
+      "A new section in the README describes building the site and using the base path when publishing to GitHub Pages.",
+    date: "2025-07-20T00:00:00Z",
+    author: "Web Team",
+    tags: ["docs", "deploy"],
+    imageUrl: "https://robohash.org/devlog-52?size=640x360"
+  },
 ];
