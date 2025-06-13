@@ -4,11 +4,11 @@ export const playerCameraConfig = {
         /* @tweakable Grid spawn position override (grid units) */
         gridPosition: { x: 69, z: 117 },
         /* @tweakable Path to the idle animation GLB */
-        idleGltfPath: 'assets/player/Animation_Idle_02_withSkin.glb',
+        idleGltfPath: 'https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/player/Animation_Idle_02_withSkin.glb',
         /* @tweakable Path to the walking animation GLB */
-        walkGltfPath: 'assets/player/Animation_Walking_withSkin.glb',
+        walkGltfPath: 'https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/player/Animation_Walking_withSkin.glb',
         /* @tweakable Path to the running animation GLB */
-        runGltfPath: 'assets/player/Animation_Running_withSkin.glb',
+        runGltfPath: 'https://file.garden/Zy7B0LkdIVpGyzA1/Big/home/assets/player/Animation_Running_withSkin.glb',
         /* @tweakable Player movement speed in units per second */
         speed: 6.0,
         /* @tweakable Run speed multiplier (applied when holding Shift) */
