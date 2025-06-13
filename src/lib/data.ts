@@ -517,5 +517,15 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["assets", "script"],
     imageUrl: "https://robohash.org/devlog-48?size=640x360"
+  },
+  {
+    id: "devlog-49",
+    title: "Cache script linked to Home Base",
+    excerpt: "Clicking the Home Base button now triggers asset caching.",
+    content: "A small server exposes /cache-assets, and geolocation.js calls it when the Home Base Command Center opens.",
+    date: "2025-07-17T00:00:00Z",
+    author: "Web Team",
+    tags: ["assets", "integration"],
+    imageUrl: "https://robohash.org/devlog-49?size=640x360"
   }
 ];
