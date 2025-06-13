@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "fetch-home-assets": "node public/home/scripts/download_assets.js",
+    "postinstall": "npm run fetch-home-assets",
     "start": "node cache-server.js"
   },
   "dependencies": {

@@ -18,6 +18,17 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-50",
+    title: "Home assets auto-download",
+    excerpt: "npm install runs fetch-home-assets.",
+    content:
+      "A postinstall script in package.json now executes `npm run fetch-home-assets` so the home page models download automatically after dependencies install.",
+    date: "2025-07-18T00:00:00Z",
+    author: "Web Team",
+    tags: ["build", "assets"],
+    imageUrl: "https://robohash.org/devlog-50?size=640x360"
+  },
+  {
     id: "devlog-44",
     title: "Terra Incognita overlay fixed",
     excerpt: "Script loads without trailing whitespace errors.",
