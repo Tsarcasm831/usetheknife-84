@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "fetch-home-assets": "node public/home/scripts/download_assets.js",
+    "cache-assets": "node download_and_cache.js",
     "start": "node cache-server.js"
   },
   "dependencies": {
@@ -49,6 +50,7 @@
     "@turf/intersect": "^7.2.0",
     "@turf/line-split": "^7.2.0",
     "@turf/point-on-feature": "^7.2.0",
+    "@xmldom/xmldom": "^0.9.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",

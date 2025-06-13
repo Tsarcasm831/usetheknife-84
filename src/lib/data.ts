@@ -548,4 +548,14 @@ export const mockDevLogs: DevLogEntry[] = [
     tags: ["assets", "home"],
     imageUrl: "https://robohash.org/devlog-51?size=640x360"
   },
+  {
+    id: "devlog-52",
+    title: "Asset cache script rewritten",
+    excerpt: "download_and_cache.js saves files under ./cache.",
+    content: "The cache server now calls download_and_cache.js to mirror File Garden assets locally. Run npm run cache-assets to populate the cache directory.",
+    date: "2025-07-20T00:00:00Z",
+    author: "Web Team",
+    tags: ["assets", "script"],
+    imageUrl: "https://robohash.org/devlog-52?size=640x360"
+  },
 ];
