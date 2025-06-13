@@ -537,26 +537,5 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["footer", "link"],
     imageUrl: "https://robohash.org/devlog-50?size=640x360"
-  },
-  {
-    id: "devlog-51",
-    title: "Player assets load from CDN",
-    excerpt: "Home Base fetches remote animations and portrait.",
-    content: "playerCamera.js and conversation scripts now reference the File Garden URLs so the command center downloads the player model and portrait on demand.",
-    date: "2025-07-19T00:00:00Z",
-    author: "Web Team",
-    tags: ["assets", "home"],
-    imageUrl: "https://robohash.org/devlog-51?size=640x360"
-  },
-  {
-    id: "devlog-52",
-    title: "GitHub Pages guide added",
-    excerpt: "README explains how to deploy.",
-    content:
-      "A new section in the README describes building the site and using the base path when publishing to GitHub Pages.",
-    date: "2025-07-20T00:00:00Z",
-    author: "Web Team",
-    tags: ["docs", "deploy"],
-    imageUrl: "https://robohash.org/devlog-52?size=640x360"
-  },
+  }
 ];

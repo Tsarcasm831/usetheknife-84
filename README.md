@@ -32,21 +32,6 @@ This repository contains the web portal for **Remnants of Destruction**. The sit
 
 Run `npm run build` to create a production build in the `dist/` folder.
 
-## Deploying to GitHub Pages
-
-1. Build the project:
-   ```bash
-   npm run build
-   ```
-   This outputs static files into the `dist/` directory.
-2. Push the contents of `dist` to the branch configured for GitHub Pages (often `gh-pages` or `docs`).
-3. When serving from a repository subpath such as `https://<user>.github.io/<repo>/`,
-   pass a base path when building:
-   ```bash
-   vite build --base=/<repo>/
-   ```
-   or set `base: '/<repo>/'` in `vite.config.ts`.
-
 ## DevLog Image Generation
 
 The DevLog page now uses [RoboHash](https://robohash.org/) to create fun
