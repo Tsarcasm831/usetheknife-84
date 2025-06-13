@@ -6,17 +6,10 @@ export function initGeoLocation(map) {
     .bindPopup(`
       <b>Home</b><br>
       Coordinates: ${homeLat.toFixed(6)}, ${homeLng.toFixed(6)}<br>
-      <button id="home-details-btn" class="sidebar-button" onclick="window.openHomeBase()">Home Base Command Center</button>
+      <button id="home-details-btn" class="sidebar-button" onclick="window.openIframeModal('/home/index.html')">Home Base Command Center</button>
     `)
     .openPopup();
 }
-
-window.openHomeBase = function () {
-  fetch('/cache-assets', { method: 'POST' }).catch(console.error);
-  if (window.openIframeModal) {
-    window.openIframeModal('/home/index.html');
-  }
-};
 
 export function updateGeolocation(lat, lng) {
   const el = document.getElementById("geolocation-info");

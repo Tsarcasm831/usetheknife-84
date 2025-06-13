@@ -18,17 +18,6 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
-    id: "devlog-50",
-    title: "Home assets auto-download",
-    excerpt: "npm install runs fetch-home-assets.",
-    content:
-      "A postinstall script in package.json now executes `npm run fetch-home-assets` so the home page models download automatically after dependencies install.",
-    date: "2025-07-18T00:00:00Z",
-    author: "Web Team",
-    tags: ["build", "assets"],
-    imageUrl: "https://robohash.org/devlog-50?size=640x360"
-  },
-  {
     id: "devlog-44",
     title: "Terra Incognita overlay fixed",
     excerpt: "Script loads without trailing whitespace errors.",
@@ -528,37 +517,5 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["assets", "script"],
     imageUrl: "https://robohash.org/devlog-48?size=640x360"
-  },
-  {
-    id: "devlog-49",
-    title: "Cache script linked to Home Base",
-    excerpt: "Clicking the Home Base button now triggers asset caching.",
-    content: "A small server exposes /cache-assets, and geolocation.js calls it when the Home Base Command Center opens.",
-    date: "2025-07-17T00:00:00Z",
-    author: "Web Team",
-    tags: ["assets", "integration"],
-    imageUrl: "https://robohash.org/devlog-49?size=640x360"
-  },
-  {
-    id: "devlog-51",
-    title: "Hospital loader refactored",
-    excerpt: "Model now loads via loadModel utility.",
-    content:
-      "The hospital structure script calls loadModel instead of manually fetching the GLB, with the same transforms applied after loading.",
-    date: "2025-07-19T00:00:00Z",
-    author: "Web Team",
-    tags: ["refactor", "models"],
-    imageUrl: "https://robohash.org/devlog-51?size=640x360"
-  },
-  {
-    id: "devlog-52",
-    title: "Model loader tracks missing assets",
-    excerpt: "Failed loads accumulate for a summary.",
-    content:
-      "ModelLoader now stores any URLs that fail to load. After the game initializes it logs a concise list of missing assets once.",
-    date: "2025-07-20T00:00:00Z",
-    author: "Web Team",
-    tags: ["debug", "models"],
-    imageUrl: "https://robohash.org/devlog-52?size=640x360"
   }
 ];

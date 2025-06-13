@@ -5,11 +5,11 @@ This repository contains the web portal for **Remnants of Destruction**. The sit
 ## Getting Started
 
 1. Install Node.js (18 or later) and npm.
-2. Clone the repository and install dependencies (this also triggers the postinstall script):
+2. Clone the repository and install dependencies:
    ```bash
    npm install
    ```
-3. Download the home page assets (this now runs automatically after `npm install`):
+3. Download the home page assets:
    ```bash
    npm run fetch-home-assets
    ```

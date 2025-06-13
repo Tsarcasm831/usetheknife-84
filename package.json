@@ -9,9 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "fetch-home-assets": "node public/home/scripts/download_assets.js",
-    "postinstall": "npm run fetch-home-assets",
-    "start": "node cache-server.js"
+    "fetch-home-assets": "node public/home/scripts/download_assets.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

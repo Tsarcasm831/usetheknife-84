@@ -55,7 +55,6 @@ GLTFLoader.prototype.load = function(url, onLoad, onProgress, onError) {
 
 // Cache to store promises for loaded models
 const modelCache = new Map();
-const missingAssets = new Set();
 const gltfLoader = new GLTFLoader();
 const fbxLoader = new FBXLoader();
 
@@ -175,13 +174,11 @@ export async function loadModel(url, onProgress) {
         };
 
         const onError = (error) => {
-            missingAssets.add(requestUrl);
-            const base = requestUrl.split('/').pop();
-            const msg = `Missing asset: ${base}`;
+            const errorMsg = `ModelLoader: Error loading ${isFBX ? 'FBX' : 'GLTF'} model from ${requestUrl}: ${error.message || error}`;
             if (isFaunaModel) {
-                console.warn(`FAUNA MODEL ERROR: ${msg}`);
+                console.error(`FAUNA MODEL ERROR: ${errorMsg}`, error);
             } else {
-                console.warn(msg);
+                console.error(errorMsg, error);
             }
             reject(error);
         };
@@ -341,10 +338,3 @@ export async function loadSpyderWorkshopModel(onProgress) {
     }
     return loadModel(SPYDER_WORKSHOP_PATH, onProgress);
 }
-
-// After initialization, log summary of any missing assets
-window.addEventListener('load', () => {
-    if (missingAssets.size) {
-        console.log(`Missing assets: ${Array.from(missingAssets).join(', ')}`);
-    }
-});
