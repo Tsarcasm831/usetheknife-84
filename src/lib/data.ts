@@ -527,5 +527,15 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["assets", "integration"],
     imageUrl: "https://robohash.org/devlog-49?size=640x360"
+  },
+  {
+    id: "devlog-50",
+    title: "Discord invite updated",
+    excerpt: "Footer points to the live channel.",
+    content: "Index.tsx now links to https://discord.gg/qUVrPpNUNv so visitors can join our community server.",
+    date: "2025-07-18T00:00:00Z",
+    author: "Web Team",
+    tags: ["footer", "link"],
+    imageUrl: "https://robohash.org/devlog-50?size=640x360"
   }
 ];

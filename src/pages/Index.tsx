@@ -26,7 +26,14 @@ const Index = () => {
             
             <div className="flex flex-col items-center md:items-end">
               <div className="flex space-x-4 mb-4">
-                <a href="#" className="hover:text-game-orange">Discord</a>
+                <a
+                  href="https://discord.gg/qUVrPpNUNv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-game-orange"
+                >
+                  Discord
+                </a>
                 <a
                   href="https://www.youtube.com/@lordtsarcasm/videos"
                   target="_blank"
