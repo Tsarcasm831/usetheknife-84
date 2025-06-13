@@ -538,5 +538,16 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["assets", "integration"],
     imageUrl: "https://robohash.org/devlog-49?size=640x360"
+  },
+  {
+    id: "devlog-51",
+    title: "Hospital loader refactored",
+    excerpt: "Model now loads via loadModel utility.",
+    content:
+      "The hospital structure script calls loadModel instead of manually fetching the GLB, with the same transforms applied after loading.",
+    date: "2025-07-19T00:00:00Z",
+    author: "Web Team",
+    tags: ["refactor", "models"],
+    imageUrl: "https://robohash.org/devlog-51?size=640x360"
   }
 ];
