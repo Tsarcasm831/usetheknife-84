@@ -507,5 +507,15 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["bugfix", "home"],
     imageUrl: "https://robohash.org/devlog-47?size=640x360"
+  },
+  {
+    id: "devlog-48",
+    title: "Cache asset list locally",
+    excerpt: "New script downloads models from downloadableassets.txt.",
+    content: "cache_assets.js saves missing GLB files and regenerates the manifest so models load without 404s.",
+    date: "2025-07-16T00:00:00Z",
+    author: "Web Team",
+    tags: ["assets", "script"],
+    imageUrl: "https://robohash.org/devlog-48?size=640x360"
   }
 ];
