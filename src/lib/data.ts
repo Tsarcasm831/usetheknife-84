@@ -18,6 +18,120 @@ export const mockNavItems: NavItem[] = [
 
 export const mockDevLogs: DevLogEntry[] = [
   {
+    id: "devlog-55",
+    title: "Contribution guide updated",
+    excerpt: "Every pull request must log its changes.",
+    content: "AGENTS.md now states that every code change requires a devlog entry summarizing the pull request so the timeline stays complete.",
+    date: "2025-07-23T00:00:00Z",
+    author: "Web Team",
+    tags: ["docs", "process"],
+    imageUrl: "https://robohash.org/devlog-55?size=640x360"
+  },
+  {
+    id: "devlog-54",
+    title: "3D Overworld demo uploaded",
+    excerpt: "Playable prototype now lives in public/game/3doverworld.",
+    content:
+      "A new 3D Overworld demo showcases early terrain, items and lighting scripts. Open public/game/3doverworld/index.html to explore the test map.",
+    date: "2025-07-22T00:00:00Z",
+    author: "Web Team",
+    tags: ["game", "demo"],
+    imageUrl: "https://robohash.org/devlog-54?size=640x360"
+  },
+  {
+    id: "devlog-53",
+    title: "RoboHash fallback for images",
+    excerpt: "Old posts and the form now auto-generate art.",
+    content: "Entries 3-17 use RoboHash images and DevLogForm creates a RoboHash URL when none is provided.",
+    date: "2025-07-21T00:00:00Z",
+    author: "Web Team",
+    tags: ["devlog", "images"],
+    imageUrl: "https://robohash.org/devlog-53?size=640x360"
+  },
+  {
+    id: "devlog-52",
+    title: "PWA support enabled",
+    excerpt: "Site can now install as an app.",
+    content: "vite-plugin-pwa registers a service worker and adds a manifest so the portal works offline.",
+    date: "2025-07-20T00:00:00Z",
+    author: "Web Team",
+    tags: ["pwa", "service worker"],
+    imageUrl: "https://robohash.org/devlog-52?size=640x360"
+  },
+  {
+    id: "devlog-51",
+    title: "Error boundaries added",
+    excerpt: "App routes now handled safely.",
+    content: "A new ErrorBoundary component wraps the router so unexpected runtime errors show a friendly message and link back home.",
+    date: "2025-07-19T00:00:00Z",
+    author: "Web Team",
+    tags: ["react", "error"],
+    imageUrl: "https://robohash.org/devlog-51?size=640x360"
+  },
+  {
+    id: "devlog-50",
+    title: "Discord invite updated",
+    excerpt: "Footer points to the live channel.",
+    content: "Index.tsx now links to https://discord.gg/qUVrPpNUNv so visitors can join our community server.",
+    date: "2025-07-18T00:00:00Z",
+    author: "Web Team",
+    tags: ["footer", "link"],
+    imageUrl: "https://robohash.org/devlog-50?size=640x360"
+  },
+  {
+    id: "devlog-49",
+    title: "Cache script linked to Home Base",
+    excerpt: "Clicking the Home Base button now triggers asset caching.",
+    content: "A small server exposes /cache-assets, and geolocation.js calls it when the Home Base Command Center opens.",
+    date: "2025-07-17T00:00:00Z",
+    author: "Web Team",
+    tags: ["assets", "integration"],
+    imageUrl: "https://robohash.org/devlog-49?size=640x360"
+  },
+  {
+    id: "devlog-48",
+    title: "Cache asset list locally",
+    excerpt: "New script downloads models from downloadableassets.txt.",
+    content: "cache_assets.js saves missing GLB files and regenerates the manifest so models load without 404s.",
+    date: "2025-07-16T00:00:00Z",
+    author: "Web Team",
+    tags: ["assets", "script"],
+    imageUrl: "https://robohash.org/devlog-48?size=640x360"
+  },
+  {
+    id: "devlog-47",
+    title: "Loading video fallback created",
+    excerpt: "Home page no longer errors when menu-video missing.",
+    content:
+      "loadingScreen.js now creates the menu video dynamically if it's absent, and index.html includes a hidden video element for styling.",
+    date: "2025-07-15T00:00:00Z",
+    author: "Web Team",
+    tags: ["bugfix", "home"],
+    imageUrl: "https://robohash.org/devlog-47?size=640x360"
+  },
+  {
+    id: "devlog-46",
+    title: "Simpler NavBar markup",
+    excerpt: "Removed extra wrappers to lighten DOM.",
+    content:
+      "The NavBar and hero section no longer use unnecessary \x3cdiv\x3e elements. This flattening trims the DOM tree and speeds up rendering.",
+    date: "2025-07-14T00:00:00Z",
+    author: "Web Team",
+    tags: ["cleanup", "performance"],
+    imageUrl: "https://robohash.org/devlog-46?size=640x360"
+  },
+  {
+    id: "devlog-45",
+    title: "Notifications use GPU-friendly transforms",
+    excerpt: "Sliding elements now rely on transform animations.",
+    content:
+      "Globe notifications and the ranger thought bubble animate via CSS transforms instead of top/left, tapping hardware acceleration for smoother movement.",
+    date: "2025-07-13T00:00:00Z",
+    author: "Web Team",
+    tags: ["performance", "animation"],
+    imageUrl: "https://robohash.org/devlog-45?size=640x360"
+  },
+  {
     id: "devlog-44",
     title: "Terra Incognita overlay fixed",
     excerpt: "Script loads without trailing whitespace errors.",
@@ -474,120 +588,5 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Project Lead",
     tags: ["roadmap", "development"],
     imageUrl: "https://robohash.org/devlog-3?size=640x360"
-  },
-  {
-    id: "devlog-45",
-    title: "Notifications use GPU-friendly transforms",
-    excerpt: "Sliding elements now rely on transform animations.",
-    content:
-      "Globe notifications and the ranger thought bubble animate via CSS transforms instead of top/left, tapping hardware acceleration for smoother movement.",
-    date: "2025-07-13T00:00:00Z",
-    author: "Web Team",
-    tags: ["performance", "animation"],
-    imageUrl: "https://robohash.org/devlog-45?size=640x360"
-  },
-  {
-    id: "devlog-46",
-    title: "Simpler NavBar markup",
-    excerpt: "Removed extra wrappers to lighten DOM.",
-    content:
-      "The NavBar and hero section no longer use unnecessary \x3cdiv\x3e elements. This flattening trims the DOM tree and speeds up rendering.",
-    date: "2025-07-14T00:00:00Z",
-    author: "Web Team",
-    tags: ["cleanup", "performance"],
-    imageUrl: "https://robohash.org/devlog-46?size=640x360"
-  },
-  {
-    id: "devlog-47",
-    title: "Loading video fallback created",
-    excerpt: "Home page no longer errors when menu-video missing.",
-    content:
-      "loadingScreen.js now creates the menu video dynamically if it's absent, and index.html includes a hidden video element for styling.",
-    date: "2025-07-15T00:00:00Z",
-    author: "Web Team",
-    tags: ["bugfix", "home"],
-    imageUrl: "https://robohash.org/devlog-47?size=640x360"
-  },
-  {
-    id: "devlog-48",
-    title: "Cache asset list locally",
-    excerpt: "New script downloads models from downloadableassets.txt.",
-    content: "cache_assets.js saves missing GLB files and regenerates the manifest so models load without 404s.",
-    date: "2025-07-16T00:00:00Z",
-    author: "Web Team",
-    tags: ["assets", "script"],
-    imageUrl: "https://robohash.org/devlog-48?size=640x360"
-  },
-  {
-    id: "devlog-49",
-    title: "Cache script linked to Home Base",
-    excerpt: "Clicking the Home Base button now triggers asset caching.",
-    content: "A small server exposes /cache-assets, and geolocation.js calls it when the Home Base Command Center opens.",
-    date: "2025-07-17T00:00:00Z",
-    author: "Web Team",
-    tags: ["assets", "integration"],
-    imageUrl: "https://robohash.org/devlog-49?size=640x360"
-  },
-  {
-    id: "devlog-50",
-    title: "Discord invite updated",
-    excerpt: "Footer points to the live channel.",
-    content: "Index.tsx now links to https://discord.gg/qUVrPpNUNv so visitors can join our community server.",
-    date: "2025-07-18T00:00:00Z",
-    author: "Web Team",
-    tags: ["footer", "link"],
-    imageUrl: "https://robohash.org/devlog-50?size=640x360"
-  },
-  {
-    id: "devlog-51",
-    title: "Error boundaries added",
-    excerpt: "App routes now handled safely.",
-    content: "A new ErrorBoundary component wraps the router so unexpected runtime errors show a friendly message and link back home.",
-    date: "2025-07-19T00:00:00Z",
-    author: "Web Team",
-    tags: ["react", "error"],
-    imageUrl: "https://robohash.org/devlog-51?size=640x360"
-  },
-  {
-    id: "devlog-52",
-    title: "PWA support enabled",
-    excerpt: "Site can now install as an app.",
-    content: "vite-plugin-pwa registers a service worker and adds a manifest so the portal works offline.",
-    date: "2025-07-20T00:00:00Z",
-    author: "Web Team",
-    tags: ["pwa", "service worker"],
-    imageUrl: "https://robohash.org/devlog-52?size=640x360"
-  },
-  {
-    id: "devlog-53",
-    title: "RoboHash fallback for images",
-    excerpt: "Old posts and the form now auto-generate art.",
-    content: "Entries 3-17 use RoboHash images and DevLogForm creates a RoboHash URL when none is provided.",
-    date: "2025-07-21T00:00:00Z",
-    author: "Web Team",
-    tags: ["devlog", "images"],
-    imageUrl: "https://robohash.org/devlog-53?size=640x360"
-  },
-  {
-    id: "devlog-54",
-    title: "3D Overworld demo uploaded",
-    excerpt: "Playable prototype now lives in public/game/3doverworld.",
-    content:
-      "A new 3D Overworld demo showcases early terrain, items and lighting scripts. Open public/game/3doverworld/index.html to explore the test map.",
-    date: "2025-07-22T00:00:00Z",
-    author: "Web Team",
-    tags: ["game", "demo"],
-    imageUrl: "https://robohash.org/devlog-54?size=640x360"
-  }
-,
-  {
-    id: "devlog-55",
-    title: "Contribution guide updated",
-    excerpt: "Every pull request must log its changes.",
-    content: "AGENTS.md now states that every code change requires a devlog entry summarizing the pull request so the timeline stays complete.",
-    date: "2025-07-23T00:00:00Z",
-    author: "Web Team",
-    tags: ["docs", "process"],
-    imageUrl: "https://robohash.org/devlog-55?size=640x360"
   }
 ];
