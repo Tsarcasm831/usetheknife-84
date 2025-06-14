@@ -537,5 +537,15 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["footer", "link"],
     imageUrl: "https://robohash.org/devlog-50?size=640x360"
+  },
+  {
+    id: "devlog-51",
+    title: "Error boundaries added",
+    excerpt: "App routes now handled safely.",
+    content: "A new ErrorBoundary component wraps the router so unexpected runtime errors show a friendly message and link back home.",
+    date: "2025-07-19T00:00:00Z",
+    author: "Web Team",
+    tags: ["react", "error"],
+    imageUrl: "https://robohash.org/devlog-51?size=640x360"
   }
 ];
