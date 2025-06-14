@@ -325,7 +325,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-16T00:00:00Z",
     author: "Web Team",
     tags: ["branding"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=usetheknife"
+    imageUrl: "https://robohash.org/devlog-17?size=640x360"
   },
   {
 
@@ -337,7 +337,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-15T00:00:00Z",
     author: "Web Team",
     tags: ["bugfix", "ui"],
-    imageUrl: "https://via.placeholder.com/640x360/FFCC00/FFFFFF/?text=Sign+In"
+    imageUrl: "https://robohash.org/devlog-16?size=640x360"
   },
   {
     id: "devlog-15",
@@ -348,7 +348,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-14T00:00:00Z",
     author: "Web Team",
     tags: ["ai", "docs"],
-    imageUrl: "https://via.placeholder.com/640x360/FFCC00/FFFFFF/?text=AI+Fix"
+    imageUrl: "https://robohash.org/devlog-15?size=640x360"
   },
   {
     id: "devlog-14",
@@ -359,7 +359,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-13T00:00:00Z",
     author: "Web Team",
     tags: ["ui", "cleanup"],
-    imageUrl: "https://via.placeholder.com/640x360/FFCC00/FFFFFF/?text=Nav+Update"
+    imageUrl: "https://robohash.org/devlog-14?size=640x360"
   },
   {
     id: "devlog-13",
@@ -370,7 +370,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-12T00:00:00Z",
     author: "Web Team",
     tags: ["ui", "cleanup"],
-    imageUrl: "https://via.placeholder.com/640x360/FFCC00/FFFFFF/?text=Nav+Clean"
+    imageUrl: "https://robohash.org/devlog-13?size=640x360"
   },
   {
     id: "devlog-12",
@@ -380,7 +380,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-11T00:00:00Z",
     author: "Web Team",
     tags: ["docs", "game"],
-    imageUrl: "https://via.placeholder.com/640x360/4285F4/FFFFFF/?text=Map+Setup"
+    imageUrl: "https://robohash.org/devlog-12?size=640x360"
   },
   {
     id: "devlog-11",
@@ -391,7 +391,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-10T00:00:00Z",
     author: "Web Team",
     tags: ["roadmap", "update"],
-    imageUrl: "https://via.placeholder.com/640x360/FF3A20/FFFFFF/?text=Roadmap+Update"
+    imageUrl: "https://robohash.org/devlog-11?size=640x360"
   },
   {
     id: "devlog-10",
@@ -402,7 +402,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-09T00:00:00Z",
     author: "Web Team",
     tags: ["website"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=DevLog+Page"
+    imageUrl: "https://robohash.org/devlog-10?size=640x360"
   },
   {
     id: "devlog-9",
@@ -412,7 +412,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-08T00:00:00Z",
     author: "Web Team",
     tags: ["documentation"],
-    imageUrl: "https://via.placeholder.com/640x360/007ACC/FFFFFF/?text=Docs+Update"
+    imageUrl: "https://robohash.org/devlog-9?size=640x360"
   },
   {
     id: "devlog-8",
@@ -422,7 +422,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-08T09:00:00Z",
     author: "Web Team",
     tags: ["ui", "navigation"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Navigation"
+    imageUrl: "https://robohash.org/devlog-8?size=640x360"
   },
   {
     id: "devlog-7",
@@ -432,7 +432,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-07T12:00:00Z",
     author: "Web Team",
     tags: ["website", "community"],
-    imageUrl: "https://via.placeholder.com/640x360/1E90FF/FFFFFF/?text=Media+Page"
+    imageUrl: "https://robohash.org/devlog-7?size=640x360"
   },
   {
     id: "devlog-6",
@@ -442,7 +442,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-07T10:00:00Z",
     author: "Web Team",
     tags: ["ui", "update"],
-    imageUrl: "https://via.placeholder.com/640x360/FFA500/FFFFFF/?text=Coming+Soon"
+    imageUrl: "https://robohash.org/devlog-6?size=640x360"
   },
   {
     id: "devlog-5",
@@ -452,7 +452,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-07T00:00:00Z",
     author: "Web Team",
     tags: ["meta", "branding"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=Branding"
+    imageUrl: "https://robohash.org/devlog-5?size=640x360"
   },
   {
     id: "devlog-4",
@@ -462,7 +462,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-06T10:00:00Z",
     author: "Web Team",
     tags: ["ui", "bugfix"],
-    imageUrl: "https://via.placeholder.com/640x360/2DD4BF/FFFFFF/?text=UI+Fixes"
+    imageUrl: "https://robohash.org/devlog-4?size=640x360"
   },
   {
     id: "devlog-3",
@@ -473,7 +473,7 @@ export const mockDevLogs: DevLogEntry[] = [
     date: "2025-06-10T00:00:00Z",
     author: "Project Lead",
     tags: ["roadmap", "development"],
-    imageUrl: "https://via.placeholder.com/640x360/FF3A20/FFFFFF/?text=Roadmap"
+    imageUrl: "https://robohash.org/devlog-3?size=640x360"
   },
   {
     id: "devlog-45",
@@ -557,5 +557,15 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["pwa", "service worker"],
     imageUrl: "https://robohash.org/devlog-52?size=640x360"
+  },
+  {
+    id: "devlog-53",
+    title: "RoboHash fallback for images",
+    excerpt: "Old posts and the form now auto-generate art.",
+    content: "Entries 3-17 use RoboHash images and DevLogForm creates a RoboHash URL when none is provided.",
+    date: "2025-07-21T00:00:00Z",
+    author: "Web Team",
+    tags: ["devlog", "images"],
+    imageUrl: "https://robohash.org/devlog-53?size=640x360"
   }
 ];
