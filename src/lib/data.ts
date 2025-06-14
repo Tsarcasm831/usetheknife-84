@@ -547,5 +547,15 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["react", "error"],
     imageUrl: "https://robohash.org/devlog-51?size=640x360"
+  },
+  {
+    id: "devlog-52",
+    title: "PWA support enabled",
+    excerpt: "Site can now install as an app.",
+    content: "vite-plugin-pwa registers a service worker and adds a manifest so the portal works offline.",
+    date: "2025-07-20T00:00:00Z",
+    author: "Web Team",
+    tags: ["pwa", "service worker"],
+    imageUrl: "https://robohash.org/devlog-52?size=640x360"
   }
 ];
