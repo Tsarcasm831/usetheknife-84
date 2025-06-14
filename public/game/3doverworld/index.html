@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title>8-Bit Apocalypse Woodcutter</title>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="https://file.garden/Zy7B0LkdIVpGyzA1/3DGLBASSETS/favicon.png">
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { width: 100%; height: 100%; }
+    #ui {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      color: #fff;
+      font-family: 'Press Start 2P', monospace;
+      text-shadow: 2px 2px #000;
+    }
+    .inventory {
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+      border: 2px solid #fff;
+    }
+    .stat {
+      margin-bottom: 5px;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Include the new inventory CSS for styling the interactive inventory -->
+  <link rel="stylesheet" type="text/css" href="inventory.css">
+</head>
+<body>
+  <div id="ui">
+    <div class="inventory">
+      <div class="stat">Health: <span id="healthCount">100</span></div>
+      <div class="stat">Wood: <span id="woodCount">0</span></div>
+    </div>
+  </div>
+  <!-- Include download.js first so that GLTF asset URLs are set up -->
+  <script type="module" src="download.js"></script>
+  <script type="module" src="download2d.js"></script>
+  <script type="module" src="game.js"></script>
+  <script type="module" src="creative_mode.js"></script>
+  <script type="module" src="hotbar.js"></script>
+  <!-- Updated interactive inventory module -->
+  <script type="module" src="inventory.js"></script>
+  <script type="module" src="character_profile.js"></script>
+  <script type="module" src="traits.js"></script>
+  <script type="module" src="skills.js"></script>
+  <script type="module" src="aura.js"></script>
+  <script type="module" src="chest.js"></script>
+  <!-- Include the new cottage.js script -->
+  <script type="module" src="cottage.js"></script>
+  <!-- Include the new crosshair script -->
+  <script type="module" src="crosshair.js"></script>
+  <!-- Include the minimap script so that the minimap is visible and follows the player -->
+  <script type="module" src="minimap.js"></script>
+  <!-- Include the new waila.js script to display what the player is looking at -->
+  <script type="module" src="waila.js"></script>
+</body>
+</html>
