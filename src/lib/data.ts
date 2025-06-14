@@ -567,5 +567,16 @@ export const mockDevLogs: DevLogEntry[] = [
     author: "Web Team",
     tags: ["devlog", "images"],
     imageUrl: "https://robohash.org/devlog-53?size=640x360"
+  },
+  {
+    id: "devlog-54",
+    title: "3D Overworld demo uploaded",
+    excerpt: "Playable prototype now lives in public/game/3doverworld.",
+    content:
+      "A new 3D Overworld demo showcases early terrain, items and lighting scripts. Open public/game/3doverworld/index.html to explore the test map.",
+    date: "2025-07-22T00:00:00Z",
+    author: "Web Team",
+    tags: ["game", "demo"],
+    imageUrl: "https://robohash.org/devlog-54?size=640x360"
   }
 ];
