@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -10,9 +11,13 @@ EventEmitter.defaultMaxListeners = 20;
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  root: process.cwd(),
   server: {
     host: "::",
     port: 8080,
+    fs: {
+      strict: false
+    }
   },
   plugins: [
     react(),
