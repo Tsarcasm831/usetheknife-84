@@ -579,4 +579,15 @@ export const mockDevLogs: DevLogEntry[] = [
     tags: ["game", "demo"],
     imageUrl: "https://robohash.org/devlog-54?size=640x360"
   }
+,
+  {
+    id: "devlog-55",
+    title: "Contribution guide updated",
+    excerpt: "Every pull request must log its changes.",
+    content: "AGENTS.md now states that every code change requires a devlog entry summarizing the pull request so the timeline stays complete.",
+    date: "2025-07-23T00:00:00Z",
+    author: "Web Team",
+    tags: ["docs", "process"],
+    imageUrl: "https://robohash.org/devlog-55?size=640x360"
+  }
 ];

@@ -1,6 +1,6 @@
 # Project Contribution Guide
 
-This repository hosts the Remnants of Destruction devlog portal built with Vite, React and TypeScript. Use this document as the baseline instructions for all future updates.
+This repository hosts the Remnants of Destruction devlog portal built with Vite, React and TypeScript. Use this document as the baseline instructions for all future updates. **Every change must be documented on the DevLog page so the history remains complete.**
 
 ## Required Steps for Pull Requests
 
@@ -9,7 +9,7 @@ This repository hosts the Remnants of Destruction devlog portal built with Vite,
 2. **Run the linter**
    - Execute `npm run lint` before committing. Fix any reported issues.
 3. **Update the DevLog**
-   - Append a brief entry to `src/lib/data.ts` describing your change so it appears on the DevLog page.
+   - Add a new entry to `src/lib/data.ts` summarizing your pull request. Every merge must include this entry so all changes are recorded chronologically.
 4. **Keep commits focused**
    - Commit messages should be short and reference the main change.
 

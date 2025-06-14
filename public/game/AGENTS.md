@@ -1,6 +1,6 @@
 # Agent Contribution Guide
 
-**Updated 2025-06-06:** All pull requests must update the devlog page with a brief summary of the changes.
+**Updated 2025-06-06:** All pull requests must update the devlog page with a brief summary of the changes. Every modification, no matter how small, requires an entry so the devlog reflects the complete history.
 
 
 This document outlines the development standards for the **Remnants of Destruction**
@@ -196,7 +196,7 @@ Below is a simplified view of the repository showing only directories:
   the title; include them in the body if required.
 - Check for merge conflicts before opening a pull request so the review process
   goes smoothly.
-- Update the devlog page with a brief summary of your changes.
+- Update the devlog page with a brief summary of your changes. Each pull request must add its own entry so all releases and fixes are chronologically tracked.
 
 ## Documentation standards
 - Keep this `AGENTS.md` up to date. Whenever you adjust guidelines, provide a
