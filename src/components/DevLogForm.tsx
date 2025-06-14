@@ -43,13 +43,15 @@ const DevLogForm: React.FC<DevLogFormProps> = ({ onSubmit, onCancel }) => {
       return;
     }
 
+    const defaultImage = `https://robohash.org/${encodeURIComponent(`${title.trim()} ${excerpt.trim()}`)}?size=640x360`;
+
     onSubmit({
       title: title.trim(),
       excerpt: excerpt.trim(),
       content: content.trim(),
       author: author.trim(),
       tags,
-      imageUrl: imageUrl || 'https://via.placeholder.com/640x360/FFCC00/FFFFFF/?text=DevLog',
+      imageUrl: imageUrl || defaultImage,
       featured
     });
 
