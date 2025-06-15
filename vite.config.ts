@@ -11,12 +11,13 @@ EventEmitter.defaultMaxListeners = 20;
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  root: process.cwd(),
+  root: ".",
   server: {
     host: "::",
     port: 8080,
     fs: {
-      strict: false
+      strict: false,
+      allow: [".."]
     }
   },
   plugins: [
